@@ -1,0 +1,57 @@
+/* Colors */
+
+$black: #111111;
+$white: #ffffff;
+$white-alt: #f7f7f7;
+$silver: #f2f2f2;
+$silver-dark: #c3c3c3;
+$platinum: #ededed;
+$platinum-dark: #e0e0e0;
+$platinum-darker: #d0d0d0;
+$ash: #aaaaaa;
+$grey-lt: #999;
+$grey: #888888;
+$dim: #666666;
+$dim-blue: #434a50;
+$jet: #333333;
+$jet-blue: #34383b;
+
+$gray-blue: #707978;
+
+$gray-lighter: $silver;
+$gray-light: $ash;
+$gray: $grey;
+$gray-dark: $dim;
+$gray-darker: $jet;
+$plat: $platinum;
+$plat-dark: $platinum-dark;
+
+$divider-gray: $platinum-darker;
+
+$red: #de5833;
+$red-dark: #bd4b2b;
+$red-darker: darken($red-dark,15%);
+$red-light: #e37151;
+$red-lighter: lighten($red-light,15%);
+$green: #589e4d;
+$blue-desaturated: #6096bf;
+$blue-dark-bg: #49a9f2;
+$blue: #4495d4;
+$blue-dark: #3a7fb4;
+$blue-darker: darken($blue-dark,15%);
+$blue-light: #60a5da;
+$blue-lighter: lighten($blue-light,15%);
+$blue-lightest: lighten($blue-light,20%);
+$gold: #f1a031;
+$purple: #5454db;
+
+
+/* Sizes */
+
+$base-font-size: 14.4px;
+$margin: 10px;
+
+$serp-width: 620px;
+$max-width: 980px;
+
+$serp-margin-left: 110px;

@@ -1,0 +1,108 @@
+// =======================
+// Fixes - From HTML5 BP
+// ======================= */
+
+// Reset - Fix for whitespace on right bug in FF */
+html,body
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+// apply a natural box layout model to all elements - Danny Smith 1 Oct 12 */
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url(boxsizing-polyfill.htc);
+}
+
+
+// ==========================================================================
+// Base Styles
+// ========================================================================== */
+// Hammer and CodeKit contains all of the Bourboun Mixins (http://bourbon.io/) 
+
+
+/* @group Generic */
+
+::-moz-selection {
+    background: $blue-lighter;
+    text-shadow: none;
+}
+
+::selection {
+    background: $blue-lighter;
+    text-shadow: none;
+}
+
+html, button, input, select, textarea {
+    color: $gray-darker; /* Abe: modified */
+}
+
+html {
+	font-size: 90%;
+	line-height: 1.4;
+}
+
+.container {
+	max-width: $max-width;
+}
+
+/* Standard Classes */
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 0;
+}
+
+h1, .h-xxl, .t-xxxxl			{ font-size: em(40px); }
+h2, .h-xl, .t-xxxl           	{ font-size: em(30px); }
+h3, .h-l, .t-xxl   			    { font-size: em(21px); }
+h4, .h-m, .t-xl                 { font-size: em(19px); }
+h5, .h-s, .t-l                  { font-size: em(17px); }
+h6, .h-xs, .t-m, .t-16          { font-size: em(16px); }
+.t-s, .t-14 					{ font-size: em(14px); }
+.t-xs, .t-13                    { font-size: em(13px); }
+small, .t-xxs                   { font-size: em(12px); }
+.t-xxxs                         { font-size: em(11px); text-transform: uppercase;}
+
+p, .p, ul, ol {
+	@extend .t-m;
+	margin: 0 0 26px 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img,
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+		max-width: 100%;
+		position: relative;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+/* @end */

@@ -1,0 +1,77 @@
+// =======================
+// SERP-Related elements
+// ======================= */
+
+header {
+	padding-top: 16px;
+	border-top: 4px solid $red;
+	border-bottom: 1px solid $platinum-darker;
+	box-shadow: 0 1px 0 rgba(0,0,0,0);
+
+	.logo {
+		float: left;
+		width: 42px;
+		height: 42px;
+		border-radius: 100%;
+		background-color: $red;
+		margin-left: 28px;
+	}
+
+	form {
+		height: 38px;
+		width: 845px;
+		padding: $margin;
+		margin-left: ($serp-margin-left - 10);
+		border-radius: 2px;
+		border: 1px solid $silver-dark;
+		background-color: $white-alt;
+	}
+
+	input {
+		display: block;
+		width: 100%;
+		font-size: 1.1em;
+		background: none;
+		outline: none;
+		border: none;
+		padding: 0;
+		z-index: 1;
+	}
+
+	.duckbar {
+		margin: $margin ($serp-margin-left - 10);
+
+		a {
+			padding: 0 $margin;
+			color: $dim;
+
+			&.active { color: $red; }
+			&.border { border-right: 1px solid $platinum-darker; }
+		}
+	}
+}
+
+.ia_wrapper {
+	padding: $margin 0;
+	// border-top: 1px solid $platinum-darker;
+	border-bottom: 1px solid $platinum-darker;
+	background-color: $silver;
+}
+.ia_tab {
+	margin-left: $serp-margin-left;
+	margin-bottom: $margin;
+	color: $dim;
+}
+.ia {
+	margin-left: $serp-margin-left;
+}
+
+.container.serp {
+	width: $serp-width;
+	margin-left: $serp-margin-left;
+
+	p { 
+		@extend .t-13;
+		color: $dim; 
+	}
+}
