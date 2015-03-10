@@ -61,19 +61,19 @@ h1,h2,h3,h4,h5,h6 {
     margin-bottom: 0;
 }
 
-h1, .h-xxl, .t-xxxxl			{ font-size: em(40px); }
-h2, .h-xl, .t-xxxl           	{ font-size: em(30px); }
-h3, .h-l, .t-xxl   			    { font-size: em(21px); }
-h4, .h-m, .t-xl                 { font-size: em(19px); }
-h5, .h-s, .t-l                  { font-size: em(17px); }
+h1, .h-xxl, .t-xxxxl, .t-40 	{ font-size: em(40px); }
+h2, .h-xl, .t-xxxl, .t-30      	{ font-size: em(30px); }
+h3, .h-l, .t-xxl, .t-21		    { font-size: em(21px); }
+h4, .h-m, .t-xl, .t-19          { font-size: em(19px); }
+h5, .h-s, .t-l, .t-17           { font-size: em(17px); }
 h6, .h-xs, .t-m, .t-16          { font-size: em(16px); }
 .t-s, .t-14 					{ font-size: em(14px); }
 .t-xs, .t-13                    { font-size: em(13px); }
-small, .t-xxs                   { font-size: em(12px); }
-.t-xxxs                         { font-size: em(11px); text-transform: uppercase;}
+small, .t-xxs, .t-12            { font-size: em(12px); }
+.t-xxxs, .t-11                  { font-size: em(11px); text-transform: uppercase;}
 
 p, .p, ul, ol {
-	@extend .t-m;
+	@extend .t-16;
 	margin: 0 0 26px 0;
 }
 

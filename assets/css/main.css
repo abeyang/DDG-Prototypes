@@ -392,22 +392,22 @@ html {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0; }
 
-h1, .h-xxl, .t-xxxxl {
+h1, .h-xxl, .t-xxxxl, .t-40 {
   font-size: 2.7777777778em; }
 
-h2, .h-xl, .t-xxxl {
+h2, .h-xl, .t-xxxl, .t-30 {
   font-size: 2.0833333333em; }
 
-h3, .h-l, .t-xxl {
+h3, .h-l, .t-xxl, .t-21 {
   font-size: 1.4583333333em; }
 
-h4, .h-m, .t-xl {
+h4, .h-m, .t-xl, .t-19 {
   font-size: 1.3194444444em; }
 
-h5, .h-s, .t-l {
+h5, .h-s, .t-l, .t-17 {
   font-size: 1.1805555556em; }
 
-h6, .h-xs, .t-m, p, .p, ul, ol, .t-16 {
+h6, .h-xs, .t-m, .t-16, p, .p, ul, ol {
   font-size: 1.1111111111em; }
 
 .t-s, .t-14 {
@@ -416,10 +416,10 @@ h6, .h-xs, .t-m, p, .p, ul, ol, .t-16 {
 .t-xs, .t-13, .container.serp p {
   font-size: 0.9027777778em; }
 
-small, .t-xxs {
+small, .t-xxs, .t-12 {
   font-size: 0.8333333333em; }
 
-.t-xxxs {
+.t-xxxs, .t-11 {
   font-size: 0.7638888889em;
   text-transform: uppercase; }
 
