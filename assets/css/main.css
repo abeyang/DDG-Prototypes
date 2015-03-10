@@ -491,6 +491,12 @@ header {
       header .duckbar a.border {
         border-right: 1px solid #d0d0d0; }
 
+.container.serp {
+  width: 620px;
+  margin-left: 110px; }
+  .container.serp p {
+    color: #666666; }
+
 .ia_wrapper {
   padding: 10px 0;
   border-bottom: 1px solid #d0d0d0;
@@ -503,12 +509,6 @@ header {
 
 .ia {
   margin-left: 110px; }
-
-.container.serp {
-  width: 620px;
-  margin-left: 110px; }
-  .container.serp p {
-    color: #666666; }
 
 .guides {
   border: 1px solid #4ffdfe; }

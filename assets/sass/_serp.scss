@@ -51,21 +51,6 @@ header {
 	}
 }
 
-.ia_wrapper {
-	padding: $margin 0;
-	// border-top: 1px solid $platinum-darker;
-	border-bottom: 1px solid $platinum-darker;
-	background-color: $silver;
-}
-.ia_tab {
-	margin-left: $serp-margin-left;
-	margin-bottom: $margin;
-	color: $dim;
-}
-.ia {
-	margin-left: $serp-margin-left;
-}
-
 .container.serp {
 	width: $serp-width;
 	margin-left: $serp-margin-left;
