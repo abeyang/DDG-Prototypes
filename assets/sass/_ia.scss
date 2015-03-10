@@ -5,6 +5,13 @@
 	border-bottom: 1px solid $platinum-darker;
 	background-color: $silver;
 }
+.has_tiles {
+	overflow-y: hidden;
+	white-space: nowrap;
+	position: static;
+}
+
+
 .ia_tab {
 	margin-left: $serp-margin-left;
 	margin-bottom: $margin;

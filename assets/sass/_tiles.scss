@@ -1,0 +1,21 @@
+.tile {
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: top;
+
+	border-radius: 2px;
+	position: relative;
+	background-color: map-get($colors, white);
+	border: 1px solid #e3e3e3;
+	border-bottom-color: #cacaca;
+	outline: 1px solid transparent;
+}
+
+.tile_body {
+	padding: $margin;
+
+	&.mod {
+		height: 100px;
+		width: 180px;
+	}
+}
