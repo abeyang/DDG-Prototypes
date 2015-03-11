@@ -5,7 +5,7 @@
 
 	border-radius: 2px;
 	position: relative;
-	background-color: map-get($colors, white);
+	background-color: map-get($colors, "white");
 	border: 1px solid #e3e3e3;
 	border-bottom-color: #cacaca;
 	outline: 1px solid transparent;

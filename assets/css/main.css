@@ -1,4 +1,5 @@
 /* Colors */
+/* Sass Maps: http://thesassway.com/news/sass-3-3-released */
 /* Sizes */
 @font-face {
   font-family: 'proxima-nova';
@@ -378,7 +379,7 @@ html, body {
   text-shadow: none; }
 
 html, button, input, select, textarea {
-  color: #333333;
+  color: jet;
   /* Abe: modified */ }
 
 html {
@@ -422,6 +423,216 @@ small, .t-xxs, .t-12 {
 .t-xxxs, .t-11 {
   font-size: 0.7638888889em;
   text-transform: uppercase; }
+
+.c-black {
+  color: #111; }
+
+.bg-black {
+  background-color: #111; }
+
+.c-white {
+  color: #fff; }
+
+.bg-white {
+  background-color: #fff; }
+
+.c-white-alt {
+  color: #f7f7f7; }
+
+.bg-white-alt {
+  background-color: #f7f7f7; }
+
+.c-silver {
+  color: #f2f2f2; }
+
+.bg-silver {
+  background-color: #f2f2f2; }
+
+.c-silver-dark {
+  color: #c3c3c3; }
+
+.bg-silver-dark {
+  background-color: #c3c3c3; }
+
+.c-platinum {
+  color: #ededed; }
+
+.bg-platinum {
+  background-color: #ededed; }
+
+.c-platinum-dark {
+  color: #e0e0e0; }
+
+.bg-platinum-dark {
+  background-color: #e0e0e0; }
+
+.c-platinum-darker {
+  color: #d0d0d0; }
+
+.bg-platinum-darker {
+  background-color: #d0d0d0; }
+
+.c-ash {
+  color: #aaaaaa; }
+
+.bg-ash {
+  background-color: #aaaaaa; }
+
+.c-gray-light {
+  color: #999; }
+
+.bg-gray-light {
+  background-color: #999; }
+
+.c-gray {
+  color: #888888; }
+
+.bg-gray {
+  background-color: #888888; }
+
+.c-dim {
+  color: #666666; }
+
+.bg-dim {
+  background-color: #666666; }
+
+.c-dim-blue {
+  color: #434a50; }
+
+.bg-dim-blue {
+  background-color: #434a50; }
+
+.c-jet {
+  color: #333333; }
+
+.bg-jet {
+  background-color: #333333; }
+
+.c-jet-blue {
+  color: #34383b; }
+
+.bg-jet-blue {
+  background-color: #34383b; }
+
+.c-gray-blue {
+  color: #707978; }
+
+.bg-gray-blue {
+  background-color: #707978; }
+
+.c-gray-dark {
+  color: dim; }
+
+.bg-gray-dark {
+  background-color: dim; }
+
+.c-gray-darker {
+  color: jet; }
+
+.bg-gray-darker {
+  background-color: jet; }
+
+.c-divider-gray {
+  color: platinum-darker; }
+
+.bg-divider-gray {
+  background-color: platinum-darker; }
+
+.c-red {
+  color: #de5833; }
+
+.bg-red {
+  background-color: #de5833; }
+
+.c-red-dark {
+  color: #bd4b2b; }
+
+.bg-red-dark {
+  background-color: #bd4b2b; }
+
+.c-red-darker {
+  color: #7f321d; }
+
+.bg-red-darker {
+  background-color: #7f321d; }
+
+.c-red-light {
+  color: #e37151; }
+
+.bg-red-light {
+  background-color: #e37151; }
+
+.c-red-lighter {
+  color: #eea793; }
+
+.bg-red-lighter {
+  background-color: #eea793; }
+
+.c-green {
+  color: #589e4d; }
+
+.bg-green {
+  background-color: #589e4d; }
+
+.c-blue-desaturated {
+  color: #6096bf; }
+
+.bg-blue-desaturated {
+  background-color: #6096bf; }
+
+.c-blue-dark-bg {
+  color: #49a9f2; }
+
+.bg-blue-dark-bg {
+  background-color: #49a9f2; }
+
+.c-blue {
+  color: #4495d4; }
+
+.bg-blue {
+  background-color: #4495d4; }
+
+.c-blue-dark {
+  color: #3a7fb4; }
+
+.bg-blue-dark {
+  background-color: #3a7fb4; }
+
+.c-blue-darker {
+  color: #27567a; }
+
+.bg-blue-darker {
+  background-color: #27567a; }
+
+.c-blue-light {
+  color: #60a5da; }
+
+.bg-blue-light {
+  background-color: #60a5da; }
+
+.c-blue-lighter {
+  color: #9ec8e8; }
+
+.bg-blue-lighter {
+  background-color: #9ec8e8; }
+
+.c-blue-lightest {
+  color: #b3d4ed; }
+
+.bg-blue-lightest {
+  background-color: #b3d4ed; }
+
+.c-gold {
+  color: #f1a031; }
+
+.bg-gold {
+  background-color: #f1a031; }
+
+.c-purple {
+  color: #5454db; }
+
+.bg-purple {
+  background-color: #5454db; }
 
 p, .p, ul, ol {
   margin: 0 0 26px 0; }

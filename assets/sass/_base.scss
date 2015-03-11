@@ -29,17 +29,17 @@ html,body
 /* @group Generic */
 
 ::-moz-selection {
-    background: $blue-lighter;
+    background: map-get($colors, "blue-lighter");
     text-shadow: none;
 }
 
 ::selection {
-    background: $blue-lighter;
+    background: map-get($colors, "blue-lighter");
     text-shadow: none;
 }
 
 html, button, input, select, textarea {
-    color: $gray-darker; /* Abe: modified */
+    color: map-get($colors, "gray-darker"); /* Abe: modified */
 }
 
 html {
@@ -71,6 +71,16 @@ h6, .h-xs, .t-m, .t-16          { font-size: em(16px); }
 .t-xs, .t-13                    { font-size: em(13px); }
 small, .t-xxs, .t-12            { font-size: em(12px); }
 .t-xxxs, .t-11                  { font-size: em(11px); text-transform: uppercase;}
+
+// Produces warnings:
+@each $name, $color in $colors {
+    // Font Colors 
+    .c-#{$name} { color: $color; }
+
+    // Background Colors
+    .bg-#{$name} { background-color: $color; }
+}
+
 
 p, .p, ul, ol {
 	@extend .t-16;
