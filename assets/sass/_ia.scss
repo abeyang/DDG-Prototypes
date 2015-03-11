@@ -2,9 +2,9 @@
 .ia_wrapper {
 	padding: $margin 0;
 	margin-bottom: $margin*3;
-	// border-top: 1px solid map-get($colors, "platinum-darker");
 	border-bottom: 1px solid map-get($colors, "platinum-darker");
 	background-color: map-get($colors, "silver");
+	// background-color: map-get($colors, "blue-superlight");
 }
 .has_tiles {
 	overflow-y: hidden;

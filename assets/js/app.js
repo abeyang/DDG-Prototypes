@@ -19,35 +19,26 @@ var app = angular.module('app', []);
 
 // CONTROLLERS
 
-app.controller('PlanetsController', function($scope) {
+app.controller('PlanetsController', function($scope, ui) {
+	ui.search = 'planets';
+	ui.tab = 'Celestial Bodies';
+	$scope.ui = ui;
 
 	$scope.planets = [
 		{
 			name: 'sun',
 			type: 'Star',
-			expand: 0,
-			area: '',
-			radius: '',
-			daylength: '',
-			mass: '',
-			distance: '',
-			period: ''
+			expand: 0
 		},
 		{
 			name: 'mercury',
 			type: 'Planet',
-			expand: 0,
-			area: '',
-			radius: '',
-			daylength: '',
-			mass: '',
-			distance: '',
-			period: ''
+			expand: 0
 		},
 		{
 			name: 'venus',
 			type: 'Planet',
-			expand: 1
+			expand: 0
 		},
 		{
 			name: 'earth',
@@ -77,44 +68,17 @@ app.controller('PlanetsController', function($scope) {
 
 });
 
+app.controller('IndexController', function() {
+	// Empty controller, to prevent errors being thrown
+});
+
 // FACTORIES
 
-/*
+
 app.factory('ui', function() {
 	return {
         lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor.',
-        findById: function(resource, id) {
-        	return _.find(resource.list(), function(obj) {
-                return obj.id == id;
-            });
-        },
-        findAttrById: function(resource, attr, id) {
-        	var obj = this.findById(resource, id);
-        	return obj[attr];
-        },
-        imageLink: function(id) {
-        	return 'assets/images/cover_' + id + '.jpg';
-        },
-        avatarLink: function(id) {
-        	return 'assets/images/face_' + id + '.jpg';	
-        },
-        getDate: function(datetimestr) {
-        	return moment(datetimestr).format('ll');
-        },
-        getTime: function(datetimestr) {
-        	return moment(datetimestr).format('h:mm a');
-        },
-        getDateTime: function(datetimestr) {
-        	// return moment(datetimestr).calendar();
-        	return this.getDate(datetimestr) + ', ' + this.getTime(datetimestr);
-        },
-        getMyName: function() {
-        	return name;
-        },
-        toggle: function(item) {
-        	// toggles between true and false
-        	return (item) ? false : true;
-        }
-	}
+        search: '',
+        tab: 'Info'
+	};
 });
-*/

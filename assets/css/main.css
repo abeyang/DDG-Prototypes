@@ -623,6 +623,12 @@ small, .t-xxs, .t-12 {
 .bg-blue-lightest {
   background-color: #b3d4ed; }
 
+.c-blue-superlight {
+  color: #f1f7fc; }
+
+.bg-blue-superlight {
+  background-color: #f1f7fc; }
+
 .c-gold {
   color: #f1a031; }
 
@@ -664,6 +670,17 @@ textarea {
   resize: vertical; }
 
 /* @end */
+.ui-panel {
+  display: none;
+  width: 300px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  opacity: 0.8;
+  background-color: #4495d4;
+  color: #fff; }
+
 header {
   padding-top: 16px;
   border-top: 4px solid #de5833;

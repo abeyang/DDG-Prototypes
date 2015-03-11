@@ -14,10 +14,10 @@
   transition: width 0.3s ease-in-out;
   margin-left: 144px; }
 .Planets .expand .tile_info {
-  width: 300px; }
-.Planets table {
-  margin: 8px 15px;
   width: 270px; }
+.Planets table {
+  margin: 8px 20px;
+  width: 230px; }
   .Planets table td {
     padding-top: 10px; }
   .Planets table .info {

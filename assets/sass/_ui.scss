@@ -1,0 +1,13 @@
+.ui-panel {
+	display: none;	// come back to this one day
+
+	width: 300px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: $margin*2;
+
+	opacity: 0.8;
+	background-color: map-get($colors, "blue");
+	color: map-get($colors, "white");
+}
