@@ -1,0 +1,39 @@
+.Planets .tile {
+  margin-right: 10px; }
+  .Planets .tile:hover {
+    cursor: pointer;
+    border-color: #de5833;
+    outline-color: #de5833; }
+.Planets .tile_info {
+  width: 0;
+  float: left;
+  overflow: hidden;
+  transition: width 0.3s ease-out; }
+.Planets .expand .tile_info {
+  width: 300px;
+  margin-left: 144px; }
+.Planets .tile_wrapper {
+  width: 144px;
+  height: 200px;
+  z-index: 100; }
+.Planets .planet {
+  height: 134px;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .Planets .planet.sun {
+    background-image: url(img/sun@2x.png); }
+  .Planets .planet.mercury {
+    background-image: url(img/mercury.png); }
+  .Planets .planet.venus {
+    background-image: url(img/venus.png); }
+  .Planets .planet.earth {
+    background-image: url(img/earth@2x.png); }
+  .Planets .planet.moon {
+    background-image: url(img/moon.png); }
+  .Planets .planet.mars {
+    background-image: url(img/mars.png); }
+.Planets h6 {
+  text-align: center;
+  text-transform: capitalize; }
+.Planets .tile_subtitle {
+  text-align: center; }

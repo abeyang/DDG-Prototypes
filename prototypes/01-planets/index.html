@@ -1,4 +1,3 @@
-<!-- Planets -->
 
 <!DOCTYPE html>
 <head>
@@ -8,9 +7,14 @@
     <meta name="description" content="DuckDuckGo Prototypes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS -->
 	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
+
+	<!-- Javascript -->
+	<script src="../../assets/js/angular.js"></script>
+	<script src="../../assets/js/app.js"></script>
 </head>
-<body>
+<body ng-app="app">
 
 <header>
 	<div class="logo"> </div>
@@ -24,28 +28,33 @@
 		<a>Videos</a>
 	</div>
 </header>
-<div class="ia_wrapper has_tiles">
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="Planets.css" charset="utf-8">
+
+<!-- Main -->
+<div ng-controller="PlanetsController" class="ia_wrapper has_tiles Planets">
 	<div class="ia_tab">
 		Showing 35 Results
-	</div>
+	</div> <!-- /.ia_tab -->
+
 	<div class="ia">
-		<div class="tile">
-			<div class="tile_body mod">
-				testing
+		<div class="tile" ng-repeat="planet in planets" ng-class="{expand: planet.expand}" ng-click="planet.expand = -(planet.expand-1)">
+			<div class="tile_info">
+				asdasdf
+			</div>
+
+			<div class="tile_wrapper bg-jet">
+				<div class="planet {{planet.name}}">
+					
+				</div>
+				<div class="tile_body">
+					<h6 class="c-white">{{planet.name}}</h6>
+					<div class="c-ash tile_subtitle">{{planet.type}}</div>
+				</div>				
 			</div>
 		</div>
-		<div class="tile">
-			<div class="tile_body mod">
-				testing
-			</div>
-		</div>
-		<div class="tile">
-			<div class="tile_body mod">
-				testing
-			</div>
-		</div>
-	</div>
-</div>
+	</div> <!-- /.ia -->
+</div> <!-- /.ia_wrapper -->
 
     <div class="container serp">
     	<div class="result">

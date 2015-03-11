@@ -1,0 +1,57 @@
+$width: 144px;
+
+.Planets {
+	.tile {
+		margin-right: 10px;
+
+		&:hover {
+			cursor: pointer;
+			border-color: #de5833;
+			outline-color: #de5833;
+		}
+	}
+
+	.tile_info {
+		width: 0;
+		float: left;
+		overflow: hidden;
+		transition: width 0.3s ease-out;
+	}
+	.expand .tile_info {
+		width: 300px;
+		margin-left: $width;
+	}
+
+	.tile_wrapper {
+		width: $width;
+		height: 200px;
+		z-index: 100;
+	}
+
+	.planet {
+		height: 134px;
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		&.sun { background-image: url(img/sun@2x.png); }
+		&.mercury { background-image: url(img/mercury.png); }
+		&.venus { background-image: url(img/venus.png); }
+		&.earth { background-image: url(img/earth@2x.png); }
+		&.moon { background-image: url(img/moon.png); }
+		&.mars { background-image: url(img/mars.png); }
+	}
+
+	.tile_body {
+		// ...
+	}
+
+	h6 {
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+	.tile_subtitle {
+		text-align: center;
+	}
+
+}

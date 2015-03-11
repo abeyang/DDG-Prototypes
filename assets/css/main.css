@@ -391,6 +391,7 @@ html {
 
 /* Standard Classes */
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
   margin-bottom: 0; }
 
 h1, .h-xxl, .t-xxxxl, .t-40 {
@@ -414,7 +415,7 @@ h6, .h-xs, .t-m, .t-16, p, .p, ul, ol {
 .t-s, .t-14 {
   font-size: 0.9722222222em; }
 
-.t-xs, .t-13, .container.serp p {
+.t-xs, .t-13, .container.serp p, .tile_subtitle {
   font-size: 0.9027777778em; }
 
 small, .t-xxs, .t-12 {
@@ -736,6 +737,10 @@ header {
   border: 1px solid #e3e3e3;
   border-bottom-color: #cacaca;
   outline: 1px solid transparent; }
+  .tile:hover {
+    cursor: pointer;
+    border-color: #666666;
+    outline-color: #666666; }
 
 .tile_body {
   padding: 10px; }

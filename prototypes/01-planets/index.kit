@@ -1,31 +1,35 @@
-<!-- Planets -->
-
 <!-- $title: Planets -->
+
 <!-- $dir: ../../ -->
 <!-- @include ../../includes/searchtab -->
 
-<div class="ia_wrapper has_tiles">
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+
+<!-- Main -->
+<div ng-controller="<!-- $title -->Controller" class="ia_wrapper has_tiles <!-- $title -->">
 	<div class="ia_tab">
 		Showing 35 Results
-	</div>
+	</div> <!-- /.ia_tab -->
+
 	<div class="ia">
-		<div class="tile">
-			<div class="tile_body mod">
-				testing
+		<div class="tile" ng-repeat="planet in planets" ng-class="{expand: planet.expand}" ng-click="planet.expand = -(planet.expand-1)">
+			<div class="tile_info">
+				asdasdf
+			</div>
+
+			<div class="tile_wrapper bg-jet">
+				<div class="planet {{planet.name}}">
+					
+				</div>
+				<div class="tile_body">
+					<h6 class="c-white">{{planet.name}}</h6>
+					<div class="c-ash tile_subtitle">{{planet.type}}</div>
+				</div>				
 			</div>
 		</div>
-		<div class="tile">
-			<div class="tile_body mod">
-				testing
-			</div>
-		</div>
-		<div class="tile">
-			<div class="tile_body mod">
-				testing
-			</div>
-		</div>
-	</div>
-</div>
+	</div> <!-- /.ia -->
+</div> <!-- /.ia_wrapper -->
 
 <!-- @include ../../includes/serp -->	
 <!-- @include ../../includes/foot -->

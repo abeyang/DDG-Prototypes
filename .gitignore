@@ -1,4 +1,4 @@
 .DS_Store
-assets/css/.scss-cache
-assets/sass/.sass-cache
 bower_components
+*.scssc
+*.sassc
