@@ -1,6 +1,7 @@
 
 .ia_wrapper {
 	padding: $margin 0;
+	margin-bottom: $margin*3;
 	// border-top: 1px solid map-get($colors, "platinum-darker");
 	border-bottom: 1px solid map-get($colors, "platinum-darker");
 	background-color: map-get($colors, "silver");
@@ -10,7 +11,6 @@
 	white-space: nowrap;
 	position: static;
 }
-
 
 .ia_tab {
 	margin-left: $serp-margin-left;

@@ -40,7 +40,12 @@
 	<div class="ia">
 		<div class="tile" ng-repeat="planet in planets" ng-class="{expand: planet.expand}" ng-click="planet.expand = -(planet.expand-1)">
 			<div class="tile_info">
-				asdasdf
+				<table>
+					<tr ng-repeat="item in info">
+						<td class="label c-gray-light t-13">{{ item.name }}</td>
+						<td class="info t-13">{{ item.info }}</td>
+					</tr>
+				</table>
 			</div>
 
 			<div class="tile_wrapper bg-jet">
@@ -52,6 +57,7 @@
 					<div class="c-ash tile_subtitle">{{planet.type}}</div>
 				</div>				
 			</div>
+
 		</div>
 	</div> <!-- /.ia -->
 </div> <!-- /.ia_wrapper -->

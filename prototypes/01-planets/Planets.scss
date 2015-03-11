@@ -1,4 +1,7 @@
-$width: 144px;
+@import "../../assets/sass/variables";
+
+$tile_width: 144px;
+$info_width: 300px;
 
 .Planets {
 	.tile {
@@ -15,15 +18,24 @@ $width: 144px;
 		width: 0;
 		float: left;
 		overflow: hidden;
-		transition: width 0.3s ease-out;
+		transition: width 0.3s ease-in-out;
+		margin-left: $tile_width;
 	}
 	.expand .tile_info {
-		width: 300px;
-		margin-left: $width;
+		width: $info_width;
+	}
+
+	table {
+		margin: 8px 15px;
+		width: $info_width - 30;
+
+		td { padding-top: 10px; }
+
+		.info { text-align: right; }
 	}
 
 	.tile_wrapper {
-		width: $width;
+		width: $tile_width;
 		height: 200px;
 		z-index: 100;
 	}
@@ -42,7 +54,8 @@ $width: 144px;
 	}
 
 	.tile_body {
-		// ...
+		width: $tile_width;
+		position: absolute;
 	}
 
 	h6 {

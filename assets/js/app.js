@@ -66,14 +66,14 @@ app.controller('PlanetsController', function($scope) {
 		},
 	];
 
-	$scope.info = {
-		area: '177.7 million sq miles',
-		radius: '3,760 miles',
-		daylength: '116d 18h 0m',
-		mass: '4.867E24 kg',
-		distance: '67,240,000 miles',
-		period: '225 days'
-	};
+	$scope.info = [
+		{name: 'Surface Area', info: '177.7 million sq miles'},
+		{name: 'Radius', info: '3,760 miles'},
+		{name: 'Length of Day', info: '116d 18h 0m'},
+		{name: 'Mass', info: '4.867E24 kg'},
+		{name: 'Distance from Sun', info: '67,240,000 miles'},
+		{name: 'Orbital Period', info: '225 days'}
+	];
 
 });
 

@@ -1,3 +1,6 @@
+/* Colors */
+/* Sass Maps: http://thesassway.com/news/sass-3-3-released */
+/* Sizes */
 .Planets .tile {
   margin-right: 10px; }
   .Planets .tile:hover {
@@ -8,10 +11,17 @@
   width: 0;
   float: left;
   overflow: hidden;
-  transition: width 0.3s ease-out; }
-.Planets .expand .tile_info {
-  width: 300px;
+  transition: width 0.3s ease-in-out;
   margin-left: 144px; }
+.Planets .expand .tile_info {
+  width: 300px; }
+.Planets table {
+  margin: 8px 15px;
+  width: 270px; }
+  .Planets table td {
+    padding-top: 10px; }
+  .Planets table .info {
+    text-align: right; }
 .Planets .tile_wrapper {
   width: 144px;
   height: 200px;
@@ -32,6 +42,9 @@
     background-image: url(img/moon.png); }
   .Planets .planet.mars {
     background-image: url(img/mars.png); }
+.Planets .tile_body {
+  width: 144px;
+  position: absolute; }
 .Planets h6 {
   text-align: center;
   text-transform: capitalize; }
