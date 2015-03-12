@@ -15,10 +15,6 @@ $info_width: 270px;
 	}
 
 	.tile_info {
-		width: 0;
-		float: left;
-		overflow: hidden;
-		transition: width 0.3s ease-in-out;
 		margin-left: $tile_width;
 	}
 	.expand .tile_info {

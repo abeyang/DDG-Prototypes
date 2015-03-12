@@ -5,6 +5,7 @@
 
 <!-- Load all other resources here: -->
 <link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+<script src="<!-- $title -->.js"></script>
 
 <!-- UI Panel: for prototyping purposes -->
 <div class="ui-panel">
@@ -19,7 +20,7 @@
 	</div> <!-- /.ia_tab -->
 
 	<div class="ia">
-		<div class="tile" ng-repeat="planet in planets" ng-class="{expand: planet.expand}" ng-click="planet.expand = -(planet.expand-1)">
+		<div class="tile tile-accordion" ng-repeat="planet in planets" ng-class="{expand: planet.expand}">
 			<div class="tile_info">
 				<table>
 					<tr ng-repeat="item in info">
@@ -29,7 +30,7 @@
 				</table>
 			</div>
 
-			<div class="tile_wrapper bg-jet">
+			<div ng-click="planet.expand = -(planet.expand-1)" class="tile_wrapper bg-jet">
 				<div class="planet {{planet.name}}">
 					
 				</div>

@@ -759,6 +759,14 @@ header {
     cursor: pointer;
     border-color: #666666;
     outline-color: #666666; }
+  .tile.expand:hover {
+    cursor: default; }
+
+.tile-accordion .tile_info {
+  width: 0;
+  float: left;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out; }
 
 .tile_body {
   padding: 10px; }

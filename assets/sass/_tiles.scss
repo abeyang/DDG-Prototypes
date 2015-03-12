@@ -15,7 +15,22 @@
 		border-color: map-get($colors, "dim");
 		outline-color: map-get($colors, "dim");
 	}
+
+	&.expand:hover {
+		// todo: need to still work on this
+		cursor: default;
+	}
 }
+
+.tile-accordion {
+	.tile_info {
+		width: 0;
+		float: left;
+		overflow: hidden;
+		transition: width 0.3s ease-in-out;
+	}
+}
+
 
 .tile_body {
 	padding: $margin;
