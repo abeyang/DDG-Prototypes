@@ -1,0 +1,88 @@
+<!-- $title: Population -->
+
+<!-- $dir: ../../ -->
+<!-- @include ../../includes/searchtab -->
+
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+<script src="<!-- $dir -->assets/js/Chart.js"></script>
+<script src="<!-- $title -->.js"></script>
+
+<!-- UI Panel: for prototyping purposes -->
+<div class="ui-panel">
+	<h6>Test</h6>
+	<p>{{ ui.lorem }}</p>
+</div> <!-- /.ui-panel -->
+
+<!-- Main -->
+<div class="ia_wrapper has_tiles <!-- $title -->">
+	<!-- todo: currently .ia_tab shifts along with tiles. NOT CORRECT. -->
+	<div class="ia_tab">
+		<strong>Population</strong> of nations within <strong>Eastern Europe</strong>
+	</div> <!-- /.ia_tab -->
+
+	<div class="ia">
+		<div class="tile tile-accordion" ng-repeat="nation in nations" ng-class="{expand: nation.expand}">
+			<div class="tile_info">
+				
+			</div>
+
+			<div ng-click="nation.expand = -(nation.expand-1)" class="tile_wrapper">
+				<h6>{{ nation.name }} </h6>
+				<div class="flag">
+					<div class="imageborder">
+						<img src="https://duckduckgo.com/assets/flags/60/{{nation.flag}}.png?v=4">
+					</div>
+				</div>
+				<div class="tile_body">
+					<h6>{{nation.population}} million</h6>
+					<div class="c-gray-light tile_subtitle">{{nation.year}}</div>
+				</div>				
+			</div>
+
+		</div>
+	</div> <!-- /.ia -->
+</div> <!-- /.ia_wrapper -->
+
+<!-- <canvas ng-if="nation.name=='Kazakhstan'" id="chart" width="230" height="200"></canvas> -->
+<canvas id="chart" width="230" height="200"></canvas>
+
+<!-- @include ../../includes/serp -->	
+
+<script type="text/javascript">
+	
+	// Init Chart
+	var data = {
+	    labels: ["January", "February", "March", "April", "May", "June", "July"],
+	    datasets: [
+	        {
+	            label: "My First dataset",
+	            fillColor: "rgba(220,220,220,0.2)",
+	            strokeColor: "rgba(220,220,220,1)",
+	            pointColor: "rgba(220,220,220,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(220,220,220,1)",
+	            data: [65, 59, 80, 81, 56, 55, 40]
+	        },
+	        {
+	            label: "My Second dataset",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [28, 48, 40, 19, 86, 27, 90]
+	        }
+	    ]
+	};
+
+	var options = {};
+
+	ctx = document.getElementById("chart").getContext("2d");
+	lineChart = new Chart(ctx).Line(data, options);
+
+</script>
+
+<!-- @include ../../includes/foot -->

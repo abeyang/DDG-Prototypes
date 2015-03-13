@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Population / DDG Prototypes</title>
+    <meta name="description" content="DuckDuckGo Prototypes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
+
+	<!-- Javascript -->
+	<script src="../../assets/js/angular.min.js"></script>
+	<script src="../../assets/js/app.js"></script>
+</head>
+<body ng-controller="PopulationController">
+
+<header>
+	<div class="logo"> </div>
+	<form>
+		<input type="text" value="{{ui.search}}">
+	</form>
+
+	<div class="duckbar">
+		<a class="active border">{{ui.tab}}</a>
+		<a>Images</a>
+		<a>Videos</a>
+	</div>
+</header>
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="Population.css" charset="utf-8">
+<script src="../../assets/js/Chart.js"></script>
+<script src="Population.js"></script>
+
+<!-- UI Panel: for prototyping purposes -->
+<div class="ui-panel">
+	<h6>Test</h6>
+	<p>{{ ui.lorem }}</p>
+</div> <!-- /.ui-panel -->
+
+<!-- Main -->
+<div class="ia_wrapper has_tiles Population">
+	<!-- todo: currently .ia_tab shifts along with tiles. NOT CORRECT. -->
+	<div class="ia_tab">
+		<strong>Population</strong> of nations within <strong>Eastern Europe</strong>
+	</div> <!-- /.ia_tab -->
+
+	<div class="ia">
+		<div class="tile tile-accordion" ng-repeat="nation in nations" ng-class="{expand: nation.expand}">
+			<div class="tile_info">
+				
+			</div>
+
+			<div ng-click="nation.expand = -(nation.expand-1)" class="tile_wrapper">
+				<h6>{{ nation.name }} </h6>
+				<div class="flag">
+					<div class="imageborder">
+						<img src="https://duckduckgo.com/assets/flags/60/{{nation.flag}}.png?v=4">
+					</div>
+				</div>
+				<div class="tile_body">
+					<h6>{{nation.population}} million</h6>
+					<div class="c-gray-light tile_subtitle">{{nation.year}}</div>
+				</div>				
+			</div>
+
+		</div>
+	</div> <!-- /.ia -->
+</div> <!-- /.ia_wrapper -->
+
+<!-- <canvas ng-if="nation.name=='Kazakhstan'" id="chart" width="230" height="200"></canvas> -->
+<canvas id="chart" width="230" height="200"></canvas>
+
+    <div class="container serp">
+    	<div class="result">
+    		<h4>Duis mollis, est non commodo luctus</h4>
+    		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    	</div>
+
+    	<div class="result">
+    		<h4>Duis mollis, est non commodo luctus</h4>
+    		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    	</div>
+				
+	</div><!-- /.container.serp -->	
+
+<script type="text/javascript">
+	
+	// Init Chart
+	var data = {
+	    labels: ["January", "February", "March", "April", "May", "June", "July"],
+	    datasets: [
+	        {
+	            label: "My First dataset",
+	            fillColor: "rgba(220,220,220,0.2)",
+	            strokeColor: "rgba(220,220,220,1)",
+	            pointColor: "rgba(220,220,220,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(220,220,220,1)",
+	            data: [65, 59, 80, 81, 56, 55, 40]
+	        },
+	        {
+	            label: "My Second dataset",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
+	            data: [28, 48, 40, 19, 86, 27, 90]
+	        }
+	    ]
+	};
+
+	var options = {};
+
+	ctx = document.getElementById("chart").getContext("2d");
+	lineChart = new Chart(ctx).Line(data, options);
+
+</script>
+
+</body>
+</html>

@@ -82,6 +82,22 @@ small, .t-xxs, .t-12            { font-size: em(12px); }
     .bg-#{$name} { background-color: $color; }
 }
 
+// border effect
+.imageborder {
+  position: relative;
+    
+  &:before {
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;    // todo: needs to be dynamic
+    height: 60px;
+    border: 2px solid rgba(0,0,0,.15);
+    border-radius: 100%;
+  }
+}
+
 
 p, .p, ul, ol {
 	@extend .t-16;

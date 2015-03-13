@@ -1,0 +1,64 @@
+@import "../../assets/sass/variables";
+
+$tile_width: 144px;
+$info_width: 270px;
+
+.Population {
+	.tile {
+		margin-right: 10px;
+
+		&:hover {
+			cursor: pointer;
+			border-color: #de5833;
+			outline-color: #de5833;
+		}
+	}
+
+	.tile_info {
+		margin-left: $tile_width;
+	}
+	.expand .tile_info {
+		width: $info_width;
+	}
+
+	canvas { z-index: 150; }
+
+	// todo: delete table
+	table {
+		margin: 8px 20px;
+		width: $info_width - 40;
+	}
+
+	.tile_wrapper {
+		width: $tile_width;
+		padding-top: 20px;
+		height: 200px;
+		z-index: 100;
+	}
+	.expand .tile_wrapper {
+		background-color: map-get($colors, "white-alt");
+	}
+
+	.tile_body {
+		
+	}
+
+	h6 {
+		text-align: center;
+	}
+
+	.tile_subtitle {
+		text-align: center;
+	}
+
+	.flag {
+		margin-top: 15px;
+		margin-bottom: 10px;
+
+		.imageborder {
+			// can't simply do text-align: center, due to border
+			left: $tile_width/2 - (60 - 30);
+		}
+	}
+
+}

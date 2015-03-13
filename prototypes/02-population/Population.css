@@ -1,0 +1,34 @@
+/* Colors */
+/* Sass Maps: http://thesassway.com/news/sass-3-3-released */
+/* Sizes */
+.Population .tile {
+  margin-right: 10px; }
+  .Population .tile:hover {
+    cursor: pointer;
+    border-color: #de5833;
+    outline-color: #de5833; }
+.Population .tile_info {
+  margin-left: 144px; }
+.Population .expand .tile_info {
+  width: 270px; }
+.Population canvas {
+  z-index: 150; }
+.Population table {
+  margin: 8px 20px;
+  width: 230px; }
+.Population .tile_wrapper {
+  width: 144px;
+  padding-top: 20px;
+  height: 200px;
+  z-index: 100; }
+.Population .expand .tile_wrapper {
+  background-color: #f7f7f7; }
+.Population h6 {
+  text-align: center; }
+.Population .tile_subtitle {
+  text-align: center; }
+.Population .flag {
+  margin-top: 15px;
+  margin-bottom: 10px; }
+  .Population .flag .imageborder {
+    left: 42px; }

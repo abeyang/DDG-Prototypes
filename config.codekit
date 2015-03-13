@@ -13523,6 +13523,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/prototypes\/01-planets\/min\/Planets-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/01-planets\/min\/Planets-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/01-planets\/min\/min\/Planets-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/prototypes\/01-planets\/Planets.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -13531,6 +13542,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/01-planets\/Planets.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/01-planets\/Planets.js",
+		"outputAbbreviatedPath": "\/prototypes\/01-planets\/min\/Planets-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/prototypes\/01-planets\/Planets.scss": {
 		"createSourceMap": 0,
@@ -13541,6 +13563,71 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/01-planets\/Planets.scss",
 		"outputAbbreviatedPath": "\/prototypes\/01-planets\/Planets.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/prototypes\/02-population\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/02-population\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/02-population\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/02-population\/index.kit",
+		"outputAbbreviatedPath": "\/prototypes\/02-population\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/02-population\/min\/Population-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/02-population\/min\/Population-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/02-population\/min\/min\/Population-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/02-population\/Population.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/02-population\/Population.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/02-population\/Population.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/02-population\/Population.js",
+		"outputAbbreviatedPath": "\/prototypes\/02-population\/min\/Population-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/02-population\/Population.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/02-population\/Population.scss",
+		"outputAbbreviatedPath": "\/prototypes\/02-population\/Population.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,

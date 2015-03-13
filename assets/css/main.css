@@ -641,6 +641,18 @@ small, .t-xxs, .t-12 {
 .bg-purple {
   background-color: #5454db; }
 
+.imageborder {
+  position: relative; }
+  .imageborder:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-radius: 100%; }
+
 p, .p, ul, ol {
   margin: 0 0 26px 0; }
 
