@@ -1,0 +1,1 @@
+app.controller("TilesController",function(e,d){d.init("weather","Weather",!1),e.ui=d,e.ui.expandmode=0,e.tiles=[{wide:!0,expand:!1},{wide:!1,expand:!1},{wide:!1,expand:!1},{wide:!1,expand:!1},{wide:!1,expand:!1},{wide:!1,expand:!1},{wide:!1,expand:!1},{wide:!1,expand:!1}]});

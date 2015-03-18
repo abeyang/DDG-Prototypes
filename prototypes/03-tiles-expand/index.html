@@ -1,0 +1,77 @@
+<!-- Inspiration:
+http://tympanus.net/codrops/2014/01/14/look-inside-book-preview-with-bookblock/
+http://www.the-art-of-web.com/css/css-animation/ (Step 5)
+ -->
+
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Tiles / DDG Prototypes</title>
+    <meta name="description" content="DuckDuckGo Prototypes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
+
+	<!-- Javascript -->
+	<script src="../../assets/js/angular.js"></script>
+	<script src="../../assets/js/app.js"></script>
+</head>
+<body ng-controller="TilesController">
+
+<header>
+	<div class="logo"> </div>
+	<form>
+		<input type="text" value="{{ui.search}}">
+	</form>
+
+	<div class="duckbar">
+		<a class="active border">{{ui.tab}}</a>
+		<a>Images</a>
+		<a>Videos</a>
+	</div>
+</header>
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="Tiles.css" charset="utf-8">
+<script src="Tiles.js"></script>
+
+<!-- UI Panel: for prototyping purposes -->
+<div class="ui-panel">
+	<h6>Test</h6>
+	<p>{{ ui.lorem }}</p>
+</div> <!-- /.ui-panel -->
+
+<!-- Main -->
+<div class="ia_wrapper has_tiles Tiles">
+	<!-- todo: currently .ia_tab shifts along with tiles. NOT CORRECT. -->
+	<div class="ia_tab">
+		<strong ng-click="ui.expandmode = -(ui.expandmode-1)">Toggle Expand-Mode</strong> Weather in Riverside, CA {{ ui.expandmode }}
+	</div> <!-- /.ia_tab -->
+
+	<div class="ia" ng-class="{expandmode: ui.expandmode}">
+		<div class="tile" ng-repeat="tile in tiles" ng-class="{expand: tile.expand, wide: tile.wide}">
+			<div ng-click="ui.expandmode = 1" class="tile_wrapper">
+				{{ $index }}
+			</div>
+		</div>
+	</div> <!-- /.ia -->
+</div> <!-- /.ia_wrapper -->
+
+
+    <div class="container serp">
+    	<div class="result">
+    		<h4>Duis mollis, est non commodo luctus</h4>
+    		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    	</div>
+
+    	<div class="result">
+    		<h4>Duis mollis, est non commodo luctus</h4>
+    		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    	</div>
+				
+	</div><!-- /.container.serp -->	
+</body>
+</html>

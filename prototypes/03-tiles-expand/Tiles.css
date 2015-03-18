@@ -1,0 +1,19 @@
+/* Colors */
+/* Sass Maps: http://thesassway.com/news/sass-3-3-released */
+/* Sizes */
+.Tiles .tile {
+  margin-right: 10px;
+  display: block;
+  float: left; }
+.Tiles .tile_wrapper {
+  width: 50px;
+  height: 150px;
+  padding: 10px;
+  transition: all 0.5s ease-in-out; }
+.Tiles .wide .tile_wrapper {
+  width: 200px; }
+.Tiles .expandmode .tile {
+  display: block;
+  float: none; }
+.Tiles .expandmode .tile_wrapper {
+  width: 620px; }

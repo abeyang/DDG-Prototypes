@@ -1,0 +1,39 @@
+<!-- Inspiration:
+http://tympanus.net/codrops/2014/01/14/look-inside-book-preview-with-bookblock/
+http://www.the-art-of-web.com/css/css-animation/ (Step 5)
+ -->
+
+<!-- $title: Tiles -->
+
+<!-- $dir: ../../ -->
+<!-- @include ../../includes/searchtab -->
+
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+<script src="<!-- $title -->.js"></script>
+
+<!-- UI Panel: for prototyping purposes -->
+<div class="ui-panel">
+	<h6>Test</h6>
+	<p>{{ ui.lorem }}</p>
+</div> <!-- /.ui-panel -->
+
+<!-- Main -->
+<div class="ia_wrapper has_tiles <!-- $title -->">
+	<!-- todo: currently .ia_tab shifts along with tiles. NOT CORRECT. -->
+	<div class="ia_tab">
+		<strong ng-click="ui.expandmode = -(ui.expandmode-1)">Toggle Expand-Mode</strong> Weather in Riverside, CA {{ ui.expandmode }}
+	</div> <!-- /.ia_tab -->
+
+	<div class="ia" ng-class="{expandmode: ui.expandmode}">
+		<div class="tile" ng-repeat="tile in tiles" ng-class="{expand: tile.expand, wide: tile.wide}">
+			<div ng-click="ui.expandmode = 1" class="tile_wrapper">
+				{{ $index }}
+			</div>
+		</div>
+	</div> <!-- /.ia -->
+</div> <!-- /.ia_wrapper -->
+
+
+<!-- @include ../../includes/serp -->	
+<!-- @include ../../includes/foot -->

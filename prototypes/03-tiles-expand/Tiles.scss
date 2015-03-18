@@ -1,0 +1,39 @@
+@import "../../assets/sass/variables";
+
+$tile_width: 50px;
+$tile_height: 150px;
+
+.Tiles {
+	.tile {
+		margin-right: 10px;
+		// -webkit-transition-property: left, top, -webkit-transform;
+		// -webkit-transition-duration: 1s, 1s, 1s;
+		// -webkit-transition-delay: 0, 0, 0;
+		display: block;
+		float: left;
+	}
+
+	.tile_wrapper {
+		width: $tile_width;
+		height: $tile_height;
+		padding: $margin;
+
+		transition: all 0.5s ease-in-out;
+	}
+
+	.wide .tile_wrapper { width: $tile_width * 4; }
+
+	.expandmode {
+		.tile {
+			display: block;
+			float: none;
+			// width: $serp-width;
+		}
+		.tile_wrapper {
+			// width: 100%;
+			width: $serp-width;
+		}
+	}
+
+
+}
