@@ -15,7 +15,7 @@ Created by Abe Yang 5/14/2014
 'use strict';
 
 // var app = angular.module('app', ['ngSanitize', 'textAngular', 'flow']);
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngSanitize']);
 
 // CONTROLLERS
 
