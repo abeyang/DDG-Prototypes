@@ -327,7 +327,7 @@ textarea {
 
 /* @end */
 .Cheatsheet h6 {
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 10px; }
 .Cheatsheet .half {
   float: left;
@@ -342,14 +342,28 @@ textarea {
 .Cheatsheet code {
   padding: 3px 5px;
   border-radius: 3px;
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
+  border: none;
+  background-color: #e0e0e0;
   color: #333333; }
+.Cheatsheet .graygray code {
+  border: 1px solid #d0d0d0;
+  background-color: #ededed; }
+.Cheatsheet .whitegray code {
+  border: 1px solid #e0e0e0;
+  background-color: #fff; }
+.Cheatsheet .white code {
+  border: none;
+  background-color: #fff; }
+.Cheatsheet .whiteblue code {
+  border: 1px solid #b3d4ed;
+  background-color: #fff;
+  color: #3a7fb4; }
 .Cheatsheet .key {
-  min-width: 74px;
+  min-width: 84px;
   max-width: 140px;
   padding-right: 10px;
   color: #888888;
-  line-height: 1.6; }
+  line-height: 1.7; }
 .Cheatsheet .desc {
-  color: #666666; }
+  color: #666666;
+  line-height: 1.4; }

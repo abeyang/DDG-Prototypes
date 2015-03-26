@@ -5,9 +5,8 @@ $tile_width: 144px;
 $info_width: 270px;
 
 .Cheatsheet {
-//	h4 { margin-bottom: $margin; }
 	h6 {
-		margin-top: $margin*1.5;
+		margin-top: $margin*2;
 		margin-bottom: $margin;
 	}
 
@@ -31,22 +30,44 @@ $info_width: 270px;
 	code {
 		padding: 3px 5px;
 		border-radius: 3px;
-		border: 1px solid map-get($colors, "platinum-dark"); 
-		background-color: map-get($colors, "white"); 
+		border: none;
+		background-color: map-get($colors, "platinum-dark"); 
 		color: map-get($colors, "jet");
+	}
+	
+	.graygray code {
+		border: 1px solid map-get($colors, "platinum-darker"); 
+		background-color: map-get($colors, "platinum"); 
+	}
+
+	.whitegray code {
+		border: 1px solid map-get($colors, "platinum-dark"); 
+		background-color: map-get($colors, "white"); 			
+	}
+
+	.white code {
+		border: none;
+		background-color: map-get($colors, "white"); 			
+	}
+
+	.whiteblue code {
+		border: 1px solid map-get($colors, "blue-lightest"); 
+		background-color: map-get($colors, "white"); 
+		color: map-get($colors, "blue-dark"); 
 	}
 
 	.key { 
-		min-width: 74px;
+		min-width: 84px;
 		max-width: 140px;
 		padding-right: $margin;
 		@extend .t-12;
 		color: map-get($colors, "gray"); 
-		line-height: 1.6;
+		line-height: 1.7;
 	}
 
 	.desc {
 		color: map-get($colors, "dim"); 
+		line-height: 1.4;
 	}
 
 }

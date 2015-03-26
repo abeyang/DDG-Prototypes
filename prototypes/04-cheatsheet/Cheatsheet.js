@@ -1,5 +1,6 @@
 app.controller('CheatsheetController', function($scope, ui) {
 	ui.init('cheatsheet', 'Cheatsheet', false);
+	ui.color = '';
 	$scope.ui = ui;
 
 	$scope.emacs = [
@@ -218,6 +219,31 @@ app.controller('CheatsheetController', function($scope, ui) {
 				}
 			]
 		},
+		{
+			name: 'Help',
+			commands: [
+				{
+					key: "<code>C-h k</code>",
+					desc: "Show command documentation"
+				},
+				{
+					key: "<code>C-h a</code>",
+					desc: "Command apropos"
+				},
+				{
+					key: "<code>C-h c</code>",
+					desc: "Show command name on message line"
+				},
+				{
+					key: "<code>C-h f</code>",
+					desc: "Describe function"
+				},
+				{
+					key: "<code>C-h i</code>",
+					desc: "Info browser"
+				}
+			]
+		}
 	];
 
 	$scope.cheats = $scope.emacs;

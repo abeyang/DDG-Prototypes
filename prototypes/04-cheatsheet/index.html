@@ -36,8 +36,14 @@
 
 <!-- UI Panel: for prototyping purposes -->
 <div class="ui-panel">
-	<h6>Test</h6>
-	<p>{{ ui.lorem }}</p>
+	<h6>Colors</h6>
+	<p>
+		<input type="radio" ng-model="ui.color" value=""> Default (Gray / no border)<br />
+		<input type="radio" ng-model="ui.color" value="graygray"> Light Gray / Gray<br />
+		<input type="radio" ng-model="ui.color" value="whitegray"> White / Gray<br />
+		<input type="radio" ng-model="ui.color" value="white"> White / no border<br />
+		<input type="radio" ng-model="ui.color" value="whiteblue"> White / Blue<br />
+	</p>
 </div> <!-- /.ui-panel -->
 
 <!-- Main -->
@@ -45,7 +51,7 @@
 	<div class="ia pad-15">
 		<h4>Cheatsheet {{half}}</h4>
 
-		<div class="half">
+		<div class="half" ng-class="ui.color">
 			<table>
 				<tbody ng-repeat="cheat in cheats | limitTo:half">
 					<tr>
@@ -61,7 +67,7 @@
 			</table>
 		</div>
 
-		<div class="half">
+		<div class="half" ng-class="ui.color">
 			<!-- https://docs.angularjs.org/api/ng/filter/limitTo -->
 			<table>
 				<tbody ng-repeat="cheat in cheats | limitTo:half-full">
