@@ -1,0 +1,44 @@
+@import "../../assets/sass/variables";
+
+$tile_width: 144px;
+$info_width: 270px;
+
+.Cheatsheet {
+//	h4 { margin-bottom: $margin; }
+	h6 {
+		margin-top: $margin*2;
+		margin-bottom: $margin;
+	}
+
+	.half {
+		float: left;
+		width: $serp-width/2;
+
+		&:first-of-type {
+			padding-right: 23px;
+		}
+		&:last-of-type {
+			padding-left: 23px;
+		}
+	}
+
+	td {
+		vertical-align: top;
+		line-height: 1.6;
+	}
+
+	code {
+		padding: 3px 5px;
+		border-radius: 3px;
+		// border: 1px solid map-get($colors, "platinum-dark"); 
+		background-color: map-get($colors, "white"); 
+		color: map-get($colors, "jet");
+	}
+
+	.key { 
+		max-width: 84px;
+		padding-right: $margin;
+		color: map-get($colors, "gray"); 
+	}
+
+}

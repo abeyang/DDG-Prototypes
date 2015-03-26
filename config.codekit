@@ -13722,6 +13722,82 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/prototypes\/04-cheatsheet\/Cheatsheet.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/Cheatsheet.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/04-cheatsheet\/Cheatsheet.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/Cheatsheet.js",
+		"outputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/min\/Cheatsheet-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/04-cheatsheet\/Cheatsheet.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/Cheatsheet.scss",
+		"outputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/Cheatsheet.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/prototypes\/04-cheatsheet\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/04-cheatsheet\/index.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/index.kit",
+		"outputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/04-cheatsheet\/min\/Cheatsheet-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/min\/Cheatsheet-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/min\/min\/Cheatsheet-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/04-cheatsheet\/min\/Planets-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/min\/Planets-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/04-cheatsheet\/min\/min\/Planets-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,

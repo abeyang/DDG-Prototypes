@@ -1,0 +1,42 @@
+<!-- $title: Cheatsheet -->
+
+<!-- $dir: ../../ -->
+<!-- @include ../../includes/searchtab -->
+
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+<script src="<!-- $title -->.js"></script>
+
+<!-- UI Panel: for prototyping purposes -->
+<div class="ui-panel">
+	<h6>Test</h6>
+	<p>{{ ui.lorem }}</p>
+</div> <!-- /.ui-panel -->
+
+<!-- Main -->
+<div class="ia_wrapper <!-- $title --> clearfix">
+	<div class="ia pad-15">
+		<h4>Cheatsheet</h4>
+
+		<div class="half">
+			<div ng-repeat="cheat in cheats">
+				<h6>{{ cheat.name }}</h6>
+				<table>
+					<tr ng-repeat="cmd in cheat.commands">
+						<td class="key" ng-bind-html="cmd.key"></td>
+						<td>{{ cmd.desc }}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="half">
+			{{ ui.lorem }}
+		</div>
+
+		&nbsp;
+	</div>
+</div> <!-- /.ia_wrapper -->
+
+<!-- @include ../../includes/serp -->	
+<!-- @include ../../includes/foot -->

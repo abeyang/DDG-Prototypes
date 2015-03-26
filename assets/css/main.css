@@ -756,6 +756,12 @@ header {
 
 .ia {
   margin-left: 110px; }
+  .ia.pad-15 {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  .ia.pad-30 {
+    padding-top: 30px;
+    padding-bottom: 30px; }
 
 .tile {
   margin-right: 5px;

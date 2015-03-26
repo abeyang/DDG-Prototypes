@@ -1,0 +1,25 @@
+/* Colors */
+/* Sass Maps: http://thesassway.com/news/sass-3-3-released */
+/* Sizes */
+.Cheatsheet h6 {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+.Cheatsheet .half {
+  float: left;
+  width: 310px; }
+  .Cheatsheet .half:first-of-type {
+    padding-right: 23px; }
+  .Cheatsheet .half:last-of-type {
+    padding-left: 23px; }
+.Cheatsheet td {
+  vertical-align: top;
+  line-height: 1.6; }
+.Cheatsheet code {
+  padding: 3px 5px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333333; }
+.Cheatsheet .key {
+  max-width: 84px;
+  padding-right: 10px;
+  color: #888888; }
