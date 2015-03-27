@@ -25,35 +25,35 @@ app.controller('CheatsheetController', function($scope, ui) {
 			name: 'Cursor Movement',
 			commands: [
 				{
-					key: "<code>C-f</code> / <code>C-b</code> ",
+					key: "<code>C-f</code> / <code>C-b</code>",
 					desc: "Move forward/backward by character"
 				},
 				{
-					key: "<code>M-f</code> / <code>M-b</code> ",
+					key: "<code>M-f</code> / <code>M-b</code>",
 					desc: "Move forward/backward by word"
 				},
 				{
-					key: "<code>C-n</code> / <code>C-p</code> ",
+					key: "<code>C-n</code> / <code>C-p</code>",
 					desc: "Move forward/backward by line"
 				},
 				{
-					key: "<code>M-e</code> / <code>M-a</code> ",
+					key: "<code>M-e</code> / <code>M-a</code>",
 					desc: "Move forward/backward by sentence"
 				},
 				{
-					key: "<code>C-M-f</code> / <code>C-M-b</code> ",
+					key: "<code>C-M-f</code> / <code>C-M-b</code>",
 					desc: "Move forward/backward by expression"
 				},
 				{
-					key: "<code>M-}</code> / <code>M-{</code> ",
+					key: "<code>M-}</code> / <code>M-{</code>",
 					desc: "Move forward/backward by paragraph"
 				},
 				{
-					key: "<code>C-a</code> / <code>C-e</code> ",
+					key: "<code>C-a</code> / <code>C-e</code>",
 					desc: "Move to beginning/end of line"
 				},
 				{
-					key: "<code>M-<</code> / <code>M-></code> ",
+					key: "<code>M-<</code> / <code>M-></code>",
 					desc: "Move to beginning/end of buffer"
 				},
 			]
@@ -62,11 +62,11 @@ app.controller('CheatsheetController', function($scope, ui) {
 			name: 'Deletion',
 			commands: [
 				{
-					key: "<code>C-d</code> / <code>DEL</code> ",
+					key: "<code>C-d</code> / <code>DEL</code>",
 					desc: "Delete forward/backward by character"
 				},
 				{
-					key: "<code>M-D</code> / <code>M-DEL</code> ",
+					key: "<code>M-D</code> / <code>M-DEL</code>",
 					desc: "Delete forward/backward by word"
 				},
 				{
@@ -78,7 +78,7 @@ app.controller('CheatsheetController', function($scope, ui) {
 					desc: "Delete forward/backward by sentence"
 				},
 				{
-					key: "<code>C-M-k</code> / <code>C-M-DEL</code> ",
+					key: "<code>C-M-k</code> / <code>C-M-DEL</code>",
 					desc: "Delete forward/backward by expression"
 				}
 			]
@@ -91,7 +91,7 @@ app.controller('CheatsheetController', function($scope, ui) {
 					desc: "Page Down"
 				},
 				{
-					key: "<code>M-v	</code>", 
+					key: "<code>M-v</code>", 
 					desc: "Page Up"
 				},
 				{
@@ -99,27 +99,27 @@ app.controller('CheatsheetController', function($scope, ui) {
 					desc: "Page Down other window"
 				},
 				{
-					key: "<code>C-x 1</code>", 
+					key: "<code>C-x</code> <code>1</code>", 
 					desc: "Make current window only window"
 				},
 				{
-					key: "<code>C-x 2</code>", 
+					key: "<code>C-x</code> <code>2</code>", 
 					desc: "Split window vertically"
 				},
 				{
-					key: "<code>C-x 3</code>", 
+					key: "<code>C-x</code> <code>3</code>", 
 					desc: "Split window horizontally"
 				},
 				{
-					key: "<code>C-x ^</code>", 
+					key: "<code>C-x</code> <code>^</code>", 
 					desc: "Grow window vertically"
 				},
 				{
-					key: "<code>C-x o</code>", 
+					key: "<code>C-x</code> <code>o</code>", 
 					desc: "Switch to next window"
 				},
 				{
-					key: "<code>C-x 0</code>", 
+					key: "<code>C-x</code> <code>0</code>", 
 					desc: "Close current window"
 				}
 			]
@@ -132,27 +132,27 @@ app.controller('CheatsheetController', function($scope, ui) {
 					desc: "Find file (or create if not existing)"
 				},
 				{
-					key: "<code>C-x C-s</code>", 
+					key: "<code>C-x</code> <code>C-s</code>", 
 					desc: "Save file"
 				},
 				{
-					key: "<code>C-x C-w</code>", 
+					key: "<code>C-x</code> <code>C-w</code>", 
 					desc: "Write file"
 				},
 				{
-					key: "<code>C-x s</code>", 
+					key: "<code>C-x</code> <code>s</code>", 
 					desc: "Save modified buffers"
 				},
 				{
-					key: "<code>C-x b</code>", 
+					key: "<code>C-x</code> <code>b</code>", 
 					desc: "Select buffer"
 				},
 				{
-					key: "<code>C-x C-b</code>", 
+					key: "<code>C-x</code> <code>C-b</code>", 
 					desc: "List buffers"
 				},
 				{
-					key: "<code>C-x k</code>", 
+					key: "<code>C-x</code> <code>k</code>", 
 					desc: "Kill buffer"
 				}
 			]
@@ -165,19 +165,19 @@ app.controller('CheatsheetController', function($scope, ui) {
 					desc: "Set mark"
 				},
 				{
-					key: "<code>C-w	</code>",
+					key: "<code>C-w</code>",
 					desc: "Cut (after setting mark and moving to end point)"
 				},
 				{
-					key: "<code>M-w	</code>",
+					key: "<code>M-w</code>",
 					desc: "Copy (after setting mark and moving to end point)"
 				},
 				{
-					key: "<code>C-y	</code>",
+					key: "<code>C-y</code>",
 					desc: "Yank (paste) most recently killed (cut or copied)"
 				},
 				{
-					key: "<code>M-y	</code>",
+					key: "<code>M-y</code>",
 					desc: "Yank next most recently killed"
 				}
 			]
@@ -186,11 +186,11 @@ app.controller('CheatsheetController', function($scope, ui) {
 			name: 'Searching and Replacing',
 			commands: [
 				{
-					key: "<code>C-s	</code>",
+					key: "<code>C-s</code>",
 					desc: "Incremental search forward"
 				},
 				{
-					key: "<code>C-r	</code>",
+					key: "<code>C-r</code>",
 					desc: "Incremental search backward"
 				},
 				{
@@ -223,23 +223,23 @@ app.controller('CheatsheetController', function($scope, ui) {
 			name: 'Help',
 			commands: [
 				{
-					key: "<code>C-h k</code>",
+					key: "<code>C-h</code> <code>k</code>",
 					desc: "Show command documentation"
 				},
 				{
-					key: "<code>C-h a</code>",
+					key: "<code>C-h</code> <code>a</code>",
 					desc: "Command apropos"
 				},
 				{
-					key: "<code>C-h c</code>",
+					key: "<code>C-h</code> <code>c</code>",
 					desc: "Show command name on message line"
 				},
 				{
-					key: "<code>C-h f</code>",
+					key: "<code>C-h</code> <code>f</code>",
 					desc: "Describe function"
 				},
 				{
-					key: "<code>C-h i</code>",
+					key: "<code>C-h</code> <code>i</code>",
 					desc: "Info browser"
 				}
 			]

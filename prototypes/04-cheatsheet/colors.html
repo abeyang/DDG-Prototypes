@@ -10,7 +10,11 @@
 
     <!-- CSS -->
 	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
-    
+
+	<!-- Javascript -->
+	<script src="../../assets/js/angular.js"></script>
+	<script src="../../assets/js/angular-sanitize.js"></script>
+	<script src="../../assets/js/app.js"></script>
 </head>
 <body ng-controller="CheatsheetController">
 <header>
@@ -27,41 +31,60 @@
 </header>
 <!-- Load all other resources here: -->
 <link rel="stylesheet" href="Cheatsheet.css" charset="utf-8">
-
-<!-- First 3 files are required for angular-masonry, unfortunately:
-https://github.com/passy/angular-masonry/issues/100#issuecomment-78165023 -->
-<script src="../../assets/js/jquery-1.11.2.min.js"></script>
-<script src="../../assets/js/masonry.pkgd.min.js"></script>
-<script src="../../assets/js/imagesloaded.pkgd.js"></script>
-<!-- Javascript -->
-<script src="../../assets/js/angular.js"></script>
-<script src="../../assets/js/angular-sanitize.js"></script>
-<script src="../../assets/js/angular-masonry.js"></script>
-<script src="../../assets/js/app.js"></script>
-
-<script type="text/javascript">
-	app.requires.push('wu.masonry');
-</script>
-
 <script src="Cheatsheet.js"></script>
 
+<!-- UI Panel: for prototyping purposes -->
+<div class="ui-panel">
+	<h6>Colors</h6>
+	<p>
+		<input type="radio" ng-model="ui.color" value=""> Default (Gray / no border)<br />
+		<input type="radio" ng-model="ui.color" value="graygray"> Light Gray / Gray<br />
+		<input type="radio" ng-model="ui.color" value="whitegray"> White / Gray<br />
+		<input type="radio" ng-model="ui.color" value="white"> White / no border<br />
+		<input type="radio" ng-model="ui.color" value="whiteblue"> White / Blue<br />
+	</p>
+</div> <!-- /.ui-panel -->
 
 <!-- Main -->
 <div class="ia_wrapper Cheatsheet clearfix">
 	<div class="ia pad-15">
-		<div masonry column-width="320">
-			<h4>Emacs Cheatsheet</h4>
+		<h4>Emacs Cheatsheet</h4>
 
-			<div class="masonry-brick whitegray" ng-repeat="cheat in cheats">
-				<h6>{{ cheat.name }}</h6>
-				<div ng-repeat="cmd in cheat.commands">
-					<span class="key" ng-bind-html="cmd.key"></span>
-					<span class="desc">{{ cmd.desc }}</span>
-				</div>
-			</div> <!-- /.item -->
+		<div class="half" ng-class="ui.color">
+			<table>
+				<tbody ng-repeat="cheat in cheats | limitTo:half">
+					<tr>
+						<td colspan="2">
+							<h6>{{ cheat.name }}</h6>
+						</td>
+					</tr>
+					<tr ng-repeat="cmd in cheat.commands">
+						<td class="key" ng-bind-html="cmd.key"></td>
+						<td class="desc">{{ cmd.desc }}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		
-	</div> <!-- /.ia -->
+
+		<div class="half" ng-class="ui.color">
+			<!-- https://docs.angularjs.org/api/ng/filter/limitTo -->
+			<table>
+				<tbody ng-repeat="cheat in cheats | limitTo:half-full">
+					<tr>
+						<td colspan="2">
+							<h6>{{ cheat.name }}</h6>
+						</td>
+					</tr>
+					<tr ng-repeat="cmd in cheat.commands">
+						<td class="key" ng-bind-html="cmd.key"></td>
+						<td class="desc">{{ cmd.desc }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		&nbsp;
+	</div>
 </div> <!-- /.ia_wrapper -->
 
     <div class="container serp">

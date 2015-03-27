@@ -339,6 +339,8 @@ textarea {
 .Cheatsheet td {
   vertical-align: top;
   padding-bottom: 4px; }
+.Cheatsheet .masonry-brick {
+  width: 300px; }
 .Cheatsheet code {
   padding: 3px 5px;
   border-radius: 3px;
