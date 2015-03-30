@@ -339,6 +339,8 @@ textarea {
 .Cheatsheet td {
   vertical-align: top;
   padding-bottom: 4px; }
+  .Cheatsheet td.key {
+    padding-right: 10px; }
 .Cheatsheet .masonry-brick {
   width: 300px; }
 .Cheatsheet code {
@@ -363,7 +365,6 @@ textarea {
 .Cheatsheet .key {
   min-width: 84px;
   max-width: 140px;
-  padding-right: 10px;
   color: #888888;
   line-height: 1.7; }
 .Cheatsheet .desc {

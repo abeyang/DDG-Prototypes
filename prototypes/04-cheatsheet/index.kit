@@ -1,0 +1,48 @@
+<!-- $title: Cheatsheet -->
+
+<!-- $dir: ../../ -->
+<!-- @include ../../includes/head-nojs -->
+<!-- @include ../../includes/searchtab -->
+
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+
+<!-- First 3 files are required for angular-masonry, unfortunately:
+https://github.com/passy/angular-masonry/issues/100#issuecomment-78165023 -->
+<script src="<!-- $dir -->assets/js/jquery-1.11.2.min.js"></script>
+<script src="<!-- $dir -->assets/js/masonry.pkgd.min.js"></script>
+<script src="<!-- $dir -->assets/js/imagesloaded.pkgd.js"></script>
+<!-- Javascript -->
+<script src="<!-- $dir -->assets/js/angular.js"></script>
+<script src="<!-- $dir -->assets/js/angular-sanitize.js"></script>
+<script src="<!-- $dir -->assets/js/angular-masonry.js"></script>
+<script src="<!-- $dir -->assets/js/app.js"></script>
+
+<script type="text/javascript">
+	// http://stackoverflow.com/questions/18875714/angular-js-re-open-and-add-dependencies-to-an-already-bootstrapped-application
+	app.requires.push('wu.masonry');
+</script>
+
+<script src="<!-- $title -->.js"></script>
+
+
+<!-- Main -->
+<div class="ia_wrapper <!-- $title --> clearfix">
+	<div class="ia pad-15">
+		<div masonry column-width="320">
+			<h4>Emacs Cheatsheet</h4>
+
+			<div class="masonry-brick whitegray" ng-repeat="cheat in cheats">
+				<h6>{{ cheat.name }}</h6>
+				<div ng-repeat="cmd in cheat.commands">
+					<span class="key" ng-bind-html="cmd.key"></span>
+					<span class="desc">{{ cmd.desc }}</span>
+				</div>
+			</div> <!-- /.item -->
+		</div>
+		
+	</div> <!-- /.ia -->
+</div> <!-- /.ia_wrapper -->
+
+<!-- @include ../../includes/serp -->	
+<!-- @include ../../includes/foot -->

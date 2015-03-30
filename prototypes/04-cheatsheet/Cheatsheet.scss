@@ -24,6 +24,8 @@ $card_width: 300px;
 	td {
 		vertical-align: top;
 		padding-bottom: 4px;
+
+		&.key { padding-right: $margin; }
 	}
 
 	.masonry-brick {
@@ -62,7 +64,6 @@ $card_width: 300px;
 	.key { 
 		min-width: 84px;
 		max-width: 140px;
-		padding-right: $margin;
 		@extend .t-12;
 		color: map-get($colors, "gray"); 
 		line-height: 1.7;
