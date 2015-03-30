@@ -11,4 +11,13 @@
 	opacity: 0.9;
 	background-color: map-get($colors, "jet");
 	color: map-get($colors, "white");
+	z-index: 100;
+
+	&.bottom {
+		width: 100%;
+		top: auto;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 }

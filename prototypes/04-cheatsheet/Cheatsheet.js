@@ -1,6 +1,8 @@
 app.controller('CheatsheetController', function($scope, ui) {
 	ui.init('cheatsheet', 'Cheatsheet', false);
-	ui.color = '';
+	ui.color = 'whitegray';
+	ui.inlineblock = 'inlineblock';
+	ui.tile = '';
 	$scope.ui = ui;
 
 	$scope.emacs = [
@@ -128,7 +130,7 @@ app.controller('CheatsheetController', function($scope, ui) {
 			name: 'Files and Buffers',
 			commands: [
 				{
-					key: "<code>C-x C-f</code>", 
+					key: "<code>C-x</code> <code>C-f</code>", 
 					desc: "Find file (or create if not existing)"
 				},
 				{

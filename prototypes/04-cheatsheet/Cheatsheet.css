@@ -56,7 +56,7 @@ h5, .h-s, .t-l, .t-17 {
 h6, .h-xs, .t-m, .t-16, p, .p, ul, ol {
   font-size: 1.1111111111em; }
 
-.t-s, .t-14 {
+.t-s, .t-14, .Cheatsheet .masonry-brick.tile h6 {
   font-size: 0.9722222222em; }
 
 .t-xs, .t-13 {
@@ -326,6 +326,10 @@ textarea {
   resize: vertical; }
 
 /* @end */
+.ui-panel span {
+  display: inline-block;
+  margin-left: 20px; }
+
 .Cheatsheet h6 {
   margin-top: 20px;
   margin-bottom: 10px; }
@@ -342,13 +346,36 @@ textarea {
   .Cheatsheet td.key {
     padding-right: 10px; }
 .Cheatsheet .masonry-brick {
-  width: 300px; }
+  width: 280px; }
+  .Cheatsheet .masonry-brick .pairing {
+    margin-bottom: 8px; }
+  .Cheatsheet .masonry-brick .key {
+    float: left;
+    width: 100px; }
+  .Cheatsheet .masonry-brick .desc {
+    margin-left: 110px;
+    padding-top: 1px; }
+  .Cheatsheet .masonry-brick.tile {
+    margin-bottom: 20px; }
+    .Cheatsheet .masonry-brick.tile h6 {
+      margin-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 10px;
+      border-bottom: 1px solid #eee; }
+    .Cheatsheet .masonry-brick.tile .pairing {
+      padding-left: 10px;
+      padding-right: 10px; }
 .Cheatsheet code {
   padding: 3px 5px;
   border-radius: 3px;
   border: none;
   background-color: #e0e0e0;
   color: #333333; }
+.Cheatsheet .inlineblock code {
+  display: inline-block;
+  padding-bottom: 0;
+  margin-top: 1px;
+  line-height: 1.3; }
 .Cheatsheet .graygray code {
   border: 1px solid #d0d0d0;
   background-color: #ededed; }
@@ -361,6 +388,10 @@ textarea {
 .Cheatsheet .whiteblue code {
   border: 1px solid #b3d4ed;
   background-color: #fff;
+  color: #3a7fb4; }
+.Cheatsheet .blue code {
+  border: 1px solid #D0E4F4;
+  background-color: #ECF4FB;
   color: #3a7fb4; }
 .Cheatsheet .key {
   min-width: 84px;
