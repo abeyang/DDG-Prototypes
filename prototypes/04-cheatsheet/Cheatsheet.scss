@@ -4,9 +4,11 @@
 $card_width: 280px;
 $key_width: 100px;
 
-.ui-panel span { 
-	display: inline-block;
-	margin-left: $margin*2; 
+.ui-panel {
+	h6, span { 
+		display: inline-block;
+		margin-right: $margin*2; 
+	}
 }
 
 .Cheatsheet {
@@ -36,23 +38,23 @@ $key_width: 100px;
 
 	.masonry-brick {
 		width: $card_width;
-		// margin-top: $margin;
-		// margin-bottom: $margin;
 
 		.pairing {
 			margin-bottom: 8px;
 		}
 
-		.key {
-			float: left;
-			width: $key_width;
-			// margin-right: $margin;
-		}
+		&.no-table {
+			.key {
+				float: left;
+				width: $key_width;
+			}
 
-		.desc {
-			margin-left: $key_width + 10;
-			padding-top: 1px;
+			.desc {
+				margin-left: $key_width + 10;
+			}
 		}
+		
+		.desc { padding-top: 1px; }
 
 		&.tile {
 			margin-bottom: $margin*2;

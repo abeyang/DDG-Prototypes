@@ -27,22 +27,25 @@ https://github.com/passy/angular-masonry/issues/100#issuecomment-78165023 -->
 
 <!-- UI Panel: for prototyping purposes -->
 <div class="ui-panel bottom">
-		<input type="checkbox" ng-model="ui.inlineblock" ng-true-value="'inlineblock'" ng-false-value="''"> <strong>Inline-block</strong>
+	<h6>Layout</h6>
+	<span><input type="checkbox" ng-model="ui.inlineblock" ng-true-value="'inlineblock'" ng-false-value="''"> Inline-block</span>
+	<span><input type="checkbox" ng-model="ui.tile" ng-true-value="'tile'" ng-false-value="''"> Tiles</span>
+	<span><input type="checkbox" ng-model="ui.equalsizecols"> Equal-sized Columns</span>
 
-		<br /><input type="checkbox" ng-model="ui.tile" ng-true-value="'tile'" ng-false-value="''"> <strong>Tiles</strong>
-		
-		<br /><strong>Colors</strong>
-		<span><input type="radio" ng-model="ui.color" value="whitegray"> White / Gray</span>
-		<span><input type="radio" ng-model="ui.color" value=""> Gray / no border</span>
-		<span><input type="radio" ng-model="ui.color" value="blue"> Blue / Light Blue</span>
+	<br /><h6>Colors</h6>
+	<span><input type="radio" ng-model="ui.color" value="whitegray"> White / Gray</span>
+	<span><input type="radio" ng-model="ui.color" value=""> Gray / no border</span>
+	<span><input type="radio" ng-model="ui.color" value="blue"> Blue / Light Blue</span>
 </div> <!-- /.ui-panel -->
 
 <!-- Main -->
 <div class="ia_wrapper <!-- $title --> clearfix">
 	<div class="ia pad-15">
 		<h4>Emacs Cheatsheet</h4>
-		<div masonry column-width="320">
-			<div class="masonry-brick" ng-class="[ui.color, ui.inlineblock, ui.tile]" ng-repeat="cheat in cheats">
+
+		<!-- Non Table-view -->
+		<div masonry column-width="320" ng-show="ui.equalsizecols">
+			<div class="masonry-brick no-table" ng-class="[ui.color, ui.inlineblock, ui.tile]" ng-repeat="cheat in cheats">
 				<h6>{{ cheat.name }}</h6>
 				<div ng-repeat="cmd in cheat.commands">
 					<div class="pairing clearfix">
@@ -52,9 +55,26 @@ https://github.com/passy/angular-masonry/issues/100#issuecomment-78165023 -->
 				</div>
 			</div> <!-- /.masonry-brick -->
 		</div>
+
+		<!-- Table-view -->
+		<div masonry column-width="320" ng-show="!ui.equalsizecols">
+			<table class="masonry-brick" ng-class="[ui.color, ui.inlineblock, ui.tile]" ng-repeat="cheat in cheats">
+				<tr>
+					<td colspan="2">
+						<h6>{{ cheat.name }}</h6>		
+					</td>
+				</tr>
+				<tr ng-repeat="cmd in cheat.commands">
+					<td class="key" ng-bind-html="cmd.key"></td>
+					<td class="desc">{{ cmd.desc }}</td>
+				</tr>
+			</table> <!-- /.masonry-brick -->
+		</div>
 		
 	</div> <!-- /.ia -->
 </div> <!-- /.ia_wrapper -->
+
+
 
 <!-- @include ../../includes/serp -->	
 <!-- @include ../../includes/foot -->

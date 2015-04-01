@@ -326,9 +326,9 @@ textarea {
   resize: vertical; }
 
 /* @end */
-.ui-panel span {
+.ui-panel h6, .ui-panel span {
   display: inline-block;
-  margin-left: 20px; }
+  margin-right: 20px; }
 
 .Cheatsheet h6 {
   margin-top: 20px;
@@ -349,11 +349,12 @@ textarea {
   width: 280px; }
   .Cheatsheet .masonry-brick .pairing {
     margin-bottom: 8px; }
-  .Cheatsheet .masonry-brick .key {
+  .Cheatsheet .masonry-brick.no-table .key {
     float: left;
     width: 100px; }
+  .Cheatsheet .masonry-brick.no-table .desc {
+    margin-left: 110px; }
   .Cheatsheet .masonry-brick .desc {
-    margin-left: 110px;
     padding-top: 1px; }
   .Cheatsheet .masonry-brick.tile {
     margin-bottom: 20px; }

@@ -2,6 +2,7 @@ app.controller('CheatsheetController', function($scope, ui) {
 	ui.init('cheatsheet', 'Cheatsheet', false);
 	ui.color = 'whitegray';
 	ui.inlineblock = 'inlineblock';
+	ui.equalsizecols = false;
 	ui.tile = '';
 	$scope.ui = ui;
 
