@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Detail / DDG Prototypes</title>
+    <meta name="description" content="DuckDuckGo Prototypes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
+
+	<!-- Javascript -->
+	<script src="../../assets/js/angular.js"></script>
+	<script src="../../assets/js/angular-sanitize.js"></script>
+	<script src="../../assets/js/app.js"></script>
+</head>
+<body ng-controller="DetailController">
+<header>
+	<div class="logo"> </div>
+	<form>
+		<input type="text" value="{{ui.search}}">
+	</form>
+
+	<div class="duckbar">
+		<a class="active border">{{ui.tab}}</a>
+		<a>Images</a>
+		<a>Videos</a>
+	</div>
+</header>
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="Detail.css" charset="utf-8">
+<script src="Detail.js"></script>
+
+<!-- UI Panel: for prototyping purposes -->
+<!-- <div class="ui-panel">
+	<h6>Test</h6>
+	<p>{{ ui.lorem }}</p>
+</div>  -->
+<!-- /.ui-panel -->
+
+<!-- Main -->
+<div class="ia_wrapper has_tiles Detail">
+	<div class="ia_tab">
+		Showing 10 Movies {{ selectedid }}
+	</div> <!-- /.ia_tab -->
+
+	<div class="ia">
+		<div class="tile" ng-repeat="movie in movies" ng-click="updateSelected($index)">
+			<img src="img/{{ movie.uid }}.jpg">
+			
+		</div>
+
+	</div> <!-- /.ia -->
+</div> <!-- /.ia_wrapper -->
+
+<!-- Detail Pane -->
+<!-- canvas: http://quasimondo.com/StackBlurForCanvas/StackBlurDemo.html -->
+<!-- svg: http://css-plus.com/2012/03/gaussian-blur/ -->
+<!-- pure css (using this one): http://zurb.com/playground/image-blur-texture -->
+<div class="detailpane">
+	<img class="hero_bg" src="img/{{ movies[selectedid].uid }}.jpg">
+	<img class="hero" src="img/{{ movies[selectedid].uid }}.jpg">
+	<div class="hero_block">
+		{{ movies[selectedid].name }}
+	</div>
+</div>
+
+    <div class="container serp">
+    	<div class="result">
+    		<h4>Duis mollis, est non commodo luctus</h4>
+    		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    	</div>
+
+    	<div class="result">
+    		<h4>Duis mollis, est non commodo luctus</h4>
+    		<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    	</div>
+				
+	</div><!-- /.container.serp -->	
+</body>
+</html>

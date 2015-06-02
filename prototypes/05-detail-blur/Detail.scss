@@ -1,0 +1,54 @@
+@import "../../assets/sass/variables";
+
+$tile_width: 144px;
+$info_width: 270px;
+
+.Detail {
+	.tile {
+		margin-right: 10px;
+
+		&:hover {
+			cursor: pointer;
+			border-color: #de5833;
+			outline-color: #de5833;
+		}
+
+		img {
+			height: 224px;
+		}
+	}
+
+	&.ia_wrapper { margin-bottom: 0; }
+}
+
+.detailpane {
+	position: relative;
+	height: 420px;
+	padding: 24px;
+	padding-left: $serp-margin-left;
+	margin-bottom: 30px;
+	background-color: #222;
+	overflow: hidden; // Hide overflow to contain the background
+
+	.hero_bg {
+		position: absolute;
+		top: -50%;
+		left: 0;
+		width: 200%;
+		// Where the magic happens
+		-webkit-filter: blur(100px);
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+
+	.hero {
+		position: relative;
+		height: 100%;
+	}
+
+	.hero_block {
+		position: absolute;
+		color: #fff;
+		top: 33%;
+		left: 400px;
+	}
+}
