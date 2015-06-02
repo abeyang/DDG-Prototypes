@@ -60,8 +60,8 @@ app.controller('DetailController', function($scope, ui) {
 	];
 
 	$scope.styles = {
-		blur: 100,		// px
-		top: -600,		// px
+		blur: 120,		// px
+		top: -500,		// px
 		width: 100,		// %
 		opacity: 66,	// %
 		vignette: ''
