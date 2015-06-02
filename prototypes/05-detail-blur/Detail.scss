@@ -32,13 +32,14 @@ $info_width: 270px;
 
 	.hero_bg {
 		position: absolute;
-		top: -50%;
+		//top: -50%;
 		left: 0;
 		width: 200%;
 		// Where the magic happens
-		-webkit-filter: blur(100px);
-		-webkit-transform: translate3d(0, 0, 0);
-		opacity: 0.75;
+		// -webkit-filter: blur(100px);
+		//opacity: 0.75;
+
+		&.vignette { -webkit-transform: translate3d(0, 0, 0); }
 	}
 
 	.hero {
@@ -65,8 +66,23 @@ $info_width: 270px;
 		}
 		p { 
 			margin-top: 12px; 
-			margin-right: 24px;
+			max-width: 900px;
 			color: rgba(255,255,255,0.8);
 		}
+	}
+}
+
+.ui-panel {
+	p { 
+		margin-bottom: 0; 
+		margin-top: -10px;
+	}
+
+	.slider_wrapper {
+		position: relative;
+		left: 100px;
+		top: -40px;
+		display: block;
+		width: 600px;
 	}
 }

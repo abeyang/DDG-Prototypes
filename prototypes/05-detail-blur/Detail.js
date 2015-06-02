@@ -28,16 +28,22 @@ app.controller('DetailController', function($scope, ui) {
 			director: 'Curtis Hanson'
 		},
 		{
-			uid: 'dreams',
-			name: 'In Dreams',
-			year: '1999',
-			director: 'Neil Jordan'
-		},
-		{
 			uid: 'creation',
 			name: 'Creation',
 			year: '2010',
 			director: 'Jon Amiel'
+		},
+		{
+			uid: 'folks',
+			name: 'The Thing About My Folks',
+			year: '2005',
+			director: 'Raymond De Felitta'
+		},
+		{
+			uid: 'dreams',
+			name: 'In Dreams',
+			year: '1999',
+			director: 'Neil Jordan'
 		},
 		{
 			uid: 'minorityreport',
@@ -53,10 +59,18 @@ app.controller('DetailController', function($scope, ui) {
 		}
 	];
 
+	$scope.styles = {
+		blur: 100,		// px
+		top: -50,		// px
+		width: 100,		// %
+		opacity: 75,	// %
+		vignette: 'vignette'
+	}
+
 	$scope.selectedid = 0;
 
 	$scope.updateSelected = function(id) {
 		$scope.selectedid = id;
-	}
+	};
 
 });

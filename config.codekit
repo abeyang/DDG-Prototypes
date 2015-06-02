@@ -11,6 +11,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/css\/slider.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/slider.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/img\/grid-20.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -204,6 +213,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/plugins.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/plugins-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/slider.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/slider.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/slider-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -15840,6 +15860,17 @@
 		"initialSize": 14714,
 		"inputAbbreviatedPath": "\/prototypes\/05-detail-blur\/img\/dreams.jpg",
 		"outputAbbreviatedPath": "\/prototypes\/05-detail-blur\/img\/dreams.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/prototypes\/05-detail-blur\/img\/folks.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 65896,
+		"inputAbbreviatedPath": "\/prototypes\/05-detail-blur\/img\/folks.jpg",
+		"outputAbbreviatedPath": "\/prototypes\/05-detail-blur\/img\/folks.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

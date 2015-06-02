@@ -10,11 +10,7 @@
 
     <!-- CSS -->
 	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
-
-	<!-- Javascript -->
-	<script src="../../assets/js/angular.js"></script>
-	<script src="../../assets/js/angular-sanitize.js"></script>
-	<script src="../../assets/js/app.js"></script>
+    
 </head>
 <body ng-controller="DetailController">
 <header>
@@ -31,19 +27,53 @@
 </header>
 <!-- Load all other resources here: -->
 <link rel="stylesheet" href="Detail.css" charset="utf-8">
+<link rel="stylesheet" href="../../assets/css/slider.css" charset="utf-8">
+
+<!-- Javascript -->
+<script src="../../assets/js/angular.js"></script>
+<script src="../../assets/js/angular-sanitize.js"></script>
+<script src="../../assets/js/slider.js"></script>
+<script src="../../assets/js/app.js"></script>
+
+<script type="text/javascript">
+	// http://stackoverflow.com/questions/18875714/angular-js-re-open-and-add-dependencies-to-an-already-bootstrapped-application
+	app.requires.push('ui.slider');
+</script>
 <script src="Detail.js"></script>
 
 <!-- UI Panel: for prototyping purposes -->
-<!-- <div class="ui-panel">
-	<h6>Test</h6>
-	<p>{{ ui.lorem }}</p>
-</div>  -->
-<!-- /.ui-panel -->
+<!-- http://prajwalkman.github.io/angular-slider/ -->
+<div class="ui-panel bottom">
+	<p>
+		Blur: {{ styles.blur }}px
+		<span class="slider_wrapper">
+			<slider floor="0" ceiling="200" step="1" precision="1" ng-model="styles.blur"></slider>
+		</span> 
+	</p>
+
+	<p>
+		Top: {{ styles.top }}%
+		<span class="slider_wrapper">
+			<slider floor="-500" ceiling="0" step="25" precision="2" ng-model="styles.top"></slider>
+		</span> 
+	</p>
+
+	<p>
+		Opacity: {{ styles.opacity }}%
+		<span class="slider_wrapper">
+			<slider floor="0" ceiling="100" step="1" precision="1" ng-model="styles.opacity"></slider>
+		</span> 
+	</p>
+
+	<p>
+		<span><input type="checkbox" ng-model="styles.vignette" ng-true-value="'vignette'" ng-false-value="''"> Vignette</span>
+	</p>
+</div> <!-- /.ui-panel -->
 
 <!-- Main -->
 <div class="ia_wrapper has_tiles Detail">
 	<div class="ia_tab">
-		Showing 10 Movies {{ selectedid }}
+		Showing 10 Movies
 	</div> <!-- /.ia_tab -->
 
 	<div class="ia">
@@ -60,7 +90,7 @@
 <!-- svg: http://css-plus.com/2012/03/gaussian-blur/ -->
 <!-- pure css (using this one): http://zurb.com/playground/image-blur-texture -->
 <div class="detailpane">
-	<img class="hero_bg" src="img/{{ movies[selectedid].uid }}.jpg">
+	<img class="hero_bg" ng-class="styles.vignette" style="-webkit-filter: blur({{styles.blur}}px); top: {{styles.top}}%; opacity: 0.{{styles.opacity}};" src="img/{{ movies[selectedid].uid }}.jpg">
 	<img class="hero" src="img/{{ movies[selectedid].uid }}.jpg">
 	<div class="hero_block">
 		<h2>{{ movies[selectedid].name }}</h2>
