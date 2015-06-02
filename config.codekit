@@ -15822,6 +15822,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/prototypes\/05-detail-blur\/img\/creation.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21631,
+		"inputAbbreviatedPath": "\/prototypes\/05-detail-blur\/img\/creation.jpg",
+		"outputAbbreviatedPath": "\/prototypes\/05-detail-blur\/img\/creation.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/prototypes\/05-detail-blur\/img\/dreams.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

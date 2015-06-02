@@ -38,7 +38,12 @@
 	<img class="hero_bg" src="img/{{ movies[selectedid].uid }}.jpg">
 	<img class="hero" src="img/{{ movies[selectedid].uid }}.jpg">
 	<div class="hero_block">
-		{{ movies[selectedid].name }}
+		<h2>{{ movies[selectedid].name }}</h2>
+		<h3>{{ movies[selectedid].year }}</h3>
+		<p>
+			Director: {{ movies[selectedid].director }} <br />
+			Actors: {{ ui.lorem }} <br />
+		</p>
 	</div>
 </div>
 
