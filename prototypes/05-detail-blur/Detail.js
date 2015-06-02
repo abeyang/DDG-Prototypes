@@ -61,10 +61,10 @@ app.controller('DetailController', function($scope, ui) {
 
 	$scope.styles = {
 		blur: 100,		// px
-		top: -50,		// px
+		top: -600,		// px
 		width: 100,		// %
-		opacity: 75,	// %
-		vignette: 'vignette'
+		opacity: 66,	// %
+		vignette: ''
 	}
 
 	$scope.selectedid = 0;
