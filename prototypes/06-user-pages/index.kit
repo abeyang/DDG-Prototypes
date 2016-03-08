@@ -1,0 +1,43 @@
+<!-- $title: UserPage -->
+<!-- $user: riqpe -->
+
+<!-- $dir: ../../ -->
+<!-- @include ../../includes/head-nojs -->
+
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+
+<!-- Javascript -->
+<script src="<!-- $dir -->assets/js/angular.js"></script>
+<script src="<!-- $dir -->assets/js/angular-sanitize.js"></script>
+<script src="<!-- $dir -->assets/js/app.js"></script>
+
+<!-- User Info -->
+<script src="users/<!-- $user -->.js"></script>
+<script src="<!-- $title -->.js"></script>
+
+<style type="text/css">
+	body {
+		padding: 20px;
+	}
+</style>
+
+<!-- Main -->
+<img src="{{user.gh_data.avatar_url}}" />
+<br /><strong>{{user.name}}</strong>
+<br />{{user.login}}
+<br />{{user.location}}
+
+<h2>Instant Answers</h2>
+<div ng-repeat="ia in user.instant_answers">
+	<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
+	<p>{{ia.description}}</p>
+</div>
+
+<h2>Issues</h2>
+<div ng-repeat="issue in user.issues">
+	<strong><a href="{{issue.gh_data.pull_request.html_url}}">{{issue.title}}</a></strong> | {{issue.comments}} comments | {{issue.state}}
+	<p>{{issue.body}}</p>
+</div>
+
+<!-- @include ../../includes/foot -->
