@@ -3,22 +3,34 @@ app.controller('UserPageController', function($scope, ui) {
 	$scope.ui = ui;
 
 	// CHANGE USERNAME TO GET SPECIFIC USER
-	var username = 'GuiltyDolphin';
-	// var username = 'AnthonyNeace';
-	// var username = 'riqpe';
+	// $scope.username = 'GuiltyDolphin';
+	// $scope.username = 'AnthonyNeace';
+	// $scope.username = 'riqpe';
 
-	$scope.user = eval(username);
+	$scope.users = [
+		{username: 'GuiltyDolphin'},
+		{username: 'AnthonyNeace'},
+		{username: 'riqpe'}
+	];
+	$scope.username = $scope.users[0].username;	// just setting a default
 
-	// developed IAs -- using http://underscorejs.org/
-	$scope.ias = _.filter(ias, function(ia) { 
-  		return _.some(ia.developer, function(d) { return d.name == username});
-	});
+	// given a username, fill out the $scope variables appropriately, like IAs, etc.
+	$scope.showUserInfo = function() {
+		$scope.user = eval($scope.username);
 
-	// maintained IAs
-	$scope.ias_maintained = _.filter(ias, function(ia) { 
-		var found = false;  		
-		if (ia.maintainer) { if (ia.maintainer.github == username) found = true; }
-		return found;
-	});
+		// developed IAs -- using http://underscorejs.org/
+		$scope.ias = _.filter(ias, function(ia) { 
+	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
+		});
+
+		// maintained IAs
+		$scope.ias_maintained = _.filter(ias, function(ia) { 
+			var found = false;  		
+			if (ia.maintainer) { if (ia.maintainer.github == $scope.username) found = true; }
+			return found;
+		});
+	}
+
+	$scope.showUserInfo();
 
 });
