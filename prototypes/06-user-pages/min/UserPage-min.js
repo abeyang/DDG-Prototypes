@@ -1,0 +1,1 @@
+app.controller("UserPageController",function($scope,ui){ui.init("","",!1),$scope.ui=ui;var username="riqpe";$scope.user=eval(username),$scope.ias=_.filter(ias,function(e){return _.some(e.developer,function(e){return e.name==username})})});

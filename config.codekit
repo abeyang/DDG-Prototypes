@@ -229,6 +229,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/underscore-min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/underscore-min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/underscore-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/assets\/js\/vendor\/jquery-1.10.2.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -15988,6 +15999,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/prototypes\/06-user-pages\/min\/UserPage-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/min\/UserPage-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/min\/min\/UserPage-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/prototypes\/06-user-pages\/UserPage.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -16027,6 +16049,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/guiltydolphin.js",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/guiltydolphin-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/06-user-pages\/users\/min\/all_ias-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/all_ias-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/all_ias-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

@@ -16,6 +16,7 @@
 
 <!-- Load all other resources here: -->
 <link rel="stylesheet" href="UserPage.css" charset="utf-8">
+<script src="../../assets/js/underscore-min.js"></script>
 
 <!-- Javascript -->
 <script src="../../assets/js/angular.js"></script>
@@ -24,6 +25,9 @@
 
 <!-- User Info -->
 <script src="users/guiltydolphin.js"></script>
+<script src="users/riqpe.js"></script>
+<script src="users/anthonyneace.js"></script>
+<script src="users/all_ias.js"></script>
 <script src="UserPage.js"></script>
 
 <style type="text/css">
@@ -39,16 +43,17 @@
 <br />{{user.location}}
 
 <h2>Instant Answers</h2>
-<div ng-repeat="ia in user.instant_answers">
+<div ng-repeat="ia in ias">
 	<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
-	<p>{{ia.description}}</p>
+	<p>{{ia.developer}}</p>
 </div>
 
-<h2>Issues</h2>
-<div ng-repeat="issue in user.issues">
-	<strong><a href="{{issue.gh_data.pull_request.html_url}}">{{issue.title}}</a></strong> | {{issue.comments}} comments | {{issue.state}}
-	<p>{{issue.body}}</p>
+<h2>Pulls</h2>
+<div ng-repeat="pull in user.pulls | filter:{state:''}">
+	<strong><a href="{{pull.html_url}}">{{pull.title}}</a></strong> | {{pull.state}} | {{pull.closed_at}}
+	<!-- <p>{{pull.body}}</p> -->
 </div>
+
 
 </body>
 </html>
