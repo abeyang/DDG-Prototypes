@@ -34,11 +34,16 @@
 	body {
 		padding: 20px;
 	}
+
+	.red { color: #f00; }
 </style>
 
-<select name="username" id="username" ng-model="username">
-  <option ng-repeat="user in users" value="{{user.username}}">{{option.name}}</option>
-</select>
+<!-- Toggle between users -->
+<div>
+	<select name="username" id="username" ng-model="username" ng-change="showUserInfo()">
+	  <option ng-repeat="user in users" value="{{user.username}}">{{user.username}}</option>
+	</select>	
+</div>
 
 <!-- Main -->
 <img src="{{user.gh_data.avatar_url}}" />
@@ -69,7 +74,7 @@
 <h2>Issues</h2>
 <div ng-repeat="issue in user.issues | filter:{state:''}">
 	<p>
-		<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> | {{issue.state}} | {{issue.comments}} comments
+		<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> <span ng-if="issue.pull_request" class="red">Pull Request</span> | {{issue.state}} | {{issue.comments}} comments
 		<br />{{issue.labels}}
 		<br />Developer: {{issue.user.login}}
 		<br />Reviewer: {{issue.assignee.login}}
