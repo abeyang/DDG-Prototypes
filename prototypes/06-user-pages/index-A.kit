@@ -58,14 +58,8 @@
 			<a href="" ng-click="show_issues = 'closed'">Closed</a>
 		</div>
 		<h3>Issues</h3>
-		<div ng-repeat="issue in user.issues | filter:{state:show_issues}">
-			<p>
-				<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> <span ng-if="issue.pull_request" class="red">Pull Request</span> | {{issue.state}} | {{issue.comments}} comments
-				<br />{{issue.labels}}
-				<br />Developer: {{issue.user.login}}
-				<br />Reviewer: {{issue.assignee.login}}
-			</p>
-		</div>
+		<p ng-repeat="issue in user.issues | filter:{state:show_issues}" ng-include="'partials/a_issue.html'">
+		</p>
 	</main>
 
 

@@ -1,0 +1,4 @@
+<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> <span ng-if="issue.pull_request" class="red">Pull Request</span> | {{issue.state}} | {{issue.comments}} comments
+<br />{{issue.labels}}
+<br />Developer: {{issue.user.login}}
+<br />Reviewer: {{issue.assignee.login}}
