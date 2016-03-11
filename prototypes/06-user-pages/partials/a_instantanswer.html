@@ -4,5 +4,5 @@
 	<p><strong>{{ia.name}}</strong></p>
 	Developers: <span ng-bind-html="fn.getDevs(ia)"></span> <br />
 	Maintainer: {{ia.maintainer.github}} <br />
-	Topics: {{ia.topic}}
+	Topics: <span ng-bind-html="fn.getTopics(ia)"></span>
 </div>

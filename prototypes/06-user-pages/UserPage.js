@@ -58,6 +58,22 @@ app.factory('fn', function() {
 				html += '<span>' + dev.name + ' </span>';
 			});
 			return html;
-		}
+		},
+		// get topics based on an instant answer; returns html
+		getTopics: function(ia) {
+			var html = '';
+			_.each(ia.topic, function(topic) {
+				html += '<span>' + topic + ' </span>';
+			});
+			return html;
+		},
+		// get labels based on an issue; returns html
+		getLabels: function(issue) {
+			var html = '';
+			_.each(issue.labels, function(label) {
+				html += '<span>' + label.name + '; </span>';
+			});
+			return html;
+		},
 	};
 });
