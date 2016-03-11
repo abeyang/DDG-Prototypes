@@ -15981,6 +15981,61 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/prototypes\/06-user-pages\/avatars\/anthonyneace.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23827,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/anthonyneace.jpg",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/anthonyneace.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/prototypes\/06-user-pages\/avatars\/guiltydolphin.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37528,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/guiltydolphin.png",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/guiltydolphin.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/prototypes\/06-user-pages\/avatars\/mintsoft.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7405,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/mintsoft.png",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/mintsoft.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/prototypes\/06-user-pages\/avatars\/pjhampton.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36692,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/pjhampton.jpg",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/pjhampton.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/prototypes\/06-user-pages\/avatars\/riqpe.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47011,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/riqpe.png",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/riqpe.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/prototypes\/06-user-pages\/includes\/_a-header.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -16090,6 +16145,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/06-user-pages\/partials\/a_instantanswer.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/partials\/a_instantanswer.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/prototypes\/06-user-pages\/UserPage.css": {
 		"fileType": 16,

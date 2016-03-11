@@ -19,6 +19,11 @@ $green-70:	rgba($green, 0.7);
 $green-40:	rgba($green, 0.4);
 $green-25:	rgba($green, 0.25);
 
+$red:		#E0572A;
+$red-70:	rgba($red, 0.7);
+$red-40:	rgba($red, 0.4);
+$red-25:	rgba($red, 0.25);
+
 // Sizes
 
 $tx-sm: 	13px;
@@ -33,7 +38,7 @@ $pad:		45px;
 $pad-lg:	60px;
 
 $sidebar:	214px;
-$main:		720px;
+$main:		760px;
 
 $round:		5px;
 $round-sm:	3px;
@@ -46,7 +51,7 @@ body {
 }
 
 .toolbar {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	padding: 10px;
@@ -66,7 +71,7 @@ html, body, p, div {
 	color: $black;
 }
 
-.red { color: #f00; }
+.red { color: $red; }
 
 
 // LAYOUT
@@ -116,6 +121,7 @@ section {
 .status {
 	float: right;
 	margin-top: -4px;
+	margin-left: 10px;
 	padding: 3px 6px;
 	border-radius: $round-sm;
 	border: 1px solid $gray-lt;
@@ -124,6 +130,10 @@ section {
 	&.live {
 		border-color: $green-25;
 		color: $green-70;
+	}
+	&.ghosted {
+		border-color: $red-25;
+		color: $red-70;	
 	}
 }
 

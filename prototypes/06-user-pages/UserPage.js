@@ -1,15 +1,16 @@
-app.controller('UserPageController', function($scope, ui) {
-	ui.init('', '', false);
-	$scope.ui = ui;
+app.controller('UserPageController', function($scope, fn) {
+	$scope.fn = fn;
 
 	// list of available users
 	$scope.users = [
-		{username: 'GuiltyDolphin', hasInfo: true, hasAvatar: true},
-		{username: 'AnthonyNeace', hasInfo: true, hasAvatar: true},
-		{username: 'riqpe', hasInfo: true, hasAvatar: true},
-		{username: 'pjhampton', hasInfo: true, hasAvatar: true},
-		{username: 'mintsoft', hasInfo: true, hasAvatar: true}
+		{username: 'GuiltyDolphin', hasInfo: true, avatar: "guiltydolphin.png"},
+		{username: 'AnthonyNeace', hasInfo: true, avatar: "anthonyneace.jpg"},
+		{username: 'riqpe', hasInfo: true, avatar: "riqpe.png"},
+		{username: 'pjhampton', hasInfo: true, avatar: "pjhampton.jpg"},
+		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"}
 	];
+
+	// console.log(fn.findByAttr($scope.users, 'username', 'pjhampton'));
 
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {
@@ -36,4 +37,16 @@ app.controller('UserPageController', function($scope, ui) {
 	// initializing show_issues
 	$scope.show_issues = '';
 
+});
+
+// helper functions
+app.factory('fn', function() {
+	return {
+		// given an array, search for an attr (like 'username'): if found, return object
+		findByAttr: function(arr, attr, name) {
+			return _.find(arr, function(obj) {
+		        return obj[attr] == name;
+		    });
+		}
+	};
 });

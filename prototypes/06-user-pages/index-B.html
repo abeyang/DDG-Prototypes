@@ -64,28 +64,14 @@
 	<main>
 		<h3>Developed IAs</h3>
 		<section>
-			<div class="card half" ng-repeat="ia in ias_developed">
-				<div class="content">
-					<div class="status {{ia.dev_milestone}}">{{ia.dev_milestone}}</div>
-					<p><strong>{{ia.name}}</strong></p>
-					<!-- Developers: {{ia.developer}} <br /> -->
-					Maintainer: {{ia.maintainer.github}} <br />
-					Topics: {{ia.topic}}
-				</div>
+			<div class="card half" ng-repeat="ia in ias_developed" ng-include="'partials/a_instantanswer.html'">
 			</div>
 		</section>
 
 		<h3>Maintained IAs</h3>
 
 		<section>
-			<div class="card half" ng-repeat="ia in ias_maintained">
-				<div class="content">
-					<div class="status">{{ia.dev_milestone}}</div>
-					<p><strong>{{ia.name}}</strong></p>
-					<!-- Developers: {{ia.developer}} <br /> -->
-					Maintainer: {{ia.maintainer.github}} <br />
-					Topics: {{ia.topic}}
-				</div>
+			<div class="card half" ng-repeat="ia in ias_maintained" ng-include="'partials/a_instantanswer.html'">
 			</div>
 		</section>
 

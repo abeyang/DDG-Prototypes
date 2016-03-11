@@ -8,7 +8,7 @@ body {
   background-color: #fafafa; }
 
 .toolbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   padding: 10px;
@@ -26,7 +26,7 @@ html, body, p, div {
   color: #333; }
 
 .red {
-  color: #f00; }
+  color: #E0572A; }
 
 .container {
   max-width: 68em;
@@ -59,14 +59,14 @@ section::after {
 
 .half {
   float: left;
-  width: 347.5px;
+  width: 367.5px;
   height: 150px; }
   .half:nth-child(even) {
     margin-left: 25px; }
 
 .third {
   float: left;
-  width: 223.3333333333px;
+  width: 236.6666666667px;
   margin-left: 25px; }
   .third:nth-child(3n+1) {
     margin-left: 0; }
@@ -74,6 +74,7 @@ section::after {
 .status {
   float: right;
   margin-top: -4px;
+  margin-left: 10px;
   padding: 3px 6px;
   border-radius: 3px;
   border: 1px solid #eee;
@@ -81,6 +82,9 @@ section::after {
   .status.live {
     border-color: rgba(89, 159, 73, 0.25);
     color: rgba(89, 159, 73, 0.7); }
+  .status.ghosted {
+    border-color: rgba(224, 87, 42, 0.25);
+    color: rgba(224, 87, 42, 0.7); }
 
 header {
   height: 160px;

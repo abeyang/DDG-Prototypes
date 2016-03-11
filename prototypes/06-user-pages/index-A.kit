@@ -64,27 +64,22 @@
 		
 
 		
+		<h3>Maintained IAs</h3>
+
+		<section>
+			<div class="card half" ng-repeat="ia in ias_maintained" ng-include="'partials/a_instantanswer.html'">
+			</div>
+		</section>
 		
-		<h2>Developed IAs</h2>
-		<div ng-repeat="ia in ias_developed">
-			<p>
-				<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
-				<br />Developers: {{ia.developer}}
-				<br />Maintainer: {{ia.maintainer.github}}
-				<br />Topics: {{ia.topic}}
-			</p>
-		</div>
 
-		<h2>Maintained IAs</h2>
+		<h3>Developed IAs</h3>
+		<section>
+			<!-- This skips IAs in which there is a maintainer; implementation is HACKISH, b/c it assumes maintainer is user (which isn't nec true)! -->
+			<div class="card half" ng-repeat="ia in ias_developed" ng-if="!ia.maintainer" ng-include="'partials/a_instantanswer.html'"></div>
+				
+		</section>
 
-		<div ng-repeat="ia in ias_maintained">
-			<p>
-				<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
-				<br />Developers: {{ia.developer}}
-				<br />Maintainer: {{ia.maintainer.github}}
-				<br />Topics: {{ia.topic}}
-			</p>
-		</div>
+		
 
 		<!-- PRs will have the pull_request attribute -->
 		<div style="float:right;">
@@ -92,7 +87,7 @@
 			<a href="" ng-click="show_issues = 'open'">Open</a>
 			<a href="" ng-click="show_issues = 'closed'">Closed</a>
 		</div>
-		<h2>Issues</h2>
+		<h3>Issues</h3>
 		<div ng-repeat="issue in user.issues | filter:{state:show_issues}">
 			<p>
 				<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> <span ng-if="issue.pull_request" class="red">Pull Request</span> | {{issue.state}} | {{issue.comments}} comments
