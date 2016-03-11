@@ -62,27 +62,15 @@
 
 	<!-- Main -->
 	<main>
-		<h3>Developed IAs</h3>
+		<h3>Developed &amp; Maintained IAs</h3>
 		<section>
-			<div class="card half" ng-repeat="ia in ias_developed" ng-include="'partials/a_instantanswer.html'">
-			</div>
-		</section>
-
-		<h3>Maintained IAs</h3>
-
-		<section>
-			<div class="card half" ng-repeat="ia in ias_maintained" ng-include="'partials/a_instantanswer.html'">
+			<div class="card half heightA" ng-repeat="ia in ias" ng-include="'partials/a_instantanswer.html'">
 			</div>
 		</section>
 
 		<!-- PRs will have the pull_request attribute -->
-		<div style="float:right;">
-			<a href="" ng-click="show_issues = ''">All</a>
-			<a href="" ng-click="show_issues = 'open'">Open</a>
-			<a href="" ng-click="show_issues = 'closed'">Closed</a>
-		</div>
-		<h3>Issues</h3>
-		<div ng-repeat="issue in user.issues | filter:{state:show_issues}">
+		<h3>Open Issues &amp; Pull Requests</h3>
+		<div ng-repeat="issue in user.issues | filter:{state:'open'}">
 			<p>
 				<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> <span ng-if="issue.pull_request" class="red">Pull Request</span> | {{issue.state}} | {{issue.comments}} comments
 				<br />{{issue.labels}}

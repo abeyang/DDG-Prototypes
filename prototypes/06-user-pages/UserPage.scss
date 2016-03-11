@@ -98,13 +98,13 @@ section {
 		padding: $pad-xxs;
 		border-bottom: 1px solid $gray-lt;
 	}
+	&.heightA { height: 170px; }
 }
 
 .half {
 	float: left;
 	width: ($main - $pad-xs)/2;
-	height: 150px;	// TODO: need to change this value
-
+	
 	&:nth-child(even) { margin-left: $pad-xs; }
 }
 .third {

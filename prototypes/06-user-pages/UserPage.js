@@ -17,6 +17,11 @@ app.controller('UserPageController', function($scope, fn) {
 		$scope.user = eval($scope.username);
 
 		// TODO: merge developed IAs with maintained IAs, which means need to dig deeper
+		// developed & maintained IAs, all in one array
+		$scope.ias = _.filter(ias, function(ia) { 
+	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) || (ia.maintainer && ia.maintainer.github == $scope.username));
+		});
+
 		// developed IAs -- using http://underscorejs.org/
 		$scope.ias_developed = _.filter(ias, function(ia) { 
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
@@ -24,14 +29,12 @@ app.controller('UserPageController', function($scope, fn) {
 
 		// maintained IAs
 		$scope.ias_maintained = _.filter(ias, function(ia) { 
-			var found = false;  		
-			if (ia.maintainer) { if (ia.maintainer.github == $scope.username) found = true; }
-			return found;
+			return (ia.maintainer && ia.maintainer.github == $scope.username);
 		});
 	}
 
 	// initializing a default user
-	$scope.username = $scope.users[0].username;	
+	$scope.username = $scope.users[2].username;	
 	$scope.showUser();
 
 	// initializing show_issues
@@ -47,6 +50,14 @@ app.factory('fn', function() {
 			return _.find(arr, function(obj) {
 		        return obj[attr] == name;
 		    });
+		},
+		// get developers based on an instant answer; returns html
+		getDevs: function(ia) {
+			var html = '';
+			_.each(ia.developer, function(dev) {
+				html += '<span>' + dev.name + ' </span>';
+			});
+			return html;
 		}
 	};
 });

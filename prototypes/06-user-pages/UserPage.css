@@ -56,11 +56,12 @@ section::after {
   .card .header {
     padding: 20px;
     border-bottom: 1px solid #eee; }
+  .card.heightA {
+    height: 170px; }
 
 .half {
   float: left;
-  width: 367.5px;
-  height: 150px; }
+  width: 367.5px; }
   .half:nth-child(even) {
     margin-left: 25px; }
 
