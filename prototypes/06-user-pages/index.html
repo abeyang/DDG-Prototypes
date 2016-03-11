@@ -27,16 +27,17 @@
 <script src="users/guiltydolphin.js"></script>
 <script src="users/riqpe.js"></script>
 <script src="users/anthonyneace.js"></script>
+<script src="users/pjhampton.js"></script>
+<script src="users/mintsoft.js"></script>
 <script src="users/all_ias.js"></script>
 <script src="UserPage.js"></script>
 
 <!-- Toggle between users -->
 <div class="toolbar">
 	<select name="username" id="username" ng-model="username" ng-change="showUser()">
-	  <option ng-repeat="user in users" value="{{user.username}}">{{user.username}}</option>
+	  <option ng-repeat="user in users | filter: {hasInfo:true}" value="{{user.username}}">{{user.username}}</option>
 	</select>	
 </div>
-
 <!-- Main -->
 <img src="{{user.gh_data.avatar_url}}" />
 <br /><strong>{{user.name}}</strong>
@@ -44,7 +45,7 @@
 <br />{{user.location}}
 
 <h2>Developed IAs</h2>
-<div ng-repeat="ia in ias">
+<div ng-repeat="ia in ias_developed">
 	<p>
 		<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
 		<br />Developers: {{ia.developer}}

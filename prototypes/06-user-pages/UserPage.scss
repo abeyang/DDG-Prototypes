@@ -7,16 +7,24 @@
 
 $white: 	#fff;
 $offwhite: 	#fafafa;
+$gray-lt:	#eee;
+$gray:		#aaa;
 $black: 	#333;
 $black-10:	rgba($black, 0.10);
 
 $deepblue: 	#3F94D6;
+
+$green: 	#599F49;
+$green-70:	rgba($green, 0.7);
+$green-40:	rgba($green, 0.4);
+$green-25:	rgba($green, 0.25);
 
 // Sizes
 
 $tx-sm: 	13px;
 $tx:	 	15px;
 $tx-lg: 	21px;
+$tx-xxl:	48px;
 
 $pad-xxs:	20px;
 $pad-xs:	25px;
@@ -27,18 +35,15 @@ $pad-lg:	60px;
 $sidebar:	214px;
 $main:		720px;
 
+$round:		5px;
+$round-sm:	3px;
+
 // MISC
 // ----------------------------------------------------------------------------
 
 body { 
-	// padding: 50px 20px; 
 	background-color: $offwhite;
 }
-html, body, p, div {
-	color: $black;
-}
-
-.red { color: #f00; }
 
 .toolbar {
 	position: absolute;
@@ -50,36 +55,78 @@ html, body, p, div {
 	opacity: 0.2;
 }
 
+// TYPOGRAPHY
+// ----------------------------------------------------------------------------
+
+h2 { font-size: $tx-xxl; }
+h3 { font-size: $tx-lg; margin-bottom: $pad-sm; }
+
+html, body, p, div {
+	font-size: $tx;
+	color: $black;
+}
+
+.red { color: #f00; }
+
+
+// LAYOUT
+// ----------------------------------------------------------------------------
+
+.container {
+	@include outer-container;
+}
+
+section {
+	@include clearfix;
+}
+
 .card {
 	margin-bottom: $pad-xs;
-	border-radius: 5px;
+	border-radius: $round;
 	border: 1px solid $black-10;
 	-webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 	background-color: $white;
 
 	.content { padding: $pad-xxs; }
-}
-
-.container {
-	@include outer-container;
+	.header {
+		padding: $pad-xxs;
+		border-bottom: 1px solid $gray-lt;
+	}
 }
 
 .half {
 	float: left;
 	width: ($main - $pad-xs)/2;
-	height: 200px;
+	height: 150px;	// TODO: need to change this value
 
 	&:nth-child(even) { margin-left: $pad-xs; }
 }
 .third {
 	float: left;
 	width: ($main - 2*$pad-xs)/3;
-	height: 200px;
+	// height: 200px;
 	margin-left: $pad-xs;
 
 	&:nth-child(3n+1) { margin-left: 0; }
 }
+
+// WIDGETS + ELEMENTS
+// ----------------------------------------------------------------------------
+.status {
+	float: right;
+	margin-top: -4px;
+	padding: 3px 6px;
+	border-radius: $round-sm;
+	border: 1px solid $gray-lt;
+	color: $gray;
+
+	&.live {
+		border-color: $green-25;
+		color: $green-70;
+	}
+}
+
 
 // HEADER
 // ----------------------------------------------------------------------------

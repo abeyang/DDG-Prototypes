@@ -34,57 +34,32 @@
 
 	<!-- Main -->
 	<main>
+		<h3>Developed IAs</h3>
 		<section>
-			<div class="card">
-				<div class="content">This is a card</div>
-			</div>			
-		</section>
-		<section>
-			<div class="card half">
-				<div class="content">This is a card</div>
-			</div>
-
-			<div class="card half">
-				<div class="content">This is a card</div>
+			<div class="card half" ng-repeat="ia in ias_developed">
+				<div class="content">
+					<div class="status {{ia.dev_milestone}}">{{ia.dev_milestone}}</div>
+					<p><strong>{{ia.name}}</strong></p>
+					<!-- Developers: {{ia.developer}} <br /> -->
+					Maintainer: {{ia.maintainer.github}} <br />
+					Topics: {{ia.topic}}
+				</div>
 			</div>
 		</section>
+
+		<h3>Maintained IAs</h3>
+
 		<section>
-			<div class="card third">
-				<div class="content">This is a card</div>
-			</div>
-
-			<div class="card third">
-				<div class="content">This is a card</div>
-			</div>
-
-			<div class="card third">
-				<div class="content">This is a card</div>
+			<div class="card half" ng-repeat="ia in ias_maintained">
+				<div class="content">
+					<div class="status">{{ia.dev_milestone}}</div>
+					<p><strong>{{ia.name}}</strong></p>
+					<!-- Developers: {{ia.developer}} <br /> -->
+					Maintainer: {{ia.maintainer.github}} <br />
+					Topics: {{ia.topic}}
+				</div>
 			</div>
 		</section>
-		
-
-		
-		
-		<h2>Developed IAs</h2>
-		<div ng-repeat="ia in ias_developed">
-			<p>
-				<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
-				<br />Developers: {{ia.developer}}
-				<br />Maintainer: {{ia.maintainer.github}}
-				<br />Topics: {{ia.topic}}
-			</p>
-		</div>
-
-		<h2>Maintained IAs</h2>
-
-		<div ng-repeat="ia in ias_maintained">
-			<p>
-				<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
-				<br />Developers: {{ia.developer}}
-				<br />Maintainer: {{ia.maintainer.github}}
-				<br />Topics: {{ia.topic}}
-			</p>
-		</div>
 
 		<!-- PRs will have the pull_request attribute -->
 		<div style="float:right;">
@@ -92,7 +67,7 @@
 			<a href="" ng-click="show_issues = 'open'">Open</a>
 			<a href="" ng-click="show_issues = 'closed'">Closed</a>
 		</div>
-		<h2>Issues</h2>
+		<h3>Issues</h3>
 		<div ng-repeat="issue in user.issues | filter:{state:show_issues}">
 			<p>
 				<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> <span ng-if="issue.pull_request" class="red">Pull Request</span> | {{issue.state}} | {{issue.comments}} comments

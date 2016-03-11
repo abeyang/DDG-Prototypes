@@ -7,18 +7,40 @@ html {
 body {
   background-color: #fafafa; }
 
-html, body, p, div {
-  color: #333; }
-
-.red {
-  color: #f00; }
-
 .toolbar {
   position: absolute;
   top: 0;
   right: 0;
   padding: 10px;
   opacity: 0.2; }
+
+h2 {
+  font-size: 48px; }
+
+h3 {
+  font-size: 21px;
+  margin-bottom: 30px; }
+
+html, body, p, div {
+  font-size: 15px;
+  color: #333; }
+
+.red {
+  color: #f00; }
+
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+section::after {
+  clear: both;
+  content: "";
+  display: table; }
 
 .card {
   margin-bottom: 25px;
@@ -31,30 +53,34 @@ html, body, p, div {
   background-color: #fff; }
   .card .content {
     padding: 20px; }
-
-.container {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .container::after {
-    clear: both;
-    content: "";
-    display: table; }
+  .card .header {
+    padding: 20px;
+    border-bottom: 1px solid #eee; }
 
 .half {
   float: left;
   width: 347.5px;
-  height: 200px; }
+  height: 150px; }
   .half:nth-child(even) {
     margin-left: 25px; }
 
 .third {
   float: left;
   width: 223.3333333333px;
-  height: 200px;
   margin-left: 25px; }
   .third:nth-child(3n+1) {
     margin-left: 0; }
+
+.status {
+  float: right;
+  margin-top: -4px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  color: #aaa; }
+  .status.live {
+    border-color: rgba(89, 159, 73, 0.25);
+    color: rgba(89, 159, 73, 0.7); }
 
 header {
   height: 160px;

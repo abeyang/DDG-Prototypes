@@ -4,9 +4,11 @@ app.controller('UserPageController', function($scope, ui) {
 
 	// list of available users
 	$scope.users = [
-		{username: 'GuiltyDolphin'},
-		{username: 'AnthonyNeace'},
-		{username: 'riqpe'}
+		{username: 'GuiltyDolphin', hasInfo: true, hasAvatar: true},
+		{username: 'AnthonyNeace', hasInfo: true, hasAvatar: true},
+		{username: 'riqpe', hasInfo: true, hasAvatar: true},
+		{username: 'pjhampton', hasInfo: true, hasAvatar: true},
+		{username: 'mintsoft', hasInfo: true, hasAvatar: true}
 	];
 
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.

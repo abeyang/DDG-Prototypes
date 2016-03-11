@@ -16008,6 +16008,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/prototypes\/06-user-pages\/includes\/_toggle_users.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_toggle_users.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_toggle_users.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/includes\/_userinfo.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_userinfo.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_userinfo.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/prototypes\/06-user-pages\/index-A.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -16023,6 +16041,24 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-A.kit",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-A.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/index-B.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-B.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/index-B.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-B.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-B.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -16157,12 +16193,56 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/prototypes\/06-user-pages\/users\/min\/mintsoft-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/mintsoft-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/mintsoft-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/06-user-pages\/users\/min\/pjhampton-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/pjhampton-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/pjhampton-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/prototypes\/06-user-pages\/users\/min\/riqpe-min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/riqpe-min.js",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/riqpe-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/06-user-pages\/users\/mintsoft.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/mintsoft.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/mintsoft-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/06-user-pages\/users\/pjhampton.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/pjhampton.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/pjhampton-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

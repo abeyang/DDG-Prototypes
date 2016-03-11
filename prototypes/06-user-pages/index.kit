@@ -13,18 +13,11 @@
 <script src="<!-- $dir -->assets/js/app.js"></script>
 
 <!-- User Info -->
-<script src="users/guiltydolphin.js"></script>
-<script src="users/riqpe.js"></script>
-<script src="users/anthonyneace.js"></script>
-<script src="users/all_ias.js"></script>
+<!-- @include includes/userinfo -->
 <script src="<!-- $title -->.js"></script>
 
 <!-- Toggle between users -->
-<div class="toolbar">
-	<select name="username" id="username" ng-model="username" ng-change="showUser()">
-	  <option ng-repeat="user in users" value="{{user.username}}">{{user.username}}</option>
-	</select>	
-</div>
+<!-- @include includes/toggle_users -->
 
 <!-- Main -->
 <img src="{{user.gh_data.avatar_url}}" />
