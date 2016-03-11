@@ -17,12 +17,20 @@ html, body, p, div {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 10px; }
+  padding: 10px;
+  opacity: 0.2; }
 
 .card {
+  margin-bottom: 25px;
   border-radius: 5px;
   border: 1px solid rgba(51, 51, 51, 0.1);
+  -webkit-background-clip: padding-box;
+  /* for Safari */
+  background-clip: padding-box;
+  /* for IE9+, Firefox 4+, Opera, Chrome */
   background-color: #fff; }
+  .card .content {
+    padding: 20px; }
 
 .container {
   max-width: 68em;
@@ -32,6 +40,21 @@ html, body, p, div {
     clear: both;
     content: "";
     display: table; }
+
+.half {
+  float: left;
+  width: 347.5px;
+  height: 200px; }
+  .half:nth-child(even) {
+    margin-left: 25px; }
+
+.third {
+  float: left;
+  width: 223.3333333333px;
+  height: 200px;
+  margin-left: 25px; }
+  .third:nth-child(3n+1) {
+    margin-left: 0; }
 
 header {
   height: 160px;

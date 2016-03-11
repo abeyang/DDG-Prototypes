@@ -15,7 +15,7 @@ app.controller('UserPageController', function($scope, ui) {
 
 		// TODO: merge developed IAs with maintained IAs, which means need to dig deeper
 		// developed IAs -- using http://underscorejs.org/
-		$scope.ias = _.filter(ias, function(ia) { 
+		$scope.ias_developed = _.filter(ias, function(ia) { 
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
 		});
 
