@@ -5,9 +5,9 @@
 
 <!-- Load all other resources here: -->
 <link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
-<script src="<!-- $dir -->assets/js/underscore-min.js"></script>
 
 <!-- Javascript -->
+<script src="<!-- $dir -->assets/js/underscore-min.js"></script>
 <script src="<!-- $dir -->assets/js/angular.js"></script>
 <script src="<!-- $dir -->assets/js/angular-sanitize.js"></script>
 <script src="<!-- $dir -->assets/js/app.js"></script>
@@ -19,17 +19,9 @@
 <script src="users/all_ias.js"></script>
 <script src="<!-- $title -->.js"></script>
 
-<style type="text/css">
-	body {
-		padding: 20px;
-	}
-
-	.red { color: #f00; }
-</style>
-
 <!-- Toggle between users -->
-<div>
-	<select name="username" id="username" ng-model="username" ng-change="showUserInfo()">
+<div class="toolbar">
+	<select name="username" id="username" ng-model="username" ng-change="showUser()">
 	  <option ng-repeat="user in users" value="{{user.username}}">{{user.username}}</option>
 	</select>	
 </div>
@@ -55,13 +47,20 @@
 <div ng-repeat="ia in ias_maintained">
 	<p>
 		<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
+		<br />Developers: {{ia.developer}}
 		<br />Maintainer: {{ia.maintainer.github}}
+		<br />Topics: {{ia.topic}}
 	</p>
 </div>
 
 <!-- PRs will have the pull_request attribute -->
+<div style="float:right;">
+	<a href="" ng-click="show_issues = ''">All</a>
+	<a href="" ng-click="show_issues = 'open'">Open</a>
+	<a href="" ng-click="show_issues = 'closed'">Closed</a>
+</div>
 <h2>Issues</h2>
-<div ng-repeat="issue in user.issues | filter:{state:''}">
+<div ng-repeat="issue in user.issues | filter:{state:show_issues}">
 	<p>
 		<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> <span ng-if="issue.pull_request" class="red">Pull Request</span> | {{issue.state}} | {{issue.comments}} comments
 		<br />{{issue.labels}}

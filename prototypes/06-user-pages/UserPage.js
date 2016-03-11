@@ -2,22 +2,18 @@ app.controller('UserPageController', function($scope, ui) {
 	ui.init('', '', false);
 	$scope.ui = ui;
 
-	// CHANGE USERNAME TO GET SPECIFIC USER
-	// $scope.username = 'GuiltyDolphin';
-	// $scope.username = 'AnthonyNeace';
-	// $scope.username = 'riqpe';
-
+	// list of available users
 	$scope.users = [
 		{username: 'GuiltyDolphin'},
 		{username: 'AnthonyNeace'},
 		{username: 'riqpe'}
 	];
-	$scope.username = $scope.users[0].username;	// just setting a default
 
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
-	$scope.showUserInfo = function() {
+	$scope.showUser = function() {
 		$scope.user = eval($scope.username);
 
+		// TODO: merge developed IAs with maintained IAs, which means need to dig deeper
 		// developed IAs -- using http://underscorejs.org/
 		$scope.ias = _.filter(ias, function(ia) { 
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
@@ -31,6 +27,11 @@ app.controller('UserPageController', function($scope, ui) {
 		});
 	}
 
-	$scope.showUserInfo();
+	// initializing a default user
+	$scope.username = $scope.users[0].username;	
+	$scope.showUser();
+
+	// initializing show_issues
+	$scope.show_issues = '';
 
 });
