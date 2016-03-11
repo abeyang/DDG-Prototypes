@@ -110,10 +110,16 @@ section {
 .third {
 	float: left;
 	width: ($main - 2*$pad-xs)/3;
-	// height: 200px;
 	margin-left: $pad-xs;
 
 	&:nth-child(3n+1) { margin-left: 0; }
+}
+.fourth {
+	float: left;
+	width: ($main - 3*$pad-xs)/4;
+	margin-left: $pad-xs;
+
+	&:nth-child(4n+1) { margin-left: 0; }
 }
 
 // WIDGETS + ELEMENTS
