@@ -1,15 +1,97 @@
-// @import "../../assets/sass/variables";
+@import "bourbon", "neat";
 
-body { padding: 50px 20px; }
+// GLOBAL VARIABLES
+// ----------------------------------------------------------------------------
+
+// Colors
+
+$white: 	#fff;
+$offwhite: 	#fafafa;
+$black: 	#333;
+$black-10:	rgba($black, 0.10);
+
+$deepblue: 	#3F94D6;
+
+// Sizes
+
+$tx-sm: 	13px;
+$tx:	 	15px;
+$tx-lg: 	21px;
+
+$pad-xs:	20px;
+$pad-sm:	30px;
+$pad:		45px;
+$pad-lg:	60px;
+
+$sidebar:	214px;
+
+// MISC
+// ----------------------------------------------------------------------------
+
+body { 
+	// padding: 50px 20px; 
+	background-color: $offwhite;
+}
+html, body, p, div {
+	color: $black;
+}
 
 .red { color: #f00; }
 
 .toolbar {
 	position: absolute;
 	top: 0;
-	left: 0;
 	right: 0;
 	padding: 10px;
-	background: #333;
-	color: #fff;
+	// background: #333;
+	// color: #fff;
+}
+
+.card {
+	border-radius: 5px;
+	border: 1px solid $black-10;
+	background-color: $white;
+}
+
+.container {
+	@include outer-container;
+}
+
+// HEADER
+// ----------------------------------------------------------------------------
+header {
+	height: 160px;
+	width: 100%;
+	background-color: $deepblue;
+	border-top: none;
+	
+	.stats {
+		margin-left: $sidebar + $pad;
+	}
+	.stats, div, p { color: $white; }
+}
+
+// SIDEBAR
+// ----------------------------------------------------------------------------
+
+aside {
+	position: absolute;
+	top: 35px;
+	width: $sidebar;
+	// float: left;
+
+}
+
+.profile {
+	img { width: 100%;}
+
+	.content { padding: $pad-xs; }
+}
+
+// MAIN CONTENT
+// ----------------------------------------------------------------------------
+
+main {
+	margin-left: $sidebar + $pad;
+	padding-top: $pad-lg;
 }

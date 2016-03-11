@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UserPage / DDG Prototypes</title>
+    <meta name="description" content="DuckDuckGo Prototypes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
+    
+</head>
+<body ng-controller="UserPageController">
+
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="UserPage.css" charset="utf-8">
+
+<!-- Javascript -->
+<script src="../../assets/js/underscore-min.js"></script>
+<script src="../../assets/js/angular.js"></script>
+<script src="../../assets/js/angular-sanitize.js"></script>
+<script src="../../assets/js/app.js"></script>
+
+<!-- User Info -->
+<script src="users/guiltydolphin.js"></script>
+<script src="users/riqpe.js"></script>
+<script src="users/anthonyneace.js"></script>
+<script src="users/all_ias.js"></script>
+<script src="UserPage.js"></script>
+
+<!-- Toggle between users -->
+<div class="toolbar">
+	<select name="username" id="username" ng-model="username" ng-change="showUser()">
+	  <option ng-repeat="user in users" value="{{user.username}}">{{user.username}}</option>
+	</select>	
+</div>
+
+<!-- Header -->
+<header>
+	<div class="container">
+	<div class="stats">
+		Header!
+	</div>		
+</div></header>
+
+<div class="container">
+	
+	<!-- Sidebar -->
+	<aside>
+		<div class="profile card">
+	<img src="{{user.gh_data.avatar_url}}" />
+	<div class="content">
+		<strong>{{user.name}}</strong>
+		<br />@{{user.login}}
+		<br />{{user.location}}		
+	</div>
+</div>
+		<p>sidebar content</p>	</aside>
+
+	<!-- Main -->
+	<main>
+		<h2>Developed IAs</h2>
+		<div ng-repeat="ia in ias">
+			<p>
+				<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
+				<br />Developers: {{ia.developer}}
+				<br />Maintainer: {{ia.maintainer.github}}
+				<br />Topics: {{ia.topic}}
+			</p>
+		</div>
+
+		<h2>Maintained IAs</h2>
+
+		<div ng-repeat="ia in ias_maintained">
+			<p>
+				<strong>{{ia.name}}</strong> | {{ia.dev_milestone}}
+				<br />Developers: {{ia.developer}}
+				<br />Maintainer: {{ia.maintainer.github}}
+				<br />Topics: {{ia.topic}}
+			</p>
+		</div>
+
+		<!-- PRs will have the pull_request attribute -->
+		<div style="float:right;">
+			<a href="" ng-click="show_issues = ''">All</a>
+			<a href="" ng-click="show_issues = 'open'">Open</a>
+			<a href="" ng-click="show_issues = 'closed'">Closed</a>
+		</div>
+		<h2>Issues</h2>
+		<div ng-repeat="issue in user.issues | filter:{state:show_issues}">
+			<p>
+				<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> <span ng-if="issue.pull_request" class="red">Pull Request</span> | {{issue.state}} | {{issue.comments}} comments
+				<br />{{issue.labels}}
+				<br />Developer: {{issue.user.login}}
+				<br />Reviewer: {{issue.assignee.login}}
+			</p>
+		</div>
+	</main>
+
+
+</div> <!-- /.container -->
+
+</body>
+</html>

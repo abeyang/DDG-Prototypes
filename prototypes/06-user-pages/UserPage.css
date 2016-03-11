@@ -1,5 +1,14 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 body {
-  padding: 50px 20px; }
+  background-color: #fafafa; }
+
+html, body, p, div {
+  color: #333; }
 
 .red {
   color: #f00; }
@@ -7,8 +16,43 @@ body {
 .toolbar {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  padding: 10px;
-  background: #333;
-  color: #fff; }
+  padding: 10px; }
+
+.card {
+  border-radius: 5px;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  background-color: #fff; }
+
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+header {
+  height: 160px;
+  width: 100%;
+  background-color: #3F94D6;
+  border-top: none; }
+  header .stats {
+    margin-left: 259px; }
+  header .stats, header div, header p {
+    color: #fff; }
+
+aside {
+  position: absolute;
+  top: 35px;
+  width: 214px; }
+
+.profile img {
+  width: 100%; }
+.profile .content {
+  padding: 20px; }
+
+main {
+  margin-left: 259px;
+  padding-top: 60px; }

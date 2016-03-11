@@ -15981,6 +15981,51 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/prototypes\/06-user-pages\/includes\/_a-header.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_a-header.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_a-header.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/includes\/_a-profile.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_a-profile.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_a-profile.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/includes\/_a-sidebar.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_a-sidebar.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_a-sidebar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/index-A.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-A.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/index-A.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-A.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-A.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/prototypes\/06-user-pages\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
