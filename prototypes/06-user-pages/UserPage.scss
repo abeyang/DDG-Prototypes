@@ -12,7 +12,8 @@ $gray:		#aaa;
 $black: 	#333;
 $black-10:	rgba($black, 0.10);
 
-$deepblue: 	#3F94D6;
+$blue: 		#4495d4;
+$blue-85: 	rgba($blue, 0.85);
 
 $green: 	#599F49;
 $green-70:	rgba($green, 0.7);
@@ -149,13 +150,15 @@ section {
 header {
 	height: 160px;
 	width: 100%;
-	background-color: $deepblue;
+	background-color: $blue-85;
 	border-top: none;
+	padding: $pad 0;
 	
 	.stats {
 		margin-left: $sidebar + $pad;
 	}
 	.stats, div, p { color: $white; }
+	span { opacity: 0.5; }
 }
 
 // SIDEBAR

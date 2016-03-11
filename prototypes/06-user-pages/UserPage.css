@@ -97,12 +97,15 @@ section::after {
 header {
   height: 160px;
   width: 100%;
-  background-color: #3F94D6;
-  border-top: none; }
+  background-color: rgba(68, 149, 212, 0.85);
+  border-top: none;
+  padding: 45px 0; }
   header .stats {
     margin-left: 259px; }
   header .stats, header div, header p {
     color: #fff; }
+  header span {
+    opacity: 0.5; }
 
 aside {
   position: absolute;
