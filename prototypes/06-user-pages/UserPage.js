@@ -11,6 +11,7 @@ app.controller('UserPageController', function($scope, fn) {
 	];
 
 	$scope.count = {};
+	$scope.topics = [];
 
 	// console.log(fn.findByAttr($scope.users, 'username', 'pjhampton'));
 
@@ -18,7 +19,6 @@ app.controller('UserPageController', function($scope, fn) {
 	$scope.showUser = function() {
 		$scope.user = eval($scope.username);
 
-		// TODO: merge developed IAs with maintained IAs, which means need to dig deeper
 		// developed & maintained IAs, all in one array
 		$scope.ias = _.filter(ias, function(ia) { 
 	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) || (ia.maintainer && ia.maintainer.github == $scope.username));
@@ -37,6 +37,24 @@ app.controller('UserPageController', function($scope, fn) {
 		// opened issues
 		$scope.issues_open = _.filter($scope.user.issues, function(issue) { 
 			return issue.state == 'open';
+		});
+
+		// topic list
+		var topics = {};
+		_.each($scope.ias, function(ia) {
+			if (ia.topic) {
+				_.each(ia.topic, function(t) {
+					if (topics[t]) ++topics[t];
+					else topics[t] = 1;
+				});
+			}
+		});
+		
+		_.each(topics, function(value, key) {
+			var obj = {topic: '', amount: 0}
+			obj.topic = key;
+			obj.amount = value;
+			$scope.topics.push(obj);
 		});
 
 		$scope.count.all_ias = _.size($scope.ias);

@@ -1,1 +1,3 @@
-<p>sidebar content</p>
+<div ng-repeat="t in topics | orderBy:'-amount'">
+	{{t.topic}} | {{t.amount}}
+</div>

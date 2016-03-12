@@ -69,7 +69,9 @@
 		<br />{{user.location}}		
 	</div>
 </div>
-		<p>sidebar content</p>	</aside>
+		<div ng-repeat="t in topics | orderBy:'-amount'">
+	{{t.topic}} | {{t.amount}}
+</div>	</aside>
 
 	<!-- Main -->
 	<main>
