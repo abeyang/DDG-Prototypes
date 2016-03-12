@@ -10,6 +10,8 @@ app.controller('UserPageController', function($scope, fn) {
 		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"}
 	];
 
+	$scope.count = {};
+
 	// console.log(fn.findByAttr($scope.users, 'username', 'pjhampton'));
 
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
@@ -31,6 +33,16 @@ app.controller('UserPageController', function($scope, fn) {
 		$scope.ias_maintained = _.filter(ias, function(ia) { 
 			return (ia.maintainer && ia.maintainer.github == $scope.username);
 		});
+
+		// opened issues
+		$scope.issues_open = _.filter($scope.user.issues, function(issue) { 
+			return issue.state == 'open';
+		});
+
+		$scope.count.all_ias = _.size($scope.ias);
+		$scope.count.open_issues = _.size($scope.issues_open);
+		$scope.count.closed_issues = _.size($scope.user.issues) - $scope.count.open_issues
+
 	}
 
 	// initializing a default user
