@@ -40,9 +40,8 @@
 			</div>
 		</section>
 
-		<!-- PRs will have the pull_request attribute -->
-		<h3>Open Issues &amp; Pull Requests</h3>
-		<p ng-repeat="issue in user.issues | filter:{state:'open'}" ng-include="'partials/a_issue.html'">
+		<h3>Open Pull Requests</h3>
+		<p ng-repeat="issue in prs | filter:{state:'open'}" ng-include="'partials/a_issue.html'">
 		</p>
 	</main>
 

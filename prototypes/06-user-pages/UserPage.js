@@ -39,6 +39,16 @@ app.controller('UserPageController', function($scope, fn) {
 			return issue.state == 'open';
 		});
 
+		// all pull requests (from issues list)
+		$scope.prs = _.filter($scope.user.issues, function(issue) { 
+			return issue.pull_request != null;
+		});
+
+		// opened pull requests
+		$scope.prs_open = _.filter($scope.prs, function(pr) { 
+			return pr.state == 'open';
+		});
+
 		// topic list
 		var topics = {};
 		_.each($scope.ias, function(ia) {
@@ -59,7 +69,9 @@ app.controller('UserPageController', function($scope, fn) {
 
 		$scope.count.all_ias = _.size($scope.ias);
 		$scope.count.open_issues = _.size($scope.issues_open);
-		$scope.count.closed_issues = _.size($scope.user.issues) - $scope.count.open_issues
+		$scope.count.closed_issues = _.size($scope.user.issues) - $scope.count.open_issues;
+		$scope.count.open_prs = _.size($scope.prs_open);
+		$scope.count.closed_prs = _.size($scope.prs) - $scope.count.open_prs;
 
 	}
 
