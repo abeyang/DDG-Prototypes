@@ -12,8 +12,21 @@ app.controller('UserPageController', function($scope, fn) {
 		{username: 'moollaza', hasInfo: true, avatar: "moollaza.jpeg"}
 	];
 
-
-	// console.log(fn.findByAttr($scope.users, 'username', 'pjhampton'));
+	// for sorting instant answers (live should be first)
+	$scope.iaSort = function(ia) {
+		switch (ia.dev_milestone) {
+			case 'live': return 0;
+			case 'complete': return 10;
+			case 'testing': return 20;
+			case 'development': return 30;
+			case 'planning': return 40;
+			default: return 1000;
+		}
+	};
+	
+	$scope.myValueFunction = function(card) {
+   return card.values.opt1 + card.values.opt2;
+};
 
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {

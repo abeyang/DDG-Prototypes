@@ -184,6 +184,7 @@ section {
 // WIDGETS + ELEMENTS
 // ----------------------------------------------------------------------------
 .status {
+	display: block;
 	float: right;
 	margin-top: -4px;
 	margin-left: 10px;
@@ -200,8 +201,8 @@ section {
 		text-align: center;
 	}
 	&.live {
-		border-color: $green-25;
-		color: $green-70;
+		border-color: $green-40;
+		color: $green;
 	}
 	&.ghosted {
 		border-color: $red-25;

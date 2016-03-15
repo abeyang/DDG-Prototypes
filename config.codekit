@@ -16357,6 +16357,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/prototypes\/06-user-pages\/users\/min\/moollaza-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/moollaza-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/moollaza-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/prototypes\/06-user-pages\/users\/min\/pjhampton-min.js": {
 		"fileType": 64,
 		"ignore": 1,

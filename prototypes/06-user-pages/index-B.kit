@@ -42,7 +42,7 @@
 				<div class="grid-6 pad-left-20">Instant Answer &amp; Maintainer</div>
 				<div class="grid-2 text-right">Developer(s)</div>
 			</div>
-			<div class="instantanswer flex-container" ng-repeat="(shortname, ia) in ias" ng-include="'partials/b_instantanswer.html'">
+			<div class="instantanswer flex-container" ng-repeat="ia in ias | orderBy: iaSort" ng-include="'partials/b_instantanswer.html'">
 			</div>
 		</section>
 

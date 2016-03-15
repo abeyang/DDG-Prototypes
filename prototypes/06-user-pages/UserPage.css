@@ -131,6 +131,7 @@ section {
   padding-left: 30px; }
 
 .status {
+  display: block;
   float: right;
   margin-top: -4px;
   margin-left: 10px;
@@ -145,8 +146,8 @@ section {
     margin-left: 0;
     text-align: center; }
   .status.live {
-    border-color: rgba(89, 159, 73, 0.25);
-    color: rgba(89, 159, 73, 0.7); }
+    border-color: rgba(89, 159, 73, 0.4);
+    color: #599F49; }
   .status.ghosted {
     border-color: rgba(224, 87, 42, 0.25);
     color: rgba(224, 87, 42, 0.7); }
