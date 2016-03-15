@@ -9,6 +9,7 @@ $white: 	#fff;
 $offwhite: 	#fafafa;
 $gray-lt:	#eee;
 $gray:		#aaa;
+// $gray-15:	rgba($gray, 0.15);
 $black: 	#333;
 $black-10:	rgba($black, 0.10);
 
@@ -27,11 +28,13 @@ $red-25:	rgba($red, 0.25);
 
 // Sizes
 
+$tx-xxs:	10px;
 $tx-sm: 	13px;
 $tx:	 	15px;
 $tx-lg: 	21px;
 $tx-xxl:	48px;
 
+$pad-xxxs:	10px;
 $pad-xxs:	20px;
 $pad-xs:	25px;
 $pad-sm:	30px;
@@ -43,12 +46,15 @@ $main:		760px;
 
 $round:		5px;
 $round-sm:	3px;
+$avatar:	24px;
+$status:	80px;
 
 // MISC
 // ----------------------------------------------------------------------------
 
 body { 
 	background-color: $offwhite;
+	padding-bottom: $pad-lg;
 }
 
 .toolbar {
@@ -74,6 +80,11 @@ html, body, p, div {
 
 .red { color: $red; }
 
+.subtitle {
+	font-size: $tx-sm;
+	color: $gray;
+}
+
 
 // LAYOUT
 // ----------------------------------------------------------------------------
@@ -84,6 +95,7 @@ html, body, p, div {
 
 section {
 	@include clearfix;
+	margin-bottom: $pad;
 }
 
 .card {
@@ -134,6 +146,11 @@ section {
 	border: 1px solid $gray-lt;
 	color: $gray;
 
+	&.full { 
+		float: left; 
+		width: $status;
+		text-align: center;
+	}
 	&.live {
 		border-color: $green-25;
 		color: $green-70;
@@ -141,6 +158,33 @@ section {
 	&.ghosted {
 		border-color: $red-25;
 		color: $red-70;	
+	}
+}
+
+.avatar {
+	float: left; 
+	width: $avatar;
+	height: $avatar;
+	border-radius: $avatar/2;
+
+	background-color: $gray-lt;
+	text-align: center;
+
+	&.right { 
+		float: right; 
+		margin-left: 4px;
+	}
+
+	span {
+		padding-top: $avatar/4;
+		font-size: $tx-xxs;
+		color: $gray;
+		text-transform: uppercase;
+	}
+
+	img {
+		width: 100%;
+		border-radius: $avatar/2;
 	}
 }
 
@@ -184,4 +228,33 @@ aside {
 main {
 	margin-left: $sidebar + $pad;
 	padding-top: $pad-lg;
+}
+
+.issue {
+	padding: $pad-xxxs 0;
+	border-top: 1px solid $gray-lt;
+
+	.content {
+		padding-left: $pad-xxxs;
+	}
+}
+
+.instantanswer {
+	display: flex;
+	align-items: center;
+	padding: $pad-xxs 0;
+	border-top: 1px solid $gray-lt;
+
+	.content {
+		margin-left: $pad-xxs;
+		width: 500px;
+	}
+
+	.avatars {
+		width: 150px;
+	}
+	.avatar { 
+		margin-left: 4px;
+		float: right;
+	}
 }

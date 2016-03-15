@@ -34,15 +34,15 @@
 
 	<!-- Main -->
 	<main>
-		<h3>Developed &amp; Maintained IAs</h3>
+		<h3>Instant Answers</h3>
 		<section>
-			<div class="card half heightA" ng-repeat="ia in ias" ng-include="'partials/a_instantanswer.html'">
+			<div class="instantanswer" ng-repeat="ia in ias" ng-include="'partials/b_instantanswer.html'">
 			</div>
 		</section>
 
 		<h3>Open Pull Requests</h3>
-		<p ng-repeat="issue in prs | filter:{state:'open'}" ng-include="'partials/a_issue.html'">
-		</p>
+		<div ng-repeat="issue in prs | filter:{state:'open'}" ng-include="'partials/b_issue.html'" class="issue">
+		</div>
 	</main>
 
 

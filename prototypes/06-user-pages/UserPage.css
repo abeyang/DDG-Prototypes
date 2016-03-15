@@ -5,7 +5,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  padding-bottom: 60px; }
 
 .toolbar {
   position: fixed;
@@ -28,6 +29,10 @@ html, body, p, div {
 .red {
   color: #E0572A; }
 
+.subtitle {
+  font-size: 13px;
+  color: #aaa; }
+
 .container {
   max-width: 68em;
   margin-left: auto;
@@ -37,10 +42,12 @@ html, body, p, div {
     content: "";
     display: table; }
 
-section::after {
-  clear: both;
-  content: "";
-  display: table; }
+section {
+  margin-bottom: 45px; }
+  section::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .card {
   margin-bottom: 25px;
@@ -87,12 +94,35 @@ section::after {
   border-radius: 3px;
   border: 1px solid #eee;
   color: #aaa; }
+  .status.full {
+    float: left;
+    width: 80px;
+    text-align: center; }
   .status.live {
     border-color: rgba(89, 159, 73, 0.25);
     color: rgba(89, 159, 73, 0.7); }
   .status.ghosted {
     border-color: rgba(224, 87, 42, 0.25);
     color: rgba(224, 87, 42, 0.7); }
+
+.avatar {
+  float: left;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #eee;
+  text-align: center; }
+  .avatar.right {
+    float: right;
+    margin-left: 4px; }
+  .avatar span {
+    padding-top: 6px;
+    font-size: 10px;
+    color: #aaa;
+    text-transform: uppercase; }
+  .avatar img {
+    width: 100%;
+    border-radius: 12px; }
 
 header {
   height: 160px;
@@ -120,3 +150,23 @@ aside {
 main {
   margin-left: 259px;
   padding-top: 60px; }
+
+.issue {
+  padding: 10px 0;
+  border-top: 1px solid #eee; }
+  .issue .content {
+    padding-left: 10px; }
+
+.instantanswer {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #eee; }
+  .instantanswer .content {
+    margin-left: 20px;
+    width: 500px; }
+  .instantanswer .avatars {
+    width: 150px; }
+  .instantanswer .avatar {
+    margin-left: 4px;
+    float: right; }

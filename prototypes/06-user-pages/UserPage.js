@@ -76,7 +76,7 @@ app.controller('UserPageController', function($scope, fn) {
 	}
 
 	// initializing a default user
-	$scope.username = $scope.users[2].username;	
+	$scope.username = $scope.users[0].username;	
 	$scope.showUser();
 
 	// initializing show_issues
@@ -93,12 +93,33 @@ app.factory('fn', function() {
 		        return obj[attr] == name;
 		    });
 		},
+		// get avatar image. If not found, uses first letter from devname
+		getAvatar: function(users, username, align) {
+			var html = '';
+			if (username) {
+				html = '<div class="avatar ' + align + '" title="' + username + '"';
+				var user = this.findByAttr(users, 'username', username);
+
+				if (user && user.avatar) html += '><img src="avatars/' + user.avatar + '" /></div>';
+				else html += "><span>" + username.charAt(0) + '</span></div>';
+			}
+
+			return html;
+		},
 		// get developers based on an instant answer; returns html
 		getDevs: function(ia) {
 			var html = '';
 			_.each(ia.developer, function(dev) {
 				html += '<span>' + dev.name + ' </span>';
 			});
+			return html;
+		},
+		// get developers based on an instant answer; returns avatars
+		getDevsAvatars: function(ia, users) {
+			var html = '';
+			_.each(ia.developer, function(dev) {
+				html += this.getAvatar(users, dev.name, '');
+			}, this);
 			return html;
 		},
 		// get topics based on an instant answer; returns html
@@ -116,6 +137,7 @@ app.factory('fn', function() {
 				html += '<span>' + label.name + '; </span>';
 			});
 			return html;
-		},
+		}
+
 	};
 });

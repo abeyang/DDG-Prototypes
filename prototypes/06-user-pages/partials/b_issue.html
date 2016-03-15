@@ -1,0 +1,6 @@
+<!-- developer -->
+<div ng-bind-html="fn.getAvatar(users, issue.user.login, '')"></div>
+<!-- reviewer -->
+<div ng-bind-html="fn.getAvatar(users, issue.assignee.login, 'right')"></div>
+
+<span class="content"><strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> | {{issue.comments}} comments | {{issue.updated_at}}</span>
