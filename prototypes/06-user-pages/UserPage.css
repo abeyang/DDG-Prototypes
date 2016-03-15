@@ -133,6 +133,7 @@ section {
   padding: 3px 6px;
   border-radius: 3px;
   border: 1px solid #eee;
+  font-size: 13px;
   color: #aaa;
   text-transform: capitalize; }
   .status.full {
@@ -161,7 +162,7 @@ section {
     position: relative;
     top: -1px;
     font-size: 10px;
-    color: #aaa;
+    color: #999;
     text-transform: uppercase; }
   .avatar img {
     width: 100%;
@@ -175,6 +176,7 @@ header {
   width: 100%;
   background-color: rgba(68, 149, 212, 0.85);
   border-top: none;
+  border-bottom: none;
   padding: 45px 0; }
   header .stats {
     margin-left: 259px; }
@@ -195,10 +197,12 @@ aside {
 
 .topic {
   position: relative;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   text-transform: capitalize;
-  color: #666; }
+  color: #666;
+  padding: 10px 0; }
+  .topic.typeA {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1); }
   .topic .amt {
     float: right;
     color: #aaa; }

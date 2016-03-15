@@ -8,6 +8,7 @@
 $white: 	#fff;
 $offwhite: 	#fafafa;
 $gray-dk:	#666;
+$gray-med:	#999;
 $gray:		#aaa;
 $gray-50:	rgba($gray, 0.5);
 $gray-lt:	#eee;
@@ -181,6 +182,7 @@ section {
 	padding: 3px 6px;
 	border-radius: $round-sm;
 	border: 1px solid $gray-lt;
+	font-size: $tx-sm;
 	color: $gray;
 	text-transform: capitalize;
 
@@ -218,7 +220,7 @@ section {
 		position: relative;
 		top: -1px;
 		font-size: $tx-xxs;
-		color: $gray;
+		color: $gray-med;
 		text-transform: uppercase;
 	}
 
@@ -239,6 +241,7 @@ header {
 	width: 100%;
 	background-color: $blue-85;
 	border-top: none;
+	border-bottom: none;
 	padding: $pad 0;
 	
 	.stats {
@@ -267,10 +270,14 @@ aside {
 
 .topic {
 	position: relative;
-	padding: $pad-xxs 0;
-	border-bottom: 1px solid $black-10;
 	text-transform: capitalize;
 	color: $gray-dk;
+	padding: $pad-xxxs 0;
+
+	&.typeA {
+		padding: $pad-xxs 0;
+		border-bottom: 1px solid $black-10;
+	}
 
 	.amt {
 		float: right;
