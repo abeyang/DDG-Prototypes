@@ -7,7 +7,9 @@ app.controller('UserPageController', function($scope, fn) {
 		{username: 'AnthonyNeace', hasInfo: true, avatar: "anthonyneace.jpg"},
 		{username: 'riqpe', hasInfo: true, avatar: "riqpe.png"},
 		{username: 'pjhampton', hasInfo: true, avatar: "pjhampton.jpg"},
-		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"}
+		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"},
+		{username: 'jagtalon', hasInfo: true, avatar: "jagtalon.jpeg"},
+		{username: 'moollaza', hasInfo: true, avatar: "moollaza.jpeg"}
 	];
 
 

@@ -30,6 +30,8 @@
 <script src="users/anthonyneace.js"></script>
 <script src="users/pjhampton.js"></script>
 <script src="users/mintsoft.js"></script>
+<script src="users/jagtalon.js"></script>
+<script src="users/moollaza.js"></script>
 <script src="users/all_ias.js"></script>
 <script src="UserPage.js"></script>
 
@@ -63,7 +65,7 @@
 	<!-- Sidebar -->
 	<aside>
 		<div class="profile card">
-	<img src="{{user.gh_data.avatar_url}}" />
+	<img src="{{user.avatar_url || user.gh_data.avatar_url}}" />
 	<div class="content">
 		<strong>{{user.name}}</strong>
 		<br />@{{user.login}}
