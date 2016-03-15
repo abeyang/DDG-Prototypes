@@ -92,7 +92,15 @@ html, body, p, div {
 }
 
 .red { color: $red; }
-.gray { color: $gray; }
+.gray { 
+	color: $gray; 
+
+	a, a:visited { 
+		color: $gray; 
+
+		&:hover { color: $blue-85; }
+	}
+}
 
 .subtitle {
 	font-size: $tx-sm;
@@ -179,7 +187,7 @@ section {
 	float: right;
 	margin-top: -4px;
 	margin-left: 10px;
-	padding: 3px 6px;
+	padding: 4px 0;
 	border-radius: $round-sm;
 	border: 1px solid $gray-lt;
 	font-size: $tx-sm;
@@ -263,7 +271,10 @@ aside {
 }
 
 .profile {
+	text-align: center;
+
 	img { width: 100%;}
+	h3 { margin-bottom: $pad-xxxs; }
 
 	.content { padding: $pad-xxs; }
 }

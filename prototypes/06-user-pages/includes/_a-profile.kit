@@ -1,8 +1,11 @@
 <div class="profile card">
 	<img src="{{user.avatar_url || user.gh_data.avatar_url}}" />
 	<div class="content">
-		<strong>{{user.name}}</strong>
-		<br />@{{user.login}}
-		<br />{{user.location}}		
+		<h3>{{user.name}}</h3>
+		<div class="gray">
+			<a href="http://github.com/{{user.login}}">@{{user.login}}</a>
+			<br />{{user.location}}		
+		</div>
+		
 	</div>
 </div>
