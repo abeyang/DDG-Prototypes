@@ -10,13 +10,14 @@ app.controller('UserPageController', function($scope, fn) {
 		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"}
 	];
 
-	$scope.count = {};
-	$scope.topics = [];
 
 	// console.log(fn.findByAttr($scope.users, 'username', 'pjhampton'));
 
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {
+		$scope.count = {};
+		$scope.topics = [];
+
 		$scope.user = eval($scope.username);
 
 		// developed & maintained IAs, all in one array
@@ -72,6 +73,9 @@ app.controller('UserPageController', function($scope, fn) {
 		$scope.count.closed_issues = _.size($scope.user.issues) - $scope.count.open_issues;
 		$scope.count.open_prs = _.size($scope.prs_open);
 		$scope.count.closed_prs = _.size($scope.prs) - $scope.count.open_prs;
+
+		var maxtopic = _.max($scope.topics, function(topic){ return topic.amount; });
+		$scope.count.max_topics = maxtopic.amount;
 
 	}
 

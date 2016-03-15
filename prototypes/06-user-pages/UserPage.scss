@@ -7,6 +7,7 @@
 
 $white: 	#fff;
 $offwhite: 	#fafafa;
+$gray-dk:	#666;
 $gray:		#aaa;
 $gray-50:	rgba($gray, 0.5);
 $gray-lt:	#eee;
@@ -262,6 +263,27 @@ aside {
 	img { width: 100%;}
 
 	.content { padding: $pad-xxs; }
+}
+
+.topic {
+	position: relative;
+	padding: $pad-xxs 0;
+	border-bottom: 1px solid $black-10;
+	text-transform: capitalize;
+	color: $gray-dk;
+
+	.amt {
+		float: right;
+		color: $gray;
+	}
+
+	.bar {
+		position: absolute;
+		bottom: -1px;
+		height: 1px;
+		background-color: $blue-85;
+		// width: 50%;
+	}
 }
 
 // MAIN CONTENT
