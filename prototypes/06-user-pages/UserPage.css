@@ -15,6 +15,12 @@ body {
   padding: 10px;
   opacity: 0.2; }
 
+a, a:visited {
+  color: #333;
+  text-decoration: none; }
+  a:hover, a:visited:hover {
+    color: rgba(68, 149, 212, 0.85); }
+
 h2 {
   font-size: 48px; }
 
@@ -29,9 +35,23 @@ html, body, p, div {
 .red {
   color: #E0572A; }
 
+.gray {
+  color: #aaa; }
+
 .subtitle {
   font-size: 13px;
   color: #aaa; }
+
+.label, .label div {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #aaa; }
+
+.label {
+  padding: 10px 0; }
+
+.text-right {
+  text-align: right; }
 
 .container {
   max-width: 68em;
@@ -86,6 +106,26 @@ section {
   .fourth:nth-child(4n+1) {
     margin-left: 0; }
 
+.flex-container {
+  display: flex;
+  align-items: center; }
+  .flex-container .grid-1 {
+    flex: 1; }
+  .flex-container .grid-2 {
+    flex: 2; }
+  .flex-container .grid-4 {
+    flex: 4; }
+  .flex-container .grid-6 {
+    flex: 6; }
+  .flex-container .grid-8 {
+    flex: 8; }
+
+.pad-left-20 {
+  padding-left: 20px; }
+
+.pad-left-30 {
+  padding-left: 30px; }
+
 .status {
   float: right;
   margin-top: -4px;
@@ -93,10 +133,11 @@ section {
   padding: 3px 6px;
   border-radius: 3px;
   border: 1px solid #eee;
-  color: #aaa; }
+  color: #aaa;
+  text-transform: capitalize; }
   .status.full {
     float: left;
-    width: 80px;
+    margin-left: 0;
     text-align: center; }
   .status.live {
     border-color: rgba(89, 159, 73, 0.25);
@@ -109,20 +150,25 @@ section {
   float: left;
   width: 24px;
   height: 24px;
-  border-radius: 12px;
+  border-radius: 24px;
+  border: 1px solid rgba(51, 51, 51, 0.05);
   background-color: #eee;
   text-align: center; }
   .avatar.right {
     float: right;
     margin-left: 4px; }
   .avatar span {
-    padding-top: 6px;
+    position: relative;
+    top: -1px;
     font-size: 10px;
     color: #aaa;
     text-transform: uppercase; }
   .avatar img {
     width: 100%;
-    border-radius: 12px; }
+    border-radius: 24px; }
+
+.fa {
+  color: rgba(170, 170, 170, 0.5); }
 
 header {
   height: 160px;
@@ -154,19 +200,19 @@ main {
 .issue {
   padding: 10px 0;
   border-top: 1px solid #eee; }
-  .issue .content {
-    padding-left: 10px; }
+  .issue .comment {
+    padding-left: 8px; }
 
 .instantanswer {
-  display: flex;
-  align-items: center;
   padding: 20px 0;
   border-top: 1px solid #eee; }
   .instantanswer .content {
-    margin-left: 20px;
-    width: 500px; }
-  .instantanswer .avatars {
-    width: 150px; }
+    padding-left: 20px; }
   .instantanswer .avatar {
-    margin-left: 4px;
-    float: right; }
+    margin-left: 6px;
+    float: right;
+    width: 30px;
+    height: 30px; }
+    .instantanswer .avatar span {
+      top: 3px;
+      font-size: 13px; }

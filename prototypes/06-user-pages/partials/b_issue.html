@@ -1,6 +1,12 @@
 <!-- developer -->
-<div ng-bind-html="fn.getAvatar(users, issue.user.login, '')"></div>
-<!-- reviewer -->
-<div ng-bind-html="fn.getAvatar(users, issue.assignee.login, 'right')"></div>
+<div class="grid-1" ng-bind-html="fn.getAvatar(users, issue.user.login, '')"></div>
 
-<span class="content"><strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong> | {{issue.comments}} comments | {{issue.updated_at}}</span>
+<span class="content grid-8">
+	<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong>
+	<span class="gray comment"><i class="fa fa-comment-o"></i> {{issue.comments}}</span>
+</span>
+
+<span class="grid-2 gray text-right">{{issue.updated_at.substring(0,10)}}</span>
+
+<!-- reviewer -->
+<div class="grid-1" ng-bind-html="fn.getAvatar(users, issue.assignee.login, 'right')"></div>

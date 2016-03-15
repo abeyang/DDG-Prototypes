@@ -15,6 +15,7 @@
 <body ng-controller="UserPageController">
 
 <!-- Load all other resources here: -->
+<link rel="stylesheet" href="../../assets/css/font-awesome.min.css" charset="utf-8">
 <link rel="stylesheet" href="UserPage.css" charset="utf-8">
 
 <!-- Javascript -->
@@ -77,13 +78,25 @@
 	<main>
 		<h3>Instant Answers</h3>
 		<section>
-			<div class="instantanswer" ng-repeat="ia in ias" ng-include="'partials/b_instantanswer.html'">
+			<div class="flex-container label">
+				<div class="grid-1">Status</div>
+				<div class="grid-4 pad-left-30">Instant Answer &amp; Maintainer</div>
+				<div class="grid-2 text-right">Developer(s)</div>
+			</div>
+			<div class="instantanswer flex-container" ng-repeat="(shortname, ia) in ias" ng-include="'partials/b_instantanswer.html'">
 			</div>
 		</section>
 
-		<h3>Open Pull Requests</h3>
-		<div ng-repeat="issue in prs | filter:{state:'open'}" ng-include="'partials/b_issue.html'" class="issue">
-		</div>
+		<section ng-if="count.open_prs">
+			<h3>Open Pull Requests</h3>
+			<div class="flex-container label">
+				<div class="grid-1">Dev</div>
+				<div class="grid-8">Pull Requests &amp; Comments</div>
+				<div class="grid-3 text-right">Last Update &amp; Reviewer</div>
+			</div>
+			<div ng-repeat="issue in prs | filter:{state:'open'}" ng-include="'partials/b_issue.html'" class="issue flex-container">
+			</div>
+		</section>
 	</main>
 
 

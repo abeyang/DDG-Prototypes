@@ -4,15 +4,15 @@
 <!-- <div ng-bind-html="fn.getAvatar(users, ia.maintainer.github, '')"></div> -->
 
 <!-- status -->
-<div class="status full {{ia.dev_milestone}}">{{ia.dev_milestone}}</div>
+<div class="status full {{ia.dev_milestone}} grid-1">{{ia.dev_milestone}}</div>
 
-<div class="content">
+<div class="grid-4 content">
 	<strong>{{ia.name}}</strong>
 	<div class="subtitle" ng-if="ia.maintainer.github">Maintained by {{ia.maintainer.github}}</div>
 </div>
 
 <!-- developers -->
-<div class="avatars" ng-bind-html="fn.getDevsAvatars(ia, users)"></div>	
+<div class="avatars grid-2" ng-bind-html="fn.getDevsAvatars(ia, users)"></div>	
 	
 	<!-- Topics: <span ng-bind-html="fn.getTopics(ia)"></span> <br /> -->
 	<!-- Query: {{ia.example_query}} -->
