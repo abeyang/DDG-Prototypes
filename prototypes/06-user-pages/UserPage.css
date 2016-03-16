@@ -244,3 +244,6 @@ main {
     .instantanswer .avatar span {
       top: 3px;
       font-size: 13px; }
+
+.a.status {
+  padding: 0 1em 0 1em; }

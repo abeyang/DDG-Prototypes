@@ -56,7 +56,7 @@ $avatar-lg: 30px;
 // MISC
 // ----------------------------------------------------------------------------
 
-body { 
+body {
 	background-color: $offwhite;
 	padding-bottom: $pad-lg;
 }
@@ -92,11 +92,11 @@ html, body, p, div {
 }
 
 .red { color: $red; }
-.gray { 
-	color: $gray; 
+.gray {
+	color: $gray;
 
-	a, a:visited { 
-		color: $gray; 
+	a, a:visited {
+		color: $gray;
 
 		&:hover { color: $blue-85; }
 	}
@@ -148,7 +148,7 @@ section {
 .half {
 	float: left;
 	width: ($main - $pad-xs)/2;
-	
+
 	&:nth-child(even) { margin-left: $pad-xs; }
 }
 .third {
@@ -195,8 +195,8 @@ section {
 	color: $gray;
 	text-transform: capitalize;
 
-	&.full { 
-		float: left; 
+	&.full {
+		float: left;
 		margin-left: 0;
 		text-align: center;
 	}
@@ -206,12 +206,12 @@ section {
 	}
 	&.ghosted {
 		border-color: $red-25;
-		color: $red-70;	
+		color: $red-70;
 	}
 }
 
 .avatar {
-	float: left; 
+	float: left;
 	width: $avatar;
 	height: $avatar;
 	border-radius: $avatar;
@@ -220,8 +220,8 @@ section {
 	background-color: $gray-lt;
 	text-align: center;
 
-	&.right { 
-		float: right; 
+	&.right {
+		float: right;
 		margin-left: 4px;
 	}
 
@@ -252,7 +252,7 @@ header {
 	border-top: none;
 	border-bottom: none;
 	padding: $pad 0;
-	
+
 	.stats {
 		margin-left: $sidebar + $pad;
 	}
@@ -331,14 +331,18 @@ main {
 	.content {
 		padding-left: $pad-xxs;
 	}
-	.avatar { 
+	.avatar {
 		margin-left: 6px;
 		float: right;
 		width: $avatar-lg;
 		height: $avatar-lg;
-		span { 
+		span {
 			top: 3px;
-			font-size: $tx-sm; 
+			font-size: $tx-sm;
 		}
 	}
+}
+
+.a.status {
+  padding: 0 1em 0 1em;
 }
