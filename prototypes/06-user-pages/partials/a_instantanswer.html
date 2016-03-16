@@ -1,8 +1,9 @@
 <!-- Outside is wrapped within <div class="card half"> -->
 <div class="content">
 	<div class="a status {{ia.dev_milestone}}">{{ia.dev_milestone}}</div>
-	<p><strong>{{ia.name}}</strong></p>
-  {{ia.description}}
+	<p class="title"><strong><a href="https://duck.co/ia/view/{{ia.id}}">{{ia.name}}</a></strong></p>
+  <div class="subtitle">{{ia.issue_number}} Issues</div>
+  <div class="description">{{ia.description}}</div>
   <!--
 	Developers: <span ng-bind-html="fn.getDevs(ia)"></span> <br />
 	Maintainer: {{ia.maintainer.github}} <br />
