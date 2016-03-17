@@ -88,7 +88,7 @@ section {
     padding: 20px;
     border-bottom: 1px solid #eee; }
   .card.heightA {
-    height: 170px; }
+    height: 152px; }
 
 .half {
   float: left;
@@ -244,3 +244,24 @@ main {
     .instantanswer .avatar span {
       top: 3px;
       font-size: 13px; }
+
+.a.status {
+  padding: 0 1em 0 1em; }
+
+.title {
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical; }
+
+.description {
+  padding-top: 1em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  height: 57px; }
+
+.pull-right {
+  float: right; }

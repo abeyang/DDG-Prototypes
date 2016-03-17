@@ -23,7 +23,7 @@ app.controller('UserPageController', function($scope, fn) {
 			default: return 1000;
 		}
 	};
-	
+
 	$scope.myValueFunction = function(card) {
    return card.values.opt1 + card.values.opt2;
 };
@@ -33,35 +33,44 @@ app.controller('UserPageController', function($scope, fn) {
 		$scope.count = {};
 		$scope.topics = [];
 
+    var issue_num = {
+      "common_escape_sequences_cheat_sheet": 10,
+      "wunderlist_cheat_sheet": 5
+    }
+
+    $scope.ias = _.map(ias, function(ia) {
+      return ia.issue_number = issue_num[ia.id] || 0;
+    })
+
 		$scope.user = eval($scope.username);
 
 		// developed & maintained IAs, all in one array
-		$scope.ias = _.filter(ias, function(ia) { 
+		$scope.ias = _.filter(ias, function(ia) {
 	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) || (ia.maintainer && ia.maintainer.github == $scope.username));
 		});
 
 		// developed IAs -- using http://underscorejs.org/
-		$scope.ias_developed = _.filter(ias, function(ia) { 
+		$scope.ias_developed = _.filter(ias, function(ia) {
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
 		});
 
 		// maintained IAs
-		$scope.ias_maintained = _.filter(ias, function(ia) { 
+		$scope.ias_maintained = _.filter(ias, function(ia) {
 			return (ia.maintainer && ia.maintainer.github == $scope.username);
 		});
 
 		// opened issues
-		$scope.issues_open = _.filter($scope.user.issues, function(issue) { 
+		$scope.issues_open = _.filter($scope.user.issues, function(issue) {
 			return issue.state == 'open';
 		});
 
 		// all pull requests (from issues list)
-		$scope.prs = _.filter($scope.user.issues, function(issue) { 
+		$scope.prs = _.filter($scope.user.issues, function(issue) {
 			return issue.pull_request != null;
 		});
 
 		// opened pull requests
-		$scope.prs_open = _.filter($scope.prs, function(pr) { 
+		$scope.prs_open = _.filter($scope.prs, function(pr) {
 			return pr.state == 'open';
 		});
 
@@ -75,7 +84,7 @@ app.controller('UserPageController', function($scope, fn) {
 				});
 			}
 		});
-		
+
 		_.each(topics, function(value, key) {
 			var obj = {topic: '', amount: 0}
 			obj.topic = key;
@@ -95,7 +104,7 @@ app.controller('UserPageController', function($scope, fn) {
 	}
 
 	// initializing a default user
-	$scope.username = $scope.users[0].username;	
+	$scope.username = $scope.users[0].username;
 	$scope.showUser();
 
 	// initializing show_issues
