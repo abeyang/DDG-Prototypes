@@ -252,14 +252,14 @@ main {
   margin-bottom: 0;
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  overflow: auto;
+  overflow: hidden;
   -webkit-box-orient: vertical; }
 
 .description {
   padding-top: 1em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  overflow: auto;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   height: 57px; }
 
