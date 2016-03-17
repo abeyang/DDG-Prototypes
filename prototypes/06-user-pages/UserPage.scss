@@ -114,7 +114,9 @@ html, body, p, div {
 }
 .label { padding: $pad-xxxs 0; }
 
+.text-center { text-align: center; }
 .text-right { text-align: right; }
+.float-right { float: right; }
 
 
 // LAYOUT
@@ -180,6 +182,8 @@ section {
 
 .pad-left-20 { padding-left: 20px; }
 .pad-left-30 { padding-left: 30px; }
+.pad-right-20 { padding-right: 20px; }
+.pad-right-30 { padding-right: 30px; }
 
 // WIDGETS + ELEMENTS
 // ----------------------------------------------------------------------------
@@ -239,8 +243,13 @@ section {
 	}
 }
 
-// font awesome icons
-.fa { color: $gray-50; }
+// icons
+.fa, .octicon { color: $gray-50; }
+
+.count {
+	padding-left: $pad-xxxs;
+	color: $gray;
+}
 
 
 // HEADER

@@ -24,23 +24,14 @@ app.controller('UserPageController', function($scope, fn) {
 		}
 	};
 
-	$scope.myValueFunction = function(card) {
-   return card.values.opt1 + card.values.opt2;
-};
+	// $scope.myValueFunction = function(card) {
+ 	//   		return card.values.opt1 + card.values.opt2;
+	// };
 
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {
 		$scope.count = {};
 		$scope.topics = [];
-
-    var issue_num = {
-      "common_escape_sequences_cheat_sheet": 10,
-      "wunderlist_cheat_sheet": 5
-    }
-
-    $scope.ias = _.map(ias, function(ia) {
-      return ia.issue_number = issue_num[ia.id] || 0;
-    })
 
 		$scope.user = eval($scope.username);
 
@@ -143,10 +134,11 @@ app.factory('fn', function() {
 			return html;
 		},
 		// get developers based on an instant answer; returns avatars
-		getDevsAvatars: function(ia, users) {
+		getDevsAvatars: function(ia, users, skipname) {
 			var html = '';
 			_.each(ia.developer, function(dev) {
-				html += this.getAvatar(users, dev.name, '');
+				// console.log(skipname + ' | ' + dev.name);
+				if (skipname != dev.name) html += this.getAvatar(users, dev.name, '');
 			}, this);
 			return html;
 		},

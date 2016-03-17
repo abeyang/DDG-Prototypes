@@ -4,7 +4,7 @@
 <!-- @include ../../includes/head-nojs -->
 
 <!-- Load all other resources here: -->
-<link rel="stylesheet" href="<!-- $dir -->assets/css/font-awesome.min.css" charset="utf-8">
+<link rel="stylesheet" href="<!-- $dir -->assets/css/octicons.css" charset="utf-8">
 <link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
 
 <!-- Javascript -->
@@ -35,25 +35,16 @@
 
 	<!-- Main -->
 	<main>
-		<h3>Instant Answers</h3>
+		<h3>Instant Answers (Maintained)</h3>
 		<section>
-			<div class="flex-container label">
-				<div class="grid-1">Status</div>
-				<div class="grid-6 pad-left-20">Instant Answer &amp; Maintainer</div>
-				<div class="grid-2 text-right">Developer(s)</div>
-			</div>
-			<div class="instantanswer flex-container" ng-repeat="ia in ias | orderBy: iaSort" ng-include="'partials/b_instantanswer.html'">
+			<div class="instantanswer flex-container" ng-repeat="ia in ias_maintained | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
 			</div>
 		</section>
 
 		<section ng-if="count.open_prs">
-			<h3>Open Pull Requests</h3>
-			<div class="flex-container label">
-				<div class="grid-1">Dev</div>
-				<div class="grid-8">Pull Requests &amp; Comments</div>
-				<div class="grid-3 text-right">Last Update &amp; Reviewer</div>
-			</div>
-			<div ng-repeat="issue in prs | filter:{state:'open'} | orderBy: '-updated_at'" ng-include="'partials/b_issue.html'" class="issue flex-container">
+			<h3>Reviewing Pull Requests</h3>
+
+			<div ng-repeat="issue in prs_open | filter:{assignee:{login: username}} | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue flex-container">
 			</div>
 		</section>
 	</main>
