@@ -33,15 +33,6 @@ app.controller('UserPageController', function($scope, fn) {
 		$scope.count = {};
 		$scope.topics = [];
 
-    var issue_num = {
-      "common_escape_sequences_cheat_sheet": 10,
-      "wunderlist_cheat_sheet": 5
-    }
-
-    $scope.ias = _.map(ias, function(ia) {
-      return ia.issue_number = issue_num[ia.id] || 0;
-    })
-
 		$scope.user = eval($scope.username);
 
 		// developed & maintained IAs, all in one array
