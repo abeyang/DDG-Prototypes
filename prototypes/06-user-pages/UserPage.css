@@ -88,7 +88,7 @@ section {
     padding: 20px;
     border-bottom: 1px solid #eee; }
   .card.heightA {
-    height: 170px; }
+    height: 152px; }
 
 .half {
   float: left;
@@ -249,7 +249,19 @@ main {
   padding: 0 1em 0 1em; }
 
 .title {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: auto;
+  -webkit-box-orient: vertical; }
 
 .description {
-  padding-top: 1em; }
+  padding-top: 1em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: auto;
+  -webkit-box-orient: vertical;
+  height: 57px; }
+
+.pull-right {
+  float: right; }

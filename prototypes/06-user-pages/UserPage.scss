@@ -142,7 +142,7 @@ section {
 		padding: $pad-xxs;
 		border-bottom: 1px solid $gray-lt;
 	}
-	&.heightA { height: 170px; }
+	&.heightA { height: 152px; }
 }
 
 .half {
@@ -349,8 +349,21 @@ main {
 
 .title {
   margin-bottom: 0;
+  display: -webkit-box;
+-webkit-line-clamp: 1;
+overflow: auto;
+-webkit-box-orient: vertical;
 }
 
 .description {
   padding-top: 1em;
+  display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: auto;
+    -webkit-box-orient: vertical;
+    height: 57px;
+}
+
+.pull-right {
+  float: right;
 }

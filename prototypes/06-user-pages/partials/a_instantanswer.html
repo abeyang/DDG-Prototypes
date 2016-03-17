@@ -4,6 +4,7 @@
 	<p class="title"><strong><a href="https://duck.co/ia/view/{{ia.id}}">{{ia.name}}</a></strong></p>
   <div class="subtitle">{{ia.issue_number}} Issues</div>
   <div class="description">{{ia.description}}</div>
+  <div class="pull-right avatars grid-2" ng-bind-html="fn.getDevsAvatars(ia, users)"></div>
   <!--
 	Developers: <span ng-bind-html="fn.getDevs(ia)"></span> <br />
 	Maintainer: {{ia.maintainer.github}} <br />
