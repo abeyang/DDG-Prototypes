@@ -74,11 +74,17 @@
 
 	</div>
 </div>
-		<div class="topic typeA" ng-repeat="t in topics | orderBy:'-amount'">
+		<!-- <div class="topic typeA" ng-repeat="t in topics | orderBy:'-amount'">
 	<span class="amt">{{t.amount}}</span>
 	{{t.topic}}
 	<div class="bar" style="width:{{t.amount / count.max_topics * 100}}%"></div>
-</div>	</aside>
+</div>	 -->
+  <div>
+    <div ng-repeat="ia in ias_maintained" ng-include="'partials/d_instantanswer.html'">
+      
+    </div>
+  </div>
+</aside>
 
 	<!-- Main -->
 	<main>

@@ -54,6 +54,11 @@ app.controller('UserPageController', function($scope, fn) {
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
 		});
 
+		// developed IAs w/o the pipeline stuff
+		$scope.ias_developed_reduced = _.filter($scope.ias_developed, function(ia) {
+			return ia.dev_milestone === "complete" || ia.dev_milestone === "live";
+		})
+
 		// maintained IAs
 		$scope.ias_maintained = _.filter(ias, function(ia) {
 			return (ia.maintainer && ia.maintainer.github == $scope.username);
