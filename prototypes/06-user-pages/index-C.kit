@@ -48,20 +48,20 @@
 		<section>
 			<div class="flex-container">
 				<!-- PR Reviews -->
-				<h3 ng-if="count.reviewed_prs" class="grid-1 margin-right-20">Pull Request Reviews</h3>
+				<h3 ng-if="count.reviewed_prs" ng-class="{'margin-right-20': count.developed_prs}" class="grid-1">Pull Request Reviews</h3>
 				<!-- Open PRs -->
-				<h3 ng-if="count.developed_prs" class="grid-1 margin-left-20">Open Pull Requests</h3>
+				<h3 ng-if="count.developed_prs" ng-class="{'margin-left-20': count.reviewed_prs}" class="grid-1">Open Pull Requests</h3>
 			</div>
 			
 			<div class="flex-container align-top">
 				<!-- PR Reviews -->
-				<div ng-if="count.reviewed_prs" class="grid-1 margin-right-20">
+				<div ng-if="count.reviewed_prs" ng-class="{'margin-right-20': count.developed_prs}" class="grid-1">
 					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC flex-container">
 					</div>				
 				</div>
 
 				<!-- Open PRs -->
-				<div ng-if="count.developed_prs" class="grid-1 margin-left-20">
+				<div ng-if="count.developed_prs" ng-class="{'margin-left-20': count.reviewed_prs}" class="grid-1">
 					<div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC hideAvatar flex-container">
 					</div>
 				</div>
