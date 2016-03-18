@@ -16132,6 +16132,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/prototypes\/06-user-pages\/includes\/_c-sidebar.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_c-sidebar.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_c-sidebar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/prototypes\/06-user-pages\/includes\/_toggle_users.kit": {
 		"fileType": 2048,
 		"ignore": 1,
