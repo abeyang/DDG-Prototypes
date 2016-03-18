@@ -48,7 +48,7 @@
 	<div class="stats">
 		<div class="fourth">
 			<span>All Instant Answers</span>
-			<h2>{{count.all_ias}}</h2>
+			<h2>{{count.maintained_ias + count.developed_only_ias}}</h2>
 		</div>
 		<div class="fourth">
 			<span>Pull Requests Reviews</span>
@@ -82,7 +82,8 @@
 </div>
 		<div class="topic typeC" ng-repeat="t in topics | orderBy:'-amount'">
 	<span class="amt">{{t.amount}}</span>
-	{{t.topic}}
+	<span>{{t.topic}}</span>
+	<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
 </div>	</aside>
 
 	<!-- Main -->
@@ -90,19 +91,22 @@
 		<section>
 			<h3>
 				<div class="tabs">
-					<a href="#" ng-class="{'active': show_ias == ias_maintained}" ng-click="show_ias=ias_maintained">
-						Maintained
-						<span class="badge">{{count.maintained_ias}}</span>
+					<a href="#" ng-click="show_ias=ias_maintained">
+						<span ng-class="{'active': show_ias == ias_maintained}" >
+							Maintained
+							<span class="badge">{{count.maintained_ias}}</span>
+						</span>
 					</a>
-					<a href="#" ng-class="{'active': show_ias == ias_developed_only}" ng-click="show_ias=ias_developed_only">
-						Developed
-						<span class="badge">{{count.developed_only_ias}}</span>
+					<a href="#" ng-click="show_ias=ias_developed_only">
+						<span ng-class="{'active': show_ias == ias_developed_only}">
+							Developed
+							<span class="badge">{{count.developed_only_ias}}</span>
+						</span>
 					</a>
 				</div>
 				Instant Answers
 			</h3>
 
-			<!-- TODO: need to use "filter" for ias -->
 			<div class="instantanswer typeC flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
 			</div>
 		</section>

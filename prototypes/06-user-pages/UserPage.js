@@ -41,14 +41,14 @@ app.controller('UserPageController', function($scope, fn) {
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
 		});
 
-		// maintained IAs
+		// maintained IAs (no ghosted or deprecated)
 		$scope.ias_maintained = _.filter(ias, function(ia) {
-			return (ia.maintainer && ia.maintainer.github == $scope.username);
+			return (ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated');
 		});
 
-		// developed IAs but NOT maintained
+		// developed IAs but NOT maintained (no ghosted or deprecated)
 		$scope.ias_developed_only = _.filter(ias, function(ia) {
-	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) && !(ia.maintainer && ia.maintainer.github == $scope.username));
+	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) && !(ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated'));
 		});
 
 		// opened issues

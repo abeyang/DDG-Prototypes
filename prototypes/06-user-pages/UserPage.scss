@@ -254,25 +254,31 @@ section {
 
 	a {
 		display: inline-block;
-		padding: 7px 0 7px $pad-xxs;
+		padding: 8px 0 0 $pad-xxs;
 		margin-left: $pad-xxs;
 		color: $gray;
 		outline: 0;
-		opacity: 0.7;
 
 		&:not(:first-of-type) {
 			border-left: 1px solid $gray-lt;
 		}
 
-		&.active {
-			border-bottom: 1px solid $blue-85;
-			color: $black;
-			opacity: 1;
-		}
 		&:hover { 
 			color: $black;
 			opacity: 1; 
 		}
+
+		& > span {
+			padding-bottom: 8px;
+			opacity: 0.7;
+		}
+
+		.active {
+			border-bottom: 2px solid $blue-85;
+			color: $black;
+			opacity: 1;
+		}
+
 	}
 }
 
@@ -338,15 +344,6 @@ aside {
 	color: $gray-dk;
 	padding: $pad-xxxs 0;
 
-	&.typeA {
-		padding: $pad-xxs 0;
-		border-bottom: 1px solid $black-10;
-	}
-
-	&.typeC {
-		padding: 8px;
-	}
-
 	.amt {
 		float: right;
 		color: $gray;
@@ -357,8 +354,28 @@ aside {
 		bottom: -1px;
 		height: 1px;
 		background-color: $blue-85;
-		// width: 50%;
 	}
+
+	&.typeA {
+		padding: $pad-xxs 0;
+		border-bottom: 1px solid $black-10;
+	}
+
+	&.typeC {
+		position: relative;
+		padding: 5px $pad-xxs;
+		// padding: 4px 8px;
+		margin-bottom: 5px;
+
+		.bar {
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			border-radius: $round;
+			background-color: $black-05;
+		}
+	}
+
 }
 
 // MAIN CONTENT
@@ -382,6 +399,7 @@ main {
 	}
 
 	.comment { 
+		display: inline-block;
 		padding-left: 8px; 
 		white-space: nowrap;
 	}

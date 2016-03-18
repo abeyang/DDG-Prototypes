@@ -1,4 +1,5 @@
 <div class="topic typeC" ng-repeat="t in topics | orderBy:'-amount'">
 	<span class="amt">{{t.amount}}</span>
-	{{t.topic}}
+	<span>{{t.topic}}</span>
+	<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
 </div>

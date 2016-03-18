@@ -39,19 +39,22 @@
 		<section>
 			<h3>
 				<div class="tabs">
-					<a href="#" ng-class="{'active': show_ias == ias_maintained}" ng-click="show_ias=ias_maintained">
-						Maintained
-						<span class="badge">{{count.maintained_ias}}</span>
+					<a href="#" ng-click="show_ias=ias_maintained">
+						<span ng-class="{'active': show_ias == ias_maintained}" >
+							Maintained
+							<span class="badge">{{count.maintained_ias}}</span>
+						</span>
 					</a>
-					<a href="#" ng-class="{'active': show_ias == ias_developed_only}" ng-click="show_ias=ias_developed_only">
-						Developed
-						<span class="badge">{{count.developed_only_ias}}</span>
+					<a href="#" ng-click="show_ias=ias_developed_only">
+						<span ng-class="{'active': show_ias == ias_developed_only}">
+							Developed
+							<span class="badge">{{count.developed_only_ias}}</span>
+						</span>
 					</a>
 				</div>
 				Instant Answers
 			</h3>
 
-			<!-- TODO: need to use "filter" for ias -->
 			<div class="instantanswer typeC flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
 			</div>
 		</section>
