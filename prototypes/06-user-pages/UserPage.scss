@@ -173,12 +173,17 @@ section {
 	align-items: center;
 	// justify-content: space-between;
 
+	&.align-top { align-items: flex-start; }
+
 	.grid-1 { flex: 1; }
 	.grid-2 { flex: 2; }
 	.grid-4 { flex: 4; }
 	.grid-6 { flex: 6; }
 	.grid-8 { flex: 8; }
 }
+
+.margin-left-20 { padding-left: 20px; }
+.margin-right-20 { padding-right: 20px; }
 
 .pad-left-20 { padding-left: 20px; }
 .pad-left-30 { padding-left: 30px; }
@@ -326,10 +331,18 @@ main {
 	padding: $pad-xxxs 0;
 	border-top: 1px solid $gray-lt;
 
-	.content {
-		// padding-left: $pad-xxxs;
+	&.hideAvatar .avatars { display: none; }
+	&.typeC {
+		font-size: $tx-sm;
+
+		.comment { padding-left: 0; }
+		strong { padding-right: 8px; }
 	}
-	.comment { padding-left: 8px; }
+
+	.comment { 
+		padding-left: 8px; 
+		white-space: nowrap;
+	}
 }
 
 

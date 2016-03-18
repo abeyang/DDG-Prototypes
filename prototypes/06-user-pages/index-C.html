@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="UserPage.css" charset="utf-8">
 
 <!-- Javascript -->
+<script src="../../assets/js/moment.min.js"></script>
 <script src="../../assets/js/underscore-min.js"></script>
 <script src="../../assets/js/angular.js"></script>
 <script src="../../assets/js/angular-sanitize.js"></script>
@@ -45,15 +46,19 @@
 <header>
 	<div class="container">
 	<div class="stats">
-		<div class="third">
+		<div class="fourth">
 			<span>All Instant Answers</span>
 			<h2>{{count.all_ias}}</h2>
 		</div>
-		<div class="third">
-			<span>Open Pull Requests</span>
-			<h2>{{count.open_prs}}</h2>
+		<div class="fourth">
+			<span>Pull Requests Reviews</span>
+			<h2>{{count.reviewed_prs}}</h2>
 		</div>
-		<div class="third">
+		<div class="fourth">
+			<span>Open Pull Requests</span>
+			<h2>{{count.developed_prs}}</h2>
+		</div>
+		<div class="fourth">
 			<span>Closed Pull Requests</span>
 			<h2>{{count.closed_prs}}</h2>
 		</div>
@@ -82,17 +87,44 @@
 
 	<!-- Main -->
 	<main>
-		<h3>Instant Answers (Maintained)</h3>
 		<section>
+			<h3>Instant Answers (Maintained)</h3>
+
+			<!-- TODO: need to use "filter" for ias -->
 			<div class="instantanswer flex-container" ng-repeat="ia in ias_maintained | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
 			</div>
 		</section>
 
-		<section ng-if="count.open_prs">
-			<h3>Reviewing Pull Requests</h3>
-
-			<div ng-repeat="issue in prs_open | filter:{assignee:{login: username}} | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue flex-container">
+		<!-- <section ng-if="count.open_prs"> -->
+		<section>
+			<div class="flex-container">
+				<!-- PR Reviews -->
+				<h3 ng-if="count.reviewed_prs" class="grid-1 margin-right-20">Pull Request Reviews</h3>
+				<!-- Open PRs -->
+				<h3 ng-if="count.developed_prs" class="grid-1 margin-left-20">Open Pull Requests</h3>
 			</div>
+			
+			<div class="flex-container align-top">
+				<!-- PR Reviews -->
+				<div ng-if="count.reviewed_prs" class="grid-1 margin-right-20">
+					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC flex-container">
+					</div>				
+				</div>
+
+				<!-- Open PRs -->
+				<div ng-if="count.developed_prs" class="grid-1 margin-left-20">
+					<div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC hideAvatar flex-container">
+					</div>
+				</div>
+			</div>
+			
+
+		</section>
+
+		<section ng-if="count.open_prs">
+			
+
+			
 		</section>
 	</main>
 

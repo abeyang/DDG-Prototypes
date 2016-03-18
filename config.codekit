@@ -225,6 +225,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/moment.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/moment.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/moment.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/assets\/js\/plugins.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -16109,6 +16120,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_b-sidebar.kit",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_b-sidebar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/includes\/_c-header.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_c-header.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_c-header.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},

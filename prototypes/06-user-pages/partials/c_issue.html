@@ -1,9 +1,10 @@
-<span class="content grid-8">
+<span class="grid-4 content">
 	<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong>
-	<span class="gray comment">{{issue.comments}} <span class="octicon octicon-comment"></span></span>
+	<span class="subtitle comment">{{issue.comments}} <span class="octicon octicon-comment"></span></span>
 </span>
 
-<span class="grid-2 gray text-right">{{issue.updated_at.substring(0,10)}}</span>
+<span class="grid-1 subtitle text-right">{{fn.getFromNow(issue.updated_at)}}</span>
+
 
 <!-- developer -->
-<div class="grid-1" ng-bind-html="fn.getAvatar(users, issue.user.login, 'right')"></div>
+<!-- <div class="avatars" ng-bind-html="fn.getAvatar(users, issue.user.login, 'right')"></div> -->

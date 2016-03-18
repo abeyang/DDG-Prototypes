@@ -24,10 +24,6 @@ app.controller('UserPageController', function($scope, fn) {
 		}
 	};
 
-	// $scope.myValueFunction = function(card) {
- 	//   		return card.values.opt1 + card.values.opt2;
-	// };
-
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {
 		$scope.count = {};
@@ -65,6 +61,16 @@ app.controller('UserPageController', function($scope, fn) {
 			return pr.state == 'open';
 		});
 
+		// opened pull requests & being reviewed by user
+		$scope.prs_open_reviewed = _.filter($scope.prs, function(pr) {
+			return (pr.state == 'open' && (pr.assignee && pr.assignee.login == $scope.username));
+		});
+
+		// opened pull requests & developed by user
+		$scope.prs_open_developed = _.filter($scope.prs, function(pr) {
+			return (pr.state == 'open' && (pr.user && pr.user.login == $scope.username));
+		});
+
 		// topic list
 		var topics = {};
 		_.each($scope.ias, function(ia) {
@@ -87,6 +93,8 @@ app.controller('UserPageController', function($scope, fn) {
 		$scope.count.open_issues = _.size($scope.issues_open);
 		$scope.count.closed_issues = _.size($scope.user.issues) - $scope.count.open_issues;
 		$scope.count.open_prs = _.size($scope.prs_open);
+		$scope.count.reviewed_prs = _.size($scope.prs_open_reviewed);
+		$scope.count.developed_prs = _.size($scope.prs_open_developed);
 		$scope.count.closed_prs = _.size($scope.prs) - $scope.count.open_prs;
 
 		var maxtopic = _.max($scope.topics, function(topic){ return topic.amount; });
@@ -157,7 +165,11 @@ app.factory('fn', function() {
 				html += '<span>' + label.name + '; </span>';
 			});
 			return html;
-		}
+		},
+		// get "time ago" from date
+		getFromNow: function(datetimestr) {
+        	return moment(datetimestr).fromNow();
+        }
 
 	};
 });
