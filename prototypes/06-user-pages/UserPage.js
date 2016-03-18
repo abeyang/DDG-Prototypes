@@ -46,6 +46,11 @@ app.controller('UserPageController', function($scope, fn) {
 			return (ia.maintainer && ia.maintainer.github == $scope.username);
 		});
 
+		// developed IAs but NOT maintained
+		$scope.ias_developed_only = _.filter(ias, function(ia) {
+	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) && !(ia.maintainer && ia.maintainer.github == $scope.username));
+		});
+
 		// opened issues
 		$scope.issues_open = _.filter($scope.user.issues, function(issue) {
 			return issue.state == 'open';
@@ -90,6 +95,8 @@ app.controller('UserPageController', function($scope, fn) {
 		});
 
 		$scope.count.all_ias = _.size($scope.ias);
+		$scope.count.maintained_ias = _.size($scope.ias_maintained);
+		$scope.count.developed_only_ias = _.size($scope.ias_developed_only);
 		$scope.count.open_issues = _.size($scope.issues_open);
 		$scope.count.closed_issues = _.size($scope.user.issues) - $scope.count.open_issues;
 		$scope.count.open_prs = _.size($scope.prs_open);
@@ -99,6 +106,9 @@ app.controller('UserPageController', function($scope, fn) {
 
 		var maxtopic = _.max($scope.topics, function(topic){ return topic.amount; });
 		$scope.count.max_topics = maxtopic.amount;
+
+		// by default. for 'filterable'
+		$scope.show_ias = ($scope.count.maintained_ias) ? $scope.ias_maintained : $scope.ias_developed_only;
 
 	}
 

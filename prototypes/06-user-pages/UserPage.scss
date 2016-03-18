@@ -48,8 +48,9 @@ $pad-lg:	60px;
 $sidebar:	214px;
 $main:		760px;
 
-$round:		5px;
 $round-sm:	3px;
+$round:		5px;
+$round-lg:	10px; 
 $avatar:	24px;
 $avatar-lg: 30px;
 
@@ -246,6 +247,41 @@ section {
 		width: 100%;
 		border-radius: $avatar;
 	}
+}
+
+.tabs {
+	float: right;
+
+	a {
+		display: inline-block;
+		padding: 7px 0 7px $pad-xxs;
+		margin-left: $pad-xxs;
+		color: $gray;
+		outline: 0;
+
+		&:not(:first-of-type) {
+			border-left: 1px solid $gray-lt;
+		}
+
+		&.active {
+			// border-bottom: 1px solid $blue-85;
+			color: $black;
+		}
+		&:hover { 
+			color: $black;
+			opacity: 1; 
+		}
+	}
+}
+
+.badge {
+	margin-left: $pad-xxxs;
+	// padding: 3px 7px;
+	// border-radius: $round-lg;
+	// background-color: $gray-lt;
+	color: $gray;
+	font-size: $tx-sm;
+	
 }
 
 // icons

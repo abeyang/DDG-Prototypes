@@ -37,14 +37,25 @@
 	<!-- Main -->
 	<main>
 		<section>
-			<h3>Instant Answers (Maintained)</h3>
+			<h3>
+				<div class="tabs">
+					<a href="#" ng-class="{'active': show_ias == ias_maintained}" ng-click="show_ias=ias_maintained">
+						Maintained
+						<span class="badge">{{count.maintained_ias}}</span>
+					</a>
+					<a href="#" ng-class="{'active': show_ias == ias_developed_only}" ng-click="show_ias=ias_developed_only">
+						Developed
+						<span class="badge">{{count.developed_only_ias}}</span>
+					</a>
+				</div>
+				Instant Answers
+			</h3>
 
 			<!-- TODO: need to use "filter" for ias -->
-			<div class="instantanswer flex-container" ng-repeat="ia in ias_maintained | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
+			<div class="instantanswer flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
 			</div>
 		</section>
 
-		<!-- <section ng-if="count.open_prs"> -->
 		<section>
 			<div class="flex-container">
 				<!-- PR Reviews -->
