@@ -339,3 +339,12 @@ main {
 
 .pull-right {
   float: right; }
+
+.one-line {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.ia-title {
+  width: 14em; }
