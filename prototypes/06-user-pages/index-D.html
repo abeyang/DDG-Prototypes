@@ -104,12 +104,13 @@
   </div>
 </section>
 
-  <h3 class="h3-small">Topics</h3>
+  <!-- <h3 class="h3-small">Topics</h3>
 		<div class="topic typeC" ng-repeat="t in topics | orderBy:'-amount'">
 	<span class="amt">{{t.amount}}</span>
 	<span> {{t.topic}}</span>
 	<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
-</div>
+
+</div> -->
 
 </aside>
 
@@ -125,7 +126,7 @@
 			<div class="flex-container align-top">
 				<!-- PR Reviews -->
 				<div ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">
-					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC flex-container">
+					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeD flex-container">
 					</div>
 				</div>
 			</div>
@@ -138,7 +139,7 @@
       <div class="flex-container">
         <!-- Open PRs -->
         <div ng-if="count.developed_prs" class="grid-1">
-          <div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC hideAvatar flex-container">
+          <div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeD hideAvatar flex-container">
           </div>
         </div>
       </div>

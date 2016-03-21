@@ -272,16 +272,18 @@ aside {
   .topic.typeA {
     padding: 20px 0;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1); }
-  .topic.typeC {
+  .topic.typeC, .topic.typeD {
     position: relative;
     padding: 5px 20px;
     margin-bottom: 5px; }
-    .topic.typeC .bar {
+    .topic.typeC .bar, .topic.typeD .bar {
       bottom: 0;
       left: 0;
       height: 100%;
       border-radius: 5px;
       background-color: rgba(51, 51, 51, 0.05); }
+  .topic.typeD {
+    font-size: 15px; }
 
 main {
   margin-left: 259px;
@@ -292,11 +294,11 @@ main {
   border-top: 1px solid #eee; }
   .issue.hideAvatar .avatars {
     display: none; }
-  .issue.typeC {
+  .issue.typeC, .issue.topic.typeD {
     font-size: 13px; }
-    .issue.typeC .comment {
+    .issue.typeC .comment, .issue.topic.typeD .comment {
       padding-left: 0; }
-    .issue.typeC strong {
+    .issue.typeC strong, .issue.topic.typeD strong {
       padding-right: 8px; }
   .issue .comment {
     display: inline-block;
@@ -306,7 +308,7 @@ main {
 .instantanswer {
   padding: 20px 0;
   border-top: 1px solid #eee; }
-  .instantanswer.typeC {
+  .instantanswer.typeC, .instantanswer.topic.typeD {
     padding: 12px 0; }
   .instantanswer .content {
     padding-left: 20px; }
@@ -341,10 +343,10 @@ main {
   float: right; }
 
 .one-line {
-  display: block;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  font-size: 13px; }
 
 .ia-title {
   width: 15em; }

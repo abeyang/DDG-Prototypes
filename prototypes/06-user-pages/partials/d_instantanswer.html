@@ -1,15 +1,16 @@
 <!-- Outside is wrapped within <div class="ia..."> -->
 
 <div class="grid-6">
-	<div>
-    <strong><a class="one-line ia-title" href="https://duck.co/ia/view/{{ia.id}}">
-      <div class="circle green" style="display: inline-block"></div>
+    <strong class="one-line" style="display: inline-block; vertical-align: sub; width: 77%;"><a class="a-title" href="https://duck.co/ia/view/{{ia.id}}">
+      <!-- <div class="circle green" style="display: inline-block"></div> -->
       {{ia.name}}
-    </a></strong></div>
-  <div class="subtitle" style="margin-left: 19px;">Maintainer</div>
+    </a>
+  <!-- <div class="subtitle" style="margin-left: 19px;">Maintainer</div> -->
 
-	<!-- <span class="count" ng-if="ia.prs_count">{{ia.prs_count}} <span class="octicon octicon-git-pull-request"></span></span>
-	<span class="count" ng-if="ia.issues_count">{{ia.issues_count}} <span class="octicon octicon-issue-opened"></span></span> -->
+	 <span class="count" style="font-size: 13px;" ng-if="ia.prs_count">{{ia.prs_count}} <span class="octicon octicon-git-pull-request"></span></span>
+	<span class="count" style="font-size: 13px;" ng-if="ia.issues_count">{{ia.issues_count}} <span class="octicon octicon-issue-opened"></span></span>
+
+  </strong>
 </div>
 
 

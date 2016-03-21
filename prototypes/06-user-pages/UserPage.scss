@@ -376,6 +376,11 @@ aside {
 		}
 	}
 
+	&.typeD {
+		@extend .typeC;
+		font-size: 15px;
+	}
+
 }
 
 // MAIN CONTENT
@@ -453,10 +458,10 @@ overflow: hidden;
 }
 
 .one-line {
-	display: block;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	font-size: 13px;
 }
 
 .ia-title {
