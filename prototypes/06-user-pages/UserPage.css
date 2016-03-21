@@ -310,6 +310,8 @@ main {
   border-top: 1px solid #eee; }
   .instantanswer.typeC, .instantanswer.topic.typeD {
     padding: 12px 0; }
+  .instantanswer.typeD {
+    padding: 8px 0; }
   .instantanswer .content {
     padding-left: 20px; }
   .instantanswer .avatar {
