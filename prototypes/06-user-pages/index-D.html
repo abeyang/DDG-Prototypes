@@ -100,6 +100,8 @@
     <!-- Instant Answers -->
   <!-- </h3> -->
 
+  <h5 style="padding-bottom: 10px;">Instant Answers</h4>
+
   <div class="instantanswer typeD flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/d_instantanswer.html'">
   </div>
 </section>
@@ -126,7 +128,7 @@
 			<div class="flex-container align-top">
 				<!-- PR Reviews -->
 				<div ng-if="count.reviewed_prs" class="grid-1">
-					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeD flex-container">
+					<div ng-repeat="issue in prs_open_reviewed_2 | orderBy: '-updated_at'" ng-include="'partials/d_issue.html'" class="issue typeD flex-container">
 					</div>
 				</div>
 			</div>
@@ -139,7 +141,7 @@
       <div class="flex-container">
         <!-- Open PRs -->
         <div ng-if="count.developed_prs" class="grid-1">
-          <div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeD hideAvatar flex-container">
+          <div ng-repeat="issue in prs_open_developed_2 | orderBy: '-updated_at'" ng-include="'partials/d_issue.html'" class="issue typeD hideAvatar flex-container">
           </div>
         </div>
       </div>

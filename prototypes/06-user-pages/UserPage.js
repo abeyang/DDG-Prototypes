@@ -53,7 +53,7 @@ app.controller('UserPageController', function($scope, fn) {
 
 		// opened issues
 		$scope.issues_open = _.filter($scope.user.issues, function(issue) {
-			return issue.state == 'open';
+			return issue.state === 'open' && issue.body.match(/https:\/\/duck\.co\/ia\/view\/(.*?)/);
 		});
 
 		// all pull requests (from issues list)
@@ -71,10 +71,29 @@ app.controller('UserPageController', function($scope, fn) {
 			return (pr.state == 'open' && (pr.assignee && pr.assignee.login == $scope.username));
 		});
 
+		var getIA = function(issue) {
+			var ia = issue.body.match(/https:\/\/duck\.co\/ia\/view\/([_a-zA-Z]+)/);
+
+			if(ia) {
+				return _.extend(issue, { ia_page: ia[1].replace(/_/g, " ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) });
+			}
+
+			return issue;
+		};
+
+		$scope.prs_open_reviewed_2 = _.map(_.filter($scope.prs, function(pr) {
+			return /https:\/\/duck\.co\/ia\/view\//.test(pr.body) && (pr.state == 'open' && (pr.assignee && pr.assignee.login == $scope.username));
+		}), getIA);
+
 		// opened pull requests & developed by user
 		$scope.prs_open_developed = _.filter($scope.prs, function(pr) {
 			return (pr.state == 'open' && (pr.user && pr.user.login == $scope.username));
 		});
+
+		// opened pull requests & developed by user
+		$scope.prs_open_developed_2 = _.map(_.filter($scope.prs, function(pr) {
+			return /https:\/\/duck\.co\/ia\/view\//.test(pr.body) && (pr.state == 'open' && (pr.user && pr.user.login == $scope.username));
+		}), getIA);
 
 		// topic list
 		var topics = {};
