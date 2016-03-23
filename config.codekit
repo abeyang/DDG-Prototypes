@@ -1301,6 +1301,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/prototypes\/06-user-pages\/avatars\/mattr555.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31002,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/mattr555.jpeg",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/mattr555.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/prototypes\/06-user-pages\/avatars\/mintsoft.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1319,6 +1330,17 @@
 		"initialSize": 26559,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/moollaza.jpeg",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/moollaza.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/prototypes\/06-user-pages\/avatars\/MrChrisW.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10950,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/MrChrisW.jpeg",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/MrChrisW.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1661,6 +1683,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/prototypes\/06-user-pages\/users\/mattr555.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/mattr555.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/mattr555-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/prototypes\/06-user-pages\/users\/min\/all_ias-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -1727,6 +1760,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/prototypes\/06-user-pages\/users\/min\/MrChrisW-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/MrChrisW-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/MrChrisW-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/prototypes\/06-user-pages\/users\/min\/pjhampton-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -1766,6 +1810,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/moollaza.js",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/moollaza-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/06-user-pages\/users\/MrChrisW.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/MrChrisW.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/MrChrisW-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

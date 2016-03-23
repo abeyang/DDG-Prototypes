@@ -9,7 +9,9 @@ app.controller('UserPageController', function($scope, fn) {
 		{username: 'pjhampton', hasInfo: true, avatar: "pjhampton.jpg"},
 		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"},
 		{username: 'jagtalon', hasInfo: true, avatar: "jagtalon.jpeg"},
-		{username: 'moollaza', hasInfo: true, avatar: "moollaza.jpeg"}
+		{username: 'moollaza', hasInfo: true, avatar: "moollaza.jpeg"},
+		{username: 'mattr555', hasInfo: true, avatar: "mattr555.jpeg"},
+		{username: 'MrChrisW', hasInfo: true, avatar: "MrChrisW.jpeg"}
 	];
 
 	// for sorting instant answers (live should be first)
