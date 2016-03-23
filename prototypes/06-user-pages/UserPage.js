@@ -26,14 +26,19 @@ app.controller('UserPageController', function($scope, fn) {
 		}
 	};
 
+	var initial = false;
+
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {
 		$scope.count = {};
 		$scope.topics = [];
 
-		if(window.location.hash) {
+		if(!initial && window.location.hash) {
 			$scope.username = window.location.hash.replace(/#\//, "");
 		}
+		initial = true;
+
+		window.location.hash = "#/" + $scope.username;
 
 		$scope.user = eval($scope.username);
 
