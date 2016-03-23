@@ -31,6 +31,10 @@ app.controller('UserPageController', function($scope, fn) {
 		$scope.count = {};
 		$scope.topics = [];
 
+		if(window.location.hash) {
+			$scope.username = window.location.hash.replace(/#\//, "");
+		}
+
 		$scope.user = eval($scope.username);
 
 		// developed & maintained IAs, all in one array
