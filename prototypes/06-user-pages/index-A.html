@@ -10,7 +10,7 @@
 
     <!-- CSS -->
 	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
-    
+
 </head>
 <body ng-controller="UserPageController">
 
@@ -29,6 +29,8 @@
 <script src="users/anthonyneace.js"></script>
 <script src="users/pjhampton.js"></script>
 <script src="users/mintsoft.js"></script>
+<script src="users/jagtalon.js"></script>
+<script src="users/moollaza.js"></script>
 <script src="users/all_ias.js"></script>
 <script src="UserPage.js"></script>
 
@@ -36,7 +38,7 @@
 <div class="toolbar">
 	<select name="username" id="username" ng-model="username" ng-change="showUser()">
 	  <option ng-repeat="user in users | filter: {hasInfo:true}" value="{{user.username}}">{{user.username}}</option>
-	</select>	
+	</select>
 </div>
 <!-- Header -->
 <header>
@@ -54,43 +56,48 @@
 			<span>Closed Pull Requests</span>
 			<h2>{{count.closed_prs}}</h2>
 		</div>
-	</div>		
+	</div>
 </div></header>
 
 <div class="container">
-	
+
 	<!-- Sidebar -->
 	<aside>
 		<div class="profile card">
-	<img src="{{user.gh_data.avatar_url}}" />
+	<img src="{{user.avatar_url || user.gh_data.avatar_url}}" />
 	<div class="content">
-		<strong>{{user.name}}</strong>
-		<br />@{{user.login}}
-		<br />{{user.location}}		
+		<h3>{{user.name}}</h3>
+		<div class="gray">
+			<a href="http://github.com/{{user.login}}">@{{user.login}}</a>
+			<br />{{user.location}}
+		</div>
+
 	</div>
 </div>
-		<div ng-repeat="t in topics | orderBy:'-amount'">
-	{{t.topic}} | {{t.amount}}
+		<div class="topic typeA" ng-repeat="t in topics | orderBy:'-amount'">
+	<span class="amt">{{t.amount}}</span>
+	{{t.topic}}
+	<div class="bar" style="width:{{t.amount / count.max_topics * 100}}%"></div>
 </div>	</aside>
 
 	<!-- Main -->
 	<main>
-		<h3>Maintained IAs</h3>
+		<h3>Maintaining Instant Answers</h3>
 
 		<section>
 			<div class="card half heightA" ng-repeat="ia in ias_maintained" ng-include="'partials/a_instantanswer.html'">
 			</div>
 		</section>
-		
 
-		<h3>Developed IAs</h3>
+
+		<h3>Developed Instant Answers</h3>
 		<section>
 			<!-- This skips IAs in which there is a maintainer; implementation is HACKISH, b/c it assumes maintainer is user (which isn't nec true)! -->
 			<div class="card half heightA" ng-repeat="ia in ias_developed" ng-if="!ia.maintainer" ng-include="'partials/a_instantanswer.html'"></div>
-				
+
 		</section>
 
-		
+
 
 		<!-- PRs will have the pull_request attribute -->
 		<div style="float:right;">

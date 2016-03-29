@@ -6,9 +6,13 @@
 <!-- status -->
 <div class="status full {{ia.dev_milestone}} grid-1">{{ia.dev_milestone}}</div>
 
-<div class="grid-4 content">
-	<strong>{{ia.name}}</strong>
-	<div class="subtitle" ng-if="ia.maintainer.github">Maintained by {{ia.maintainer.github}}</div>
+<div class="grid-6 content">
+	<strong><a href="https://duck.co/ia/view/{{ia.id}}">{{ia.name}}</a></strong>
+	<div class="subtitle">
+		<span ng-if="ia.maintainer.github">Maintained by {{ia.maintainer.github}}</span>
+		<span ng-if="ia.issues_count">| {{ia.issues_count}} Issues</span>
+		<span ng-if="ia.prs_count">| {{ia.prs_count}} PRs</span>
+	</div>
 </div>
 
 <!-- developers -->

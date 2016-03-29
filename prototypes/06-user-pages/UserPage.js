@@ -7,16 +7,28 @@ app.controller('UserPageController', function($scope, fn) {
 		{username: 'AnthonyNeace', hasInfo: true, avatar: "anthonyneace.jpg"},
 		{username: 'riqpe', hasInfo: true, avatar: "riqpe.png"},
 		{username: 'pjhampton', hasInfo: true, avatar: "pjhampton.jpg"},
-		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"}
+		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"},
+		{username: 'jagtalon', hasInfo: true, avatar: "jagtalon.jpeg"},
+		{username: 'moollaza', hasInfo: true, avatar: "moollaza.jpeg"}
 	];
 
-	$scope.count = {};
-	$scope.topics = [];
-
-	// console.log(fn.findByAttr($scope.users, 'username', 'pjhampton'));
+	// for sorting instant answers (live should be first)
+	$scope.iaSort = function(ia) {
+		switch (ia.dev_milestone) {
+			case 'live': return 0;
+			case 'complete': return 10;
+			case 'testing': return 20;
+			case 'development': return 30;
+			case 'planning': return 40;
+			default: return 1000;
+		}
+	};
 
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {
+		$scope.count = {};
+		$scope.topics = [];
+
 		$scope.user = eval($scope.username);
 
 		// developed & maintained IAs, all in one array
@@ -29,6 +41,7 @@ app.controller('UserPageController', function($scope, fn) {
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
 		});
 
+<<<<<<< HEAD
 		// maintained IAs
 		$scope.ias_maintained = _.filter(ias, function(ia) {
 			return (ia.maintainer && ia.maintainer.github == $scope.username);
@@ -36,6 +49,20 @@ app.controller('UserPageController', function($scope, fn) {
 
 		// opened issues
 		$scope.issues_open = _.map(_.filter($scope.user.issues, function(issue) {
+=======
+		// maintained IAs (no ghosted or deprecated)
+		$scope.ias_maintained = _.filter(ias, function(ia) {
+			return (ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated');
+		});
+
+		// developed IAs but NOT maintained (no ghosted or deprecated)
+		$scope.ias_developed_only = _.filter(ias, function(ia) {
+	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) && !(ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated'));
+		});
+
+		// opened issues
+		$scope.issues_open = _.filter($scope.user.issues, function(issue) {
+>>>>>>> master
 			return issue.state == 'open';
 		}), function(issue) {
 			var ia = issue.body.match(/\(https:\/\/duck\.co\/ia\/view\/.*?\)/);
@@ -57,6 +84,16 @@ app.controller('UserPageController', function($scope, fn) {
 			return pr.state == 'open';
 		});
 
+		// opened pull requests & being reviewed by user
+		$scope.prs_open_reviewed = _.filter($scope.prs, function(pr) {
+			return (pr.state == 'open' && (pr.assignee && pr.assignee.login == $scope.username));
+		});
+
+		// opened pull requests & developed by user
+		$scope.prs_open_developed = _.filter($scope.prs, function(pr) {
+			return (pr.state == 'open' && (pr.user && pr.user.login == $scope.username));
+		});
+
 		// topic list
 		var topics = {};
 		_.each($scope.ias, function(ia) {
@@ -76,10 +113,20 @@ app.controller('UserPageController', function($scope, fn) {
 		});
 
 		$scope.count.all_ias = _.size($scope.ias);
+		$scope.count.maintained_ias = _.size($scope.ias_maintained);
+		$scope.count.developed_only_ias = _.size($scope.ias_developed_only);
 		$scope.count.open_issues = _.size($scope.issues_open);
 		$scope.count.closed_issues = _.size($scope.user.issues) - $scope.count.open_issues;
 		$scope.count.open_prs = _.size($scope.prs_open);
+		$scope.count.reviewed_prs = _.size($scope.prs_open_reviewed);
+		$scope.count.developed_prs = _.size($scope.prs_open_developed);
 		$scope.count.closed_prs = _.size($scope.prs) - $scope.count.open_prs;
+
+		var maxtopic = _.max($scope.topics, function(topic){ return topic.amount; });
+		$scope.count.max_topics = maxtopic.amount;
+
+		// by default. for 'filterable'
+		$scope.show_ias = ($scope.count.maintained_ias) ? $scope.ias_maintained : $scope.ias_developed_only;
 
 	}
 
@@ -123,10 +170,11 @@ app.factory('fn', function() {
 			return html;
 		},
 		// get developers based on an instant answer; returns avatars
-		getDevsAvatars: function(ia, users) {
+		getDevsAvatars: function(ia, users, skipname) {
 			var html = '';
 			_.each(ia.developer, function(dev) {
-				html += this.getAvatar(users, dev.name, '');
+				// console.log(skipname + ' | ' + dev.name);
+				if (skipname != dev.name) html += this.getAvatar(users, dev.name, '');
 			}, this);
 			return html;
 		},
@@ -145,7 +193,11 @@ app.factory('fn', function() {
 				html += '<span>' + label.name + '; </span>';
 			});
 			return html;
-		}
+		},
+		// get "time ago" from date
+		getFromNow: function(datetimestr) {
+        	return moment(datetimestr).fromNow();
+        }
 
 	};
 });

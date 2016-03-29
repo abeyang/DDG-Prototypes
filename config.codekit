@@ -20,6 +20,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/css\/octicons.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/octicons.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/css\/slider.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -211,6 +220,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/min\/app-min.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/min\/app-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/moment.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/moment.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/moment.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -16012,6 +16032,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/prototypes\/06-user-pages\/avatars\/jagtalon.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26139,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/jagtalon.jpeg",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/jagtalon.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/prototypes\/06-user-pages\/avatars\/mintsoft.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -16019,6 +16050,17 @@
 		"initialSize": 7405,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/mintsoft.png",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/mintsoft.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/prototypes\/06-user-pages\/avatars\/moollaza.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26559,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/moollaza.jpeg",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/avatars\/moollaza.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -16069,6 +16111,33 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_a-sidebar.kit",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_a-sidebar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/includes\/_b-sidebar.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_b-sidebar.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_b-sidebar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/includes\/_c-header.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_c-header.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_c-header.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/includes\/_c-sidebar.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_c-sidebar.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/includes\/_c-sidebar.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -16123,6 +16192,24 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-B.kit",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-B.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/index-C.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-C.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/index-C.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-C.kit",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/index-C.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -16191,6 +16278,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/prototypes\/06-user-pages\/partials\/c_instantanswer.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/partials\/c_instantanswer.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/prototypes\/06-user-pages\/partials\/c_issue.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/partials\/c_issue.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/prototypes\/06-user-pages\/UserPage.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -16209,7 +16314,7 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 0
 		},
 	"\/prototypes\/06-user-pages\/UserPage.scss": {
 		"createSourceMap": 0,
@@ -16260,6 +16365,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/prototypes\/06-user-pages\/users\/jagtalon.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/jagtalon.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/jagtalon-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/prototypes\/06-user-pages\/users\/min\/all_ias-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -16293,12 +16409,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/prototypes\/06-user-pages\/users\/min\/jagtalon-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/jagtalon-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/jagtalon-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/prototypes\/06-user-pages\/users\/min\/mintsoft-min.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/mintsoft-min.js",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/mintsoft-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/06-user-pages\/users\/min\/moollaza-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/moollaza-min.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/min\/moollaza-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -16332,6 +16470,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/mintsoft.js",
 		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/mintsoft-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/prototypes\/06-user-pages\/users\/moollaza.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/moollaza.js",
+		"outputAbbreviatedPath": "\/prototypes\/06-user-pages\/users\/min\/moollaza-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

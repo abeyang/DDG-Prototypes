@@ -30,7 +30,7 @@
 	<!-- Sidebar -->
 	<aside>
 		<!-- @include includes/a-profile -->
-		<!-- @include includes/a-sidebar -->
+		<!-- @include includes/b-sidebar -->
 	</aside>
 
 	<!-- Main -->
@@ -39,10 +39,10 @@
 		<section>
 			<div class="flex-container label">
 				<div class="grid-1">Status</div>
-				<div class="grid-4 pad-left-30">Instant Answer &amp; Maintainer</div>
+				<div class="grid-6 pad-left-20">Instant Answer &amp; Maintainer</div>
 				<div class="grid-2 text-right">Developer(s)</div>
 			</div>
-			<div class="instantanswer flex-container" ng-repeat="(shortname, ia) in ias" ng-include="'partials/b_instantanswer.html'">
+			<div class="instantanswer flex-container" ng-repeat="ia in ias | orderBy: iaSort" ng-include="'partials/b_instantanswer.html'">
 			</div>
 		</section>
 
@@ -53,7 +53,7 @@
 				<div class="grid-8">Pull Requests &amp; Comments</div>
 				<div class="grid-3 text-right">Last Update &amp; Reviewer</div>
 			</div>
-			<div ng-repeat="issue in prs | filter:{state:'open'}" ng-include="'partials/b_issue.html'" class="issue flex-container">
+			<div ng-repeat="issue in prs | filter:{state:'open'} | orderBy: '-updated_at'" ng-include="'partials/b_issue.html'" class="issue flex-container">
 			</div>
 		</section>
 	</main>
