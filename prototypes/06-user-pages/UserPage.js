@@ -41,6 +41,15 @@ app.controller('UserPageController', function($scope, fn) {
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
 		});
 
+<<<<<<< HEAD
+		// maintained IAs
+		$scope.ias_maintained = _.filter(ias, function(ia) {
+			return (ia.maintainer && ia.maintainer.github == $scope.username);
+		});
+
+		// opened issues
+		$scope.issues_open = _.map(_.filter($scope.user.issues, function(issue) {
+=======
 		// maintained IAs (no ghosted or deprecated)
 		$scope.ias_maintained = _.filter(ias, function(ia) {
 			return (ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated');
@@ -53,7 +62,16 @@ app.controller('UserPageController', function($scope, fn) {
 
 		// opened issues
 		$scope.issues_open = _.filter($scope.user.issues, function(issue) {
+>>>>>>> master
 			return issue.state == 'open';
+		}), function(issue) {
+			var ia = issue.body.match(/\(https:\/\/duck\.co\/ia\/view\/.*?\)/);
+
+			if(ia) {
+				return _.extend(issue, { ia_page: ia[0] });
+			}
+			
+			return issue;
 		});
 
 		// all pull requests (from issues list)
