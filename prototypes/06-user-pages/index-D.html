@@ -15,9 +15,11 @@
 <body ng-controller="UserPageController">
 
 <!-- Load all other resources here: -->
+<link rel="stylesheet" href="../../assets/css/octicons.css" charset="utf-8">
 <link rel="stylesheet" href="UserPage.css" charset="utf-8">
 
 <!-- Javascript -->
+<script src="../../assets/js/moment.min.js"></script>
 <script src="../../assets/js/underscore-min.js"></script>
 <script src="../../assets/js/angular.js"></script>
 <script src="../../assets/js/angular-sanitize.js"></script>
@@ -31,6 +33,8 @@
 <script src="users/mintsoft.js"></script>
 <script src="users/jagtalon.js"></script>
 <script src="users/moollaza.js"></script>
+<script src="users/mattr555.js"></script>
+<script src="users/MrChrisW.js"></script>
 <script src="users/all_ias.js"></script>
 <script src="UserPage.js"></script>
 
@@ -44,15 +48,19 @@
 <header>
 	<div class="container">
 	<div class="stats">
-		<div class="third">
+		<div class="fourth">
 			<span>All Instant Answers</span>
-			<h2>{{count.all_ias}}</h2>
+			<h2>{{count.maintained_ias + count.developed_only_ias}}</h2>
 		</div>
-		<div class="third">
+		<div class="fourth">
+			<span>Pull Requests Reviews</span>
+			<h2>{{count.reviewed_prs}}</h2>
+		</div>
+		<div class="fourth">
 			<span>Open Pull Requests</span>
-			<h2>{{count.open_prs}}</h2>
+			<h2>{{count.developed_prs}}</h2>
 		</div>
-		<div class="third">
+		<div class="fourth">
 			<span>Closed Pull Requests</span>
 			<h2>{{count.closed_prs}}</h2>
 		</div>
@@ -74,58 +82,79 @@
 
 	</div>
 </div>
-		<!-- <div class="topic typeA" ng-repeat="t in topics | orderBy:'-amount'">
-	<span class="amt">{{t.amount}}</span>
-	{{t.topic}}
-	<div class="bar" style="width:{{t.amount / count.max_topics * 100}}%"></div>
-</div>	 -->
-  <div>
-    <div ng-repeat="ia in ias_maintained" ng-include="'partials/d_instantanswer.html'">
-      
-    </div>
+
+<section>
+  <!-- <h3 class="h3-small"> -->
+    <!-- <div class="tabs">
+      <a href="#" ng-click="show_ias=ias_maintained">
+        <span ng-class="{'active': show_ias == ias_maintained}" >
+          Maintained
+          <span class="badge">{{count.maintained_ias}}</span>
+        </span>
+      </a>
+      <a href="#" ng-click="show_ias=ias_developed_only">
+        <span ng-class="{'active': show_ias == ias_developed_only}">
+          Developed
+          <span class="badge">{{count.developed_only_ias}}</span>
+        </span>
+      </a>
+    </div> -->
+    <!-- Instant Answers -->
+  <!-- </h3> -->
+
+  <h5 style="padding-bottom: 10px;">Instant Answers</h4>
+
+  <div class="instantanswer typeD flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/d_instantanswer.html'">
   </div>
+</section>
+
+  <!-- <h3 class="h3-small">Topics</h3>
+		<div class="topic typeC" ng-repeat="t in topics | orderBy:'-amount'">
+	<span class="amt">{{t.amount}}</span>
+	<span> {{t.topic}}</span>
+	<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
+
+</div> -->
+
 </aside>
 
 	<!-- Main -->
 	<main>
-    <h3>Activity</h3>
-
-    <section>
-      <div class="flex-container label">
-        <div class="grid-1">Status</div>
-        <div class="grid-6 pad-left-20">Instant Answer &amp; Maintainer</div>
-        <div class="grid-2 text-right">Developer(s)</div>
-      </div>
-      <div class="instantanswer flex-container" ng-repeat="ia in ias | orderBy: iaSort" ng-if="ia.dev_milestone != 'live'" ng-include="'partials/b_instantanswer.html'">
-      </div>
-    </section>
-
-		<h3>Maintaining Instant Answers</h3>
 
 		<section>
-			<div class="card half heightA" ng-repeat="ia in ias_maintained" ng-include="'partials/a_instantanswer.html'">
+			<div class="flex-container">
+				<!-- PR Reviews -->
+				<h3 ng-if="count.reviewed_prs" class="grid-1">Pull Request Reviews</h3>
 			</div>
+
+			<div class="flex-container align-top">
+				<!-- PR Reviews -->
+				<div ng-if="count.reviewed_prs" class="grid-1">
+					<div ng-repeat="issue in prs_open_reviewed_2 | orderBy: '-updated_at'" ng-include="'partials/d_issue.html'" class="issue typeD flex-container">
+					</div>
+				</div>
+			</div>
+
+      <div class="flex-container">
+        <!-- Open PRs -->
+				<h3 ng-if="count.developed_prs" style="margin-top: 2em" class="grid-1">Open Pull Requests</h3>
+      </div>
+
+      <div class="flex-container">
+        <!-- Open PRs -->
+        <div ng-if="count.developed_prs" class="grid-1">
+          <div ng-repeat="issue in prs_open_developed_2 | orderBy: '-updated_at'" ng-include="'partials/d_issue.html'" class="issue typeD hideAvatar flex-container">
+          </div>
+        </div>
+      </div>
+
 		</section>
 
+		<section ng-if="count.open_prs">
 
-		<h3>Developed Instant Answers</h3>
-		<section>
-			<!-- This skips IAs in which there is a maintainer; implementation is HACKISH, b/c it assumes maintainer is user (which isn't nec true)! -->
-			<div class="card half heightA" ng-repeat="ia in ias_developed_reduced" ng-if="!ia.maintainer" ng-include="'partials/a_instantanswer.html'"></div>
+
 
 		</section>
-
-
-
-		<!-- PRs will have the pull_request attribute -->
-		<!-- <div style="float:right;">
-			<a href="" ng-click="show_issues = ''">All</a>
-			<a href="" ng-click="show_issues = 'open'">Open</a>
-			<a href="" ng-click="show_issues = 'closed'">Closed</a>
-		</div>
-		<h3>Issues</h3>
-		<p ng-repeat="issue in user.issues | filter:{state:show_issues}" ng-include="'partials/a_issue.html'">
-		</p> -->
 
 	</main>
 

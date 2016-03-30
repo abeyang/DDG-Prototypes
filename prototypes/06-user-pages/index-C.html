@@ -15,10 +15,11 @@
 <body ng-controller="UserPageController">
 
 <!-- Load all other resources here: -->
-<link rel="stylesheet" href="../../assets/css/font-awesome.min.css" charset="utf-8">
+<link rel="stylesheet" href="../../assets/css/octicons.css" charset="utf-8">
 <link rel="stylesheet" href="UserPage.css" charset="utf-8">
 
 <!-- Javascript -->
+<script src="../../assets/js/moment.min.js"></script>
 <script src="../../assets/js/underscore-min.js"></script>
 <script src="../../assets/js/angular.js"></script>
 <script src="../../assets/js/angular-sanitize.js"></script>
@@ -47,15 +48,19 @@
 <header>
 	<div class="container">
 	<div class="stats">
-		<div class="third">
+		<div class="fourth">
 			<span>All Instant Answers</span>
-			<h2>{{count.all_ias}}</h2>
+			<h2>{{count.maintained_ias + count.developed_only_ias}}</h2>
 		</div>
-		<div class="third">
+		<div class="fourth">
+			<span>Pull Requests Reviews</span>
+			<h2>{{count.reviewed_prs}}</h2>
+		</div>
+		<div class="fourth">
 			<span>Open Pull Requests</span>
-			<h2>{{count.open_prs}}</h2>
+			<h2>{{count.developed_prs}}</h2>
 		</div>
-		<div class="third">
+		<div class="fourth">
 			<span>Closed Pull Requests</span>
 			<h2>{{count.closed_prs}}</h2>
 		</div>
@@ -77,33 +82,66 @@
 
 	</div>
 </div>
-		<div class="topic" ng-repeat="t in topics | orderBy:'-amount'">
+		<div class="topic typeC" ng-repeat="t in topics | orderBy:'-amount'">
 	<span class="amt">{{t.amount}}</span>
-	 {{t.topic}}
+	<span> {{t.topic}}</span>
+	<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
 </div>	</aside>
 
 	<!-- Main -->
 	<main>
-		<h3>Instant Answers</h3>
 		<section>
-			<div class="flex-container label">
-				<div class="grid-1">Status</div>
-				<div class="grid-6 pad-left-20">Instant Answer &amp; Maintainer</div>
-				<div class="grid-2 text-right">Developer(s)</div>
-			</div>
-			<div class="instantanswer flex-container" ng-repeat="ia in ias | orderBy: iaSort" ng-include="'partials/b_instantanswer.html'">
+			<h3>
+				<div class="tabs">
+					<a href="#" ng-click="show_ias=ias_maintained">
+						<span ng-class="{'active': show_ias == ias_maintained}" >
+							Maintained
+							<span class="badge">{{count.maintained_ias}}</span>
+						</span>
+					</a>
+					<a href="#" ng-click="show_ias=ias_developed_only">
+						<span ng-class="{'active': show_ias == ias_developed_only}">
+							Developed
+							<span class="badge">{{count.developed_only_ias}}</span>
+						</span>
+					</a>
+				</div>
+				Instant Answers
+			</h3>
+
+			<div class="instantanswer typeC flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
 			</div>
 		</section>
 
+		<section>
+			<div class="flex-container">
+				<!-- PR Reviews -->
+				<h3 ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">Pull Request Reviews</h3>
+				<!-- Open PRs -->
+				<h3 ng-if="count.developed_prs" ng-class="{'margin-left': count.reviewed_prs}" class="grid-1">Open Pull Requests</h3>
+			</div>
+
+			<div class="flex-container align-top">
+				<!-- PR Reviews -->
+				<div ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">
+					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC flex-container">
+					</div>
+				</div>
+
+				<!-- Open PRs -->
+				<div ng-if="count.developed_prs" ng-class="{'margin-left': count.reviewed_prs}" class="grid-1">
+					<div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC hideAvatar flex-container">
+					</div>
+				</div>
+			</div>
+
+
+		</section>
+
 		<section ng-if="count.open_prs">
-			<h3>Open Pull Requests</h3>
-			<div class="flex-container label">
-				<div class="grid-1">Dev</div>
-				<div class="grid-8">Pull Requests &amp; Comments</div>
-				<div class="grid-3 text-right">Last Update &amp; Reviewer</div>
-			</div>
-			<div ng-repeat="issue in prs | filter:{state:'open'} | orderBy: '-updated_at'" ng-include="'partials/b_issue.html'" class="issue flex-container">
-			</div>
+
+
+
 		</section>
 	</main>
 
