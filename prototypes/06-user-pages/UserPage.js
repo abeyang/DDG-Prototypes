@@ -9,7 +9,9 @@ app.controller('UserPageController', function($scope, fn) {
 		{username: 'pjhampton', hasInfo: true, avatar: "pjhampton.jpg"},
 		{username: 'mintsoft', hasInfo: true, avatar: "mintsoft.png"},
 		{username: 'jagtalon', hasInfo: true, avatar: "jagtalon.jpeg"},
-		{username: 'moollaza', hasInfo: true, avatar: "moollaza.jpeg"}
+		{username: 'moollaza', hasInfo: true, avatar: "moollaza.jpeg"},
+		{username: 'mattr555', hasInfo: true, avatar: "mattr555.jpeg"},
+		{username: 'MrChrisW', hasInfo: true, avatar: "MrChrisW.jpeg"}
 	];
 
 	// for sorting instant answers (live should be first)
@@ -24,10 +26,19 @@ app.controller('UserPageController', function($scope, fn) {
 		}
 	};
 
+	var initial = false;
+
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {
 		$scope.count = {};
 		$scope.topics = [];
+
+		if(!initial && window.location.hash) {
+			$scope.username = window.location.hash.replace(/#\//, "");
+		}
+		initial = true;
+
+		window.location.hash = "#/" + $scope.username;
 
 		$scope.user = eval($scope.username);
 
@@ -41,15 +52,6 @@ app.controller('UserPageController', function($scope, fn) {
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
 		});
 
-<<<<<<< HEAD
-		// maintained IAs
-		$scope.ias_maintained = _.filter(ias, function(ia) {
-			return (ia.maintainer && ia.maintainer.github == $scope.username);
-		});
-
-		// opened issues
-		$scope.issues_open = _.map(_.filter($scope.user.issues, function(issue) {
-=======
 		// maintained IAs (no ghosted or deprecated)
 		$scope.ias_maintained = _.filter(ias, function(ia) {
 			return (ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated');
@@ -62,16 +64,7 @@ app.controller('UserPageController', function($scope, fn) {
 
 		// opened issues
 		$scope.issues_open = _.filter($scope.user.issues, function(issue) {
->>>>>>> master
-			return issue.state == 'open';
-		}), function(issue) {
-			var ia = issue.body.match(/\(https:\/\/duck\.co\/ia\/view\/.*?\)/);
-
-			if(ia) {
-				return _.extend(issue, { ia_page: ia[0] });
-			}
-			
-			return issue;
+			return issue.state === 'open' && issue.body.match(/https:\/\/duck\.co\/ia\/view\/(.*?)/);
 		});
 
 		// all pull requests (from issues list)
@@ -89,10 +82,29 @@ app.controller('UserPageController', function($scope, fn) {
 			return (pr.state == 'open' && (pr.assignee && pr.assignee.login == $scope.username));
 		});
 
+		var getIA = function(issue) {
+			var ia = issue.body.match(/https:\/\/duck\.co\/ia\/view\/([_a-zA-Z]+)/);
+
+			if(ia) {
+				return _.extend(issue, { ia_page: ia[1].replace(/_/g, " ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) });
+			}
+
+			return issue;
+		};
+
+		$scope.prs_open_reviewed_2 = _.map(_.filter($scope.prs, function(pr) {
+			return /https:\/\/duck\.co\/ia\/view\//.test(pr.body) && (pr.state == 'open' && (pr.assignee && pr.assignee.login == $scope.username));
+		}), getIA);
+
 		// opened pull requests & developed by user
 		$scope.prs_open_developed = _.filter($scope.prs, function(pr) {
 			return (pr.state == 'open' && (pr.user && pr.user.login == $scope.username));
 		});
+
+		// opened pull requests & developed by user
+		$scope.prs_open_developed_2 = _.map(_.filter($scope.prs, function(pr) {
+			return /https:\/\/duck\.co\/ia\/view\//.test(pr.body) && (pr.state == 'open' && (pr.user && pr.user.login == $scope.username));
+		}), getIA);
 
 		// topic list
 		var topics = {};

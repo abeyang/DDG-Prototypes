@@ -10,7 +10,7 @@
 
     <!-- CSS -->
 	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
-    
+
 </head>
 <body ng-controller="UserPageController">
 
@@ -32,6 +32,8 @@
 <script src="users/mintsoft.js"></script>
 <script src="users/jagtalon.js"></script>
 <script src="users/moollaza.js"></script>
+<script src="users/mattr555.js"></script>
+<script src="users/MrChrisW.js"></script>
 <script src="users/all_ias.js"></script>
 <script src="UserPage.js"></script>
 
@@ -39,7 +41,7 @@
 <div class="toolbar">
 	<select name="username" id="username" ng-model="username" ng-change="showUser()">
 	  <option ng-repeat="user in users | filter: {hasInfo:true}" value="{{user.username}}">{{user.username}}</option>
-	</select>	
+	</select>
 </div>
 <!-- Header -->
 <header>
@@ -57,11 +59,11 @@
 			<span>Closed Pull Requests</span>
 			<h2>{{count.closed_prs}}</h2>
 		</div>
-	</div>		
+	</div>
 </div></header>
 
 <div class="container">
-	
+
 	<!-- Sidebar -->
 	<aside>
 		<div class="profile card">
@@ -70,14 +72,14 @@
 		<h3>{{user.name}}</h3>
 		<div class="gray">
 			<a href="http://github.com/{{user.login}}">@{{user.login}}</a>
-			<br />{{user.location}}		
+			<br />{{user.location}}
 		</div>
-		
+
 	</div>
 </div>
 		<div class="topic" ng-repeat="t in topics | orderBy:'-amount'">
 	<span class="amt">{{t.amount}}</span>
-	{{t.topic}}
+	 {{t.topic}}
 </div>	</aside>
 
 	<!-- Main -->

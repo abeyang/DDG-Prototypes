@@ -82,59 +82,71 @@
 
 	</div>
 </div>
+
+<section>
+  <!-- <h3 class="h3-small"> -->
+    <!-- <div class="tabs">
+      <a href="#" ng-click="show_ias=ias_maintained">
+        <span ng-class="{'active': show_ias == ias_maintained}" >
+          Maintained
+          <span class="badge">{{count.maintained_ias}}</span>
+        </span>
+      </a>
+      <a href="#" ng-click="show_ias=ias_developed_only">
+        <span ng-class="{'active': show_ias == ias_developed_only}">
+          Developed
+          <span class="badge">{{count.developed_only_ias}}</span>
+        </span>
+      </a>
+    </div> -->
+    <!-- Instant Answers -->
+  <!-- </h3> -->
+
+  <h5 style="padding-bottom: 10px;">Instant Answers</h4>
+
+  <div class="instantanswer typeD flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/d_instantanswer.html'">
+  </div>
+</section>
+
+  <!-- <h3 class="h3-small">Topics</h3>
 		<div class="topic typeC" ng-repeat="t in topics | orderBy:'-amount'">
 	<span class="amt">{{t.amount}}</span>
 	<span> {{t.topic}}</span>
 	<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
-</div>	</aside>
+
+</div> -->
+
+</aside>
 
 	<!-- Main -->
 	<main>
-		<section>
-			<h3>
-				<div class="tabs">
-					<a href="#" ng-click="show_ias=ias_maintained">
-						<span ng-class="{'active': show_ias == ias_maintained}" >
-							Maintained
-							<span class="badge">{{count.maintained_ias}}</span>
-						</span>
-					</a>
-					<a href="#" ng-click="show_ias=ias_developed_only">
-						<span ng-class="{'active': show_ias == ias_developed_only}">
-							Developed
-							<span class="badge">{{count.developed_only_ias}}</span>
-						</span>
-					</a>
-				</div>
-				Instant Answers
-			</h3>
-
-			<div class="instantanswer typeC flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
-			</div>
-		</section>
 
 		<section>
 			<div class="flex-container">
 				<!-- PR Reviews -->
-				<h3 ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">Pull Request Reviews</h3>
-				<!-- Open PRs -->
-				<h3 ng-if="count.developed_prs" ng-class="{'margin-left': count.reviewed_prs}" class="grid-1">Open Pull Requests</h3>
+				<h3 ng-if="count.reviewed_prs" class="grid-1">Pull Request Reviews</h3>
 			</div>
 
 			<div class="flex-container align-top">
 				<!-- PR Reviews -->
-				<div ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">
-					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC flex-container">
-					</div>
-				</div>
-
-				<!-- Open PRs -->
-				<div ng-if="count.developed_prs" ng-class="{'margin-left': count.reviewed_prs}" class="grid-1">
-					<div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC hideAvatar flex-container">
+				<div ng-if="count.reviewed_prs" class="grid-1">
+					<div ng-repeat="issue in prs_open_reviewed_2 | orderBy: '-updated_at'" ng-include="'partials/d_issue.html'" class="issue typeD flex-container">
 					</div>
 				</div>
 			</div>
 
+      <div class="flex-container">
+        <!-- Open PRs -->
+				<h3 ng-if="count.developed_prs" style="margin-top: 2em" class="grid-1">Open Pull Requests</h3>
+      </div>
+
+      <div class="flex-container">
+        <!-- Open PRs -->
+        <div ng-if="count.developed_prs" class="grid-1">
+          <div ng-repeat="issue in prs_open_developed_2 | orderBy: '-updated_at'" ng-include="'partials/d_issue.html'" class="issue typeD hideAvatar flex-container">
+          </div>
+        </div>
+      </div>
 
 		</section>
 
