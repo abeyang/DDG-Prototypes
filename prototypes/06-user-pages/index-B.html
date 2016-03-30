@@ -10,7 +10,7 @@
 
     <!-- CSS -->
 	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
-
+    
 </head>
 <body ng-controller="UserPageController">
 
@@ -41,7 +41,7 @@
 <div class="toolbar">
 	<select name="username" id="username" ng-model="username" ng-change="showUser()">
 	  <option ng-repeat="user in users | filter: {hasInfo:true}" value="{{user.username}}">{{user.username}}</option>
-	</select>
+	</select>	
 </div>
 <!-- Header -->
 <header>
@@ -59,11 +59,11 @@
 			<span>Closed Pull Requests</span>
 			<h2>{{count.closed_prs}}</h2>
 		</div>
-	</div>
+	</div>		
 </div></header>
 
 <div class="container">
-
+	
 	<!-- Sidebar -->
 	<aside>
 		<div class="profile card">
@@ -72,14 +72,14 @@
 		<h3>{{user.name}}</h3>
 		<div class="gray">
 			<a href="http://github.com/{{user.login}}">@{{user.login}}</a>
-			<br />{{user.location}}
+			<br />{{user.location}}		
 		</div>
-
+		
 	</div>
 </div>
 		<div class="topic" ng-repeat="t in topics | orderBy:'-amount'">
 	<span class="amt">{{t.amount}}</span>
-	 {{t.topic}}
+	{{t.topic}}
 </div>	</aside>
 
 	<!-- Main -->
