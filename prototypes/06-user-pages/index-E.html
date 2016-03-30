@@ -107,28 +107,28 @@
 				Instant Answers
 			</h3>
 
-			<div class="instantanswer typeC flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/c_instantanswer.html'">
+			<div class="instantanswer typeC flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/e_instantanswer.html'">
 			</div>
 		</section>
 
 		<section>
 			<div class="flex-container">
 				<!-- PR Reviews -->
-				<h3 ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">Pull Request Reviews</h3>
+				<h3 ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">Reviewing Pull Requests</h3>
 				<!-- Open PRs -->
-				<h3 ng-if="count.developed_prs" ng-class="{'margin-left': count.reviewed_prs}" class="grid-1">Open Pull Requests</h3>
+				<h3 ng-if="count.developed_prs" ng-class="{'margin-left': count.reviewed_prs}" class="grid-1">Assigned Pull Requests</h3>
 			</div>
 			
 			<div class="flex-container align-top">
 				<!-- PR Reviews -->
 				<div ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">
-					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC flex-container">
+					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/e_issue.html'" class="issue typeC flex-container">
 					</div>				
 				</div>
 
 				<!-- Open PRs -->
 				<div ng-if="count.developed_prs" ng-class="{'margin-left': count.reviewed_prs}" class="grid-1">
-					<div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/c_issue.html'" class="issue typeC hideAvatar flex-container">
+					<div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/e_issue.html'" class="issue typeC hideAvatar flex-container">
 					</div>
 				</div>
 			</div>

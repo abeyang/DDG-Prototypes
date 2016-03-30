@@ -205,6 +205,11 @@ section {
 	color: $gray;
 	text-transform: capitalize;
 
+	&.round {
+		// margin-right: 20px;
+		padding: 4px 12px;
+		border-radius: 30px;
+	}
 	&.full {
 		float: left;
 		margin-left: 0;

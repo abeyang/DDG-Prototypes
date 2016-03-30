@@ -163,6 +163,9 @@ section {
   font-size: 13px;
   color: #aaa;
   text-transform: capitalize; }
+  .status.round {
+    padding: 4px 12px;
+    border-radius: 30px; }
   .status.full {
     float: left;
     margin-left: 0;

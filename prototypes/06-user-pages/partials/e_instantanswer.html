@@ -6,8 +6,8 @@
 	<span class="count" ng-if="ia.open_issues > 0">{{ia.open_issues}} <span class="octicon octicon-issue-opened"></span></span>
 </div>
 
-<!-- developers -->
-<div class="avatars grid-2 pad-right-20" ng-bind-html="fn.getDevsAvatars(ia, users)"></div>	
-
-<!-- status -->
-<div class="status full {{ia.dev_milestone}} grid-1">{{ia.dev_milestone}}</div>
+<!-- developers & status (not live) -->
+<div class="grid-3">
+	<div class="avatars pull-right" ng-bind-html="fn.getDevsAvatars(ia, users)"></div>
+	<div class="status {{ia.dev_milestone}} round" ng-if="ia.dev_milestone != 'live'">{{ia.dev_milestone}}</div>		
+</div>
