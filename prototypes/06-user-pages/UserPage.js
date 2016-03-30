@@ -52,6 +52,11 @@ app.controller('UserPageController', function($scope, fn) {
 	  		return _.some(ia.developer, function(d) { return d.name == $scope.username});
 		});
 
+		// developed IAs w/o the pipeline stuff
+		$scope.ias_developed_reduced = _.filter($scope.ias_developed, function(ia) {
+			return ia.dev_milestone === "complete" || ia.dev_milestone === "live";
+		})
+
 		// maintained IAs (no ghosted or deprecated)
 		$scope.ias_maintained = _.filter(ias, function(ia) {
 			return (ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated');
@@ -140,7 +145,7 @@ app.controller('UserPageController', function($scope, fn) {
 		// by default. for 'filterable'
 		$scope.show_ias = ($scope.count.maintained_ias) ? $scope.ias_maintained : $scope.ias_developed_only;
 
-	}
+	} // showUser()
 
 	// initializing a default user
 	$scope.username = $scope.users[0].username;
