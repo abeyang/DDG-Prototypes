@@ -14,16 +14,23 @@ app.controller('UserPageController', function($scope, fn) {
 		{username: 'MrChrisW', hasInfo: true, avatar: "MrChrisW.jpeg"}
 	];
 
-	// for sorting instant answers (live should be first)
+	// for sorting instant answers: 
+	// live first, followed by those with issues + PRs
+	// (lowest rank shows first)
 	$scope.iaSort = function(ia) {
+		var rank = 0;
+
 		switch (ia.dev_milestone) {
-			case 'live': return 0;
-			case 'complete': return 10;
-			case 'testing': return 20;
-			case 'development': return 30;
-			case 'planning': return 40;
-			default: return 1000;
-		}
+			case 'live': rank = 50; break;
+			case 'complete': rank = 200; break;
+			case 'testing': rank = 400; break;
+			case 'development': rank = 600; break;
+			case 'planning': rank = 800; break;
+			default: rank = 10000;
+		};
+
+		rank = rank - Number(ia.open_prs) - Number(ia.open_issues);
+		return rank;
 	};
 
 	var initial = false;
