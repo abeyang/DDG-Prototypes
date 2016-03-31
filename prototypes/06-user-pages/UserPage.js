@@ -218,9 +218,23 @@ app.factory('fn', function() {
 			});
 			return html;
 		},
-		// get "time ago" from date
+		// get "time ago" from date: "1 month ago"
 		getFromNow: function(datetimestr) {
         	return moment(datetimestr).fromNow();
+        },
+        // get *shortened* "time ago" from date: "1m"
+        getFromNowShort: function(datetimestr) {
+        	var str = moment(datetimestr).fromNow(true);
+        	var arr = str.split(' '); 	// "2 months" => ['2', 'months']
+        	str = (arr[0] == 'a') ? 1 : arr[0];		// "a" => "1"
+        	return str + arr[1][0];	// "2m"
+        },
+        // get *shortened* "time ago" from date into days: "1m" => "31d"
+        getFromNowShortDays: function(datetimestr) {
+        	var today = new Date();
+        	var day = new Date(datetimestr);
+        	var timeago = today.getTime() - day.getTime();	// in milliseconds
+        	return Math.round(timeago/86400000) + 'd';	// 1000 * 60 * 60 * 24
         }
 
 	};

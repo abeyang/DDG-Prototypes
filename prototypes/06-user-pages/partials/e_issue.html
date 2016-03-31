@@ -1,12 +1,11 @@
 <!-- developer -->
 <div class="grid-1 avatars" ng-bind-html="fn.getAvatar(users, issue.user.login)"></div>	
-
 <span class="grid-6 content">
 	<strong><a href="{{issue.html_url}}">{{issue.title}}</a></strong>
-	<br /><span class="subtitle">Last updated by XYZ {{fn.getFromNow(issue.updated_at)}}</span>
-</span>
-
-<span class="grid-1 subtitle text-right pad-left-10">
 	<span class="subtitle comment">{{issue.comments}} <span class="octicon octicon-comment"></span></span>
 </span>
 
+<span class="grid-1 subtitle text-right pad-left-10">
+	{{fn.getFromNowShortDays(issue.updated_at)}}
+	<!-- {{issue.updated_at}} -->
+</span>
