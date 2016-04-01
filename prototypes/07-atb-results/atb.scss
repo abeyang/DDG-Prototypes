@@ -6,6 +6,7 @@
 // Colors
 
 $white: 	#fff;
+$white-50:	rgba($white, 0.50);
 $offwhite: 	#fafafa;
 $gray-dk:	#666;
 $gray-med:	#999;
@@ -51,7 +52,8 @@ $pad:		45px;
 $pad-lg:	60px;
 
 $aside:		200px;
-
+$barheight:	400px;
+$barwidth:	20px;
 
 
 // MISC
@@ -86,6 +88,8 @@ html, body, p, div, th, td {
 
 .subtitle, .gray {
 	color: $gray;
+
+	strong { color: $black; margin-right: 5px; }
 }
 
 .good { color: $green; }
@@ -103,6 +107,8 @@ html, body, p, div, th, td {
 // LAYOUT
 // ----------------------------------------------------------------------------
 
+p { margin-bottom: 15px; }
+
 aside {
 	position: fixed;
 	top: 0;
@@ -118,6 +124,49 @@ input { margin-right: 3px; }
 	margin-top: 15px; 
 	font-size: $tx;
 	color: $gray-dk;
+}
+
+.grouping { 
+	float: left; 
+	border-right: 1px solid $gray-lt;
+
+	p { 
+		padding-bottom: 5px;
+		// border-bottom: 1px solid $gray-lt;
+		text-align: center; 
+	}
+}
+.barwrapper {
+	height: $barheight;
+	width: $barwidth;
+	position: relative;
+	float: left;
+	margin-right: 1px;
+
+	.bar {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: $blue-85;
+		opacity: 0.5;
+
+		.tooltip {
+			position: relative;
+			top: -40px;
+			left: -$barwidth/2;
+			width: $barwidth*2;
+			background-color: $white-50;
+			color: $gray-dk;
+			text-align: center;
+			display: none;
+		}
+
+		&:hover {
+			opacity: 1;
+
+			.tooltip { display: block; }
+		}
+	}
 }
 
 .container {

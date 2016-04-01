@@ -27,9 +27,14 @@
 <script src="atb.js"></script>
 
 <aside>
-	<h1>Chrome</h1>
+	<h1>Chrome</h1> {{maxfirststep}}
 
 	<div class="set">
+		<input type="radio" ng-model="toggles.graph" ng-value="false"> Tables <br />
+		<input type="radio" ng-model="toggles.graph" ng-value="true"> Graph
+	</div>
+
+	<div class="set" ng-show="!toggles.graph">
 		<input type="checkbox" ng-model="toggles.v1"></input> Version 1 <br />
 		<input type="checkbox" ng-model="toggles.v2"></input> Version 2 <br />
 		<input type="checkbox" ng-model="toggles.v3"></input> Version 3 <br />
@@ -37,19 +42,55 @@
 		<input type="checkbox" ng-model="toggles.v5"></input> Version 5 <br />
 	</div>
 
-	<div class="set">
+	<div class="set" ng-show="!toggles.graph">
 		<input type="checkbox" ng-model="toggles.xclick" ng-change="updateColspan()"></input> Show X Clicks <br />
 		<input type="checkbox" ng-model="toggles.impressions" ng-change="updateColspan()"></input> Show Impressions <br/>
 		<input type="checkbox" ng-model="toggles.serp"></input> Show SERP	
 	</div>
+
+	<div class="set">
+		Magic Ratio <br />
+		<input type="text" ng-model="magicratio"></input>
+	</div>
 </aside>
 
-<div class="container">
+<!-- GRAPH -->
+<div ng-show="toggles.graph" class="container">
+	<p><strong>% of Clicking Through First Step</strong></p>
+	<div class="grouping">
+		<p>v1</p>
+		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		</div>	
+	</div>
+	<div class="grouping">
+		<p>v2</p>
+		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		</div>	
+	</div>
+	<div class="grouping">
+		<p>v3</p>
+		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		</div>	
+	</div>
+	<div class="grouping">
+		<p>v4</p>
+		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		</div>	
+	</div>
+	<div class="grouping">
+		<p>v5</p>
+		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		</div>	
+	</div>
+	
+</div>
+
+<!-- TABLES -->
+<div ng-show="!toggles.graph" class="container">
 	
 	<section ng-show="toggles.v1">
-		<h2>Version 1</h2>
-
-		<p class="subtitle">{{info.chrome[1-1].desc}}</p>
+		
+		<p class="subtitle"><strong>Version 1</strong> {{info.chrome[1-1].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
@@ -62,9 +103,8 @@
 	</section>
 
 	<section ng-show="toggles.v2">
-		<h2>Version 2</h2>
 
-		<p class="subtitle">{{info.chrome[2-1].desc}}</p>
+		<p class="subtitle"><strong>Version 2</strong> {{info.chrome[2-1].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
@@ -77,9 +117,8 @@
 	</section>
 
 	<section ng-show="toggles.v3">
-		<h2>Version 3</h2>
 
-		<p class="subtitle">{{info.chrome[3-1].desc}}</p>
+		<p class="subtitle"><strong>Version 3</strong> {{info.chrome[3-1].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
@@ -92,9 +131,8 @@
 	</section>
 
 	<section ng-show="toggles.v4">
-		<h2>Version 4</h2>
 
-		<p class="subtitle">{{info.chrome[4-1].desc}}</p>
+		<p class="subtitle"><strong>Version 4</strong> {{info.chrome[4-1].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
@@ -107,9 +145,8 @@
 	</section>
 
 	<section ng-show="toggles.v5">
-		<h2>Version 5</h2>
 
-		<p class="subtitle">{{info.chrome[5-1].desc}}</p>
+		<p class="subtitle"><strong>Version 5</strong> {{info.chrome[5-1].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">

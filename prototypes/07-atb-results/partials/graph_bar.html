@@ -1,0 +1,8 @@
+<div class="bar" style="height: {{(entry.blur / (entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp)) / maxfirststep * 100 + '%'}}">
+	
+	<div class="tooltip">
+		{{fn.prettyDate(entry.date)}} <br />
+		<span ng-bind-html="fn.percent(entry.blur*magicratio, entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp, 1)"></span>
+	</div>
+
+</div>

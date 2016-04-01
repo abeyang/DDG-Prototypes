@@ -5,11 +5,11 @@ app.controller('atbController', function($scope, fn) {
 
 	$scope.info = {
 		chrome: [
-			{version: 1, type: 'cta', desc: "Baseline: has 'click here' button in modal"},
-			{version: 2, type: 'cta', desc: "removed the 'click here' on Chrome (but screenshot — pointing out the hamburger menu — was deleted by accident)"},
-			{version: 3, type: 'cta', desc: "copy/paste the chrome:// settings url"},
-			{version: 4, type: 'cta', desc: "revert back; added screenshot back"},
-			{version: 5, type: 'cta', desc: "added ATB to SERP after users perform a search"}
+			{version: 1, type: 'cta', desc: "Baseline metric: has 'click here' button in modal"},
+			{version: 2, type: 'cta', desc: "Removed the 'click here' on Chrome (but screenshot — pointing out the hamburger menu — was deleted by accident)"},
+			{version: 3, type: 'cta', desc: "Copy/paste the chrome:// settings url"},
+			{version: 4, type: 'cta', desc: "Replaced Chrome logo with DDG logo on ATB button; added screenshots back to instructions"},
+			{version: 5, type: 'cta', desc: "Added ATB button to SERP for users searching without t-param"}
 		]
 	};
 
@@ -20,9 +20,11 @@ app.controller('atbController', function($scope, fn) {
 		v4: true,
 		v5: true,
 
-		xclick: true,
+		xclick: false,
 		impressions: false,
-		serp: true
+		serp: true,
+
+		graph: true		// either show graph or tables
 	};
 
 	$scope.updateColspan = function() {
@@ -96,6 +98,16 @@ app.controller('atbController', function($scope, fn) {
 		{version: 5, date: '160326', impressions_home: 204429, impressions_side: 525, impressions_serp: 11, clickbutton_home: 436, clickbutton_side: 15, clickbutton_serp: 0, x_home: 757, x_side: 18, x_serp: 0, clickhere: 0, blur: 171, searches_cohort: 116, searches_total: 954729},
 		{version: 5, date: '160327', impressions_home: 204367, impressions_side: 504, impressions_serp: 19, clickbutton_home: 505, clickbutton_side: 15, clickbutton_serp: 0, x_home: 745, x_side: 14, x_serp: 0, clickhere: 0, blur: 217, searches_cohort: 93, searches_total: 965758}
 	];
+
+	// TODO: need to account other browsers (when we get there)
+	// no magicratio needed here
+	var max = 0;
+	_.each($scope.chrome, function(entry) {
+		var serp = (entry.clickbutton_serp) ? entry.clickbutton_serp : 0;
+		var result = entry.blur/(entry.clickbutton_home + entry.clickbutton_side + serp);
+		if (result > max) max = result;
+	});
+	$scope.maxfirststep = max;
 
 }); // atbController()
 

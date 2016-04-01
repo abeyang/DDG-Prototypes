@@ -17,6 +17,9 @@ html, body, p, div, th, td {
 
 .subtitle, .gray {
   color: #aaa; }
+  .subtitle strong, .gray strong {
+    color: #333;
+    margin-right: 5px; }
 
 .good {
   color: #599F49; }
@@ -36,6 +39,9 @@ html, body, p, div, th, td {
 .partial td {
   background-color: #fafafa; }
 
+p {
+  margin-bottom: 15px; }
+
 aside {
   position: fixed;
   top: 0;
@@ -51,6 +57,39 @@ input {
   margin-top: 15px;
   font-size: 15px;
   color: #666; }
+
+.grouping {
+  float: left;
+  border-right: 1px solid #eee; }
+  .grouping p {
+    padding-bottom: 5px;
+    text-align: center; }
+
+.barwrapper {
+  height: 400px;
+  width: 20px;
+  position: relative;
+  float: left;
+  margin-right: 1px; }
+  .barwrapper .bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(68, 149, 212, 0.85);
+    opacity: 0.5; }
+    .barwrapper .bar .tooltip {
+      position: relative;
+      top: -40px;
+      left: -10px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #666;
+      text-align: center;
+      display: none; }
+    .barwrapper .bar:hover {
+      opacity: 1; }
+      .barwrapper .bar:hover .tooltip {
+        display: block; }
 
 .container {
   margin: 40px 0 40px 240px;
