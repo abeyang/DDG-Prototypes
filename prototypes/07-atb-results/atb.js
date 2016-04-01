@@ -1,6 +1,8 @@
 app.controller('atbController', function($scope, fn) {
 	$scope.fn = fn;
 
+	$scope.magicratio = 0.72;
+
 	$scope.info = [
 		{version: 1, browser: 'chrome', type: 'cta', desc: "Baseline: has 'click here' button in modal"},
 		{version: 2, browser: 'chrome', type: 'cta', desc: "removed the 'click here' on Chrome (but screenshot — pointing out the hamburger menu — was deleted by accident)"},
