@@ -1,0 +1,104 @@
+body {
+  background-color: #fff;
+  padding-bottom: 60px; }
+
+a, a:visited {
+  color: #333;
+  text-decoration: none; }
+  a:hover, a:visited:hover {
+    color: rgba(68, 149, 212, 0.85); }
+
+h2 {
+  font-size: 48px; }
+
+h3 {
+  font-size: 21px;
+  margin-bottom: 30px; }
+
+html, body, p, div {
+  font-size: 15px;
+  color: #333; }
+
+.gray {
+  color: #aaa; }
+  .gray a, .gray a:visited {
+    color: #aaa; }
+    .gray a:hover, .gray a:visited:hover {
+      color: rgba(68, 149, 212, 0.85); }
+
+.subtitle {
+  font-size: 13px;
+  color: #aaa; }
+
+.label, .label div {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #aaa; }
+
+.label {
+  padding: 10px 0; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.float-right {
+  float: right; }
+
+.partial td {
+  background-color: rgba(224, 87, 42, 0.25); }
+
+.container {
+  margin: 0 auto; }
+
+.flex-container {
+  display: flex;
+  align-items: center; }
+  .flex-container.align-top {
+    align-items: flex-start; }
+  .flex-container .grid-1 {
+    flex: 1; }
+  .flex-container .grid-2 {
+    flex: 2; }
+  .flex-container .grid-4 {
+    flex: 4; }
+  .flex-container .grid-6 {
+    flex: 6; }
+  .flex-container .grid-8 {
+    flex: 8; }
+
+th, td {
+  padding: 5px;
+  border: 1px solid #eee; }
+  th.right-divide, td.right-divide {
+    border-right: 1px solid #aaa; }
+
+th {
+  font-size: 13px;
+  text-align: left; }
+
+td {
+  text-align: right; }
+
+.margin-left {
+  padding-left: 30px; }
+
+.margin-right {
+  padding-right: 30px; }
+
+.pad-left-10 {
+  padding-left: 10px; }
+
+.pad-left-20 {
+  padding-left: 20px; }
+
+.pad-left-30 {
+  padding-left: 30px; }
+
+.pad-right-20 {
+  padding-right: 20px; }
+
+.pad-right-30 {
+  padding-right: 30px; }

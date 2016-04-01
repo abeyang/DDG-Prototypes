@@ -1,0 +1,67 @@
+<!-- $title: atb -->
+
+<!-- $dir: ../../ -->
+<!-- @include ../../includes/head-nojs -->
+
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+
+<!-- Javascript -->
+<script src="<!-- $dir -->assets/js/underscore-min.js"></script>
+<script src="<!-- $dir -->assets/js/angular.js"></script>
+<script src="<!-- $dir -->assets/js/angular-sanitize.js"></script>
+<script src="<!-- $dir -->assets/js/app.js"></script>
+
+<!-- User Info -->
+<script src="<!-- $title -->.js"></script>
+
+<div class="container">
+
+<h2>Chrome v.5</h2>
+	
+	<table>
+		<thead>
+			<tr>
+				<th colspan="11" class="right-divide">&nbsp;</th>
+				<th colspan="3">Searches</th>
+			</tr>
+			<tr>
+				<th>Date</th>
+				<th>Homepage Imp.</th>
+				<th>Side Menu Imp.</th>
+				<th>SERP Imp.</th>
+				<th>Homepage Button Clicks</th>
+				<th>Side Menu Button Clicks</th>
+				<th>SERP Button Clicks</th>
+				<th>Homepage X Click</th>
+				<th>Side Menu X Click</th>
+				<th>SERP X Click</th>
+				<th class="right-divide">Window Blur</th>
+				<th>Thru Cohort</th>
+				<th>Total</th>
+				<th>%</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="entry in chrome | filter: {version: 5}" ng-class="{'partial': entry.partial}">
+				<td>{{fn.prettyDate(entry.date)}}</td>
+				<td>{{entry.impressions_home}}</td>
+				<td>{{entry.impressions_side}}</td>
+				<td>{{entry.impressions_serp}}</td>
+				<td>{{entry.clickbutton_home}}</td>
+				<td>{{entry.clickbutton_side}}</td>
+				<td>{{entry.clickbutton_serp}}</td>
+				<td>{{entry.x_home}}</td>
+				<td>{{entry.x_side}}</td>
+				<td>{{entry.x_serp}}</td>
+				<td class="right-divide">{{entry.blur}}</td>
+				<td>{{entry.searches_cohort}}</td>
+				<td>{{entry.searches_total}}</td>
+				<td>{{fn.percent(entry.searches_cohort, entry.searches_total)}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div> <!-- /.container -->
+
+<!-- @include ../../includes/foot -->
