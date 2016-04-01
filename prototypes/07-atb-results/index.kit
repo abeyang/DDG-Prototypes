@@ -15,130 +15,100 @@
 <!-- User Info -->
 <script src="<!-- $title -->.js"></script>
 
+<aside>
+	<h1>Chrome</h1>
+
+	<div class="set">
+		<input type="checkbox" ng-model="toggles.v1"></input> Version 1 <br />
+		<input type="checkbox" ng-model="toggles.v2"></input> Version 2 <br />
+		<input type="checkbox" ng-model="toggles.v3"></input> Version 3 <br />
+		<input type="checkbox" ng-model="toggles.v4"></input> Version 4 <br />
+		<input type="checkbox" ng-model="toggles.v5"></input> Version 5 <br />
+	</div>
+
+	<div class="set">
+		<input type="checkbox" ng-model="toggles.xclick" ng-change="updateColspan()"></input> Show X Clicks <br />
+		<input type="checkbox" ng-model="toggles.impressions" ng-change="updateColspan()"></input> Show Impressions <br/>
+		<input type="checkbox" ng-model="toggles.serp"></input> Show SERP	
+	</div>
+</aside>
+
 <div class="container">
-<!-- Version 4 -->
-<h2>Chrome v.4</h2>
-
-<p class="subtitle">{{info[3].desc}}</p>
 	
-	<table>
-		<thead>
-			<tr>
-				<th class="right-divide">&nbsp;</th>
-				<th colspan="4" class="right-divide">Homepage</th>
-				<th colspan="4" class="right-divide">Side Menu</th>
-				<th colspan="4" class="right-divide">SERP</th>
-				<th colspan="3" class="right-divide">Modal</th>
-				<th colspan="3">Searches</th>
-			</tr>
-			<tr>
-				<th class="right-divide">Date</th>
-				<th>Impressions</th>
-				<th>Button Click</th>
-				<th>X Click</th>
-				<th class="right-divide">Button:X</th>
-				<th>Impressions</th>
-				<th>Button Click</th>
-				<th>X Click</th>
-				<th class="right-divide">Button:X</th>
-				<th>Impressions</th>
-				<th>Button Click</th>
-				<th>X Click</th>
-				<th class="right-divide">Button:X</th>
-				<th>Window Blur</th>
-				<th>Total Button Clicks</th>
-				<th class="right-divide">% Finish 1st Step</th>
-				<th>Thru Cohort</th>
-				<th>Total</th>
-				<th>%</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="entry in chrome | filter: {version: 4}" ng-class="{'partial': entry.partial}">
-				<td class="right-divide">{{fn.prettyDate(entry.date)}}</td>
-				<td>{{entry.impressions_home}}</td>
-				<td>{{entry.clickbutton_home}}</td>
-				<td>{{entry.x_home}}</td>
-				<td class="right-divide" ng-bind-html="fn.ratio(entry.clickbutton_home, entry.x_home)"></td>
-				<td>{{entry.impressions_side}}</td>
-				<td>{{entry.clickbutton_side}}</td>
-				<td>{{entry.x_side}}</td>
-				<td class="right-divide" ng-bind-html="fn.ratio(entry.clickbutton_side, entry.x_side)"></td>
-				<td>{{entry.impressions_serp}}</td>
-				<td>{{entry.clickbutton_serp}}</td>
-				<td>{{entry.x_serp}}</td>
-				<td class="right-divide" ng-bind-html="fn.ratio(entry.clickbutton_serp, entry.x_serp)"></td>
-				<td>{{entry.blur}}</td>
-				<td>{{entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp}}</td>
-				<td class="right-divide">{{fn.percent(entry.blur*magicratio, entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp, 1)}}</td>
-				<td>{{entry.searches_cohort}}</td>
-				<td>{{entry.searches_total}}</td>
-				<td>{{fn.percent(entry.searches_cohort, entry.searches_total)}}</td>
-			</tr>
-		</tbody>
-	</table>
+	<section ng-show="toggles.v1">
+		<h2>Version 1</h2>
 
-<!-- Version 5 -->
-<h2>Chrome v.5</h2>
+		<p class="subtitle">{{info.chrome[1-1].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in chrome | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
 
-<p class="subtitle">{{info[4].desc}}</p>
-	
-	<table>
-		<thead>
-			<tr>
-				<th class="right-divide">&nbsp;</th>
-				<th colspan="4" class="right-divide">Homepage</th>
-				<th colspan="4" class="right-divide">Side Menu</th>
-				<th colspan="4" class="right-divide">SERP</th>
-				<th colspan="3" class="right-divide">Modal</th>
-				<th colspan="3">Searches</th>
-			</tr>
-			<tr>
-				<th class="right-divide">Date</th>
-				<th>Impressions</th>
-				<th>Button Click</th>
-				<th>X Click</th>
-				<th class="right-divide">Button:X</th>
-				<th>Impressions</th>
-				<th>Button Click</th>
-				<th>X Click</th>
-				<th class="right-divide">Button:X</th>
-				<th>Impressions</th>
-				<th>Button Click</th>
-				<th>X Click</th>
-				<th class="right-divide">Button:X</th>
-				<th>Window Blur</th>
-				<th>Total Button Clicks</th>
-				<th class="right-divide">% Finish 1st Step</th>
-				<th>Thru Cohort</th>
-				<th>Total</th>
-				<th>%</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="entry in chrome | filter: {version: 5}" ng-class="{'partial': entry.partial}">
-				<td class="right-divide">{{fn.prettyDate(entry.date)}}</td>
-				<td>{{entry.impressions_home}}</td>
-				<td>{{entry.clickbutton_home}}</td>
-				<td>{{entry.x_home}}</td>
-				<td class="right-divide" ng-bind-html="fn.ratio(entry.clickbutton_home, entry.x_home)"></td>
-				<td>{{entry.impressions_side}}</td>
-				<td>{{entry.clickbutton_side}}</td>
-				<td>{{entry.x_side}}</td>
-				<td class="right-divide" ng-bind-html="fn.ratio(entry.clickbutton_side, entry.x_side)"></td>
-				<td>{{entry.impressions_serp}}</td>
-				<td>{{entry.clickbutton_serp}}</td>
-				<td>{{entry.x_serp}}</td>
-				<td class="right-divide" ng-bind-html="fn.ratio(entry.clickbutton_serp, entry.x_serp)"></td>
-				<td>{{entry.blur}}</td>
-				<td>{{entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp}}</td>
-				<td class="right-divide">{{fn.percent(entry.blur*magicratio, entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp, 1)}}</td>
-				<td>{{entry.searches_cohort}}</td>
-				<td>{{entry.searches_total}}</td>
-				<td>{{fn.percent(entry.searches_cohort, entry.searches_total)}}</td>
-			</tr>
-		</tbody>
-	</table>
+	<section ng-show="toggles.v2">
+		<h2>Version 2</h2>
+
+		<p class="subtitle">{{info.chrome[2-1].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in chrome | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v3">
+		<h2>Version 3</h2>
+
+		<p class="subtitle">{{info.chrome[3-1].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in chrome | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v4">
+		<h2>Version 4</h2>
+
+		<p class="subtitle">{{info.chrome[4-1].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in chrome | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v5">
+		<h2>Version 5</h2>
+
+		<p class="subtitle">{{info.chrome[5-1].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in chrome | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
 
 </div> <!-- /.container -->
 

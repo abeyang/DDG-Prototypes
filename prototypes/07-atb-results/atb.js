@@ -3,13 +3,34 @@ app.controller('atbController', function($scope, fn) {
 
 	$scope.magicratio = 0.72;
 
-	$scope.info = [
-		{version: 1, browser: 'chrome', type: 'cta', desc: "Baseline: has 'click here' button in modal"},
-		{version: 2, browser: 'chrome', type: 'cta', desc: "removed the 'click here' on Chrome (but screenshot — pointing out the hamburger menu — was deleted by accident)"},
-		{version: 3, browser: 'chrome', type: 'cta', desc: "copy/paste the chrome:// settings url"},
-		{version: 4, browser: 'chrome', type: 'cta', desc: "revert back; added screenshot back"},
-		{version: 5, browser: 'chrome', type: 'cta', desc: "added ATB to SERP after users perform a search"}
-	];
+	$scope.info = {
+		chrome: [
+			{version: 1, type: 'cta', desc: "Baseline: has 'click here' button in modal"},
+			{version: 2, type: 'cta', desc: "removed the 'click here' on Chrome (but screenshot — pointing out the hamburger menu — was deleted by accident)"},
+			{version: 3, type: 'cta', desc: "copy/paste the chrome:// settings url"},
+			{version: 4, type: 'cta', desc: "revert back; added screenshot back"},
+			{version: 5, type: 'cta', desc: "added ATB to SERP after users perform a search"}
+		]
+	};
+
+	$scope.toggles = {
+		v1: false,
+		v2: false,
+		v3: false,
+		v4: true,
+		v5: true,
+
+		xclick: true,
+		impressions: false,
+		serp: true
+	};
+
+	$scope.updateColspan = function() {
+		$scope.colspan = 1;
+		if ($scope.toggles.xclick) $scope.colspan += 2;
+		if ($scope.toggles.impressions) $scope.colspan += 2;
+	};
+	$scope.updateColspan();
 
 	// last updated: 3/27
 	$scope.chrome = [
@@ -22,6 +43,25 @@ app.controller('atbController', function($scope, fn) {
 		{version: 1, date: '160228', clickbutton_home: 2886, clickbutton_side: 112, clickhere: 1420, blur: 2023, searches_cohort: 27972, searches_total: 1811167},
 		{version: 1, date: '160229', clickbutton_home: 2987, clickbutton_side: 102, clickhere: 1549, blur: 2092, searches_cohort: 34143, searches_total: 2237941},
 		{version: 1, date: '160301', partial: true, clickbutton_home: 2279, clickbutton_side: 76, clickhere: 1196, blur: 1636, searches_cohort: 38598, searches_total: 2190151},
+		// v2
+		{version: 2, date: '160301', partial: true, clickbutton_home: 784, clickbutton_side: 37, clickhere: 0, blur: 404, searches_cohort: 1117, searches_total: 2190151},
+		{version: 2, date: '160302', clickbutton_home: 3109, clickbutton_side: 111, clickhere: 0, blur: 1539, searches_cohort: 9072, searches_total: 2237941},
+		{version: 2, date: '160303', clickbutton_home: 3070, clickbutton_side: 143, clickhere: 0, blur: 1553, searches_cohort: 15020, searches_total: 2153460},
+		{version: 2, date: '160304', clickbutton_home: 2868, clickbutton_side: 101, clickhere: 0, blur: 1446, searches_cohort: 18020, searches_total: 2016418},
+		{version: 2, date: '160305', clickbutton_home: 2807, clickbutton_side: 100, clickhere: 0, blur: 1461, searches_cohort: 18019, searches_total: 1710715},
+		{version: 2, date: '160306', clickbutton_home: 3137, clickbutton_side: 111, clickhere: 0, blur: 1637, searches_cohort: 24719, searches_total: 1820450},
+		{version: 2, date: '160307', clickbutton_home: 3246, clickbutton_side: 126, clickhere: 0, blur: 1576, searches_cohort: 32937, searches_total: 2220956},
+		{version: 2, date: '160308', clickbutton_home: 3376, clickbutton_side: 168, clickhere: 0, blur: 1729, searches_cohort: 35062, searches_total: 2181247},
+		{version: 2, date: '160309', partial: true, clickbutton_home: 2697, clickbutton_side: 120, clickhere: 0, blur: 1354, searches_cohort: 40735, searches_total: 2174589},
+		// v3
+		{version: 3, date: '160309', partial: true, clickbutton_home: 588, clickbutton_side: 24, clickhere: 461, blur: 353, searches_cohort: 815, searches_total: 2174589},
+		{version: 3, date: '160310', clickbutton_home: 3385, clickbutton_side: 158, clickhere: 2076, blur: 1797, searches_cohort: 9964, searches_total: 2142686},
+		{version: 3, date: '160311', clickbutton_home: 2952, clickbutton_side: 131, clickhere: 1672, blur: 1568, searches_cohort: 12422, searches_total: 2153460},
+		{version: 3, date: '160312', clickbutton_home: 2919, clickbutton_side: 128, clickhere: 1511, blur: 1584, searches_cohort: 8034, searches_total: 1663353},
+		{version: 3, date: '160313', clickbutton_home: 3048, clickbutton_side: 134, clickhere: 1615, blur: 1698, searches_cohort: 8565, searches_total: 1739116},
+		{version: 3, date: '160314', clickbutton_home: 3162, clickbutton_side: 140, clickhere: 1994, blur: 1700, searches_cohort: 11616, searches_total: 2198432},
+		{version: 3, date: '160315', clickbutton_home: 3325, clickbutton_side: 136, clickhere: 2136, blur: 1798, searches_cohort: 14050, searches_total: 2163321},
+		{version: 3, date: '160316', partial: true, clickbutton_home: 2907, clickbutton_side: 111, clickhere: 1977, blur: 1558, searches_cohort: 22394, searches_total: 2174589},
 		// v4
 		{version: 4, date: '160316', partial: true, impressions_home: 107526, impressions_side: 1405, clickbutton_home: 899, clickbutton_side: 26, x_home: 700, x_side: 36, clickhere: 461, blur: 353, searches_cohort: 815, searches_total: 2174589},
 		{version: 4, date: '160317', impressions_home: 356449, impressions_side: 4497, clickbutton_home: 2902, clickbutton_side: 136, x_home: 2562, x_side: 117, clickhere: 0, blur: 1540, searches_cohort: 8344, searches_total: 2067126},
@@ -66,10 +106,15 @@ app.factory('fn', function() {
 			return date.substr(2, 2) + '/' + date.substr(4,2);
 		},
 		percent: function(num, den, pos) {
+			if (num < 0) return '<span class="gray">n/a</span>';
+			if (!den) return '';
+
 			if (pos == null) pos = 2
 			return (num/den * 100).toFixed(pos) + '%';
 		},
 		ratio: function(num, den) {
+			if (den == null) return '';
+
 			var r = (num/den).toFixed(2);
 			var c = (r >= 1) ? 'good' : 'bad';
 			return '<span class="' + c + '">' + r + '</span>';

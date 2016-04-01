@@ -19,6 +19,7 @@ $black-05:	rgba($black, 0.05);
 
 $blue: 		#4495d4;
 $blue-85: 	rgba($blue, 0.85);
+$blue-10: 	rgba($blue, 0.10);
 
 $green: 	#599F49;
 $green-70:	rgba($green, 0.7);
@@ -39,7 +40,8 @@ $gold-10:	rgba($gold, 0.10);
 $tx-xxs:	10px;
 $tx-sm: 	13px;
 $tx:	 	15px;
-$tx-lg: 	21px;
+$tx-lg: 	18px;
+$tx-xxl: 	21px;
 
 $pad-xxxs:	10px;
 $pad-xxs:	20px;
@@ -48,14 +50,9 @@ $pad-sm:	30px;
 $pad:		45px;
 $pad-lg:	60px;
 
-$sidebar:	214px;
-$main:		760px;
+$aside:		200px;
 
-$round-sm:	3px;
-$round:		5px;
-$round-lg:	10px;
-$avatar:	24px;
-$avatar-lg: 30px;
+
 
 // MISC
 // ----------------------------------------------------------------------------
@@ -78,16 +75,16 @@ a, a:visited {
 	}
 }
 
-h1,h2,h3,h4 { margin-top: 40px; }
 
-h2 { font-size: $tx-lg; }
+h1, h2 { font-size: $tx-lg; }
+// h2 { margin-top: 40px; }
 
 html, body, p, div, th, td {
 	font-size: $tx-sm;
 	color: $black;
 }
 
-.subtitle {
+.subtitle, .gray {
 	color: $gray;
 }
 
@@ -99,17 +96,36 @@ html, body, p, div, th, td {
 .float-right { float: right; }
 
 .partial td {
-	background-color: $gold-10;
+	background-color: $offwhite;
 }
 
 
 // LAYOUT
 // ----------------------------------------------------------------------------
 
+aside {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: $aside;
+	padding: 20px;
+	background-color: $blue-10;
+}
+
+input { margin-right: 3px; }
+
+.set { 
+	margin-top: 15px; 
+	font-size: $tx;
+	color: $gray-dk;
+}
+
 .container {
-	margin: 40px auto;
+	margin: 40px 0 40px $aside+40px;
 	max-width: 1200px;
 }
+
+section { margin-bottom: 40px; }
 
 .flex-container {
 	display: flex;
@@ -125,15 +141,24 @@ html, body, p, div, th, td {
 	.grid-8 { flex: 8; }
 }
 
+table { table-layout: fixed; }
+
 th, td {
 	padding: 5px;
 	border: 1px solid $gray-lt;
 
-	&.right-divide { border-right: 1px solid $gray-50; }
+	&.nolines { border: none; color: $gray; text-align: right; background: none; }
+	&.separator { 
+		width: 1px; 
+		padding: 0;
+		border-left: none;
+		border-right: 1px solid $gray-50; 
+	}
 }
 th {
 	font-size: $tx-xxs;
 	text-align: left;
+	// background-color: $gray-50;
 }
 td {
 	text-align: right; 

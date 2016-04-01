@@ -8,17 +8,14 @@ a, a:visited {
   a:hover, a:visited:hover {
     color: rgba(68, 149, 212, 0.85); }
 
-h1, h2, h3, h4 {
-  margin-top: 40px; }
-
-h2 {
-  font-size: 21px; }
+h1, h2 {
+  font-size: 18px; }
 
 html, body, p, div, th, td {
   font-size: 13px;
   color: #333; }
 
-.subtitle {
+.subtitle, .gray {
   color: #aaa; }
 
 .good {
@@ -37,11 +34,30 @@ html, body, p, div, th, td {
   float: right; }
 
 .partial td {
-  background-color: rgba(241, 160, 49, 0.1); }
+  background-color: #fafafa; }
+
+aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 20px;
+  background-color: rgba(68, 149, 212, 0.1); }
+
+input {
+  margin-right: 3px; }
+
+.set {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #666; }
 
 .container {
-  margin: 40px auto;
+  margin: 40px 0 40px 240px;
   max-width: 1200px; }
+
+section {
+  margin-bottom: 40px; }
 
 .flex-container {
   display: flex;
@@ -59,10 +75,21 @@ html, body, p, div, th, td {
   .flex-container .grid-8 {
     flex: 8; }
 
+table {
+  table-layout: fixed; }
+
 th, td {
   padding: 5px;
   border: 1px solid #eee; }
-  th.right-divide, td.right-divide {
+  th.nolines, td.nolines {
+    border: none;
+    color: #aaa;
+    text-align: right;
+    background: none; }
+  th.separator, td.separator {
+    width: 1px;
+    padding: 0;
+    border-left: none;
     border-right: 1px solid rgba(170, 170, 170, 0.5); }
 
 th {
