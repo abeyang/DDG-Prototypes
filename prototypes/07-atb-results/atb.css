@@ -9,7 +9,7 @@ a, a:visited {
     color: rgba(68, 149, 212, 0.85); }
 
 h1, h2, h3, h4 {
-  margin-bottom: 20px; }
+  margin-top: 40px; }
 
 h2 {
   font-size: 21px; }
@@ -19,7 +19,6 @@ html, body, p, div, th, td {
   color: #333; }
 
 .subtitle {
-  font-size: 13px;
   color: #aaa; }
 
 .good {
@@ -41,7 +40,8 @@ html, body, p, div, th, td {
   background-color: rgba(241, 160, 49, 0.1); }
 
 .container {
-  margin: 40px auto; }
+  margin: 40px auto;
+  max-width: 1200px; }
 
 .flex-container {
   display: flex;

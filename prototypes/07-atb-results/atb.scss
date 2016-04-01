@@ -78,7 +78,7 @@ a, a:visited {
 	}
 }
 
-h1,h2,h3,h4 { margin-bottom: 20px; }
+h1,h2,h3,h4 { margin-top: 40px; }
 
 h2 { font-size: $tx-lg; }
 
@@ -88,7 +88,6 @@ html, body, p, div, th, td {
 }
 
 .subtitle {
-	font-size: $tx-sm;
 	color: $gray;
 }
 
@@ -109,6 +108,7 @@ html, body, p, div, th, td {
 
 .container {
 	margin: 40px auto;
+	max-width: 1200px;
 }
 
 .flex-container {

@@ -22,6 +22,15 @@ app.controller('atbController', function($scope, fn) {
 		{version: 1, date: '160228', clickbutton_home: 2886, clickbutton_side: 112, clickhere: 1420, blur: 2023, searches_cohort: 27972, searches_total: 1811167},
 		{version: 1, date: '160229', clickbutton_home: 2987, clickbutton_side: 102, clickhere: 1549, blur: 2092, searches_cohort: 34143, searches_total: 2237941},
 		{version: 1, date: '160301', partial: true, clickbutton_home: 2279, clickbutton_side: 76, clickhere: 1196, blur: 1636, searches_cohort: 38598, searches_total: 2190151},
+		// v4
+		{version: 4, date: '160316', partial: true, impressions_home: 107526, impressions_side: 1405, clickbutton_home: 899, clickbutton_side: 26, x_home: 700, x_side: 36, clickhere: 461, blur: 353, searches_cohort: 815, searches_total: 2174589},
+		{version: 4, date: '160317', impressions_home: 356449, impressions_side: 4497, clickbutton_home: 2902, clickbutton_side: 136, x_home: 2562, x_side: 117, clickhere: 0, blur: 1540, searches_cohort: 8344, searches_total: 2067126},
+		{version: 4, date: '160318', impressions_home: 346531, impressions_side: 4179, clickbutton_home: 2565, clickbutton_side: 112, x_home: 2397, x_side: 124, clickhere: 0, blur: 1337, searches_cohort: 13246, searches_total: 1960891},
+		{version: 4, date: '160319', impressions_home: 293645, impressions_side: 4104, clickbutton_home: 2601, clickbutton_side: 116, x_home: 1969, x_side: 113, clickhere: 0, blur: 1407, searches_cohort: 14802, searches_total: 1649008},
+		{version: 4, date: '160320', impressions_home: 304992, impressions_side: 4271, clickbutton_home: 2607, clickbutton_side: 106, x_home: 1940, x_side: 107, clickhere: 0, blur: 1382, searches_cohort: 20210, searches_total: 1778827},
+		{version: 4, date: '160321', impressions_home: 371491, impressions_side: 4358, clickbutton_home: 2741, clickbutton_side: 94, x_home: 2467, x_side: 116, clickhere: 0, blur: 1424, searches_cohort: 27230, searches_total: 2171017},
+		{version: 4, date: '160322', impressions_home: 362222, impressions_side: 4388, clickbutton_home: 2640, clickbutton_side: 98, x_home: 2364, x_side: 107, clickhere: 0, blur: 1357, searches_cohort: 30881, searches_total: 2115995},
+		{version: 4, date: '160323', partial: true, impressions_home: 271786, impressions_side: 3281, clickbutton_home: 2044, clickbutton_side: 100, x_home: 1842, x_side: 90, clickhere: 0, blur: 1076, searches_cohort: 32444, searches_total: 2085366},
 		// v5
 		{version: 5, date: '160323', partial: true, impressions_home: 86123, impressions_side: 547, impressions_serp: 80031, clickbutton_home: 605, clickbutton_side: 18, clickbutton_serp: 314, x_home: 490, x_side: 10, x_serp: 638, clickhere: 0, blur: 406, searches_cohort: 908, searches_total: 2085366},
 		{version: 5, date: '160324', impressions_home: 339952, impressions_side: 2077, impressions_serp: 322980, clickbutton_home: 2522, clickbutton_side: 76, clickbutton_serp: 1240, x_home: 2190, x_side: 52, x_serp: 2751, clickhere: 0, blur: 1672, searches_cohort: 7094, searches_total: 1987034},
