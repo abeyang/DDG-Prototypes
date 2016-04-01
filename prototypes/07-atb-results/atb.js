@@ -54,8 +54,14 @@ app.factory('fn', function() {
 		prettyDate: function(date) {
 			return date.substr(2, 2) + '/' + date.substr(4,2);
 		},
-		percent: function(num, den) {
-			return (num/den * 100).toFixed(2) + '%';
+		percent: function(num, den, pos) {
+			if (pos == null) pos = 2
+			return (num/den * 100).toFixed(pos) + '%';
+		},
+		ratio: function(num, den) {
+			var r = (num/den).toFixed(2);
+			var c = (r >= 1) ? 'good' : 'bad';
+			return '<span class="' + c + '">' + r + '</span>';
 		}
 	};
 });

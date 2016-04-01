@@ -8,35 +8,25 @@ a, a:visited {
   a:hover, a:visited:hover {
     color: rgba(68, 149, 212, 0.85); }
 
+h1, h2, h3, h4 {
+  margin-bottom: 20px; }
+
 h2 {
-  font-size: 48px; }
+  font-size: 21px; }
 
-h3 {
-  font-size: 21px;
-  margin-bottom: 30px; }
-
-html, body, p, div {
-  font-size: 15px;
+html, body, p, div, th, td {
+  font-size: 13px;
   color: #333; }
-
-.gray {
-  color: #aaa; }
-  .gray a, .gray a:visited {
-    color: #aaa; }
-    .gray a:hover, .gray a:visited:hover {
-      color: rgba(68, 149, 212, 0.85); }
 
 .subtitle {
   font-size: 13px;
   color: #aaa; }
 
-.label, .label div {
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #aaa; }
+.good {
+  color: #599F49; }
 
-.label {
-  padding: 10px 0; }
+.bad {
+  color: #E0572A; }
 
 .text-center {
   text-align: center; }
@@ -48,10 +38,10 @@ html, body, p, div {
   float: right; }
 
 .partial td {
-  background-color: rgba(224, 87, 42, 0.25); }
+  background-color: rgba(241, 160, 49, 0.1); }
 
 .container {
-  margin: 0 auto; }
+  margin: 40px auto; }
 
 .flex-container {
   display: flex;
@@ -73,10 +63,10 @@ th, td {
   padding: 5px;
   border: 1px solid #eee; }
   th.right-divide, td.right-divide {
-    border-right: 1px solid #aaa; }
+    border-right: 1px solid rgba(170, 170, 170, 0.5); }
 
 th {
-  font-size: 13px;
+  font-size: 10px;
   text-align: left; }
 
 td {

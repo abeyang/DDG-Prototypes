@@ -29,6 +29,10 @@ $red:		#E0572A;
 $red-70:	rgba($red, 0.7);
 $red-40:	rgba($red, 0.4);
 $red-25:	rgba($red, 0.25);
+$red-10:	rgba($red, 0.10);
+
+$gold:		#f1a031;
+$gold-10:	rgba($gold, 0.10);
 
 // Sizes
 
@@ -36,7 +40,6 @@ $tx-xxs:	10px;
 $tx-sm: 	13px;
 $tx:	 	15px;
 $tx-lg: 	21px;
-$tx-xxl:	48px;
 
 $pad-xxxs:	10px;
 $pad-xxs:	20px;
@@ -75,22 +78,13 @@ a, a:visited {
 	}
 }
 
-h2 { font-size: $tx-xxl; }
-h3 { font-size: $tx-lg; margin-bottom: $pad-sm; }
+h1,h2,h3,h4 { margin-bottom: 20px; }
 
-html, body, p, div {
-	font-size: $tx;
+h2 { font-size: $tx-lg; }
+
+html, body, p, div, th, td {
+	font-size: $tx-sm;
 	color: $black;
-}
-
-.gray {
-	color: $gray;
-
-	a, a:visited {
-		color: $gray;
-
-		&:hover { color: $blue-85; }
-	}
 }
 
 .subtitle {
@@ -98,19 +92,15 @@ html, body, p, div {
 	color: $gray;
 }
 
-.label, .label div {
-	font-size: $tx-sm;
-	text-transform: uppercase;
-	color: $gray;
-}
-.label { padding: $pad-xxxs 0; }
+.good { color: $green; }
+.bad { color: $red; }
 
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .float-right { float: right; }
 
 .partial td {
-	background-color: $red-25;
+	background-color: $gold-10;
 }
 
 
@@ -118,7 +108,7 @@ html, body, p, div {
 // ----------------------------------------------------------------------------
 
 .container {
-	margin: 0 auto;
+	margin: 40px auto;
 }
 
 .flex-container {
@@ -139,10 +129,10 @@ th, td {
 	padding: 5px;
 	border: 1px solid $gray-lt;
 
-	&.right-divide { border-right: 1px solid $gray; }
+	&.right-divide { border-right: 1px solid $gray-50; }
 }
 th {
-	font-size: $tx-sm;
+	font-size: $tx-xxs;
 	text-align: left;
 }
 td {
