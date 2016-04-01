@@ -16,8 +16,8 @@
 <script src="<!-- $title -->.js"></script>
 
 <aside>
-	<h1>Chrome</h1> {{maxfirststep}}
-
+	<h1>Chrome</h1> 
+	
 	<div class="set">
 		<input type="radio" ng-model="toggles.graph" ng-value="false"> Tables <br />
 		<input type="radio" ng-model="toggles.graph" ng-value="true"> Graph
@@ -45,7 +45,7 @@
 
 <!-- GRAPH -->
 <div ng-show="toggles.graph" class="container">
-	<p><strong>% of Clicking Through First Step</strong></p>
+	<p><strong>% Finishing First Step (in modal)</strong></p>
 	<div class="grouping">
 		<p>v1</p>
 		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
