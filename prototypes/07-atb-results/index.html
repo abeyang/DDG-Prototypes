@@ -27,7 +27,14 @@
 <script src="atb.js"></script>
 
 <aside>
-	<h1>Chrome</h1> 
+	<select name="title" id="title" ng-model="title" ng-change="selectBrowser()">
+		<option value="chrome">Chrome</option>
+		<option value="firefox">Firefox</option>
+	</select>
+
+	<div class="set"><strong>Intent:</strong> {{info[title][0].desc}}</div>
+
+	<!-- <h1>{{title}}</h1>  -->
 	
 	<div class="set">
 		<input type="radio" ng-model="toggles.graph" ng-value="false"> Tables <br />
@@ -58,27 +65,27 @@
 <div ng-show="toggles.graph" class="container">
 	<p><strong>% Finishing First Step (in modal)</strong></p>
 	<div class="grouping">
-		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 		</div>	
 		<p>v1</p>
 	</div>
 	<div class="grouping">
-		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 		</div>	
 		<p>v2</p>
 	</div>
 	<div class="grouping">
-		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 		</div>	
 		<p>v3</p>
 	</div>
 	<div class="grouping">
-		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 		</div>	
 		<p>v4</p>
 	</div>
 	<div class="grouping">
-		<div class="barwrapper" ng-repeat="entry in chrome | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+		<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 		</div>	
 		<p>v5</p>
 	</div>
@@ -90,13 +97,13 @@
 	
 	<section ng-show="toggles.v1">
 		
-		<p class="subtitle"><strong>Version 1</strong> {{info.chrome[1-1].desc}}</p>
+		<p class="subtitle"><strong>Version 1</strong> {{info[title][1].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
 			</thead>
 			<tbody>
-				<tr ng-repeat="entry in chrome | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				<tr ng-repeat="entry in browser | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>
@@ -104,13 +111,13 @@
 
 	<section ng-show="toggles.v2">
 
-		<p class="subtitle"><strong>Version 2</strong> {{info.chrome[2-1].desc}}</p>
+		<p class="subtitle"><strong>Version 2</strong> {{info[title][2].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
 			</thead>
 			<tbody>
-				<tr ng-repeat="entry in chrome | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				<tr ng-repeat="entry in browser | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>
@@ -118,13 +125,13 @@
 
 	<section ng-show="toggles.v3">
 
-		<p class="subtitle"><strong>Version 3</strong> {{info.chrome[3-1].desc}}</p>
+		<p class="subtitle"><strong>Version 3</strong> {{info[title][3].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
 			</thead>
 			<tbody>
-				<tr ng-repeat="entry in chrome | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				<tr ng-repeat="entry in browser | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>
@@ -132,13 +139,13 @@
 
 	<section ng-show="toggles.v4">
 
-		<p class="subtitle"><strong>Version 4</strong> {{info.chrome[4-1].desc}}</p>
+		<p class="subtitle"><strong>Version 4</strong> {{info[title][4].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
 			</thead>
 			<tbody>
-				<tr ng-repeat="entry in chrome | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				<tr ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>
@@ -146,13 +153,13 @@
 
 	<section ng-show="toggles.v5">
 
-		<p class="subtitle"><strong>Version 5</strong> {{info.chrome[5-1].desc}}</p>
+		<p class="subtitle"><strong>Version 5</strong> {{info[title][5].desc}}</p>
 			
 		<table>
 			<thead ng-include="'partials/table_header.html'">
 			</thead>
 			<tbody>
-				<tr ng-repeat="entry in chrome | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				<tr ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>
