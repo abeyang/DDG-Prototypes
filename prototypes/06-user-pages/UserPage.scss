@@ -72,6 +72,10 @@ body {
 	opacity: 0.2;
 }
 
+.cursor {
+	cursor: pointer;
+}
+
 // TYPOGRAPHY
 // ----------------------------------------------------------------------------
 
@@ -343,15 +347,31 @@ aside {
 	.content { padding: $pad-xxs; }
 }
 
+.set {
+	margin-bottom: $pad-xxs;
+
+	strong {
+		display: block;
+		margin-bottom: $pad-xxxs;
+	}
+}
+
 .topic {
 	position: relative;
 	text-transform: capitalize;
 	color: $gray-dk;
 	padding: $pad-xxxs 0;
+	border-radius: $round;
 
 	.amt {
 		float: right;
 		color: $gray;
+	}
+	.close {
+		float: right;
+		color: $white;
+		display: none;
+		z-index: 50;
 	}
 
 	.bar {
@@ -359,6 +379,14 @@ aside {
 		bottom: -1px;
 		height: 1px;
 		background-color: $blue-85;
+	}
+
+	&.active {
+		.amt, .bar { display: none; }
+		.close { display: inline; }
+
+		background-color: $blue-85;
+		color: $white;
 	}
 
 	&.typeA {

@@ -49,9 +49,9 @@ app.controller('UserPageController', function($scope, fn) {
 
 		$scope.user = eval($scope.username);
 
-		// developed & maintained IAs, all in one array
+		// developed & maintained IAs, all in one array (no ghosted or deprecated)
 		$scope.ias = _.filter(ias, function(ia) {
-	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) || (ia.maintainer && ia.maintainer.github == $scope.username));
+	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) || (ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated'));
 		});
 
 		// developed IAs -- using http://underscorejs.org/
@@ -164,7 +164,8 @@ app.controller('UserPageController', function($scope, fn) {
 	// for use by filter (see app.filter... below)
 	$scope.filtertopic = '';
 	$scope.setFilterTopic = function(topic) {
-		$scope.filtertopic = topic;
+		// double-clicking will reset
+		$scope.filtertopic = ($scope.filtertopic == topic) ? '' : topic;
 	}
 });
 
@@ -173,7 +174,6 @@ app.controller('UserPageController', function($scope, fn) {
 // check out "filter 3": https://toddmotto.com/everything-about-custom-filters-in-angular-js/
 app.filter('filterIA', function() {
 	return function (items, topic) {
-	console.log('topic: ' + topic)
 		// return everything if no topic is given
 		if (topic == '') return items;
 

@@ -1,6 +1,25 @@
-<strong ng-click="setFilterTopic('')">Topics</strong>
-<div class="topic typeC" ng-repeat="t in topics | orderBy:'-amount'" ng-click="setFilterTopic(t.topic)">
-	<span class="amt">{{t.amount}}</span>
-	<span> {{t.topic}}</span>
-	<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
+<div class="set">
+	<strong>Filter Instant Answers</strong>
+	<div class="topic typeC cursor">
+		<span>PRs &amp; Issues</span>
+	</div>
+	<div class="topic typeC cursor">
+		<span>Maintained</span>
+	</div>
+	<div class="topic typeC cursor">
+		<span>Developed</span>
+	</div>
+	<div class="topic typeC cursor">
+		<span>In-Progress</span>
+	</div>
+</div>
+
+<div class="set">
+	<strong>Filter by Topics</strong>
+	<div ng-class="{'active': filtertopic==t.topic}" class="topic typeC cursor" ng-repeat="t in topics | orderBy:'-amount'" ng-click="setFilterTopic(t.topic)">
+		<span class="amt">{{t.amount}}</span>
+		<span class="close">x</span>
+		<span>{{t.topic}}</span>
+		<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
+	</div>
 </div>

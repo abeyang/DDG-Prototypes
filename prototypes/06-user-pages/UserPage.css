@@ -15,6 +15,9 @@ body {
   padding: 10px;
   opacity: 0.2; }
 
+.cursor {
+  cursor: pointer; }
+
 a, a:visited {
   color: #333;
   text-decoration: none; }
@@ -259,19 +262,38 @@ aside {
   .profile .content {
     padding: 20px; }
 
+.set {
+  margin-bottom: 20px; }
+  .set strong {
+    display: block;
+    margin-bottom: 10px; }
+
 .topic {
   position: relative;
   text-transform: capitalize;
   color: #666;
-  padding: 10px 0; }
+  padding: 10px 0;
+  border-radius: 5px; }
   .topic .amt {
     float: right;
     color: #aaa; }
+  .topic .close {
+    float: right;
+    color: #fff;
+    display: none;
+    z-index: 50; }
   .topic .bar {
     position: absolute;
     bottom: -1px;
     height: 1px;
     background-color: rgba(68, 149, 212, 0.85); }
+  .topic.active {
+    background-color: rgba(68, 149, 212, 0.85);
+    color: #fff; }
+    .topic.active .amt, .topic.active .bar {
+      display: none; }
+    .topic.active .close {
+      display: inline; }
   .topic.typeA {
     padding: 20px 0;
     border-bottom: 1px solid rgba(51, 51, 51, 0.1); }
