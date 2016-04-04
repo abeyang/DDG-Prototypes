@@ -280,8 +280,9 @@ aside {
   .topic .close {
     float: right;
     color: #fff;
-    display: none;
-    z-index: 50; }
+    display: none; }
+    .topic .close .octicon {
+      color: #fff; }
   .topic .bar {
     position: absolute;
     bottom: -1px;

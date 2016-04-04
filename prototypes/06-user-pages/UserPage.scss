@@ -371,7 +371,7 @@ aside {
 		float: right;
 		color: $white;
 		display: none;
-		z-index: 50;
+		.octicon { color: $white; }
 	}
 
 	.bar {

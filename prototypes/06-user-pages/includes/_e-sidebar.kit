@@ -1,15 +1,23 @@
 <div class="set">
 	<strong>Filter Instant Answers</strong>
-	<div class="topic typeC cursor">
+	<div ng-class="{'active': othertype=='prs'}" ng-click="setOtherType('prs')" class="topic typeC cursor">
+		<span class="amt">{{count.prs_ias}}</span>
+		<span class="close"><span class="octicon octicon-x"></span></span>
 		<span>PRs &amp; Issues</span>
 	</div>
-	<div class="topic typeC cursor">
+	<div ng-class="{'active': othertype=='maintained'}" ng-click="setOtherType('maintained')" class="topic typeC cursor">
+		<span class="amt">{{count.maintained_ias}}</span>
+		<span class="close"><span class="octicon octicon-x"></span></span>
 		<span>Maintained</span>
 	</div>
-	<div class="topic typeC cursor">
+	<div ng-class="{'active': othertype=='developed'}" ng-click="setOtherType('developed')" class="topic typeC cursor">
+		<span class="amt">{{count.developed_ias}}</span>
+		<span class="close"><span class="octicon octicon-x"></span></span>
 		<span>Developed</span>
 	</div>
-	<div class="topic typeC cursor">
+	<div ng-class="{'active': othertype=='progress'}" ng-click="setOtherType('progress')" class="topic typeC cursor">
+		<span class="amt">{{count.progress_ias}}</span>
+		<span class="close"><span class="octicon octicon-x"></span></span>
 		<span>In-Progress</span>
 	</div>
 </div>
@@ -18,7 +26,7 @@
 	<strong>Filter by Topics</strong>
 	<div ng-class="{'active': filtertopic==t.topic}" class="topic typeC cursor" ng-repeat="t in topics | orderBy:'-amount'" ng-click="setFilterTopic(t.topic)">
 		<span class="amt">{{t.amount}}</span>
-		<span class="close">x</span>
+		<span class="close"><span class="octicon octicon-x"></span></span>
 		<span>{{t.topic}}</span>
 		<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
 	</div>

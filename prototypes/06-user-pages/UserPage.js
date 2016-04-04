@@ -35,6 +35,21 @@ app.controller('UserPageController', function($scope, fn) {
 
 	var initial = false;
 
+	// for use by filter (see app.filter... below)
+	$scope.filtertopic = '';
+	$scope.othertype = '';
+	
+	$scope.setFilterTopic = function(topic) {
+		// double-clicking will reset
+		$scope.filtertopic = ($scope.filtertopic == topic) ? '' : topic;
+		$scope.othertype = '';
+	}
+	$scope.setOtherType = function(type) {
+		// double-clicking will reset
+		$scope.othertype = ($scope.othertype == type) ? '' : type;
+		$scope.filtertopic = '';
+	}
+
 	// given a username, fill out the $scope variables appropriately, like IAs, etc.
 	$scope.showUser = function() {
 		$scope.count = {};
@@ -136,8 +151,13 @@ app.controller('UserPageController', function($scope, fn) {
 			$scope.topics.push(obj);
 		});
 
+		// reset filters
+		$scope.setFilterTopic('');
+
+		// set "counters"
 		$scope.count.all_ias = _.size($scope.ias);
 		$scope.count.maintained_ias = _.size($scope.ias_maintained);
+		$scope.count.developed_ias = _.size($scope.ias_developed);
 		$scope.count.developed_only_ias = _.size($scope.ias_developed_only);
 		$scope.count.open_issues = _.size($scope.issues_open);
 		$scope.count.closed_issues = _.size($scope.user.issues) - $scope.count.open_issues;
@@ -145,6 +165,13 @@ app.controller('UserPageController', function($scope, fn) {
 		$scope.count.reviewed_prs = _.size($scope.prs_open_reviewed);
 		$scope.count.developed_prs = _.size($scope.prs_open_developed);
 		$scope.count.closed_prs = _.size($scope.prs) - $scope.count.open_prs;
+
+		$scope.count.prs_ias = _.size(_.filter($scope.ias, function(ia) {
+			return (ia.open_prs > 0) || (ia.open_issues > 0);
+		}));
+		$scope.count.progress_ias = _.size(_.filter($scope.ias, function(ia) {
+			return (ia.dev_milestone != 'live');
+		}));
 
 		var maxtopic = _.max($scope.topics, function(topic){ return topic.amount; });
 		$scope.count.max_topics = maxtopic.amount;
@@ -161,25 +188,52 @@ app.controller('UserPageController', function($scope, fn) {
 	// initializing show_issues
 	$scope.show_issues = '';
 
-	// for use by filter (see app.filter... below)
-	$scope.filtertopic = '';
-	$scope.setFilterTopic = function(topic) {
-		// double-clicking will reset
-		$scope.filtertopic = ($scope.filtertopic == topic) ? '' : topic;
-	}
 });
 
 // filter IAs by... (default is to show all)
 // http://stackoverflow.com/questions/16563018/angularjs-custom-filters-and-ng-repeat
 // check out "filter 3": https://toddmotto.com/everything-about-custom-filters-in-angular-js/
 app.filter('filterIA', function() {
-	return function (items, topic) {
-		// return everything if no topic is given
-		if (topic == '') return items;
+	return function (items, topic, othertype, username) {
+		// console.log (items + ' ' + topic + ' ' + othertype + ' ' + username);
 
-		return _.filter(items, function(ia) {
-			return _.contains(ia.topic, topic);
-		});
+		// return everything if no topic + othertype is given
+		if (topic == '' && othertype == '') return items;
+
+		// filter by topic
+		else if (topic != '') {
+			return _.filter(items, function(ia) {
+				return _.contains(ia.topic, topic);
+			});
+		}
+
+		// filter by type
+		else {
+			if (othertype == 'prs') {
+				return _.filter(items, function(ia) {
+					return (ia.open_prs > 0) || (ia.open_issues > 0);
+				});
+			}
+
+			else if (othertype == 'maintained') {
+				return _.filter(items, function(ia) {
+					return (ia.maintainer && ia.maintainer.github == username);
+				});
+			}
+
+			else if (othertype == 'developed') {
+				return _.filter(items, function(ia) {
+					return _.some(ia.developer, function(d) { return d.name == username});
+				});
+			}
+
+			else if (othertype == 'progress') {
+				return _.filter(items, function(ia) {
+					return (ia.dev_milestone != 'live');
+				});
+			}
+		}
+
 	};
 });
 

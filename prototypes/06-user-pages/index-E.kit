@@ -37,27 +37,12 @@
 	<!-- Main -->
 	<main>
 		<section>
-			<h3>
-<!-- 				<div class="tabs">
-					<a href="#" ng-click="show_ias=ias_maintained">
-						<span ng-class="{'active': show_ias == ias_maintained}" >
-							Maintained
-							<span class="badge">{{count.maintained_ias}}</span>
-						</span>
-					</a>
-					<a href="#" ng-click="show_ias=ias_developed_only">
-						<span ng-class="{'active': show_ias == ias_developed_only}">
-							Developed
-							<span class="badge">{{count.developed_only_ias}}</span>
-						</span>
-					</a>
-				</div> -->
-				Instant Answers
-			</h3>
+			<h3>Instant Answers</h3>
 
-			<!-- filtertopic: {{filtertopic}} -->
+<!-- 			filtertopic: {{filtertopic}}
+			<br />othertype: {{othertype}} -->
 
-			<div class="instantanswer typeC flex-container" ng-repeat="ia in ias | filterIA:filtertopic | orderBy: iaSort" ng-include="'partials/e_instantanswer.html'">
+			<div class="instantanswer typeC flex-container" ng-repeat="ia in ias | filterIA:filtertopic:othertype:username | orderBy: iaSort" ng-include="'partials/e_instantanswer.html'">
 			</div>
 
 			
