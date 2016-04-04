@@ -31,14 +31,14 @@
 	<!-- Sidebar -->
 	<aside>
 		<!-- @include includes/a-profile -->
-		<!-- @include includes/c-sidebar -->
+		<!-- @include includes/e-sidebar -->
 	</aside>
 
 	<!-- Main -->
 	<main>
 		<section>
 			<h3>
-				<div class="tabs">
+<!-- 				<div class="tabs">
 					<a href="#" ng-click="show_ias=ias_maintained">
 						<span ng-class="{'active': show_ias == ias_maintained}" >
 							Maintained
@@ -51,12 +51,16 @@
 							<span class="badge">{{count.developed_only_ias}}</span>
 						</span>
 					</a>
-				</div>
+				</div> -->
 				Instant Answers
 			</h3>
 
-			<div class="instantanswer typeC flex-container" ng-repeat="ia in show_ias | orderBy: iaSort" ng-include="'partials/e_instantanswer.html'">
+			filtertopic: {{filtertopic}}
+
+			<div class="instantanswer typeC flex-container" ng-repeat="ia in ias | filterIA:filtertopic | orderBy: iaSort" ng-include="'partials/e_instantanswer.html'">
 			</div>
+
+			
 		</section>
 
 		<section>
@@ -84,11 +88,6 @@
 
 		</section>
 
-		<section ng-if="count.open_prs">
-			
-
-			
-		</section>
 	</main>
 
 

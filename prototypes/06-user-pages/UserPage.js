@@ -161,6 +161,26 @@ app.controller('UserPageController', function($scope, fn) {
 	// initializing show_issues
 	$scope.show_issues = '';
 
+	// for use by filter (see app.filter... below)
+	$scope.filtertopic = '';
+	$scope.setFilterTopic = function(topic) {
+		$scope.filtertopic = topic;
+	}
+});
+
+// filter IAs by... (default is to show all)
+// http://stackoverflow.com/questions/16563018/angularjs-custom-filters-and-ng-repeat
+// check out "filter 3": https://toddmotto.com/everything-about-custom-filters-in-angular-js/
+app.filter('filterIA', function() {
+	return function (items, topic) {
+	console.log('topic: ' + topic)
+		// return everything if no topic is given
+		if (topic == '') return items;
+
+		return _.filter(items, function(ia) {
+			return _.contains(ia.topic, topic);
+		});
+	};
 });
 
 // helper functions
