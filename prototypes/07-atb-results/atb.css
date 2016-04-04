@@ -40,7 +40,7 @@ html, body, p, div, th, td {
   background-color: #fafafa; }
 
 p {
-  margin-bottom: 15px; }
+  margin-bottom: 45px; }
 
 aside {
   position: fixed;
@@ -62,7 +62,9 @@ input {
   float: left;
   border-right: 1px solid #eee; }
   .grouping p {
-    padding-bottom: 5px;
+    clear: left;
+    padding-top: 15px;
+    margin-bottom: 0;
     text-align: center; }
 
 .barwrapper {

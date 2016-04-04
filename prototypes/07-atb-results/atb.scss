@@ -107,7 +107,7 @@ html, body, p, div, th, td {
 // LAYOUT
 // ----------------------------------------------------------------------------
 
-p { margin-bottom: 15px; }
+p { margin-bottom: 45px; }
 
 aside {
 	position: fixed;
@@ -131,8 +131,9 @@ input { margin-right: 3px; }
 	border-right: 1px solid $gray-lt;
 
 	p { 
-		padding-bottom: 5px;
-		// border-bottom: 1px solid $gray-lt;
+		clear: left;
+		padding-top: 15px;
+		margin-bottom: 0;
 		text-align: center; 
 	}
 }

@@ -256,6 +256,8 @@ aside {
 .profile {
   text-align: center; }
   .profile img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     width: 100%; }
   .profile h3 {
     margin-bottom: 10px; }
@@ -273,7 +275,10 @@ aside {
   text-transform: capitalize;
   color: #666;
   padding: 10px 0;
-  border-radius: 5px; }
+  border-radius: 5px;
+  opacity: 0.8; }
+  .topic:hover {
+    opacity: 1; }
   .topic .amt {
     float: right;
     color: #aaa; }
