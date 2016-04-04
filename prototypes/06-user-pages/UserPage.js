@@ -66,7 +66,9 @@ app.controller('UserPageController', function($scope, fn) {
 
 		// developed & maintained IAs, all in one array (no ghosted or deprecated)
 		$scope.ias = _.filter(ias, function(ia) {
-	  		return (_.some(ia.developer, function(d) { return d.name == $scope.username}) || (ia.maintainer && ia.maintainer.github == $scope.username) && !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated'));
+	  		return (
+	  			(_.some(ia.developer, function(d) { return d.name == $scope.username}) || (ia.maintainer && ia.maintainer.github == $scope.username))
+	  			&& !(ia.dev_milestone=='ghosted' || ia.dev_milestone=='deprecated'));
 		});
 
 		// developed IAs -- using http://underscorejs.org/

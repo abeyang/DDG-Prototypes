@@ -88,7 +88,7 @@
 	<div ng-class="{'active': othertype=='maintained'}" ng-click="setOtherType('maintained')" class="topic typeC cursor">
 		<span class="amt">{{count.maintained_ias}}</span>
 		<span class="close"><span class="octicon octicon-x"></span></span>
-		<span>Maintained</span>
+		<span>Maintaining</span>
 	</div>
 	<div ng-class="{'active': othertype=='developed'}" ng-click="setOtherType('developed')" class="topic typeC cursor">
 		<span class="amt">{{count.developed_ias}}</span>
@@ -107,7 +107,7 @@
 	<div ng-class="{'active': filtertopic==t.topic}" class="topic typeC cursor" ng-repeat="t in topics | orderBy:'-amount'" ng-click="setFilterTopic(t.topic)">
 		<span class="amt">{{t.amount}}</span>
 		<span class="close"><span class="octicon octicon-x"></span></span>
-		<span>{{t.topic}}</span>
+		<span> {{t.topic}}</span>
 		<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
 	</div>
 </div>	</aside>
