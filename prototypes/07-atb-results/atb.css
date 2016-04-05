@@ -40,7 +40,7 @@ html, body, p, div, th, td {
   background-color: #fafafa; }
 
 p {
-  margin-bottom: 45px; }
+  margin-bottom: 30px; }
 
 aside {
   position: fixed;
@@ -115,6 +115,13 @@ input {
         display: block; }
     .barwrapper .bar.green {
       background-color: rgba(89, 159, 73, 0.7); }
+
+.graph {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  background-color: rgba(51, 51, 51, 0.05); }
 
 .container {
   margin: 40px 0 40px 240px;

@@ -22,15 +22,13 @@
 	</select>
 
 	<div class="set"><strong>Intent:</strong> {{info[title][0].desc}}</div>
-
-	<!-- <h1>{{title}}</h1>  -->
 	
 	<div class="set">
-		<input type="radio" ng-model="toggles.graph" ng-value="false"> Tables <br />
-		<input type="radio" ng-model="toggles.graph" ng-value="true"> Graph
+		<input type="radio" ng-model="toggles.graphtype" value="modal" ng-change="updateColspan()"> Modal <br />
+		<input type="radio" ng-model="toggles.graphtype" value="impressions" ng-change="updateColspan()"> CTA
 	</div>
 
-	<div class="set" ng-show="!toggles.graph">
+	<div class="set">
 		<input type="checkbox" ng-model="toggles.v1"></input> Version 1 <br />
 		<input type="checkbox" ng-model="toggles.v2"></input> Version 2 <br />
 		<input type="checkbox" ng-model="toggles.v3"></input> Version 3 <br />
@@ -38,9 +36,9 @@
 		<input type="checkbox" ng-model="toggles.v5"></input> Version 5 <br />
 	</div>
 
-	<div class="set" ng-show="!toggles.graph">
+	<div class="set">
+		<input type="checkbox" ng-model="toggles.graph"></input> Show Graph <br/>
 		<input type="checkbox" ng-model="toggles.xclick" ng-change="updateColspan()"></input> Show X Clicks <br />
-		<input type="checkbox" ng-model="toggles.impressions" ng-change="updateColspan()"></input> Show Impressions <br/>
 		<input type="checkbox" ng-model="toggles.serp"></input> Show SERP	
 	</div>
 
@@ -50,65 +48,60 @@
 	</div>
 </aside>
 
-<!-- GRAPHS -->
-<div ng-show="toggles.graph" class="container">
+<!-- TABLES -->
+<div class="container">
 
-	<!-- Modal Workflow -->
-	<section>
+	<!-- Graph: Modal Workflow -->
+	<section ng-show="toggles.graphtype=='modal' && toggles.graph" class="graph">
 		<p class="subtitle"><strong>% Finishing First Step (in modal)</strong> Gives us some idea how many people <em>might</em> be setting DDG as their default browser</p>
-		<div class="grouping">
+		<div ng-show="toggles.v1" class="grouping">
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 			</div>	
 			<p>v1 <span class="tooltip subtitle">{{info[title][1].desc}}</span></p>
 		</div>
-		<div class="grouping">
+		<div ng-show="toggles.v2" class="grouping">
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 			</div>	
 			<p>v2 <span class="tooltip subtitle">{{info[title][2].desc}}</span></p>
 		</div>
-		<div class="grouping">
+		<div ng-show="toggles.v3" class="grouping">
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 			</div>	
 			<p>v3 <span class="tooltip subtitle">{{info[title][3].desc}}</span></p>
 		</div>
-		<div class="grouping">
+		<div ng-show="toggles.v4" class="grouping">
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 			</div>	
 			<p>v4 <span class="tooltip subtitle">{{info[title][4].desc}}</span></p>
 		</div>
-		<div class="grouping">
+		<div ng-show="toggles.v5" class="grouping">
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
 			</div>	
 			<p>v5 <span class="tooltip subtitle">{{info[title][5].desc}}</span></p>
 		</div>
 	</section>
 
-	<!-- Clicks based on Impressions (starts from v4) -->
-	<section>
+	<!-- Graph: Clicks based on Impressions (starts from v4) -->
+	<section ng-show="toggles.graphtype=='impressions' && toggles.graph" class="graph">
 		<p class="subtitle">
 			<strong>Clicks / Impressions ratio</strong> Given amount of people who see the button, what percentage is actually clicking on them <br />
+			(We only started tracking impressions since v4)<br />
 			<span class="label margin-right"><span class="dot"></span> Homepage</span>
 			<span class="label green"><span class="dot"></span> Sidebar</span>
 		</p>
 		
 		
 		<div class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
+			<div ng-show="toggles.v4" class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
 			</div>	
 			<p>v4 <span class="tooltip subtitle">{{info[title][4].desc}}</span></p>
 		</div>
-		<div class="grouping">
+		<div ng-show="toggles.v5" class="grouping">
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
 			</div>	
 			<p>v5 <span class="tooltip subtitle">{{info[title][5].desc}}</span></p>
 		</div>
 	</section>
-	
-	
-</div>
-
-<!-- TABLES -->
-<div ng-show="!toggles.graph" class="container">
 	
 	<section ng-show="toggles.v1">
 		

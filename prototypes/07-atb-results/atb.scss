@@ -107,7 +107,7 @@ html, body, p, div, th, td {
 // LAYOUT
 // ----------------------------------------------------------------------------
 
-p { margin-bottom: 45px; }
+p { margin-bottom: 30px; }
 
 aside {
 	position: fixed;
@@ -193,6 +193,14 @@ input { margin-right: 3px; }
 
 		&.green { background-color: $green-70;}
 	}
+}
+
+.graph {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 15px;
+	background-color: $black-05;
 }
 
 

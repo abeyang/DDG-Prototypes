@@ -12,9 +12,9 @@
 
 	<th class="separator"></th>
 
-	<th colspan="3">Modal</th>
+	<th ng-show="toggles.graphtype=='modal'" colspan="3">Modal</th>
 
-	<th class="separator"></th>
+	<th ng-show="toggles.graphtype=='modal'" class="separator"></th>
 
 	<th colspan="3">Searches</th>
 </tr>
@@ -23,32 +23,32 @@
 	<th>Button Click</th>
 	<th ng-show="toggles.xclick">X Click</th>
 	<th ng-show="toggles.xclick">Button:X</th>
-	<th ng-show="toggles.impressions">Impressions</th>
-	<th ng-show="toggles.impressions">% Button Clicks</th>
+	<th ng-show="toggles.graphtype=='impressions'">Impressions</th>
+	<th ng-show="toggles.graphtype=='impressions'">% Button Clicks</th>
 	
 	<th class="separator"></th>
 	
 	<th>Button Click</th>
 	<th ng-show="toggles.xclick">X Click</th>
 	<th ng-show="toggles.xclick">Button:X</th>
-	<th ng-show="toggles.impressions">Impressions</th>
-	<th ng-show="toggles.impressions">% Button Clicks</th>
+	<th ng-show="toggles.graphtype=='impressions'">Impressions</th>
+	<th ng-show="toggles.graphtype=='impressions'">% Button Clicks</th>
 
 	<th class="separator"></th>
 
 	<th ng-show="toggles.serp">Button Click</th>
 	<th ng-show="toggles.xclick && toggles.serp">X Click</th>
 	<th ng-show="toggles.xclick && toggles.serp">Button:X</th>
-	<th ng-show="toggles.impressions && toggles.serp">Impressions</th>
-	<th ng-show="toggles.impressions && toggles.serp">% Button Clicks</th>
+	<th ng-show="toggles.graphtype=='impressions' && toggles.serp">Impressions</th>
+	<th ng-show="toggles.graphtype=='impressions' && toggles.serp">% Button Clicks</th>
 
 	<th class="separator"></th>
 
-	<th>Window Blur</th>
-	<th>Total Button Clicks</th>
-	<th>% Finish 1st Step</th>
+	<th ng-show="toggles.graphtype=='modal'">Window Blur</th>
+	<th ng-show="toggles.graphtype=='modal'">Total Button Clicks</th>
+	<th ng-show="toggles.graphtype=='modal'">% Finish 1st Step</th>
 
-	<th class="separator"></th>
+	<th ng-show="toggles.graphtype=='modal'" class="separator"></th>
 
 	<th>Thru Cohort</th>
 	<th>Total</th>

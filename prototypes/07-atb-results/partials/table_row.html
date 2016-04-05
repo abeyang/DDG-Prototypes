@@ -3,34 +3,34 @@
 <td>{{entry.clickbutton_home}}</td>
 <td ng-show="toggles.xclick">{{entry.x_home}}</td>
 <td ng-show="toggles.xclick" ng-bind-html="fn.ratio(entry.clickbutton_home, entry.x_home)"></td>
-<td ng-show="toggles.impressions">{{entry.impressions_home}}</td>
-<td ng-show="toggles.impressions" ng-bind-html="fn.percent(entry.clickbutton_home, entry.impressions_home)"></td>
+<td ng-show="toggles.graphtype=='impressions'">{{entry.impressions_home}}</td>
+<td ng-show="toggles.graphtype=='impressions'" ng-bind-html="fn.percent(entry.clickbutton_home, entry.impressions_home)"></td>
 
 <td class="separator"></td>
 
 <td>{{entry.clickbutton_side}}</td>
 <td ng-show="toggles.xclick">{{entry.x_side}}</td>
 <td ng-show="toggles.xclick" ng-bind-html="fn.ratio(entry.clickbutton_side, entry.x_side)"></td>
-<td ng-show="toggles.impressions">{{entry.impressions_side}}</td>
-<td ng-show="toggles.impressions" ng-bind-html="fn.percent(entry.clickbutton_side, entry.impressions_side)"></td>
+<td ng-show="toggles.graphtype=='impressions'">{{entry.impressions_side}}</td>
+<td ng-show="toggles.graphtype=='impressions'" ng-bind-html="fn.percent(entry.clickbutton_side, entry.impressions_side)"></td>
 
 <td class="separator"></td>
 
 <td ng-show="toggles.serp">{{entry.clickbutton_serp}}</td>
 <td ng-show="toggles.xclick && toggles.serp">{{entry.x_serp}}</td>
 <td ng-show="toggles.xclick && toggles.serp" ng-bind-html="fn.ratio(entry.clickbutton_serp, entry.x_serp)"></td>
-<td ng-show="toggles.impressions && toggles.serp">{{entry.impressions_serp}}</td>
-<td ng-show="toggles.impressions && toggles.serp" ng-bind-html="fn.percent(entry.clickbutton_serp, entry.impressions_serp)"></td>
+<td ng-show="toggles.graphtype=='impressions' && toggles.serp">{{entry.impressions_serp}}</td>
+<td ng-show="toggles.graphtype=='impressions' && toggles.serp" ng-bind-html="fn.percent(entry.clickbutton_serp, entry.impressions_serp)"></td>
 
 <td class="separator"></td>
 
-<td ng-if="entry.blur > 0">{{entry.blur}}</td>
-<td ng-if="entry.blur <= 0" class="gray">n/a</td>
-<td>{{entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp}}</td>
-<td ng-bind-html="fn.percent(entry.blur*magicratio, entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp, 1)"></td>
+<td ng-show="toggles.graphtype=='modal'" ng-if="entry.blur > 0">{{entry.blur}}</td>
+<td ng-show="toggles.graphtype=='modal'" ng-if="entry.blur <= 0" class="gray">n/a</td>
+<td ng-show="toggles.graphtype=='modal'">{{entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp}}</td>
+<td ng-show="toggles.graphtype=='modal'" ng-bind-html="fn.percent(entry.blur*magicratio, entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp, 1)"></td>
 
-<td class="separator"></td>
+<td ng-show="toggles.graphtype=='modal'" class="separator"></td>
 
 <td>{{entry.searches_cohort}}</td>
 <td>{{entry.searches_total}}</td>
-<td>{{fn.percent(entry.searches_cohort, entry.searches_total)}}</td>
+<td ng-bind-html="fn.percent(entry.searches_cohort, entry.searches_total)"></td>

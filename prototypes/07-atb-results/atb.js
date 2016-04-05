@@ -31,16 +31,15 @@ app.controller('atbController', function($scope, fn) {
 		v5: true,
 
 		xclick: false,
-		impressions: true,
 		serp: false,
-
-		graph: true		// either show graph or tables
+		graph: true,
+		graphtype: 'impressions'	// impressions vs modal
 	};
 
 	$scope.updateColspan = function() {
 		$scope.colspan = 1;
 		if ($scope.toggles.xclick) $scope.colspan += 2;
-		if ($scope.toggles.impressions) $scope.colspan += 2;
+		if ($scope.toggles.graphtype=='impressions') $scope.colspan += 2;
 	};
 	$scope.updateColspan();
 
