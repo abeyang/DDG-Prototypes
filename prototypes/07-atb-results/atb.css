@@ -66,9 +66,33 @@ input {
     padding-top: 15px;
     margin-bottom: 0;
     text-align: center; }
+    .grouping p .tooltip {
+      position: absolute; }
+    .grouping p:hover .tooltip {
+      display: block; }
+
+.tooltip {
+  position: relative;
+  text-align: center;
+  display: none; }
+
+.label {
+  color: #4495d4; }
+
+.label.green {
+  color: #599F49; }
+  .label.green .dot {
+    background-color: rgba(89, 159, 73, 0.7); }
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: rgba(68, 149, 212, 0.85); }
 
 .barwrapper {
-  height: 400px;
+  height: 300px;
   width: 20px;
   position: relative;
   float: left;
@@ -80,18 +104,17 @@ input {
     background-color: rgba(68, 149, 212, 0.85);
     opacity: 0.5; }
     .barwrapper .bar .tooltip {
-      position: relative;
       top: -40px;
       left: -10px;
       width: 40px;
       background-color: rgba(255, 255, 255, 0.5);
-      color: #666;
-      text-align: center;
-      display: none; }
+      color: #666; }
     .barwrapper .bar:hover {
       opacity: 1; }
       .barwrapper .bar:hover .tooltip {
         display: block; }
+    .barwrapper .bar.green {
+      background-color: rgba(89, 159, 73, 0.7); }
 
 .container {
   margin: 40px 0 40px 240px;
@@ -99,6 +122,10 @@ input {
 
 section {
   margin-bottom: 40px; }
+  section::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .flex-container {
   display: flex;
@@ -141,10 +168,10 @@ td {
   text-align: right; }
 
 .margin-left {
-  padding-left: 30px; }
+  margin-left: 30px; }
 
 .margin-right {
-  padding-right: 30px; }
+  margin-right: 30px; }
 
 .pad-left-10 {
   padding-left: 10px; }

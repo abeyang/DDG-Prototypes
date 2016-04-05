@@ -52,7 +52,7 @@ $pad:		45px;
 $pad-lg:	60px;
 
 $aside:		200px;
-$barheight:	400px;
+$barheight:	300px;
 $barwidth:	20px;
 
 
@@ -135,8 +135,34 @@ input { margin-right: 3px; }
 		padding-top: 15px;
 		margin-bottom: 0;
 		text-align: center; 
+
+		.tooltip {
+			// bottom: -40px;
+			position: absolute;
+		}
+
+		&:hover .tooltip { display: block; }
 	}
 }
+.tooltip {
+	position: relative;
+	text-align: center;
+	display: none;
+}
+.label { color: $blue; }
+.label.green { 
+	color: $green; 
+
+	.dot { background-color: $green-70; }
+}
+.dot {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 5px;
+	background-color: $blue-85;
+}
+
 .barwrapper {
 	height: $barheight;
 	width: $barwidth;
@@ -152,14 +178,11 @@ input { margin-right: 3px; }
 		opacity: 0.5;
 
 		.tooltip {
-			position: relative;
 			top: -40px;
 			left: -$barwidth/2;
 			width: $barwidth*2;
 			background-color: $white-50;
 			color: $gray-dk;
-			text-align: center;
-			display: none;
 		}
 
 		&:hover {
@@ -167,15 +190,21 @@ input { margin-right: 3px; }
 
 			.tooltip { display: block; }
 		}
+
+		&.green { background-color: $green-70;}
 	}
 }
+
 
 .container {
 	margin: 40px 0 40px $aside+40px;
 	max-width: 1200px;
 }
 
-section { margin-bottom: 40px; }
+section { 
+	 @include clearfix;
+	margin-bottom: 40px; 
+}
 
 .flex-container {
 	display: flex;
@@ -214,8 +243,8 @@ td {
 	text-align: right; 
 }
 
-.margin-left { padding-left: 30px; }
-.margin-right { padding-right: 30px; }
+.margin-left { margin-left: 30px; }
+.margin-right { margin-right: 30px; }
 
 .pad-left-10 { padding-left: 10px; }
 .pad-left-20 { padding-left: 20px; }

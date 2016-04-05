@@ -19,8 +19,8 @@
 <td ng-show="toggles.serp">{{entry.clickbutton_serp}}</td>
 <td ng-show="toggles.xclick && toggles.serp">{{entry.x_serp}}</td>
 <td ng-show="toggles.xclick && toggles.serp" ng-bind-html="fn.ratio(entry.clickbutton_serp, entry.x_serp)"></td>
-<td ng-show="toggles.impressions">{{entry.impressions_serp}}</td>
-<td ng-show="toggles.impressions" ng-bind-html="fn.percent(entry.clickbutton_serp, entry.impressions_serp)"></td>
+<td ng-show="toggles.impressions && toggles.serp">{{entry.impressions_serp}}</td>
+<td ng-show="toggles.impressions && toggles.serp" ng-bind-html="fn.percent(entry.clickbutton_serp, entry.impressions_serp)"></td>
 
 <td class="separator"></td>
 

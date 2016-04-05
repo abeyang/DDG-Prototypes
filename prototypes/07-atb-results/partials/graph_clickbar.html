@@ -1,0 +1,19 @@
+<!-- <div class="bar" style="height: {{((entry.clickbutton_home + entry.clickbutton_side) / (entry.impressions_home + entry.impressions_side)) / maxclickratio * 100 + '%'}}">
+	
+	<div class="tooltip">
+		{{fn.prettyDate(entry.date)}} <br />
+		<span ng-bind-html="fn.percent(entry.clickbutton_home + entry.clickbutton_side, entry.impressions_home + entry.impressions_side, 1)"></span>
+	</div>
+
+</div> -->
+
+<div class="bar" style="height: {{(entry.clickbutton_home / (entry.impressions_home + entry.impressions_side)) / maxclickratio * 100 + '%'}}">
+	
+	<div class="tooltip">
+		{{fn.prettyDate(entry.date)}} <br />
+		<span class="label" ng-bind-html="fn.percent(entry.clickbutton_home, entry.impressions_home, 2)"></span> <br />
+		<span class="label green" ng-bind-html="fn.percent(entry.clickbutton_side, entry.impressions_side, 2)"></span>
+	</div>
+
+</div>
+<div class="green bar" style="height: {{(entry.clickbutton_side / (entry.impressions_home + entry.impressions_side)) / maxclickratio * 100 + '%'}}"></div>

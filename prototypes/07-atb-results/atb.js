@@ -32,9 +32,9 @@ app.controller('atbController', function($scope, fn) {
 
 		xclick: false,
 		impressions: true,
-		serp: true,
+		serp: false,
 
-		graph: false		// either show graph or tables
+		graph: true		// either show graph or tables
 	};
 
 	$scope.updateColspan = function() {
@@ -144,14 +144,23 @@ app.controller('atbController', function($scope, fn) {
 		var browser = $scope.title;
 		$scope.browser = $scope[browser];
 
-		// no magicratio needed here
-		var max = 0;
+		// graph: determine (A) the largest % first step complete modal, as well as (B) button click / impression ratio
+		// (no magicratio needed here)
+		var maxfirststep = 0;
+		var maxclickratio = 0;
 		_.each($scope.browser, function(entry) {
+			// A
 			var serp = (entry.clickbutton_serp) ? entry.clickbutton_serp : 0;
 			var result = entry.blur/(entry.clickbutton_home + entry.clickbutton_side + serp);
-			if (result > max) max = result;
+			if (result > maxfirststep) maxfirststep = result;
+
+			// B
+			var ratio = 0;
+			if (entry.impressions_home) ratio = (entry.clickbutton_home + entry.clickbutton_side) / (entry.impressions_home + entry.impressions_side);
+			if (ratio > maxclickratio) maxclickratio = ratio;
 		});
-		$scope.maxfirststep = max;
+		$scope.maxfirststep = maxfirststep;
+		$scope.maxclickratio = maxclickratio;
 	}
 
 	$scope.title = 'firefox';
