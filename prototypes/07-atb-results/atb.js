@@ -20,6 +20,14 @@ app.controller('atbController', function($scope, fn) {
 			{version: 3, desc: "Baseline metric (versions 1-4)"},
 			{version: 4, desc: "Baseline metric (versions 1-4)"},
 			{version: 5, desc: "Removed links/carousel from homepage"}
+		],
+		safari: [
+			{version: 0, desc: "Improve the CTA; get people to click the button"},
+			{version: 1, desc: "Baseline metric (versions 1-4)"},
+			{version: 2, desc: "Baseline metric (versions 1-4)"},
+			{version: 3, desc: "Baseline metric (versions 1-4)"},
+			{version: 4, desc: "Baseline metric (versions 1-4)"},
+			{version: 5, desc: "Using DDG logo instead of Safari's"}
 		]
 	};
 
@@ -130,6 +138,37 @@ app.controller('atbController', function($scope, fn) {
 	];
 
 	$scope.safari = [
+		// v1
+		{version: 1, date: '160227', clickbutton_home: 751, clickbutton_side: 29, clickhere: -1, blur: 272, searches_cohort: -1, searches_total: -1},
+		{version: 1, date: '160228', clickbutton_home: 796, clickbutton_side: 27, clickhere: -1, blur: 300, searches_cohort: -1, searches_total: -1},
+		{version: 1, date: '160229', clickbutton_home: 666, clickbutton_side: 24, clickhere: -1, blur: 246, searches_cohort: -1, searches_total: -1},
+		{version: 1, date: '160301', partial: true, clickbutton_home: 536, clickbutton_side: 22, clickhere: -1, blur: 214, searches_cohort: -1, searches_total: -1},
+		// v2
+		{version: 2, date: '160301', partial: true, clickbutton_home: 198, clickbutton_side: 9, clickhere: -1, blur: 71, searches_cohort: -1, searches_total: 1120451},
+		{version: 2, date: '160302', clickbutton_home: 721, clickbutton_side: 32, clickhere: -1, blur: 256, searches_cohort: -1, searches_total: 1210516},
+		{version: 2, date: '160303', clickbutton_home: 744, clickbutton_side: 17, clickhere: -1, blur: 293, searches_cohort: -1, searches_total: 1171151},
+		{version: 2, date: '160304', clickbutton_home: 686, clickbutton_side: 15, clickhere: -1, blur: 275, searches_cohort: -1, searches_total: 1117219},
+		{version: 2, date: '160305', clickbutton_home: 732, clickbutton_side: 21, clickhere: -1, blur: 245, searches_cohort: -1, searches_total: 1076640},
+		{version: 2, date: '160306', clickbutton_home: 829, clickbutton_side: 29, clickhere: -1, blur: 326, searches_cohort: -1, searches_total: 1157972},
+		{version: 2, date: '160307', clickbutton_home: 848, clickbutton_side: 30, clickhere: -1, blur: 321, searches_cohort: 138, searches_total: 1242487},
+		{version: 2, date: '160308', clickbutton_home: 764, clickbutton_side: 24, clickhere: -1, blur: 291, searches_cohort: 154, searches_total: 1197611},
+		{version: 2, date: '160309', partial: true, clickbutton_home: 558, clickbutton_side: 21, clickhere: -1, blur: 215, searches_cohort: 155, searches_total: 1190475},
+		// v3
+		{version: 3, date: '160309', partial: true, clickbutton_home: 142, clickbutton_side: 7, clickhere: 0, blur: 64, searches_cohort: 2, searches_total: 1190475},
+		{version: 3, date: '160310', clickbutton_home: 692, clickbutton_side: 28, clickhere: 0, blur: 268, searches_cohort: 0, searches_total: 1167640},
+		{version: 3, date: '160311', clickbutton_home: 636, clickbutton_side: 24, clickhere: 2, blur: 248, searches_cohort: 52, searches_total: 1171151},
+		{version: 3, date: '160312', clickbutton_home: 683, clickbutton_side: 24, clickhere: 0, blur: 269, searches_cohort: 33, searches_total: 1033166},
+		{version: 3, date: '160313', clickbutton_home: 745, clickbutton_side: 26, clickhere: 0, blur: 270, searches_cohort: 17, searches_total: 1100747},
+		{version: 3, date: '160314', clickbutton_home: 725, clickbutton_side: 25, clickhere: 0, blur: 268, searches_cohort: 44, searches_total: 1214816},
+		{version: 3, date: '160315', clickbutton_home: 714, clickbutton_side: 28, clickhere: 0, blur: 267, searches_cohort: 58, searches_total: 1214816},
+		{version: 3, date: '160316', partial: true, clickbutton_home: 533, clickbutton_side: 18, clickhere: 0, blur: 202, searches_cohort: 98, searches_total: 1159974},
+		// v4
+		{version: 4, date: '160318', impressions_home: 231359, impressions_side: 997, clickbutton_home: 601, clickbutton_side: 24, x_home: 921, x_side: 21, clickhere: 0, blur: 217, searches_cohort: 110, searches_total: 1062380},
+		{version: 4, date: '160319', impressions_home: 217766, impressions_side: 1065, clickbutton_home: 750, clickbutton_side: 21, x_home: 898, x_side: 17, clickhere: 0, blur: 291, searches_cohort: 130, searches_total: 1022863},
+		{version: 4, date: '160320', impressions_home: 233248, impressions_side: 1122, clickbutton_home: 736, clickbutton_side: 34, x_home: 932, x_side: 25, clickhere: 0, blur: 261, searches_cohort: 150, searches_total: 1119579},
+		{version: 4, date: '160321', impressions_home: 262247, impressions_side: 1072, clickbutton_home: 763, clickbutton_side: 26, x_home: 1095, x_side: 27, clickhere: 0, blur: 277, searches_cohort: 149, searches_total: 1206607},
+		{version: 4, date: '160322', impressions_home: 249243, impressions_side: 1028, clickbutton_home: 646, clickbutton_side: 21, x_home: 900, x_side: 23, clickhere: 0, blur: 247, searches_cohort: 239, searches_total: 1147944},
+		{version: 4, date: '160323', partial: true, impressions_home: 180537, impressions_side: 721, clickbutton_home: 523, clickbutton_side: 19, x_home: 775, x_side: 19, clickhere: 0, blur: 200, searches_cohort: 218, searches_total: 1135445},
 		// v5
 		{version: 5, date: '160323', partial: true, impressions_home: 66189, impressions_side: 147, impressions_serp: 0, clickbutton_home: 155, clickbutton_side: 4, clickbutton_serp: 0, x_home: 240, x_side: 6, x_serp: 0, clickhere: 0, blur: 63, searches_cohort: 4, searches_total: 1135445},
 		{version: 5, date: '160324', impressions_home: 237586, impressions_side: 492, impressions_serp: 29, clickbutton_home: 543, clickbutton_side: 14, clickbutton_serp: 0, x_home: 818, x_side: 22, x_serp: 2, clickhere: 0, blur: 218, searches_cohort: 47, searches_total: 1081560},
@@ -162,7 +201,7 @@ app.controller('atbController', function($scope, fn) {
 		$scope.maxclickratio = maxclickratio;
 	}
 
-	$scope.title = 'firefox';
+	$scope.title = 'safari';
 	$scope.selectBrowser();
 
 }); // atbController()
