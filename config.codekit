@@ -16401,6 +16401,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/prototypes\/06-user-pages\/partials\/e3_issue.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/06-user-pages\/partials\/e3_issue.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/prototypes\/06-user-pages\/partials\/e_instantanswer.html": {
 		"fileType": 8192,
 		"ignore": 0,

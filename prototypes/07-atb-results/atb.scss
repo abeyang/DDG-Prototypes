@@ -53,7 +53,7 @@ $pad-lg:	60px;
 
 $aside:		200px;
 $barheight:	300px;
-$barwidth:	20px;
+$barwidth:	15px;
 
 
 // MISC
@@ -179,8 +179,8 @@ input { margin-right: 3px; }
 
 		.tooltip {
 			top: -40px;
-			left: -$barwidth/2;
-			width: $barwidth*2;
+			left: -$barwidth;
+			width: $barwidth*3;
 			background-color: $white-50;
 			color: $gray-dk;
 		}

@@ -35,6 +35,7 @@
 		<input type="checkbox" ng-model="toggles.v3"></input> Version 3 <br />
 		<input type="checkbox" ng-model="toggles.v4"></input> Version 4 <br />
 		<input type="checkbox" ng-model="toggles.v5"></input> Version 5 <br />
+		<input type="checkbox" ng-model="toggles.v6"></input> Version 6 <br />
 	</div>
 
 	<div class="set">
@@ -80,6 +81,11 @@
 			</div>	
 			<p>v5 <span class="tooltip subtitle">{{info[title][5].desc}}</span></p>
 		</div>
+		<div ng-show="toggles.v6" class="grouping">
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+			</div>	
+			<p>v6 <span class="tooltip subtitle">{{info[title][6].desc}}</span></p>
+		</div>
 	</section>
 
 	<!-- Graph: Clicks based on Impressions (starts from v4) -->
@@ -101,6 +107,11 @@
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
 			</div>	
 			<p>v5 <span class="tooltip subtitle">{{info[title][5].desc}}</span></p>
+		</div>
+		<div ng-show="toggles.v6" class="grouping">
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
+			</div>	
+			<p>v6 <span class="tooltip subtitle">{{info[title][6].desc}}</span></p>
 		</div>
 	</section>
 	
@@ -169,6 +180,20 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v6">
+
+		<p class="subtitle"><strong>Version 6</strong> {{info[title][6].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>

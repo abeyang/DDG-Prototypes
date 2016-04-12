@@ -59,13 +59,13 @@
 			<div class="flex-container align-top">
 				<!-- PR Reviews -->
 				<div ng-if="count.reviewed_prs" ng-class="{'margin-right': count.developed_prs}" class="grid-1">
-					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/e_issue.html'" class="issue typeC flex-container">
+					<div ng-repeat="issue in prs_open_reviewed | orderBy: '-updated_at'" ng-include="'partials/e3_issue.html'" class="issue typeC flex-container">
 					</div>				
 				</div>
 
 				<!-- Open PRs -->
 				<div ng-if="count.developed_prs" ng-class="{'margin-left': count.reviewed_prs}" class="grid-1">
-					<div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/e_issue.html'" class="issue typeC hideAvatar flex-container">
+					<div ng-repeat="issue in prs_open_developed | orderBy: '-updated_at'" ng-include="'partials/e3_issue.html'" class="issue typeC hideAvatar flex-container">
 					</div>
 				</div>
 			</div>
