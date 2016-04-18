@@ -294,7 +294,7 @@ app.controller('atbController', function($scope, fn) {
 		$scope.maxclickratio = maxclickratio;
 	}
 
-	$scope.title = 'safari';
+	$scope.title = 'chrome';
 	$scope.selectBrowser();
 
 }); // atbController()
