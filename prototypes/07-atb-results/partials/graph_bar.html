@@ -1,4 +1,4 @@
-<div class="bar" style="height: {{(entry.blur / (entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp)) / maxfirststep * 100 + '%'}}">
+<div class="bar" style="height: {{((entry.blur + entry.blur_home + entry.blur_side) / (entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp)) / maxfirststep * 100 + '%'}}">
 	
 	<div class="tooltip">
 		{{fn.prettyDate(entry.date)}} <br />

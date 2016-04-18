@@ -24,10 +24,13 @@
 
 <td class="separator"></td>
 
+<!-- starting from v7, "blur" is split to "blur_home" and "blur_side" -->
 <td ng-show="toggles.graphtype=='modal'" ng-if="entry.blur > 0">{{entry.blur}}</td>
-<td ng-show="toggles.graphtype=='modal'" ng-if="entry.blur <= 0" class="gray">n/a</td>
+<td ng-show="toggles.graphtype=='modal'" ng-if="entry.blur < 0" class="gray">n/a</td>
+<td ng-show="toggles.graphtype=='modal'" ng-if="!entry.blur">{{entry.blur_home + entry.blur_side}}</td>
 <td ng-show="toggles.graphtype=='modal'">{{entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp}}</td>
-<td ng-show="toggles.graphtype=='modal'" ng-bind-html="fn.percent(entry.blur*magicratio, entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp, 1)"></td>
+<td ng-show="toggles.graphtype=='modal'" ng-if="entry.blur" ng-bind-html="fn.percent(entry.blur*magicratio, entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp, 1)"></td>
+<td ng-show="toggles.graphtype=='modal'" ng-if="!entry.blur" ng-bind-html="fn.percent((entry.blur_home+entry.blur_side)*magicratio, entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp, 1)"></td>
 
 <td ng-show="toggles.graphtype=='modal'" class="separator"></td>
 

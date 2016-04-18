@@ -47,6 +47,8 @@
 		<input type="checkbox" ng-model="toggles.v4"></input> Version 4 <br />
 		<input type="checkbox" ng-model="toggles.v5"></input> Version 5 <br />
 		<input type="checkbox" ng-model="toggles.v6"></input> Version 6 <br />
+		<input type="checkbox" ng-model="toggles.v7"></input> Version 7 <br />
+		<input type="checkbox" ng-model="toggles.v8"></input> Version 8 <br />
 	</div>
 
 	<div class="set">
@@ -97,6 +99,16 @@
 			</div>	
 			<p>v6 <span class="tooltip subtitle">{{info[title][6].desc}}</span></p>
 		</div>
+		<div ng-show="toggles.v7" class="grouping">
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 7}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+			</div>	
+			<p>v7 <span class="tooltip subtitle">{{info[title][7].desc}}</span></p>
+		</div>
+		<div ng-show="toggles.v8" class="grouping">
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 8}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
+			</div>	
+			<p>v8 <span class="tooltip subtitle">{{info[title][8].desc}}</span></p>
+		</div>
 	</section>
 
 	<!-- Graph: Clicks based on Impressions (starts from v4) -->
@@ -124,10 +136,20 @@
 			</div>	
 			<p>v6 <span class="tooltip subtitle">{{info[title][6].desc}}</span></p>
 		</div>
+		<div ng-show="toggles.v7" class="grouping">
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 7}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
+			</div>	
+			<p>v7 <span class="tooltip subtitle">{{info[title][7].desc}}</span></p>
+		</div>
+		<div ng-show="toggles.v8" class="grouping">
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 8}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
+			</div>	
+			<p>v8 <span class="tooltip subtitle">{{info[title][8].desc}}</span></p>
+		</div>
 	</section>
 	
 	<section ng-show="toggles.v1">
-		
+	
 		<p class="subtitle"><strong>Version 1</strong> {{info[title][1].desc}}</p>
 			
 		<table>
@@ -141,7 +163,6 @@
 	</section>
 
 	<section ng-show="toggles.v2">
-
 		<p class="subtitle"><strong>Version 2</strong> {{info[title][2].desc}}</p>
 			
 		<table>
@@ -155,7 +176,6 @@
 	</section>
 
 	<section ng-show="toggles.v3">
-
 		<p class="subtitle"><strong>Version 3</strong> {{info[title][3].desc}}</p>
 			
 		<table>
@@ -169,7 +189,6 @@
 	</section>
 
 	<section ng-show="toggles.v4">
-
 		<p class="subtitle"><strong>Version 4</strong> {{info[title][4].desc}}</p>
 			
 		<table>
@@ -183,7 +202,6 @@
 	</section>
 
 	<section ng-show="toggles.v5">
-
 		<p class="subtitle"><strong>Version 5</strong> {{info[title][5].desc}}</p>
 			
 		<table>
@@ -197,7 +215,6 @@
 	</section>
 
 	<section ng-show="toggles.v6">
-
 		<p class="subtitle"><strong>Version 6</strong> {{info[title][6].desc}}</p>
 			
 		<table>
@@ -205,6 +222,32 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v7">
+		<p class="subtitle"><strong>Version 7</strong> {{info[title][7].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in browser | filter: {version: 7}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v8">
+		<p class="subtitle"><strong>Version 8</strong> {{info[title][8].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in browser | filter: {version: 8}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>
