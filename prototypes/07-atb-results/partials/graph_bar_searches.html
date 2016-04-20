@@ -1,0 +1,9 @@
+<!-- % of searches through cohort -->
+
+<div class="bar" style="height: {{(entry.searches_cohort / entry.searches_total) / stats.maxsearches * 100 + '%'}}">
+	
+	<div class="tooltip">
+		{{fn.prettyDate(entry.date)}} <br />
+		<span ng-bind-html="fn.percent(entry.searches_cohort, entry.searches_total, 4)"></span>
+	</div>
+</div>

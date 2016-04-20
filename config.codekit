@@ -16747,6 +16747,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/prototypes\/07-atb-results\/partials\/graph_bar_searches.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/prototypes\/07-atb-results\/partials\/graph_bar_searches.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/prototypes\/07-atb-results\/partials\/graph_clickbar.html": {
 		"fileType": 8192,
 		"ignore": 0,

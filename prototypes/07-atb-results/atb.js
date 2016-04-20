@@ -59,7 +59,8 @@ app.controller('atbController', function($scope, fn) {
 	$scope.stats = {
 		avg: {
 			firststep: {},
-			clickratio: {}
+			clickratio: {},
+			searches: {}
 		}
 	};
 
@@ -293,6 +294,7 @@ app.controller('atbController', function($scope, fn) {
 		// (no magicratio needed here)
 		var maxfirststep = 0;
 		var maxclickratio = 0;
+		var maxsearches = 0;
 		var version = 0;
 		var avg_n = {};
 		var avg_d = 0;
@@ -311,6 +313,10 @@ app.controller('atbController', function($scope, fn) {
 			if (entry.impressions_home) ratio = (entry.clickbutton_home + entry.clickbutton_side) / (entry.impressions_home + entry.impressions_side);
 			if (ratio > maxclickratio) maxclickratio = ratio;
 
+			// Find the maximum value for "% of searches" thru cohort
+			var search = entry.searches_cohort / entry.searches_total;
+			if (search > maxsearches) maxsearches = search;
+
 			// Find averages for each version
 			// TODO -- different versions
 			if (entry.version != version) {
@@ -318,12 +324,14 @@ app.controller('atbController', function($scope, fn) {
 				if (version) {
 					$scope.setAvg('firststep', version, avg_n['firststep'], avg_d);
 					$scope.setAvg('clickratio', version, avg_n['clickratio'], avg_d);
+					$scope.setAvg('searches', version, avg_n['searches'], avg_d);
 				}
 				// update counters
 				version++;
 				avg_n = {
 					firststep: 0,
-					clickratio: 0
+					clickratio: 0,
+					searches: 0
 				};
 				avg_d = 0;
 			}
@@ -331,16 +339,19 @@ app.controller('atbController', function($scope, fn) {
 				// keep adding to numerator and denominator
 				avg_n['firststep'] += result;
 				avg_n['clickratio'] += ratio;
+				avg_n['searches'] += search;
 				avg_d++;
 			}
 		});
 		// Need to find the final average
 		$scope.setAvg('firststep', version, avg_n['firststep'], avg_d);
 		$scope.setAvg('clickratio', version, avg_n['clickratio'], avg_d);
+		$scope.setAvg('searches', version, avg_n['searches'], avg_d);
 
 		// "Max" stats
 		$scope.stats.maxfirststep = maxfirststep;
 		$scope.stats.maxclickratio = maxclickratio;
+		$scope.stats.maxsearches = maxsearches;
 	}
 
 	$scope.title = 'chrome';
