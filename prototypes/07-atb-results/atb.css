@@ -60,7 +60,8 @@ input {
 
 .grouping {
   float: left;
-  border-right: 1px solid #eee; }
+  border-right: 1px solid #eee;
+  position: relative; }
   .grouping p {
     clear: left;
     padding-top: 15px;
@@ -90,6 +91,12 @@ input {
   height: 8px;
   border-radius: 5px;
   background-color: rgba(68, 149, 212, 0.85); }
+
+.avg {
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+  border-top: 1px solid rgba(224, 87, 42, 0.7); }
 
 .barwrapper {
   height: 300px;
@@ -122,6 +129,13 @@ input {
   right: 0;
   padding: 15px;
   background-color: rgba(51, 51, 51, 0.05); }
+
+.subgraph {
+  margin-bottom: 40px; }
+  .subgraph::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .container {
   margin: 40px 0 40px 240px;

@@ -56,6 +56,13 @@ app.controller('atbController', function($scope, fn) {
 		graphtype: 'modal'	// impressions vs modal
 	};
 
+	$scope.stats = {
+		avg: {
+			firststep: {},
+			clickratio: {}
+		}
+	};
+
 	$scope.updateColspan = function() {
 		$scope.colspan = 1;
 		if ($scope.toggles.xclick) $scope.colspan += 2;
@@ -270,6 +277,13 @@ app.controller('atbController', function($scope, fn) {
 		{version: 8, date: '160417', impressions_home: 213861, impressions_side: 944, clickbutton_home: 833, clickbutton_side: 17, x_home: 2000, x_side: 34, clickhere_home: 0, clickhere_side: 0, blur_home: 255, blur_side: 4, searches_cohort: 64, searches_total: 1109575}
 	];
 
+	// set average for specific cohort
+	$scope.setAvg = function(type, version, num, den) {
+		var avg = num/den;
+		$scope.stats.avg[type][version] = avg;
+		// console.log(type + ' ' + version + ': ' + num + '/' + den);
+	};
+
 	// init browser
 	$scope.selectBrowser = function() {
 		var browser = $scope.title;
@@ -279,19 +293,54 @@ app.controller('atbController', function($scope, fn) {
 		// (no magicratio needed here)
 		var maxfirststep = 0;
 		var maxclickratio = 0;
+		var version = 0;
+		var avg_n = {};
+		var avg_d = 0;
+		
 		_.each($scope.browser, function(entry) {
-			// A
+			// Find the maximum value for "first step"
 			var serp = (entry.clickbutton_serp) ? entry.clickbutton_serp : 0;
-			var result = entry.blur/(entry.clickbutton_home + entry.clickbutton_side + serp);
+			var blur = (entry.blur) ? entry.blur : 0;
+			var blur_home = (entry.blur_home) ? entry.blur_home : 0;
+			var blur_side = (entry.blur_side) ? entry.blur_side : 0;
+			var result = (blur + blur_home + blur_side)/(entry.clickbutton_home + entry.clickbutton_side + serp);
 			if (result > maxfirststep) maxfirststep = result;
 
-			// B
+			// Find the maximum value for "click ratio"
 			var ratio = 0;
 			if (entry.impressions_home) ratio = (entry.clickbutton_home + entry.clickbutton_side) / (entry.impressions_home + entry.impressions_side);
 			if (ratio > maxclickratio) maxclickratio = ratio;
+
+			// Find averages for each version
+			// TODO -- different versions
+			if (entry.version != version) {
+				// new version -- find avg of previous version
+				if (version) {
+					$scope.setAvg('firststep', version, avg_n['firststep'], avg_d);
+					$scope.setAvg('clickratio', version, avg_n['clickratio'], avg_d);
+				}
+				// update counters
+				version++;
+				avg_n = {
+					firststep: 0,
+					clickratio: 0
+				};
+				avg_d = 0;
+			}
+			else {
+				// keep adding to numerator and denominator
+				avg_n['firststep'] += result;
+				avg_n['clickratio'] += ratio;
+				avg_d++;
+			}
 		});
-		$scope.maxfirststep = maxfirststep;
-		$scope.maxclickratio = maxclickratio;
+		// Need to find the final average
+		$scope.setAvg('firststep', version, avg_n['firststep'], avg_d);
+		$scope.setAvg('clickratio', version, avg_n['clickratio'], avg_d);
+
+		// "Max" stats
+		$scope.stats.maxfirststep = maxfirststep;
+		$scope.stats.maxclickratio = maxclickratio;
 	}
 
 	$scope.title = 'chrome';

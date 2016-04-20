@@ -129,6 +129,7 @@ input { margin-right: 3px; }
 .grouping { 
 	float: left; 
 	border-right: 1px solid $gray-lt;
+	position: relative;
 
 	p { 
 		clear: left;
@@ -163,6 +164,13 @@ input { margin-right: 3px; }
 	background-color: $blue-85;
 }
 
+.avg {
+	position: absolute;
+	bottom: 32px;		// hackish
+	width: 100%;
+	border-top: 1px solid $red-70;
+}
+
 .barwrapper {
 	height: $barheight;
 	width: $barwidth;
@@ -193,6 +201,7 @@ input { margin-right: 3px; }
 
 		&.green { background-color: $green-70;}
 	}
+
 }
 
 .graph {
@@ -202,6 +211,10 @@ input { margin-right: 3px; }
 	padding: 15px;
 	background-color: $black-05;
 }
+.subgraph {
+	@include clearfix;
+	margin-bottom: 40px;
+}
 
 
 .container {
@@ -210,7 +223,7 @@ input { margin-right: 3px; }
 }
 
 section { 
-	 @include clearfix;
+	@include clearfix;
 	margin-bottom: 40px; 
 }
 

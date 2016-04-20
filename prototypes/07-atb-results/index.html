@@ -63,52 +63,59 @@
 	</div>
 </aside>
 
-<!-- TABLES -->
 <div class="container">
 
 	<!-- Graph: Modal Workflow -->
 	<section ng-show="toggles.graphtype=='modal' && toggles.graph" class="graph">
-		<p class="subtitle"><strong>% Finishing First Step (in modal)</strong> Gives us some idea how many people <em>might</em> be setting DDG as their default browser</p>
-		<div ng-show="toggles.v1" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
-			</div>	
-			<p>v1</p>
+		<div class="subgraph">
+			<p class="subtitle"><strong>% Finishing First Step (in modal)</strong> Gives us some idea how many people <em>might</em> be setting DDG as their default browser</p>
+			<div ng-show="toggles.v1" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[1] / stats.maxfirststep * 300 + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v1</p>
+			</div>
+			<div ng-show="toggles.v2" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[2] / stats.maxfirststep * 300 + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v2</p>
+			</div>
+			<div ng-show="toggles.v3" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[3] / stats.maxfirststep * 300 + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v3</p>
+			</div>
+			<div ng-show="toggles.v4" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[4] / stats.maxfirststep * 300 + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v4</p>
+			</div>
+			<div ng-show="toggles.v5" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[5] / stats.maxfirststep * 300 + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v5</p>
+			</div>
+			<div ng-show="toggles.v6" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[6] / stats.maxfirststep * 300 + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v6</p>
+			</div>
+			<div ng-show="toggles.v7" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[7] / stats.maxfirststep * 300 + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 7}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v7</p>
+			</div>
+			<div ng-show="toggles.v8" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[8] / stats.maxfirststep * 300 + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 8}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v8</p>
+			</div>
 		</div>
-		<div ng-show="toggles.v2" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 2}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
-			</div>	
-			<p>v2</p>
+
+		<div class="subgraph">
+			<p class="subtitle"><strong>% Searches through Cohort</strong> Gives us some idea how many people <em>might</em> be setting DDG as their default browser</p>
+			blah blah blah
 		</div>
-		<div ng-show="toggles.v3" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 3}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
-			</div>	
-			<p>v3</p>
-		</div>
-		<div ng-show="toggles.v4" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
-			</div>	
-			<p>v4</p>
-		</div>
-		<div ng-show="toggles.v5" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
-			</div>	
-			<p>v5</p>
-		</div>
-		<div ng-show="toggles.v6" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
-			</div>	
-			<p>v6</p>
-		</div>
-		<div ng-show="toggles.v7" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 7}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
-			</div>	
-			<p>v7</p>
-		</div>
-		<div ng-show="toggles.v8" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 8}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'">
-			</div>	
-			<p>v8</p>
-		</div>
+		
 	</section>
 
 	<!-- Graph: Clicks based on Impressions (starts from v4) -->
@@ -122,31 +129,34 @@
 		
 		
 		<div class="grouping">
-			<div ng-show="toggles.v4" class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
-			</div>	
+			<div class="avg" style="height: {{ stats.avg.clickratio[4] / stats.maxclickratio * 300 + 'px'}}"></div>
+			<div ng-show="toggles.v4" class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v4</p>
 		</div>
 		<div ng-show="toggles.v5" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
-			</div>	
+			<div class="avg" style="height: {{ stats.avg.clickratio[5] / stats.maxclickratio * 300 + 'px'}}"></div>
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v5</p>
 		</div>
 		<div ng-show="toggles.v6" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
-			</div>	
+			<div class="avg" style="height: {{ stats.avg.clickratio[6] / stats.maxclickratio * 300 + 'px'}}"></div>
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v6</p>
 		</div>
 		<div ng-show="toggles.v7" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 7}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
-			</div>	
+			<div class="avg" style="height: {{ stats.avg.clickratio[7] / stats.maxclickratio * 300 + 'px'}}"></div>
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 7}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v7</p>
 		</div>
 		<div ng-show="toggles.v8" class="grouping">
-			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 8}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'">
-			</div>	
+			<div class="avg" style="height: {{ stats.avg.clickratio[8] / stats.maxclickratio * 300 + 'px'}}"></div>
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 8}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v8</p>
 		</div>
 	</section>
+
+
+	<!-- Charts -->
 	
 	<section ng-show="toggles.v1">
 	

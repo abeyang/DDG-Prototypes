@@ -1,4 +1,4 @@
-<div class="bar" style="height: {{(entry.clickbutton_home / (entry.impressions_home + entry.impressions_side)) / maxclickratio * 100 + '%'}}">
+<div class="bar" style="height: {{(entry.clickbutton_home / (entry.impressions_home + entry.impressions_side)) / stats.maxclickratio * 100 + '%'}}">
 	
 	<div class="tooltip">
 		{{fn.prettyDate(entry.date)}} <br />
@@ -7,4 +7,4 @@
 	</div>
 
 </div>
-<div class="green bar" style="height: {{(entry.clickbutton_side / (entry.impressions_home + entry.impressions_side)) / maxclickratio * 100 + '%'}}"></div>
+<div class="green bar" style="height: {{(entry.clickbutton_side / (entry.impressions_home + entry.impressions_side)) / stats.maxclickratio * 100 + '%'}}"></div>
