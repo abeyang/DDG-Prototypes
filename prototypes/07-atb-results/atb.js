@@ -2,6 +2,7 @@ app.controller('atbController', function($scope, fn) {
 	$scope.fn = fn;
 
 	$scope.magicratio = 0.72;
+	$scope.h = 300;				// set height for graphs
 
 	$scope.info = {
 		// version '0' == intent of browser testing
