@@ -145,7 +145,8 @@ app.controller('atbController', function($scope, fn) {
 		{version: 8, date: '160416', impressions_home: 290194, impressions_side: 3615, clickbutton_home: 2633, clickbutton_side: 77, x_home: 2126, x_side: 118, clickhere_home: 1, clickhere_side: 1, blur_home: 1515, blur_side: 25, searches_cohort: 14512, searches_total: 1686405},
 		{version: 8, date: '160417', impressions_home: 298139, impressions_side: 3723, clickbutton_home: 2746, clickbutton_side: 100, x_home: 2297, x_side: 109, clickhere_home: 0, clickhere_side: 0, blur_home: 1587, blur_side: 28, searches_cohort: 19353, searches_total: 1810407},
 		{version: 8, date: '160418', impressions_home: 371582, impressions_side: 4334, clickbutton_home: 3074, clickbutton_side: 130, x_home: 2973, x_side: 122, clickhere_home: 0, clickhere_side: 0, blur_home: 1683, blur_side: 56, searches_cohort: 26858, searches_total: 2274421},
-		{version: 8, date: '160419', impressions_home: 352335, impressions_side: 3981, clickbutton_home: 2886, clickbutton_side: 102, x_home: 2734, x_side: 108, clickhere_home: 0, clickhere_side: 0, blur_home: 1624, blur_side: 34, searches_cohort: 29270, searches_total: 2230889}
+		{version: 8, date: '160419', impressions_home: 352335, impressions_side: 3981, clickbutton_home: 2886, clickbutton_side: 102, x_home: 2734, x_side: 108, clickhere_home: 0, clickhere_side: 0, blur_home: 1624, blur_side: 34, searches_cohort: 29270, searches_total: 2230889},
+		{version: 8, date: '160420', impressions_home: 248338, impressions_side: 2809, clickbutton_home: 2076, clickbutton_side: 76, x_home: 2096, x_side: 88, clickhere_home: 0, clickhere_side: 0, blur_home: 1195, blur_side: 32, searches_cohort: 33935, searches_total: 2183546}
 	];
 
 	$scope.firefox = [
@@ -213,7 +214,8 @@ app.controller('atbController', function($scope, fn) {
 		{version: 8, date: '160416', impressions_home: 949564, impressions_side: 4645, clickbutton_home: 3175, clickbutton_side: 99, x_home: 4521, x_side: 147, clickhere_home: 188, clickhere_side: 7, blur_home: 1497, blur_side: 36, searches_cohort: 186, searches_total: 4875331},
 		{version: 8, date: '160417', impressions_home: 1001003, impressions_side: 4704, clickbutton_home: 3384, clickbutton_side: 100, x_home: 4728, x_side: 128, clickhere_home: 184, clickhere_side: 11, blur_home: 1596, blur_side: 29, searches_cohort: 344, searches_total: 5225072},
 		{version: 8, date: '160418', impressions_home: 1146910, impressions_side: 4739, clickbutton_home: 3535, clickbutton_side: 100, x_home: 5305, x_side: 139, clickhere_home: 220, clickhere_side: 12, blur_home: 1697, blur_side: 34, searches_cohort: 463, searches_total: 6024911},
-		{version: 8, date: '160419', impressions_home: 1220039, impressions_side: 4505, clickbutton_home: 3305, clickbutton_side: 104, x_home: 5191, x_side: 130, clickhere_home: 125, clickhere_side: 6, blur_home: 1485, blur_side: 41, searches_cohort: 668, searches_total: 5823981}
+		{version: 8, date: '160419', impressions_home: 1220039, impressions_side: 4505, clickbutton_home: 3305, clickbutton_side: 104, x_home: 5191, x_side: 130, clickhere_home: 125, clickhere_side: 6, blur_home: 1485, blur_side: 41, searches_cohort: 668, searches_total: 5823981},
+		{version: 8, date: '160420', impressions_home: 830813, impressions_side: 3209, clickbutton_home: 2468, clickbutton_side: 57, x_home: 3950, x_side: 95, clickhere_home: 0, clickhere_side: 0, blur_home: 1102, blur_side: 24, searches_cohort: 545, searches_total: 5671962}
 	];
 
 	$scope.safari = [
@@ -282,7 +284,8 @@ app.controller('atbController', function($scope, fn) {
 		{version: 8, date: '160416', impressions_home: 202343, impressions_side: 913, clickbutton_home: 844, clickbutton_side: 27, x_home: 2014, x_side: 30, clickhere_home: 0, clickhere_side: 0, blur_home: 260, blur_side: 9, searches_cohort: 79, searches_total: 1017026},
 		{version: 8, date: '160417', impressions_home: 213861, impressions_side: 944, clickbutton_home: 833, clickbutton_side: 17, x_home: 2000, x_side: 34, clickhere_home: 0, clickhere_side: 0, blur_home: 255, blur_side: 4, searches_cohort: 64, searches_total: 1109575},
 		{version: 8, date: '160418', impressions_home: 240215, impressions_side: 970, clickbutton_home: 883, clickbutton_side: 24, x_home: 2116, x_side: 40, clickhere_home: 0, clickhere_side: 0, blur_home: 269, blur_side: 6, searches_cohort: 67, searches_total: 1222618},
-		{version: 8, date: '160419', impressions_home: 230090, impressions_side: 1050, clickbutton_home: 775, clickbutton_side: 26, x_home: 1978, x_side: 34, clickhere_home: 0, clickhere_side: 0, blur_home: 228, blur_side: 7, searches_cohort: 83, searches_total: 1179882}
+		{version: 8, date: '160419', impressions_home: 230090, impressions_side: 1050, clickbutton_home: 775, clickbutton_side: 26, x_home: 1978, x_side: 34, clickhere_home: 0, clickhere_side: 0, blur_home: 228, blur_side: 7, searches_cohort: 83, searches_total: 1179882},
+		{version: 8, date: '160420', impressions_home: 159722, impressions_side: 702, clickbutton_home: 592, clickbutton_side: 16, x_home: 1367, x_side: 26, clickhere_home: 0, clickhere_side: 0, blur_home: 195, blur_side: 6, searches_cohort: 87, searches_total: 1145784}
 	];
 
 	// set average for specific cohort
