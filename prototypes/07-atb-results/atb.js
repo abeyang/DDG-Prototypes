@@ -54,7 +54,7 @@ app.controller('atbController', function($scope, fn) {
 		xclick: false,
 		serp: false,
 		graph: true,
-		graphtype: 'modal'	// impressions vs modal
+		graphtype: 'impressions'	// impressions vs modal
 	};
 
 	$scope.stats = {
@@ -304,6 +304,7 @@ app.controller('atbController', function($scope, fn) {
 		// (no magicratio needed here)
 		var maxfirststep = 0;
 		var maxclickratio = 0;
+		// var maxblurratio = 0;
 		var maxsearches = 0;
 		var version = 0;
 		var avg_n = {};
@@ -367,7 +368,7 @@ app.controller('atbController', function($scope, fn) {
 		$scope.stats.maxsearches = maxsearches;
 	}
 
-	$scope.title = 'chrome';
+	$scope.title = 'safari';
 	$scope.selectBrowser();
 
 }); // atbController()
