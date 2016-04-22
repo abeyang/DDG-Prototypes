@@ -159,26 +159,31 @@
 		
 		<div ng-show="toggles.v4" class="grouping">
 			<div class="avg" style="height: {{ stats.avg.clickratio[4] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="avg" style="height: {{ stats.avg.blurratio[4] / stats.maxclickratio * h + 'px'}}"></div>
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v4</p>
 		</div>
 		<div ng-show="toggles.v5" class="grouping">
 			<div class="avg" style="height: {{ stats.avg.clickratio[5] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="avg" style="height: {{ stats.avg.blurratio[5] / stats.maxclickratio * h + 'px'}}"></div>
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 5}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v5</p>
 		</div>
 		<div ng-show="toggles.v6" class="grouping">
 			<div class="avg" style="height: {{ stats.avg.clickratio[6] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="avg" style="height: {{ stats.avg.blurratio[6] / stats.maxclickratio * h + 'px'}}"></div>
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 6}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v6</p>
 		</div>
 		<div ng-show="toggles.v7" class="grouping">
 			<div class="avg" style="height: {{ stats.avg.clickratio[7] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="avg" style="height: {{ stats.avg.blurratio[7] / stats.maxclickratio * h + 'px'}}"></div>
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 7}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v7</p>
 		</div>
 		<div ng-show="toggles.v8" class="grouping">
 			<div class="avg" style="height: {{ stats.avg.clickratio[8] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="avg" style="height: {{ stats.avg.blurratio[8] / stats.maxclickratio * h + 'px'}}"></div>
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 8}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v8</p>
 		</div>

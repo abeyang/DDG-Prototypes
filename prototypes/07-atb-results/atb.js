@@ -61,6 +61,7 @@ app.controller('atbController', function($scope, fn) {
 		avg: {
 			firststep: {},
 			clickratio: {},
+			blurratio: {},
 			searches: {}
 		}
 	};
@@ -320,9 +321,12 @@ app.controller('atbController', function($scope, fn) {
 			if (result > maxfirststep) maxfirststep = result;
 
 			// Find the maximum value for "click ratio"
-			var ratio = 0;
-			if (entry.impressions_home) ratio = (entry.clickbutton_home + entry.clickbutton_side) / (entry.impressions_home + entry.impressions_side);
-			if (ratio > maxclickratio) maxclickratio = ratio;
+			var clickratio = 0;
+			if (entry.impressions_home) clickratio = (entry.clickbutton_home + entry.clickbutton_side) / (entry.impressions_home + entry.impressions_side);
+			if (clickratio > maxclickratio) maxclickratio = clickratio;
+
+			// Find blur ratio
+			var blurratio = (blur + blur_home + blur_side) / (entry.impressions_home + entry.impressions_side);
 
 			// Find the maximum value for "% of searches" thru cohort
 			if (entry.searches_total && entry.searches_total > 0) {
@@ -338,6 +342,7 @@ app.controller('atbController', function($scope, fn) {
 				if (version) {
 					$scope.setAvg('firststep', version, avg_n['firststep'], avg_d);
 					$scope.setAvg('clickratio', version, avg_n['clickratio'], avg_d);
+					$scope.setAvg('blurratio', version, avg_n['blurratio'], avg_d);
 					$scope.setAvg('searches', version, avg_n['searches'], avg_d);
 				}
 				// update counters
@@ -345,6 +350,7 @@ app.controller('atbController', function($scope, fn) {
 				avg_n = {
 					firststep: 0,
 					clickratio: 0,
+					blurratio: 0,
 					searches: 0
 				};
 				avg_d = 0;
@@ -352,7 +358,8 @@ app.controller('atbController', function($scope, fn) {
 			else {
 				// keep adding to numerator and denominator
 				avg_n['firststep'] += result;
-				avg_n['clickratio'] += ratio;
+				avg_n['clickratio'] += clickratio;
+				avg_n['blurratio'] += blurratio;
 				avg_n['searches'] += search;
 				avg_d++;
 			}
@@ -360,6 +367,7 @@ app.controller('atbController', function($scope, fn) {
 		// Need to find the final average
 		$scope.setAvg('firststep', version, avg_n['firststep'], avg_d);
 		$scope.setAvg('clickratio', version, avg_n['clickratio'], avg_d);
+		$scope.setAvg('blurratio', version, avg_n['blurratio'], avg_d);
 		$scope.setAvg('searches', version, avg_n['searches'], avg_d);
 
 		// "Max" stats
