@@ -157,9 +157,9 @@
 		</p>
 		
 		
-		<div class="grouping">
+		<div ng-show="toggles.v4" class="grouping">
 			<div class="avg" style="height: {{ stats.avg.clickratio[4] / stats.maxclickratio * h + 'px'}}"></div>
-			<div ng-show="toggles.v4" class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 4}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v4</p>
 		</div>
 		<div ng-show="toggles.v5" class="grouping">
