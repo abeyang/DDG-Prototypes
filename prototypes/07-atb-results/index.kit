@@ -39,6 +39,8 @@
 		<input type="checkbox" ng-model="toggles.v7"></input> Version 7 <br />
 		<input type="checkbox" ng-model="toggles.v8"></input> Version 8 <br />
 		<input type="checkbox" ng-model="toggles.v9"></input> Version 9 <br />
+		<input type="checkbox" ng-model="toggles.v10"></input> Version 10 <br />
+		<input type="checkbox" ng-model="toggles.v11"></input> Version 11 <br />
 	</div>
 
 	<div class="set">
@@ -105,6 +107,16 @@
 				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 9}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
 				<p>v9</p>
 			</div>
+			<div ng-show="toggles.v10" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[10] / stats.maxfirststep * h + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 10}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v10</p>
+			</div>
+			<div ng-show="toggles.v11" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[11] / stats.maxfirststep * h + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 11}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v11</p>
+			</div>
 		</div>
 
 		<div class="subgraph">
@@ -153,6 +165,16 @@
 				<div class="avg" style="height: {{ stats.avg.searches[9] / stats.maxsearches * h + 'px'}}"></div>
 				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 9}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar_searches.html'"></div>	
 				<p>v9</p>
+			</div>
+			<div ng-show="toggles.v10" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.searches[10] / stats.maxsearches * h + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 10}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar_searches.html'"></div>	
+				<p>v10</p>
+			</div>
+			<div ng-show="toggles.v11" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.searches[11] / stats.maxsearches * h + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 11}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar_searches.html'"></div>	
+				<p>v11</p>
 			</div>
 		</div>
 		
@@ -203,6 +225,18 @@
 			<div class="avg" style="height: {{ stats.avg.blurratio[9] / stats.maxclickratio * h + 'px'}}"></div>
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 9}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v9</p>
+		</div>
+		<div ng-show="toggles.v10" class="grouping">
+			<div class="avg" style="height: {{ stats.avg.clickratio[10] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="avg" style="height: {{ stats.avg.blurratio[10] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 10}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
+			<p>v10</p>
+		</div>
+		<div ng-show="toggles.v11" class="grouping">
+			<div class="avg" style="height: {{ stats.avg.clickratio[11] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="avg" style="height: {{ stats.avg.blurratio[11] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 11}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
+			<p>v11</p>
 		</div>
 	</section>
 
@@ -322,6 +356,32 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="entry in browser | filter: {version: 9}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v10">
+		<p class="subtitle"><strong>Version 10</strong> {{info[title][10].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in browser | filter: {version: 10}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v11">
+		<p class="subtitle"><strong>Version 11</strong> {{info[title][11].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in browser | filter: {version: 11}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>
