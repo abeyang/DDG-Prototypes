@@ -17,8 +17,8 @@ app.controller('atbController', function($scope, fn) {
 			{version: 7, desc: "Removed ATB button from SERP; added ATB in 'Basic' theme"},
 			{version: 8, desc: "Removed ATB from 'Basic' theme; added big screenshots to modal"},
 			{version: 9, desc: "Same as v8 (separate project: measure how much IAs contribute to retention)"},
-			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries"},
-			{version: 11, desc: "Modal: right-click to add search-engine"}
+			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
+			{version: 11, desc: "Added 'right-click to add search-engine' in modal (now 2 steps instead of 3)"}
 		],
 		firefox: [
 			{version: 0, desc: "Improve the CTA; get people to click the button"},
@@ -31,7 +31,7 @@ app.controller('atbController', function($scope, fn) {
 			{version: 7, desc: "Added links/carousel back to homepage; added blue button in ATB and moved near hamburger menu"},
 			{version: 8, desc: "Reverted ATB back to normal (got a lot of hate)"},
 			{version: 9, desc: "Updated modal to include screenshot in Step 2"},
-			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries"},
+			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
 			{version: 11, desc: "Same as v10"}
 		],
 		safari: [
@@ -45,7 +45,7 @@ app.controller('atbController', function($scope, fn) {
 			{version: 7, desc: "Same as v6"},
 			{version: 8, desc: "Added blue button to ATB"},
 			{version: 9, desc: "Hide CTA when t-param is set"},
-			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries"},
+			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
 			{version: 11, desc: "Same as v10"}
 		]
 	};
@@ -58,15 +58,15 @@ app.controller('atbController', function($scope, fn) {
 		v5: false,
 		v6: false,
 		v7: false,
-		v8: true,
-		v9: true,
+		v8: false,
+		v9: false,
 		v10: true,
 		v11: true,
 
 		xclick: false,
 		serp: false,
 		graph: true,
-		graphtype: 'impressions'	// impressions vs modal
+		graphtype: 'modal'	// impressions vs modal
 	};
 
 	$scope.stats = {
@@ -186,7 +186,7 @@ app.controller('atbController', function($scope, fn) {
 		{version: 11, date: '160508', impressions_home: 261081, impressions_side: 2991, clickbutton_home: 2174, clickbutton_side: 54, x_home: 2030, x_side: 105, clickhere_home: 0, clickhere_side: 0, blur_home: 1263, blur_side: 25, searches_cohort: 29179, searches_total: 1699368},
 		{version: 11, date: '160509', impressions_home: 350655, impressions_side: 3794, clickbutton_home: 2727, clickbutton_side: 91, x_home: 2714, x_side: 105, clickhere_home: 0, clickhere_side: 0, blur_home: 1592, blur_side: 39, searches_cohort: 40383, searches_total: 2268863},
 		{version: 11, date: '160510', impressions_home: 349406, impressions_side: 4012, clickbutton_home: 2904, clickbutton_side: 108, x_home: 2998, x_side: 122, clickhere_home: 0, clickhere_side: 0, blur_home: 1649, blur_side: 50, searches_cohort: 48264, searches_total: 2288954},
-		{version: 11, date: '160511', impressions_home: 3101, impressions_side: 59, clickbutton_home: 34, clickbutton_side: 3, x_home: 35, x_side: 2, clickhere_home: 0, clickhere_side: 0, blur_home: 29, blur_side: 2, searches_cohort: 1016, searches_total: 64419}
+		{version: 11, date: '160511', impressions_home: 250812, impressions_side: 2881, clickbutton_home: 2081, clickbutton_side: 84, x_home: 2110, x_side: 84, clickhere_home: 0, clickhere_side: 0, blur_home: 1205, blur_side: 42, searches_cohort: 51469, searches_total: 2251636}
 	];
 
 	$scope.firefox = [
@@ -282,7 +282,7 @@ app.controller('atbController', function($scope, fn) {
 		{version: 11, date: '160508', impressions_home: 945548, impressions_side: 4266, clickbutton_home: 3150, clickbutton_side: 81, x_home: 4699, x_side: 128, clickhere_home: 0, clickhere_side: 0, blur_home: 1467, blur_side: 34, searches_cohort: 497, searches_total: 4697116},
 		{version: 11, date: '160509', impressions_home: 1158878, impressions_side: 4789, clickbutton_home: 3360, clickbutton_side: 97, x_home: 5292, x_side: 128, clickhere_home: 0, clickhere_side: 0, blur_home: 1558, blur_side: 35, searches_cohort: 415, searches_total: 5838442},
 		{version: 11, date: '160510', impressions_home: 1136209, impressions_side: 4992, clickbutton_home: 3598, clickbutton_side: 121, x_home: 5499, x_side: 138, clickhere_home: 0, clickhere_side: 0, blur_home: 1718, blur_side: 48, searches_cohort: 618, searches_total: 5827931},
-		{version: 11, date: '160511', impressions_home: 48770, impressions_side: 146, clickbutton_home: 116, clickbutton_side: 3, x_home: 255, x_side: 7, clickhere_home: 0, clickhere_side: 0, blur_home: 78, blur_side: 1, searches_cohort: 9, searches_total: 791121}
+		{version: 11, date: '160511', impressions_home: 838160, impressions_side: 3391, clickbutton_home: 2752, clickbutton_side: 73, x_home: 4131, x_side: 88, clickhere_home: 0, clickhere_side: 0, blur_home: 1291, blur_side: 35, searches_cohort: 641, searches_total: 5734412}
 	];
 
 	$scope.safari = [
@@ -379,7 +379,7 @@ app.controller('atbController', function($scope, fn) {
 		{version: 11, date: '160508', impressions_home: 189070, impressions_side: 885, clickbutton_home: 577, clickbutton_side: 18, x_home: 1301, x_side: 32, clickhere_home: 0, clickhere_side: 0, blur_home: 213, blur_side: 7, searches_cohort: 113, searches_total: 992370},
 		{version: 11, date: '160509', impressions_home: 232158, impressions_side: 873, clickbutton_home: 627, clickbutton_side: 18, x_home: 1476, x_side: 25, clickhere_home: 0, clickhere_side: 0, blur_home: 214, blur_side: 4, searches_cohort: 166, searches_total: 1313646},
 		{version: 11, date: '160510', impressions_home: 226460, impressions_side: 1009, clickbutton_home: 722, clickbutton_side: 20, x_home: 1510, x_side: 39, clickhere_home: 0, clickhere_side: 0, blur_home: 218, blur_side: 8, searches_cohort: 147, searches_total: 1485242},
-		{version: 11, date: '160511', impressions_home: 29422, impressions_side: 132, clickbutton_home: 103, clickbutton_side: 4, x_home: 248, x_side: 5, clickhere_home: 0, clickhere_side: 0, blur_home: 50, blur_side: 1, searches_cohort: 72, searches_total: 625083}
+		{version: 11, date: '160511', impressions_home: 154852, impressions_side: 655, clickbutton_home: 487, clickbutton_side: 20, x_home: 978, x_side: 18, clickhere_home: 0, clickhere_side: 0, blur_home: 155, blur_side: 4, searches_cohort: 206, searches_total: 1351014}
 	];
 
 	// set average for specific cohort
@@ -410,13 +410,10 @@ app.controller('atbController', function($scope, fn) {
 			var blur = (entry.blur) ? entry.blur : 0;
 			var blur_home = (entry.blur_home) ? entry.blur_home : 0;
 			var blur_side = (entry.blur_side) ? entry.blur_side : 0;
-			var result = (blur + blur_home + blur_side)/(entry.clickbutton_home + entry.clickbutton_side + serp);
-			if (result > maxfirststep) maxfirststep = result;
 
 			// Find the maximum value for "click ratio"
 			var clickratio = 0;
 			if (entry.impressions_home) clickratio = (entry.clickbutton_home + entry.clickbutton_side) / (entry.impressions_home + entry.impressions_side);
-			if (clickratio > maxclickratio) maxclickratio = clickratio;
 
 			// Find blur ratio
 			var blurratio = (blur + blur_home + blur_side) / (entry.impressions_home + entry.impressions_side);
@@ -429,9 +426,6 @@ app.controller('atbController', function($scope, fn) {
 			}
 
 			// Find averages for each version
-			// TODO -- different versions
-			// is this current version "toggled"? if yes, go thru calculations; if not, skip it
-			// console.log('v' + version);
 			if (entry.version != version) {
 				// new version -- find avg of previous version
 				if (version) {
@@ -452,13 +446,23 @@ app.controller('atbController', function($scope, fn) {
 				};
 				avg_d = 0;
 			}
-				
-			// keep adding to numerator and denominator
-			avg_n['firststep'] += result;
-			avg_n['clickratio'] += clickratio;
-			avg_n['blurratio'] += blurratio;
-			avg_n['searches'] += search;
-			avg_d++;
+			
+			// is this current version "toggled"? if yes, go thru all final calculations
+			if ($scope.toggles['v' + version]) {
+				// max value for "first step"
+				var result = (blur + blur_home + blur_side)/(entry.clickbutton_home + entry.clickbutton_side + serp);
+				if (result > maxfirststep) maxfirststep = result;
+
+				// max value for "click ratio"
+				if (clickratio > maxclickratio) maxclickratio = clickratio;
+
+				// keep adding to numerator and denominator
+				avg_n['firststep'] += result;
+				avg_n['clickratio'] += clickratio;
+				avg_n['blurratio'] += blurratio;
+				avg_n['searches'] += search;
+				avg_d++;
+			}
 			
 		}); // end _.each()
 		
