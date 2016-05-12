@@ -421,8 +421,6 @@ app.controller('atbController', function($scope, fn) {
 			// Find the maximum value for "% of searches" thru cohort
 			if (entry.searches_total && entry.searches_total > 0) {
 				var search = entry.searches_cohort / entry.searches_total;
-				if (search > maxsearches) maxsearches = search;	
-				// console.log(entry.searches_cohort + '/' + entry.searches_total);
 			}
 
 			// Find averages for each version
@@ -455,6 +453,9 @@ app.controller('atbController', function($scope, fn) {
 
 				// max value for "click ratio"
 				if (clickratio > maxclickratio) maxclickratio = clickratio;
+
+				// max value for "% of searches"
+				if (search > maxsearches) maxsearches = search;	
 
 				// keep adding to numerator and denominator
 				avg_n['firststep'] += result;
