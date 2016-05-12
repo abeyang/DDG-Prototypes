@@ -56,8 +56,8 @@ app.controller('atbController', function($scope, fn) {
 		v3: false,
 		v4: false,
 		v5: false,
-		v6: true,
-		v7: true,
+		v6: false,
+		v7: false,
 		v8: true,
 		v9: true,
 		v10: true,
@@ -430,6 +430,8 @@ app.controller('atbController', function($scope, fn) {
 
 			// Find averages for each version
 			// TODO -- different versions
+			// is this current version "toggled"? if yes, go thru calculations; if not, skip it
+			// console.log('v' + version);
 			if (entry.version != version) {
 				// new version -- find avg of previous version
 				if (version) {
@@ -438,8 +440,10 @@ app.controller('atbController', function($scope, fn) {
 					$scope.setAvg('blurratio', version, avg_n['blurratio'], avg_d);
 					$scope.setAvg('searches', version, avg_n['searches'], avg_d);
 				}
-				// update counters
+				// update version
 				version++;
+
+				// reset all other counters
 				avg_n = {
 					firststep: 0,
 					clickratio: 0,
@@ -448,15 +452,16 @@ app.controller('atbController', function($scope, fn) {
 				};
 				avg_d = 0;
 			}
-			else {
-				// keep adding to numerator and denominator
-				avg_n['firststep'] += result;
-				avg_n['clickratio'] += clickratio;
-				avg_n['blurratio'] += blurratio;
-				avg_n['searches'] += search;
-				avg_d++;
-			}
-		});
+				
+			// keep adding to numerator and denominator
+			avg_n['firststep'] += result;
+			avg_n['clickratio'] += clickratio;
+			avg_n['blurratio'] += blurratio;
+			avg_n['searches'] += search;
+			avg_d++;
+			
+		}); // end _.each()
+		
 		// Need to find the final average
 		$scope.setAvg('firststep', version, avg_n['firststep'], avg_d);
 		$scope.setAvg('clickratio', version, avg_n['clickratio'], avg_d);
