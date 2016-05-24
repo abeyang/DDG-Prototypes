@@ -48,7 +48,8 @@
 	<div class="set">
 		<input type="checkbox" ng-model="toggles.graph"></input> Show Graph <br/>
 		<input type="checkbox" ng-model="toggles.xclick" ng-change="updateColspan()"></input> Show X Clicks <br />
-		<input type="checkbox" ng-model="toggles.serp"></input> Show SERP	
+		<input type="checkbox" ng-model="toggles.newpage"></input> Show Install Page <br />
+		<input type="checkbox" ng-model="toggles.serp"></input> Show SERP
 	</div>
 
 	<div class="set">
@@ -63,7 +64,7 @@
 	<!-- Graph: Modal Workflow -->
 	<section ng-show="toggles.graphtype=='modal' && toggles.graph" class="graph">
 		<div class="subgraph">
-			<p class="subtitle"><strong>% Finishing First Step (in modal)</strong> Gives us some idea how many people <em>might</em> be setting DDG as their default browser</p>
+			<p class="subtitle"><strong>% Finishing First Step</strong> For full page instr, checks scroll past 200px; otherwise checks for blurs in modals</p>
 			<div ng-show="toggles.v1" class="grouping">
 				<div class="avg" style="height: {{ stats.avg.firststep[1] / stats.maxfirststep * h + 'px'}}"></div>
 				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 1}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	

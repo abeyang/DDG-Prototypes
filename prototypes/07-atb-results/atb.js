@@ -1,7 +1,8 @@
 app.controller('atbController', function($scope, fn) {
 	$scope.fn = fn;
 
-	$scope.magicratio = 0.72;
+	// $scope.magicratio = 0.72;
+	$scope.magicratio = 1;
 	$scope.h = 300;				// set height for graphs
 
 	$scope.info = {
@@ -75,6 +76,7 @@ app.controller('atbController', function($scope, fn) {
 		xclick: false,
 		serp: false,
 		graph: true,
+		newpage: true,
 		graphtype: 'modal'	// impressions vs modal
 	};
 

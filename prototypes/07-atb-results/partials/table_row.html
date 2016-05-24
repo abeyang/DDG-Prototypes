@@ -34,6 +34,13 @@
 
 <td ng-show="toggles.graphtype=='modal'" class="separator"></td>
 
+<td ng-show="toggles.newpage">{{entry.fire_on_page_load}}</td>
+<td ng-show="toggles.newpage">{{entry.scroll_200px}}</td>
+<td ng-show="toggles.newpage">{{entry.tab_lost_focus}}</td>
+<td ng-show="toggles.newpage">{{entry.tab_regains_focus}}</td>
+
+<td ng-show="toggles.newpage" class="separator"></td>
+
 <td>{{entry.searches_cohort}}</td>
 <td>{{entry.searches_total}}</td>
 <td ng-bind-html="fn.percent(entry.searches_cohort, entry.searches_total, 4)"></td>

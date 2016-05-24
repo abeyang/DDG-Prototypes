@@ -16,6 +16,10 @@
 
 	<th ng-show="toggles.graphtype=='modal'" class="separator"></th>
 
+	<th ng-show="toggles.newpage" colspan="4">Install Page</th>
+
+	<th ng-show="toggles.newpage" class="separator"></th>
+
 	<th colspan="3">Searches</th>
 </tr>
 <tr>
@@ -49,6 +53,13 @@
 	<th ng-show="toggles.graphtype=='modal'">% Finish 1st Step</th>
 
 	<th ng-show="toggles.graphtype=='modal'" class="separator"></th>
+
+	<th ng-show="toggles.newpage">Page Load</th>
+	<th ng-show="toggles.newpage">Scroll Past 200px</th>
+	<th ng-show="toggles.newpage">Tab Lose Focus</th>
+	<th ng-show="toggles.newpage">Tab Regain Focus</th>
+
+	<th ng-show="toggles.newpage" class="separator"></th>
 
 	<th>Thru Cohort</th>
 	<th>Total</th>
