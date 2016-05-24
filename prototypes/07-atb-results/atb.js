@@ -19,7 +19,9 @@ app.controller('atbController', function($scope, fn) {
 			{version: 9, desc: "Same as v8 (separate project: measure how much IAs contribute to retention)"},
 			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
 			{version: 11, desc: "Added 'right-click to add search-engine' in modal (now 2 steps instead of 3)"},
-			{version: 12, desc: "Same as v11"}
+			{version: 12, desc: "Same as v11"},
+			{version: 13, desc: "Same as v12 (minor fix for versions of Chrome less than 48)"}
+
 		],
 		firefox: [
 			{version: 0, desc: "Improve the CTA; get people to click the button"},
@@ -34,7 +36,8 @@ app.controller('atbController', function($scope, fn) {
 			{version: 9, desc: "Updated modal to include screenshot in Step 2"},
 			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
 			{version: 11, desc: "Same as v10"},
-			{version: 12, desc: "Added big scfreenshots to modal"}
+			{version: 12, desc: "Added big screenshots to modal"},
+			{version: 13, desc: "Added new page instructions (no more modal)"}
 		],
 		safari: [
 			{version: 0, desc: "Improve the CTA; get people to click the button"},
@@ -49,7 +52,8 @@ app.controller('atbController', function($scope, fn) {
 			{version: 9, desc: "Hide CTA when t-param is set"},
 			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
 			{version: 11, desc: "Same as v10"},
-			{version: 12, desc: "Same as v11"}
+			{version: 12, desc: "Same as v11"},
+			{version: 13, desc: "Moved CTA to top-right; dismissing it shows msg for start.ddg.com"}
 		]
 	};
 
@@ -66,6 +70,7 @@ app.controller('atbController', function($scope, fn) {
 		v10: true,
 		v11: true,
 		v12: true,
+		v13: true,
 
 		xclick: false,
 		serp: false,
@@ -199,7 +204,13 @@ app.controller('atbController', function($scope, fn) {
 		{version: 12, date: '160515', impressions_home: 273368, impressions_side: 3247, clickbutton_home: 2442, clickbutton_side: 99, x_home: 2056, x_side: 102, clickhere_home: 0, clickhere_side: 0, blur_home: 1426, blur_side: 43, searches_cohort: 28295, searches_total: 1787182},
 		{"clickhere_side":0,"searches_cohort":39289,"clickbutton_home":3188,"date":"160516","version":12,"blur_home":1833,"x_side":110,"searches_total":2279919,"clickbutton_side":106,"blur_side":43,"impressions_side":3946,"impressions_home":348300,"clickhere_home":0,"x_home":2794},
 		{"clickhere_side":0,"searches_cohort":47322,"clickbutton_home":3670,"date":"160517","version":12,"blur_home":2182,"x_side":113,"searches_total":2322043,"clickbutton_side":132,"blur_side":66,"impressions_side":4093,"impressions_home":356931,"clickhere_home":0,"x_home":3191},
-		{"clickhere_side":0,"searches_cohort":53427,"clickbutton_home":2656,"date":"160518","version":12,"blur_home":1449,"x_side":91,"searches_total":2294006,"clickbutton_side":123,"blur_side":57,"impressions_side":2854,"impressions_home":256059,"clickhere_home":0,"x_home":2273}
+		{"clickhere_side":0,"searches_cohort":53427,"clickbutton_home":2656,"date":"160518","version":12,"blur_home":1449,"x_side":91,"searches_total":2294006,"clickbutton_side":123,"blur_side":57,"impressions_side":2854,"impressions_home":256059,"clickhere_home":0,"x_home":2273},
+		// v13
+		{"clickhere_side":9,"searches_cohort":2226,"clickbutton_home":1096,"date":"160518","version":13,"blur_home":738,"x_side":41,"searches_total":2294006,"clickbutton_side":30,"blur_side":19,"impressions_side":1236,"impressions_home":100136,"clickhere_home":274,"x_home":764},
+		{"clickhere_side":41,"searches_cohort":16637,"clickbutton_home":3529,"date":"160519","version":13,"blur_home":2312,"x_side":128,"searches_total":2252558,"clickbutton_side":127,"blur_side":79,"impressions_side":3940,"impressions_home":345999,"clickhere_home":729,"x_home":2902},
+		{"clickhere_side":24,"searches_cohort":24018,"clickbutton_home":2956,"date":"160520","version":13,"blur_home":1971,"x_side":108,"searches_total":2105556,"clickbutton_side":102,"blur_side":50,"impressions_side":3590,"impressions_home":328589,"clickhere_home":542,"x_home":2618},
+		{"clickhere_side":25,"searches_cohort":24219,"clickbutton_home":2467,"date":"160521","version":13,"blur_home":1680,"x_side":111,"searches_total":1706392,"clickbutton_side":101,"blur_side":61,"impressions_side":3394,"impressions_home":265325,"clickhere_home":519,"x_home":2000},
+		{"clickhere_side":34,"searches_cohort":32882,"clickbutton_home":3021,"date":"160522","version":13,"blur_home":2017,"x_side":113,"searches_total":1846709,"clickbutton_side":107,"blur_side":63,"impressions_side":3893,"impressions_home":282193,"clickhere_home":728,"x_home":2303}
 	];
 
 	$scope.firefox = [
@@ -304,7 +315,13 @@ app.controller('atbController', function($scope, fn) {
 		{version: 12, date: '160515', impressions_home: 961895, impressions_side: 4607, clickbutton_home: 3295, clickbutton_side: 86, x_home: 4797, x_side: 126, clickhere_home: 0, clickhere_side: 0, blur_home: 1803, blur_side: 38, searches_cohort: 334, searches_total: 4957479},
 		{"clickhere_side":0,"searches_cohort":464,"clickbutton_home":4028,"date":"160516","version":12,"blur_home":2097,"x_side":152,"searches_total":5847668,"clickbutton_side":117,"blur_side":44,"impressions_side":5372,"impressions_home":1127788,"clickhere_home":0,"x_home":5574},
 		{"clickhere_side":0,"searches_cohort":529,"clickbutton_home":3770,"date":"160517","version":12,"blur_home":2033,"x_side":148,"searches_total":5895214,"clickbutton_side":107,"blur_side":45,"impressions_side":4815,"impressions_home":1134758,"clickhere_home":0,"x_home":5351},
-		{"clickhere_side":0,"searches_cohort":470,"clickbutton_home":2874,"date":"160518","version":12,"blur_home":1612,"x_side":101,"searches_total":5757947,"clickbutton_side":63,"blur_side":25,"impressions_side":3355,"impressions_home":820044,"clickhere_home":0,"x_home":4018}
+		{"clickhere_side":0,"searches_cohort":470,"clickbutton_home":2874,"date":"160518","version":12,"blur_home":1612,"x_side":101,"searches_total":5757947,"clickbutton_side":63,"blur_side":25,"impressions_side":3355,"impressions_home":820044,"clickhere_home":0,"x_home":4018},
+		// v13
+		{"clickhere_side":1,"searches_cohort":22,"date":"160518","blur_home":54,"x_side":45,"clickbutton_side":32,"blur_side":0,"fire_on_page_load":876,"impressions_side":1398,"impressions_home":294559,"clickhere_home":55,"tab_regains_focus":399,"clickbutton_home":749,"version":13,"tab_lost_focus":1248,"searches_total":5757947,"scroll_200px":571,"x_home":1384},
+		{"clickhere_side":7,"searches_cohort":191,"date":"160519","blur_home":175,"x_side":133,"clickbutton_side":102,"blur_side":5,"fire_on_page_load":3461,"impressions_side":4502,"impressions_home":1096475,"clickhere_home":184,"tab_regains_focus":1731,"clickbutton_home":2856,"version":13,"tab_lost_focus":5078,"searches_total":5624306,"scroll_200px":2065,"x_home":5269},
+		{"clickhere_side":8,"searches_cohort":534,"date":"160520","blur_home":198,"x_side":120,"clickbutton_side":88,"blur_side":8,"fire_on_page_load":3355,"impressions_side":4551,"impressions_home":1045474,"clickhere_home":200,"tab_regains_focus":1512,"clickbutton_home":2770,"version":13,"tab_lost_focus":4779,"searches_total":5283431,"scroll_200px":2016,"x_home":4973},
+		{"clickhere_side":6,"searches_cohort":388,"date":"160521","blur_home":177,"x_side":144,"clickbutton_side":77,"blur_side":6,"fire_on_page_load":3141,"impressions_side":4602,"impressions_home":906656,"clickhere_home":170,"tab_regains_focus":1420,"clickbutton_home":2608,"version":13,"tab_lost_focus":4437,"searches_total":4530514,"scroll_200px":1879,"x_home":4441},
+		{"clickhere_side":12,"searches_cohort":400,"date":"160522","blur_home":184,"x_side":160,"clickbutton_side":91,"blur_side":11,"fire_on_page_load":3312,"impressions_side":4984,"impressions_home":968521,"clickhere_home":178,"tab_regains_focus":1574,"clickbutton_home":2756,"version":13,"tab_lost_focus":4795,"searches_total":5002265,"scroll_200px":2052,"x_home":4647}
 	];
 
 	$scope.safari = [
@@ -410,7 +427,13 @@ app.controller('atbController', function($scope, fn) {
 		{version: 12, date: '160515', impressions_home: 198211, impressions_side: 923, clickbutton_home: 679, clickbutton_side: 15, x_home: 1312, x_side: 32, clickhere_home: 0, clickhere_side: 0, blur_home: 215, blur_side: 5, searches_cohort: 101, searches_total: 1068444},
 		{"clickhere_side":0,"searches_cohort":148,"clickbutton_home":809,"date":"160516","version":12,"blur_home":295,"x_side":31,"searches_total":1215498,"clickbutton_side":27,"blur_side":6,"impressions_side":1109,"impressions_home":230372,"clickhere_home":0,"x_home":1602},
 		{"clickhere_side":0,"searches_cohort":177,"clickbutton_home":735,"date":"160517","version":12,"blur_home":253,"x_side":29,"searches_total":1164862,"clickbutton_side":30,"blur_side":11,"impressions_side":909,"impressions_home":225235,"clickhere_home":0,"x_home":1513},
-		{"clickhere_side":0,"searches_cohort":217,"clickbutton_home":502,"date":"160518","version":12,"blur_home":166,"x_side":28,"searches_total":1145486,"clickbutton_side":12,"blur_side":4,"impressions_side":634,"impressions_home":152793,"clickhere_home":0,"x_home":1022}
+		{"clickhere_side":0,"searches_cohort":217,"clickbutton_home":502,"date":"160518","version":12,"blur_home":166,"x_side":28,"searches_total":1145486,"clickbutton_side":12,"blur_side":4,"impressions_side":634,"impressions_home":152793,"clickhere_home":0,"x_home":1022},
+		// v13
+		{"clickhere_side":0,"searches_cohort":22,"clickbutton_home":510,"date":"160518","version":13,"blur_home":154,"x_side":8,"searches_total":1145486,"clickbutton_side":6,"blur_side":2,"impressions_side":303,"impressions_home":67143,"clickhere_home":0,"x_home":1600},
+		{"clickhere_side":0,"searches_cohort":28,"clickbutton_home":1290,"date":"160519","version":13,"blur_home":373,"x_side":32,"searches_total":1117112,"clickbutton_side":20,"blur_side":5,"impressions_side":907,"impressions_home":207727,"clickhere_home":0,"x_home":3506},
+		{"clickhere_side":0,"searches_cohort":81,"clickbutton_home":935,"date":"160520","version":13,"blur_home":257,"x_side":31,"searches_total":1041817,"clickbutton_side":12,"blur_side":4,"impressions_side":846,"impressions_home":193615,"clickhere_home":0,"x_home":2745},
+		{"clickhere_side":0,"searches_cohort":131,"clickbutton_home":885,"date":"160521","version":13,"blur_home":280,"x_side":29,"searches_total":957970,"clickbutton_side":21,"blur_side":8,"impressions_side":864,"impressions_home":171984,"clickhere_home":1,"x_home":2427},
+		{"clickhere_side":0,"searches_cohort":115,"clickbutton_home":983,"date":"160522","version":13,"blur_home":326,"x_side":41,"searches_total":1059164,"clickbutton_side":15,"blur_side":5,"impressions_side":894,"impressions_home":186128,"clickhere_home":0,"x_home":2444}
 	];
 
 	// set average for specific cohort

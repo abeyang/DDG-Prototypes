@@ -42,6 +42,7 @@
 		<input type="checkbox" ng-model="toggles.v10" ng-change="selectBrowser()"></input> Version 10 <br />
 		<input type="checkbox" ng-model="toggles.v11" ng-change="selectBrowser()"></input> Version 11 <br />
 		<input type="checkbox" ng-model="toggles.v12" ng-change="selectBrowser()"></input> Version 12 <br />
+		<input type="checkbox" ng-model="toggles.v13" ng-change="selectBrowser()"></input> Version 13 <br />
 	</div>
 
 	<div class="set">
@@ -123,6 +124,11 @@
 				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 12}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
 				<p>v12</p>
 			</div>
+			<div ng-show="toggles.v13" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.firststep[13] / stats.maxfirststep * h + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 13}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar.html'"></div>	
+				<p>v13</p>
+			</div>
 		</div>
 
 		<div class="subgraph">
@@ -186,6 +192,11 @@
 				<div class="avg" style="height: {{ stats.avg.searches[12] / stats.maxsearches * h + 'px'}}"></div>
 				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 12}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar_searches.html'"></div>	
 				<p>v12</p>
+			</div>
+			<div ng-show="toggles.v13" class="grouping">
+				<div class="avg" style="height: {{ stats.avg.searches[13] / stats.maxsearches * h + 'px'}}"></div>
+				<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 13}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_bar_searches.html'"></div>	
+				<p>v13</p>
 			</div>
 		</div>
 		
@@ -254,6 +265,12 @@
 			<div class="avg" style="height: {{ stats.avg.blurratio[12] / stats.maxclickratio * h + 'px'}}"></div>
 			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 12}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
 			<p>v12</p>
+		</div>
+		<div ng-show="toggles.v13" class="grouping">
+			<div class="avg" style="height: {{ stats.avg.clickratio[13] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="avg" style="height: {{ stats.avg.blurratio[13] / stats.maxclickratio * h + 'px'}}"></div>
+			<div class="barwrapper" ng-repeat="entry in browser | filter: {version: 13}" ng-class="{'partial': entry.partial}" ng-include="'partials/graph_clickbar.html'"></div>	
+			<p>v13</p>
 		</div>
 	</section>
 
@@ -412,6 +429,19 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="entry in browser | filter: {version: 12}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section ng-show="toggles.v13">
+		<p class="subtitle"><strong>Version 13</strong> {{info[title][13].desc}}</p>
+			
+		<table>
+			<thead ng-include="'partials/table_header.html'">
+			</thead>
+			<tbody>
+				<tr ng-repeat="entry in browser | filter: {version: 13}" ng-class="{'partial': entry.partial}" ng-include="'partials/table_row.html'">
 				</tr>
 			</tbody>
 		</table>
