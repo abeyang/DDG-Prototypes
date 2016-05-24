@@ -503,8 +503,13 @@ app.controller('atbController', function($scope, fn) {
 			
 			// is this current version "toggled"? if yes, go thru all final calculations
 			if ($scope.toggles['v' + version]) {
+				
 				// max value for "first step"
-				var result = (blur + blur_home + blur_side)/(entry.clickbutton_home + entry.clickbutton_side + serp);
+				var result = 0;
+				// do calc based on whether there's install page data
+				if (entry.fire_on_page_load) result = entry.scroll_200px / entry.fire_on_page_load;
+				else result = (blur + blur_home + blur_side)/(entry.clickbutton_home + entry.clickbutton_side + serp);
+				
 				if (result > maxfirststep) maxfirststep = result;
 
 				// max value for "click ratio"
