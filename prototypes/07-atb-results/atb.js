@@ -21,11 +21,12 @@ app.controller('atbController', function($scope, fn) {
 			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
 			{version: 11, desc: "Added 'right-click to add search-engine' in modal (now 2 steps instead of 3)"},
 			{version: 12, desc: "Same as v11"},
-			{version: 13, desc: "Same as v12 (minor fix for versions of Chrome less than 48)"}
+			{version: 13, desc: "Same as v12 (minor fix for versions of Chrome less than 48)"},
+			{version: 14, desc: "Same as v13"}
 
 		],
 		firefox: [
-			{version: 0, desc: "Improve the CTA; get people to click the button"},
+			{version: 0, desc: "Improve the CTA; get people to click the button (CANNOT trust % searches through cohort)"},
 			{version: 1, desc: "Baseline metric (versions 1-4)"},
 			{version: 2, desc: "Baseline metric (versions 1-4)"},
 			{version: 3, desc: "Baseline metric (versions 1-4)"},
@@ -38,7 +39,8 @@ app.controller('atbController', function($scope, fn) {
 			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
 			{version: 11, desc: "Same as v10"},
 			{version: 12, desc: "Added big screenshots to modal"},
-			{version: 13, desc: "Added new page instructions (no more modal)"}
+			{version: 13, desc: "Added new page instructions (no more modal)"},
+			{version: 14, desc: "Same as v13"}
 		],
 		safari: [
 			{version: 0, desc: "Improve the CTA; get people to click the button"},
@@ -54,7 +56,8 @@ app.controller('atbController', function($scope, fn) {
 			{version: 10, desc: "Same as v9, but fixed atb param from being dropped on requeries (NEW BASELINE)"},
 			{version: 11, desc: "Same as v10"},
 			{version: 12, desc: "Same as v11"},
-			{version: 13, desc: "Moved CTA to top-right; dismissing it shows msg for start.ddg.com"}
+			{version: 13, desc: "Moved CTA to top-right; dismissing it shows msg for start.ddg.com"},
+			{version: 14, desc: "Same as v13"}
 		]
 	};
 
@@ -72,6 +75,7 @@ app.controller('atbController', function($scope, fn) {
 		v11: true,
 		v12: true,
 		v13: true,
+		v14: true,
 
 		xclick: false,
 		serp: false,
@@ -212,7 +216,19 @@ app.controller('atbController', function($scope, fn) {
 		{"clickhere_side":41,"searches_cohort":16637,"clickbutton_home":3529,"date":"160519","version":13,"blur_home":2312,"x_side":128,"searches_total":2252558,"clickbutton_side":127,"blur_side":79,"impressions_side":3940,"impressions_home":345999,"clickhere_home":729,"x_home":2902},
 		{"clickhere_side":24,"searches_cohort":24018,"clickbutton_home":2956,"date":"160520","version":13,"blur_home":1971,"x_side":108,"searches_total":2105556,"clickbutton_side":102,"blur_side":50,"impressions_side":3590,"impressions_home":328589,"clickhere_home":542,"x_home":2618},
 		{"clickhere_side":25,"searches_cohort":24219,"clickbutton_home":2467,"date":"160521","version":13,"blur_home":1680,"x_side":111,"searches_total":1706392,"clickbutton_side":101,"blur_side":61,"impressions_side":3394,"impressions_home":265325,"clickhere_home":519,"x_home":2000},
-		{"clickhere_side":34,"searches_cohort":32882,"clickbutton_home":3021,"date":"160522","version":13,"blur_home":2017,"x_side":113,"searches_total":1846709,"clickbutton_side":107,"blur_side":63,"impressions_side":3893,"impressions_home":282193,"clickhere_home":728,"x_home":2303}
+		{"clickhere_side":34,"searches_cohort":32882,"clickbutton_home":3021,"date":"160522","version":13,"blur_home":2017,"x_side":113,"searches_total":1846709,"clickbutton_side":107,"blur_side":63,"impressions_side":3893,"impressions_home":282193,"clickhere_home":728,"x_home":2303},
+		{"clickhere_side":20,"searches_cohort":45411,"date":"160523","blur_home":2269,"x_side":109,"clickbutton_side":110,"blur_side":62,"fire_on_page_load":1,"impressions_side":4249,"impressions_home":368965,"clickhere_home":789,"tab_regains_focus":1,"version":13,"clickbutton_home":3443,"tab_lost_focus":1,"searches_total":2383316,"scroll_200px":1,"x_home":3038},
+		{"clickhere_side":22,"searches_cohort":51189,"date":"160524","blur_home":2014,"x_side":123,"clickbutton_side":115,"blur_side":62,"fire_on_page_load":0,"impressions_side":4248,"impressions_home":372609,"clickhere_home":582,"tab_regains_focus":0,"clickbutton_home":3288,"version":13,"tab_lost_focus":0,"searches_total":2333873,"scroll_200px":0,"x_home":3108},
+		{"clickhere_side":13,"searches_cohort":52804,"date":"160525","blur_home":1253,"x_side":71,"clickbutton_side":62,"blur_side":31,"fire_on_page_load":0,"impressions_side":2512,"impressions_home":237374,"clickhere_home":390,"tab_regains_focus":0,"version":13,"clickbutton_home":1992,"tab_lost_focus":0,"searches_total":2268147,"scroll_200px":0,"x_home":2126},
+		// v14
+		{"clickhere_side":7,"searches_cohort":2869,"date":"160525","blur_home":680,"x_side":49,"clickbutton_side":32,"blur_side":19,"fire_on_page_load":2,"impressions_side":1552,"impressions_home":127945,"clickhere_home":151,"tab_regains_focus":1,"version":14,"clickbutton_home":1069,"tab_lost_focus":1,"searches_total":2268147,"scroll_200px":0,"x_home":946},
+		{"clickhere_side":24,"searches_cohort":15611,"date":"160526","blur_home":1985,"x_side":145,"clickbutton_side":113,"blur_side":53,"fire_on_page_load":0,"impressions_side":4342,"impressions_home":356886,"clickhere_home":579,"tab_regains_focus":0,"clickbutton_home":3166,"version":14,"tab_lost_focus":0,"searches_total":2208395,"scroll_200px":0,"x_home":2897},
+		{"clickhere_side":32,"searches_cohort":23364,"date":"160527","blur_home":2043,"x_side":121,"clickbutton_side":130,"blur_side":73,"fire_on_page_load":0,"impressions_side":4238,"impressions_home":342300,"clickhere_home":787,"tab_regains_focus":0,"clickbutton_home":3258,"version":14,"tab_lost_focus":0,"searches_total":2056985,"scroll_200px":0,"x_home":2979},
+		{"clickhere_side":34,"searches_cohort":26335,"date":"160528","blur_home":1959,"x_side":92,"clickbutton_side":117,"blur_side":64,"fire_on_page_load":0,"impressions_side":3630,"impressions_home":281412,"clickhere_home":727,"tab_regains_focus":0,"clickbutton_home":3068,"version":14,"tab_lost_focus":0,"searches_total":1657348,"scroll_200px":0,"x_home":2418},
+		{"clickhere_side":28,"searches_cohort":35265,"date":"160529","blur_home":1833,"x_side":100,"clickbutton_side":98,"blur_side":58,"fire_on_page_load":1,"impressions_side":3463,"impressions_home":291167,"clickhere_home":658,"tab_regains_focus":1,"clickbutton_home":2990,"version":14,"tab_lost_focus":1,"searches_total":1780377,"scroll_200px":1,"x_home":2470},
+		{"clickhere_side":24,"searches_cohort":44677,"date":"160530","blur_home":2197,"x_side":112,"clickbutton_side":102,"blur_side":51,"fire_on_page_load":0,"impressions_side":4148,"impressions_home":342338,"clickhere_home":747,"tab_regains_focus":0,"clickbutton_home":3395,"version":14,"tab_lost_focus":0,"searches_total":2130449,"scroll_200px":0,"x_home":2963},
+		{"clickhere_side":26,"searches_cohort":56110,"date":"160531","blur_home":2228,"x_side":128,"clickbutton_side":121,"blur_side":66,"fire_on_page_load":1,"impressions_side":4510,"impressions_home":373567,"clickhere_home":657,"tab_regains_focus":0,"clickbutton_home":3515,"version":14,"tab_lost_focus":0,"searches_total":2315643,"scroll_200px":0,"x_home":3062},
+		{"clickhere_side":29,"searches_cohort":60019,"date":"160601","blur_home":1493,"x_side":83,"clickbutton_side":98,"blur_side":60,"fire_on_page_load":0,"impressions_side":2866,"impressions_home":260955,"clickhere_home":501,"tab_regains_focus":0,"clickbutton_home":2376,"version":14,"tab_lost_focus":0,"searches_total":2215876,"scroll_200px":0,"x_home":2297}
 	];
 
 	$scope.firefox = [
@@ -319,11 +335,23 @@ app.controller('atbController', function($scope, fn) {
 		{"clickhere_side":0,"searches_cohort":529,"clickbutton_home":3770,"date":"160517","version":12,"blur_home":2033,"x_side":148,"searches_total":5895214,"clickbutton_side":107,"blur_side":45,"impressions_side":4815,"impressions_home":1134758,"clickhere_home":0,"x_home":5351},
 		{"clickhere_side":0,"searches_cohort":470,"clickbutton_home":2874,"date":"160518","version":12,"blur_home":1612,"x_side":101,"searches_total":5757947,"clickbutton_side":63,"blur_side":25,"impressions_side":3355,"impressions_home":820044,"clickhere_home":0,"x_home":4018},
 		// v13
-		{"clickhere_side":1,"searches_cohort":22,"date":"160518","blur_home":54,"x_side":45,"clickbutton_side":32,"blur_side":0,"fire_on_page_load":876,"impressions_side":1398,"impressions_home":294559,"clickhere_home":55,"tab_regains_focus":399,"clickbutton_home":749,"version":13,"tab_lost_focus":1248,"searches_total":5757947,"scroll_200px":571,"x_home":1384},
-		{"clickhere_side":7,"searches_cohort":191,"date":"160519","blur_home":175,"x_side":133,"clickbutton_side":102,"blur_side":5,"fire_on_page_load":3461,"impressions_side":4502,"impressions_home":1096475,"clickhere_home":184,"tab_regains_focus":1731,"clickbutton_home":2856,"version":13,"tab_lost_focus":5078,"searches_total":5624306,"scroll_200px":2065,"x_home":5269},
-		{"clickhere_side":8,"searches_cohort":534,"date":"160520","blur_home":198,"x_side":120,"clickbutton_side":88,"blur_side":8,"fire_on_page_load":3355,"impressions_side":4551,"impressions_home":1045474,"clickhere_home":200,"tab_regains_focus":1512,"clickbutton_home":2770,"version":13,"tab_lost_focus":4779,"searches_total":5283431,"scroll_200px":2016,"x_home":4973},
-		{"clickhere_side":6,"searches_cohort":388,"date":"160521","blur_home":177,"x_side":144,"clickbutton_side":77,"blur_side":6,"fire_on_page_load":3141,"impressions_side":4602,"impressions_home":906656,"clickhere_home":170,"tab_regains_focus":1420,"clickbutton_home":2608,"version":13,"tab_lost_focus":4437,"searches_total":4530514,"scroll_200px":1879,"x_home":4441},
-		{"clickhere_side":12,"searches_cohort":400,"date":"160522","blur_home":184,"x_side":160,"clickbutton_side":91,"blur_side":11,"fire_on_page_load":3312,"impressions_side":4984,"impressions_home":968521,"clickhere_home":178,"tab_regains_focus":1574,"clickbutton_home":2756,"version":13,"tab_lost_focus":4795,"searches_total":5002265,"scroll_200px":2052,"x_home":4647}
+		{"clickhere_side":1,"searches_cohort":22,"date":"160518","blur_home":54,"x_side":45,"clickbutton_side":32,"blur_side":0,"fire_on_page_load":876,"impressions_side":1398,"impressions_home":294559,"clickhere_home":55,"tab_regains_focus":279,"clickbutton_home":749,"version":13,"tab_lost_focus":858,"searches_total":5757947,"scroll_200px":571,"x_home":1384},
+		{"clickhere_side":7,"searches_cohort":191,"date":"160519","blur_home":175,"x_side":133,"clickbutton_side":102,"blur_side":5,"fire_on_page_load":3461,"impressions_side":4502,"impressions_home":1096475,"clickhere_home":184,"tab_regains_focus":1136,"clickbutton_home":2856,"version":13,"tab_lost_focus":3386,"searches_total":5624306,"scroll_200px":2065,"x_home":5269},
+		{"clickhere_side":8,"searches_cohort":534,"date":"160520","blur_home":198,"x_side":120,"clickbutton_side":88,"blur_side":8,"fire_on_page_load":3355,"impressions_side":4551,"impressions_home":1045474,"clickhere_home":200,"tab_regains_focus":1019,"clickbutton_home":2770,"version":13,"tab_lost_focus":3298,"searches_total":5283431,"scroll_200px":2016,"x_home":4973},
+		{"clickhere_side":6,"searches_cohort":388,"date":"160521","blur_home":177,"x_side":144,"clickbutton_side":77,"blur_side":6,"fire_on_page_load":3141,"impressions_side":4602,"impressions_home":906656,"clickhere_home":170,"tab_regains_focus":956,"clickbutton_home":2608,"version":13,"tab_lost_focus":3064,"searches_total":4530514,"scroll_200px":1879,"x_home":4441},
+		{"clickhere_side":12,"searches_cohort":400,"date":"160522","blur_home":184,"x_side":160,"clickbutton_side":91,"blur_side":11,"fire_on_page_load":3312,"impressions_side":4984,"impressions_home":968521,"clickhere_home":178,"tab_regains_focus":1058,"clickbutton_home":2756,"version":13,"tab_lost_focus":3256,"searches_total":5002265,"scroll_200px":2052,"x_home":4647},
+		{"clickhere_side":7,"searches_cohort":485,"date":"160523","blur_home":183,"x_side":127,"clickbutton_side":86,"blur_side":8,"fire_on_page_load":3536,"impressions_side":5119,"impressions_home":1147710,"clickhere_home":157,"tab_regains_focus":1080,"clickbutton_home":2894,"version":13,"tab_lost_focus":3460,"searches_total":6035911,"scroll_200px":2154,"x_home":5351},
+		{"clickhere_side":4,"searches_cohort":840,"date":"160524","blur_home":194,"x_side":120,"clickbutton_side":87,"blur_side":5,"fire_on_page_load":3417,"impressions_side":4828,"impressions_home":1112842,"clickhere_home":189,"tab_regains_focus":1085,"clickbutton_home":2757,"version":13,"tab_lost_focus":3368,"searches_total":5850580,"scroll_200px":2026,"x_home":5309},
+		{"clickhere_side":6,"searches_cohort":842,"date":"160525","blur_home":114,"x_side":75,"clickbutton_side":50,"blur_side":5,"fire_on_page_load":2124,"impressions_side":3130,"impressions_home":726703,"clickhere_home":100,"tab_regains_focus":676,"clickbutton_home":1735,"version":13,"tab_lost_focus":2082,"searches_total":5765836,"scroll_200px":1271,"x_home":3533},
+		// v14
+		{"clickhere_side":2,"searches_cohort":21,"date":"160525","blur_home":85,"x_side":64,"clickbutton_side":25,"blur_side":2,"fire_on_page_load":1031,"impressions_side":1699,"impressions_home":352711,"clickhere_home":70,"tab_regains_focus":366,"clickbutton_home":899,"version":14,"tab_lost_focus":1024,"searches_total":5765836,"scroll_200px":616,"x_home":1627},
+		{"clickhere_side":5,"searches_cohort":216,"date":"160526","blur_home":207,"x_side":159,"clickbutton_side":83,"blur_side":5,"fire_on_page_load":3177,"impressions_side":5068,"impressions_home":1056981,"clickhere_home":195,"tab_regains_focus":985,"clickbutton_home":2707,"version":14,"tab_lost_focus":3124,"searches_total":6119759,"scroll_200px":1913,"x_home":5285},
+		{"clickhere_side":7,"searches_cohort":258,"date":"160527","blur_home":201,"x_side":145,"clickbutton_side":63,"blur_side":8,"fire_on_page_load":3125,"impressions_side":4832,"impressions_home":1025366,"clickhere_home":173,"tab_regains_focus":982,"clickbutton_home":2652,"version":14,"tab_lost_focus":3070,"searches_total":5853461,"scroll_200px":1842,"x_home":5031},
+		{"clickhere_side":6,"searches_cohort":176,"date":"160528","blur_home":165,"x_side":135,"clickbutton_side":83,"blur_side":6,"fire_on_page_load":2941,"impressions_side":4709,"impressions_home":899474,"clickhere_home":152,"tab_regains_focus":946,"clickbutton_home":2482,"version":14,"tab_lost_focus":2888,"searches_total":5132565,"scroll_200px":1796,"x_home":4417},
+		{"clickhere_side":7,"searches_cohort":225,"date":"160529","blur_home":192,"x_side":178,"clickbutton_side":95,"blur_side":5,"fire_on_page_load":3139,"impressions_side":4762,"impressions_home":987485,"clickhere_home":174,"tab_regains_focus":1005,"clickbutton_home":2678,"version":14,"tab_lost_focus":3069,"searches_total":5593162,"scroll_200px":1859,"x_home":4610},
+		{"clickhere_side":6,"searches_cohort":462,"date":"160530","blur_home":170,"x_side":165,"clickbutton_side":89,"blur_side":6,"fire_on_page_load":3495,"impressions_side":5311,"impressions_home":1108070,"clickhere_home":149,"tab_regains_focus":1080,"clickbutton_home":2905,"version":14,"tab_lost_focus":3434,"searches_total":6295139,"scroll_200px":2052,"x_home":5358},
+		{"clickhere_side":7,"searches_cohort":459,"date":"160531","blur_home":231,"x_side":141,"clickbutton_side":87,"blur_side":6,"fire_on_page_load":3483,"impressions_side":4926,"impressions_home":1137656,"clickhere_home":212,"tab_regains_focus":1113,"clickbutton_home":2996,"version":14,"tab_lost_focus":3427,"searches_total":5820931,"scroll_200px":2053,"x_home":5647},
+		{"clickhere_side":7,"searches_cohort":496,"date":"160601","blur_home":156,"x_side":112,"clickbutton_side":65,"blur_side":7,"fire_on_page_load":2668,"impressions_side":3345,"impressions_home":824943,"clickhere_home":150,"tab_regains_focus":841,"clickbutton_home":2170,"version":14,"tab_lost_focus":2610,"searches_total":5685441,"scroll_200px":1551,"x_home":4081}
 	];
 
 	$scope.safari = [
@@ -435,7 +463,19 @@ app.controller('atbController', function($scope, fn) {
 		{"clickhere_side":0,"searches_cohort":28,"clickbutton_home":1290,"date":"160519","version":13,"blur_home":373,"x_side":32,"searches_total":1117112,"clickbutton_side":20,"blur_side":5,"impressions_side":907,"impressions_home":207727,"clickhere_home":0,"x_home":3506},
 		{"clickhere_side":0,"searches_cohort":81,"clickbutton_home":935,"date":"160520","version":13,"blur_home":257,"x_side":31,"searches_total":1041817,"clickbutton_side":12,"blur_side":4,"impressions_side":846,"impressions_home":193615,"clickhere_home":0,"x_home":2745},
 		{"clickhere_side":0,"searches_cohort":131,"clickbutton_home":885,"date":"160521","version":13,"blur_home":280,"x_side":29,"searches_total":957970,"clickbutton_side":21,"blur_side":8,"impressions_side":864,"impressions_home":171984,"clickhere_home":1,"x_home":2427},
-		{"clickhere_side":0,"searches_cohort":115,"clickbutton_home":983,"date":"160522","version":13,"blur_home":326,"x_side":41,"searches_total":1059164,"clickbutton_side":15,"blur_side":5,"impressions_side":894,"impressions_home":186128,"clickhere_home":0,"x_home":2444}
+		{"clickhere_side":0,"searches_cohort":115,"clickbutton_home":983,"date":"160522","version":13,"blur_home":326,"x_side":41,"searches_total":1059164,"clickbutton_side":15,"blur_side":5,"impressions_side":894,"impressions_home":186128,"clickhere_home":0,"x_home":2444},
+		{"clickhere_side":0,"searches_cohort":150,"date":"160523","blur_home":298,"x_side":34,"clickbutton_side":31,"blur_side":6,"fire_on_page_load":0,"impressions_side":942,"impressions_home":214629,"clickhere_home":0,"tab_regains_focus":0,"clickbutton_home":923,"version":13,"tab_lost_focus":0,"searches_total":1200761,"scroll_200px":0,"x_home":2737},
+		{"clickhere_side":0,"searches_cohort":237,"date":"160524","blur_home":260,"x_side":26,"clickbutton_side":24,"blur_side":8,"fire_on_page_load":0,"impressions_side":861,"impressions_home":205127,"clickhere_home":0,"tab_regains_focus":0,"clickbutton_home":847,"version":13,"tab_lost_focus":0,"searches_total":1156902,"scroll_200px":0,"x_home":2524},
+		{"clickhere_side":0,"searches_cohort":182,"date":"160525","blur_home":153,"x_side":19,"clickbutton_side":14,"blur_side":6,"fire_on_page_load":0,"impressions_side":544,"impressions_home":125846,"clickhere_home":1,"tab_regains_focus":0,"clickbutton_home":499,"version":13,"tab_lost_focus":0,"searches_total":1115000,"scroll_200px":0,"x_home":1351},
+		// v14
+		{"clickhere_side":0,"searches_cohort":4,"date":"160525","blur_home":116,"x_side":12,"clickbutton_side":9,"blur_side":1,"fire_on_page_load":0,"impressions_side":347,"impressions_home":73143,"clickhere_home":0,"tab_regains_focus":0,"clickbutton_home":319,"version":14,"tab_lost_focus":0,"searches_total":1115000,"scroll_200px":0,"x_home":927},
+		{"clickhere_side":0,"searches_cohort":35,"date":"160526","blur_home":277,"x_side":37,"clickbutton_side":28,"blur_side":7,"fire_on_page_load":2,"impressions_side":922,"impressions_home":193996,"clickhere_home":0,"tab_regains_focus":6,"clickbutton_home":748,"version":14,"tab_lost_focus":6,"searches_total":1086379,"scroll_200px":0,"x_home":2189},
+		{"clickhere_side":0,"searches_cohort":68,"date":"160527","blur_home":228,"x_side":32,"clickbutton_side":20,"blur_side":8,"fire_on_page_load":0,"impressions_side":881,"impressions_home":185281,"clickhere_home":0,"tab_regains_focus":0,"clickbutton_home":721,"version":14,"tab_lost_focus":0,"searches_total":1018213,"scroll_200px":0,"x_home":2006},
+		{"clickhere_side":0,"searches_cohort":98,"date":"160528","blur_home":242,"x_side":34,"clickbutton_side":20,"blur_side":11,"fire_on_page_load":0,"impressions_side":844,"impressions_home":164288,"clickhere_home":0,"tab_regains_focus":0,"clickbutton_home":708,"version":14,"tab_lost_focus":0,"searches_total":916617,"scroll_200px":0,"x_home":1870},
+		{"clickhere_side":0,"searches_cohort":178,"date":"160529","blur_home":236,"x_side":30,"clickbutton_side":16,"blur_side":6,"fire_on_page_load":0,"impressions_side":849,"impressions_home":176124,"clickhere_home":0,"tab_regains_focus":0,"clickbutton_home":709,"version":14,"tab_lost_focus":0,"searches_total":1011211,"scroll_200px":0,"x_home":1934},
+		{"clickhere_side":0,"searches_cohort":94,"date":"160530","blur_home":237,"x_side":40,"clickbutton_side":30,"blur_side":10,"fire_on_page_load":0,"impressions_side":918,"impressions_home":202013,"clickhere_home":0,"tab_regains_focus":0,"clickbutton_home":772,"version":14,"tab_lost_focus":0,"searches_total":1138852,"scroll_200px":0,"x_home":2203},
+		{"clickhere_side":0,"searches_cohort":202,"date":"160531","blur_home":246,"x_side":29,"clickbutton_side":22,"blur_side":4,"fire_on_page_load":0,"impressions_side":911,"impressions_home":208984,"clickhere_home":0,"tab_regains_focus":0,"clickbutton_home":802,"version":14,"tab_lost_focus":0,"searches_total":1146993,"scroll_200px":0,"x_home":2266},
+		{"clickhere_side":0,"searches_cohort":170,"date":"160601","blur_home":171,"x_side":18,"clickbutton_side":22,"blur_side":8,"fire_on_page_load":1,"impressions_side":592,"impressions_home":141037,"clickhere_home":1,"tab_regains_focus":0,"clickbutton_home":541,"version":14,"tab_lost_focus":0,"searches_total":1099878,"scroll_200px":1,"x_home":1397}
 	];
 
 	// set average for specific cohort
@@ -507,7 +547,7 @@ app.controller('atbController', function($scope, fn) {
 				// max value for "first step"
 				var result = 0;
 				// do calc based on whether there's install page data
-				if (entry.fire_on_page_load) result = entry.scroll_200px / entry.fire_on_page_load;
+				if (entry.fire_on_page_load && entry.fire_on_page_load > 100) result = entry.tab_regains_focus / entry.fire_on_page_load;
 				else result = (blur + blur_home + blur_side)/(entry.clickbutton_home + entry.clickbutton_side + serp);
 				
 				if (result > maxfirststep) maxfirststep = result;

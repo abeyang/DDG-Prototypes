@@ -1,7 +1,7 @@
 <!-- % finishing first step -->
 
 <!-- Use modal blurs if there's no full-page data -->
-<div ng-if="!entry.fire_on_page_load" class="bar" style="height: {{((entry.blur + entry.blur_home + entry.blur_side) / (entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp)) / stats.maxfirststep * 100 + '%'}}">
+<div ng-if="!entry.fire_on_page_load || entry.fire_on_page_load <= 100" class="bar" style="height: {{((entry.blur + entry.blur_home + entry.blur_side) / (entry.clickbutton_home + entry.clickbutton_side + entry.clickbutton_serp)) / stats.maxfirststep * 100 + '%'}}">
 	
 	<div class="tooltip">
 		{{fn.prettyDate(entry.date)}} <br />
@@ -10,10 +10,10 @@
 </div>
 
 <!-- If full-page data, show % based on scroll past 200px -->
-<div ng-if="entry.fire_on_page_load" class="bar" style="height: {{(entry.scroll_200px / entry.fire_on_page_load) / stats.maxfirststep * 100 + '%'}}">
+<div ng-if="entry.fire_on_page_load > 100" class="bar" style="height: {{(entry.tab_regains_focus / entry.fire_on_page_load) / stats.maxfirststep * 100 + '%'}}">
 	
 	<div class="tooltip">
 		{{fn.prettyDate(entry.date)}} <br />
-		<span ng-bind-html="fn.percent(entry.scroll_200px*magicratio, entry.fire_on_page_load, 1)"></span>
+		<span ng-bind-html="fn.percent(entry.tab_regains_focus*magicratio, entry.fire_on_page_load, 1)"></span>
 	</div>
 </div>
