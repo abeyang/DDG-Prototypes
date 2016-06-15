@@ -41,6 +41,12 @@
 
 <td ng-show="toggles.newpage" class="separator"></td>
 
+<td ng-show="toggles.newpage">{{entry.facebook_share_button}}</td>
+<td ng-show="toggles.newpage">{{entry.twitter_share_button}}</td>
+<td ng-show="toggles.newpage">{{entry.email_share_button}}</td>
+
+<td ng-show="toggles.newpage" class="separator"></td>
+
 <td>{{entry.searches_cohort}}</td>
 <td>{{entry.searches_total}}</td>
 <td ng-bind-html="fn.percent(entry.searches_cohort, entry.searches_total, 4)"></td>

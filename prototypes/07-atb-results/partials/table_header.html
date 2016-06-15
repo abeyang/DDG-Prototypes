@@ -1,23 +1,21 @@
 <tr>
 	<th class="nolines">&nbsp;</th>
 	<th colspan="{{colspan}}">Homepage</th>
-	
 	<th class="separator"></th>
 	
 	<th colspan="{{colspan}}">Side Menu</th>
-
 	<th class="separator"></th>
 
 	<th ng-show="toggles.serp" colspan="{{colspan}}">SERP</th>
-
 	<th class="separator"></th>
 
 	<th ng-show="toggles.graphtype=='modal'" colspan="3">Modal</th>
-
 	<th ng-show="toggles.graphtype=='modal'" class="separator"></th>
 
 	<th ng-show="toggles.newpage" colspan="4">Install Page</th>
+	<th ng-show="toggles.newpage" class="separator"></th>
 
+	<th ng-show="toggles.newpage" colspan="3">Shares</th>
 	<th ng-show="toggles.newpage" class="separator"></th>
 
 	<th colspan="3">Searches</th>
@@ -58,6 +56,12 @@
 	<th ng-show="toggles.newpage">Scroll Past 200px</th>
 	<th ng-show="toggles.newpage">Tab Lose Focus</th>
 	<th ng-show="toggles.newpage">Tab Regain Focus</th>
+
+	<th ng-show="toggles.newpage" class="separator"></th>
+
+	<th ng-show="toggles.newpage">FB</th>
+	<th ng-show="toggles.newpage">Twitter</th>
+	<th ng-show="toggles.newpage">Email</th>
 
 	<th ng-show="toggles.newpage" class="separator"></th>
 
