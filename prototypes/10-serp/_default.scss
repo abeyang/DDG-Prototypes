@@ -1,0 +1,59 @@
+// DEFAULT
+// try to mimic default settings as much as possible
+
+$gray: 			#888;
+$dark-gray: 	#333;
+$current-blue: 	#4495d4;
+
+#serp {
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+.result {
+	margin-bottom: 0.4em;
+	padding: 10px;
+	border-radius: 3px;
+
+	&:hover {
+		background-color: #F7F7F7;
+
+		.url .more { display: inline-block; }
+
+		h4 a, h4 a b { color: $current-blue; }
+	}
+
+	h4 { font-weight: 400; }
+	p {
+		margin: 0;
+		
+		margin-top: 0.1em;
+	}
+	b { color: #333; }
+
+	a { 
+		color: $dark-gray; 
+		text-decoration: none;
+
+		&:hover { 
+			color: $current-blue;
+			text-decoration: underline; 
+		}
+	}
+	.url {
+		a { 
+			padding-left: 3px;
+			color: $gray; 
+
+			&:hover { color: $current-blue; }
+		}
+		img {
+			position: relative;
+			top: -1px;
+		}
+		.more { 
+			float: right; 
+			display: none;
+		}
+	}
+}

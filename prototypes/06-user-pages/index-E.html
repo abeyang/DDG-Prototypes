@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
@@ -13,6 +12,7 @@
     
 </head>
 <body ng-controller="UserPageController">
+
 
 <!-- Load all other resources here: -->
 <link rel="stylesheet" href="../../assets/css/octicons.css" charset="utf-8">
@@ -36,6 +36,7 @@
 <script src="users/mattr555.js"></script>
 <script src="users/MrChrisW.js"></script>
 <script src="users/all_ias.js"></script>
+
 <script src="UserPage.js"></script>
 
 <!-- Toggle between users -->
@@ -44,73 +45,77 @@
 	  <option ng-repeat="user in users | filter: {hasInfo:true}" value="{{user.username}}">{{user.username}}</option>
 	</select>	
 </div>
+
 <!-- Header -->
 <header>
 	<div class="container">
-	<div class="stats">
-		<div class="third">
-			<span>All Instant Answers</span>
-			<h2>{{count.maintained_ias + count.developed_only_ias}}</h2>
-		</div>
-		<div class="third">
-			<span>All Open Pull Requests</span>
-			<h2>{{count.reviewed_prs + count.developed_prs}}</h2>
-		</div>
-		<div class="third">
-			<span>Closed Pull Requests</span>
-			<h2>{{count.closed_prs}}</h2>
-		</div>
-	</div>		
-</div></header>
+		<div class="stats">
+			<div class="third">
+				<span>All Instant Answers</span>
+				<h2>{{count.maintained_ias + count.developed_only_ias}}</h2>
+			</div>
+			<div class="third">
+				<span>All Open Pull Requests</span>
+				<h2>{{count.reviewed_prs + count.developed_prs}}</h2>
+			</div>
+			<div class="third">
+				<span>Closed Pull Requests</span>
+				<h2>{{count.closed_prs}}</h2>
+			</div>
+		</div>		
+	</div>
+</header>
 
 <div class="container">
 	
 	<!-- Sidebar -->
 	<aside>
 		<div class="profile card">
-	<img src="{{user.avatar_url || user.gh_data.avatar_url}}" />
-	<div class="content">
-		<h3>{{user.name}}</h3>
-		<div class="gray">
-			<a href="http://github.com/{{user.login}}">@{{user.login}}</a>
-			<br />{{user.location}}		
+			<img src="{{user.avatar_url || user.gh_data.avatar_url}}" />
+			<div class="content">
+				<h3>{{user.name}}</h3>
+				<div class="gray">
+					<a href="http://github.com/{{user.login}}">@{{user.login}}</a>
+					<br />{{user.location}}		
+				</div>
+				
+			</div>
 		</div>
 		
-	</div>
-</div>
 		<div class="set">
-	<strong>Filter Instant Answers</strong>
-	<div ng-class="{'active': othertype=='prs'}" ng-click="setOtherType('prs')" class="topic typeC cursor">
-		<span class="amt">{{count.prs_ias}}</span>
-		<span class="close"><span class="octicon octicon-x"></span></span>
-		<span>PRs &amp; Issues</span>
-	</div>
-	<div ng-class="{'active': othertype=='maintained'}" ng-click="setOtherType('maintained')" class="topic typeC cursor">
-		<span class="amt">{{count.maintained_ias}}</span>
-		<span class="close"><span class="octicon octicon-x"></span></span>
-		<span>Maintaining</span>
-	</div>
-	<div ng-class="{'active': othertype=='developed'}" ng-click="setOtherType('developed')" class="topic typeC cursor">
-		<span class="amt">{{count.developed_ias}}</span>
-		<span class="close"><span class="octicon octicon-x"></span></span>
-		<span>Developed</span>
-	</div>
-	<div ng-class="{'active': othertype=='progress'}" ng-click="setOtherType('progress')" class="topic typeC cursor">
-		<span class="amt">{{count.progress_ias}}</span>
-		<span class="close"><span class="octicon octicon-x"></span></span>
-		<span>In-Progress</span>
-	</div>
-</div>
-
-<div class="set">
-	<strong>Filter by Topics</strong>
-	<div ng-class="{'active': filtertopic==t.topic}" class="topic typeC cursor" ng-repeat="t in topics | orderBy:'-amount'" ng-click="setFilterTopic(t.topic)">
-		<span class="amt">{{t.amount}}</span>
-		<span class="close"><span class="octicon octicon-x"></span></span>
-		<span> {{t.topic}}</span>
-		<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
-	</div>
-</div>	</aside>
+					<strong>Filter Instant Answers</strong>
+					<div ng-class="{'active': othertype=='prs'}" ng-click="setOtherType('prs')" class="topic typeC cursor">
+						<span class="amt">{{count.prs_ias}}</span>
+						<span class="close"><span class="octicon octicon-x"></span></span>
+						<span>PRs &amp; Issues</span>
+					</div>
+					<div ng-class="{'active': othertype=='maintained'}" ng-click="setOtherType('maintained')" class="topic typeC cursor">
+						<span class="amt">{{count.maintained_ias}}</span>
+						<span class="close"><span class="octicon octicon-x"></span></span>
+						<span>Maintaining</span>
+					</div>
+					<div ng-class="{'active': othertype=='developed'}" ng-click="setOtherType('developed')" class="topic typeC cursor">
+						<span class="amt">{{count.developed_ias}}</span>
+						<span class="close"><span class="octicon octicon-x"></span></span>
+						<span>Developed</span>
+					</div>
+					<div ng-class="{'active': othertype=='progress'}" ng-click="setOtherType('progress')" class="topic typeC cursor">
+						<span class="amt">{{count.progress_ias}}</span>
+						<span class="close"><span class="octicon octicon-x"></span></span>
+						<span>In-Progress</span>
+					</div>
+				</div>
+				
+				<div class="set">
+					<strong>Filter by Topics</strong>
+					<div ng-class="{'active': filtertopic==t.topic}" class="topic typeC cursor" ng-repeat="t in topics | orderBy:'-amount'" ng-click="setFilterTopic(t.topic)">
+						<span class="amt">{{t.amount}}</span>
+						<span class="close"><span class="octicon octicon-x"></span></span>
+						<span> {{t.topic}}</span>
+						<div class="bar" style="width: {{t.amount/count.max_topics*100}}%"></div>
+					</div>
+				</div>
+	</aside>
 
 	<!-- Main -->
 	<main>

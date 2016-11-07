@@ -7,7 +7,7 @@
 		"uuidString": "895943A5-9C86-4208-BFC4-1E3EF9710283"
 		}
 	],
-"creatorBuild": "25390",
+"creatorBuild": "25428",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -465,6 +465,24 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/vendor\/min\/jquery-1.10.2.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/vue.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/vue-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/vue.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/vue.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -1196,6 +1214,14 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/bower.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/bower-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/bower_components\/angular-1.1.6\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
@@ -1216,18 +1242,10 @@
 		"oAP": "\/bower_components\/angular-1.1.6\/.gitignore",
 		"oF": 0
 		},
-	"\/bower_components\/angular-1.1.6\/.jscs.json": {
-		"ft": 524288,
-		"oA": 2,
-		"oAP": "\/bower_components\/angular-1.1.6\/.jscs.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/bower_components\/angular-1.1.6\/.jscs.json.todo": {
+	"\/bower_components\/angular-1.1.6\/.jscsrc": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/bower_components\/angular-1.1.6\/.jscs.json.todo",
+		"oAP": "\/bower_components\/angular-1.1.6\/.jscsrc",
 		"oF": 0
 		},
 	"\/bower_components\/angular-1.1.6\/.jshintignore": {
@@ -1886,15 +1904,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/bower_components\/angular-1.1.6\/docs\/config\/services\/gitData.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 2,
-		"oAP": "\/bower_components\/angular-1.1.6\/docs\/config\/services\/gitData.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/bower_components\/angular-1.1.6\/docs\/config\/tag-defs\/sortOrder.js": {
 		"ft": 64,
 		"mi": 1,
@@ -1982,6 +1991,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/content\/api\/index.ngdoc",
+		"oF": 0
+		},
+	"\/bower_components\/angular-1.1.6\/docs\/content\/error\/$animate\/nocb.ngdoc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-1.1.6\/docs\/content\/error\/$animate\/nocb.ngdoc",
 		"oF": 0
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/content\/error\/$animate\/notcsel.ngdoc": {
@@ -2380,16 +2395,16 @@
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/content\/error\/ngModel\/nonassign.ngdoc",
 		"oF": 0
 		},
+	"\/bower_components\/angular-1.1.6\/docs\/content\/error\/ngModel\/numfmt.ngdoc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-1.1.6\/docs\/content\/error\/ngModel\/numfmt.ngdoc",
+		"oF": 0
+		},
 	"\/bower_components\/angular-1.1.6\/docs\/content\/error\/ngOptions\/iexp.ngdoc": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/content\/error\/ngOptions\/iexp.ngdoc",
-		"oF": 0
-		},
-	"\/bower_components\/angular-1.1.6\/docs\/content\/error\/ngOptions\/trkslct.ngdoc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/bower_components\/angular-1.1.6\/docs\/content\/error\/ngOptions\/trkslct.ngdoc",
 		"oF": 0
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/content\/error\/ngPattern\/noregexp.ngdoc": {
@@ -3852,6 +3867,12 @@
 		"oAP": "\/bower_components\/angular-1.1.6\/lib\/browserstack\/start_tunnel.sh",
 		"oF": 0
 		},
+	"\/bower_components\/angular-1.1.6\/lib\/browserstack\/teardown_tunnel.sh": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-1.1.6\/lib\/browserstack\/teardown_tunnel.sh",
+		"oF": 0
+		},
 	"\/bower_components\/angular-1.1.6\/lib\/grunt\/plugins.js": {
 		"ft": 64,
 		"mi": 1,
@@ -3892,6 +3913,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/lib\/saucelabs\/start_tunnel.sh",
+		"oF": 0
+		},
+	"\/bower_components\/angular-1.1.6\/lib\/saucelabs\/teardown_tunnel.sh": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-1.1.6\/lib\/saucelabs\/teardown_tunnel.sh",
 		"oF": 0
 		},
 	"\/bower_components\/angular-1.1.6\/lib\/versions\/version-info.js": {
@@ -4065,6 +4092,15 @@
 		"oAP": "\/bower_components\/angular-1.1.6\/scripts\/jenkins\/undo-release.sh",
 		"oF": 0
 		},
+	"\/bower_components\/angular-1.1.6\/scripts\/npm\/check-node-modules.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-1.1.6\/scripts\/npm\/check-node-modules.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/bower_components\/angular-1.1.6\/scripts\/npm\/clean-shrinkwrap.js": {
 		"ft": 64,
 		"mi": 1,
@@ -4074,11 +4110,14 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/bower_components\/angular-1.1.6\/scripts\/npm\/install-dependencies.sh": {
-		"ft": 8192,
+	"\/bower_components\/angular-1.1.6\/scripts\/npm\/copy-npm-shrinkwrap.js": {
+		"ft": 64,
+		"mi": 1,
 		"oA": 2,
-		"oAP": "\/bower_components\/angular-1.1.6\/scripts\/npm\/install-dependencies.sh",
-		"oF": 0
+		"oAP": "\/bower_components\/angular-1.1.6\/scripts\/npm\/copy-npm-shrinkwrap.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/bower_components\/angular-1.1.6\/scripts\/travis\/build.sh": {
 		"ft": 8192,
@@ -4102,6 +4141,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/scripts\/travis\/start_browser_provider.sh",
+		"oF": 0
+		},
+	"\/bower_components\/angular-1.1.6\/scripts\/travis\/tear_down_browser_provider.sh": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/angular-1.1.6\/scripts\/travis\/tear_down_browser_provider.sh",
 		"oF": 0
 		},
 	"\/bower_components\/angular-1.1.6\/scripts\/travis\/wait_for_browser_provider.sh": {
@@ -13565,6 +13610,12 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/bower_components\/eventEmitter\/UNLICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/eventEmitter\/UNLICENSE",
+		"oF": 0
+		},
 	"\/bower_components\/eventie\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
@@ -13793,6 +13844,101 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/bower_components\/jquery-bridget\/.bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/.bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/jquery-bridget\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/.gitignore",
+		"oF": 0
+		},
+	"\/bower_components\/jquery-bridget\/.jshintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/.jshintrc",
+		"oF": 0
+		},
+	"\/bower_components\/jquery-bridget\/bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/jquery-bridget\/component.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/component.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/jquery-bridget\/jquery.bridget.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/jquery.bridget.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/jquery-bridget\/package.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/package.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/jquery-bridget\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/jquery-bridget\/test\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/test\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/jquery-bridget\/test\/nice-greeter.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/test\/nice-greeter.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/jquery-bridget\/test\/tests.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/jquery-bridget\/test\/tests.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/bower_components\/jquery\/.bower.json": {
 		"ft": 524288,
@@ -14660,6 +14806,88 @@
 		"oAP": "\/bower_components\/masonry\/README.mdown",
 		"oF": 0
 		},
+	"\/bower_components\/masonry\/sandbox\/basic.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/basic.html",
+		"oF": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/bottom-up.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/bottom-up.html",
+		"oF": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/browserify\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/browserify\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/browserify\/main.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/browserify\/main.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/element-sizing.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/element-sizing.html",
+		"oF": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/fit-width.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/fit-width.html",
+		"oF": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/jquery.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/jquery.html",
+		"oF": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/require-js\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/require-js\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/require-js\/main.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/require-js\/main.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/right-to-left.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/right-to-left.html",
+		"oF": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/sandbox.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/sandbox.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/masonry\/sandbox\/stamps.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/masonry\/sandbox\/stamps.html",
+		"oF": 0
+		},
 	"\/bower_components\/matches-selector\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
@@ -14763,6 +14991,2820 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/bower_components\/vue\/.babelrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.babelrc",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/.bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/vue\/.eslintignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.eslintignore",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/.eslintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.eslintrc",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/.flowconfig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.flowconfig",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/.github\/CODE_OF_CONDUCT.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.github\/CODE_OF_CONDUCT.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/.github\/CONTRIBUTING.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.github\/CONTRIBUTING.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/.github\/ISSUE_TEMPLATE.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.github\/ISSUE_TEMPLATE.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/.github\/PULL_REQUEST_TEMPLATE.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.github\/PULL_REQUEST_TEMPLATE.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/.gitignore",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/BACKERS.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/BACKERS.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/big-table\/demo.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/big-table\/demo.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/big-table\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/big-table\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/big-table\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/big-table\/style.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/dbmon\/app.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/dbmon\/app.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/dbmon\/ENV.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/dbmon\/ENV.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/dbmon\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/dbmon\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/dbmon\/lib\/bootstrap.min.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/dbmon\/lib\/bootstrap.min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/dbmon\/lib\/memory-stats.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/dbmon\/lib\/memory-stats.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/dbmon\/lib\/monitor.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/dbmon\/lib\/monitor.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/dbmon\/lib\/styles.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/dbmon\/lib\/styles.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/reorder-list\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/reorder-list\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/ssr\/common.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/ssr\/common.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/ssr\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/ssr\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/ssr\/renderToStream.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/ssr\/renderToStream.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/ssr\/renderToString.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/ssr\/renderToString.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/svg\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/svg\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/benchmarks\/uptime\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/benchmarks\/uptime\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/build\/alias.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/alias.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/build.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/build.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/ci.sh": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/ci.sh",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/build\/config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/config.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/karma.base.config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/karma.base.config.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/karma.cover.config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/karma.cover.config.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/karma.dev.config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/karma.dev.config.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/karma.sauce.config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/karma.sauce.config.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/karma.unit.config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/karma.unit.config.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/nightwatch.config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/nightwatch.config.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/build\/release.sh": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/build\/release.sh",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/circle.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/circle.yml",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/dist\/vue.common.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/dist\/vue.common.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/dist\/vue.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/dist\/vue.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/dist\/vue.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/dist\/vue.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/examples\/commits\/app.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/commits\/app.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/examples\/commits\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/commits\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/elastic-header\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/elastic-header\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/elastic-header\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/elastic-header\/style.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/examples\/firebase\/app.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/firebase\/app.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/examples\/firebase\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/firebase\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/firebase\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/firebase\/style.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/examples\/grid\/grid.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/grid\/grid.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/examples\/grid\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/grid\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/grid\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/grid\/style.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/examples\/markdown\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/markdown\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/markdown\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/markdown\/style.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/examples\/modal\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/modal\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/modal\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/modal\/style.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/examples\/move-animations\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/move-animations\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/select2\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/select2\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/svg\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/svg\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/svg\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/svg\/style.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/bower_components\/vue\/examples\/svg\/svg.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/svg\/svg.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/examples\/todomvc\/app.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/todomvc\/app.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/examples\/todomvc\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/todomvc\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/todomvc\/readme.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/todomvc\/readme.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/examples\/tree\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/tree\/index.html",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/examples\/tree\/tree.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/examples\/tree\/tree.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/flow\/compiler.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/flow\/compiler.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/flow\/component.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/flow\/component.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/flow\/global-api.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/flow\/global-api.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/flow\/modules.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/flow\/modules.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/flow\/options.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/flow\/options.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/flow\/vnode.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/flow\/vnode.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/LICENSE",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/package.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/package.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/vue\/packages\/vue-server-renderer\/build.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/packages\/vue-server-renderer\/build.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/packages\/vue-server-renderer\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/packages\/vue-server-renderer\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/packages\/vue-server-renderer\/package.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/packages\/vue-server-renderer\/package.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/vue\/packages\/vue-server-renderer\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/packages\/vue-server-renderer\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/packages\/vue-template-compiler\/build.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/packages\/vue-template-compiler\/build.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/packages\/vue-template-compiler\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/packages\/vue-template-compiler\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/packages\/vue-template-compiler\/package.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/packages\/vue-template-compiler\/package.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/vue\/packages\/vue-template-compiler\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/packages\/vue-template-compiler\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/codegen\/events.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/codegen\/events.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/codegen\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/codegen\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/directives\/bind.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/directives\/bind.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/directives\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/directives\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/error-detector.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/error-detector.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/helpers.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/helpers.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/optimizer.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/optimizer.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/parser\/entity-decoder.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/parser\/entity-decoder.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/parser\/filter-parser.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/parser\/filter-parser.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/parser\/html-parser.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/parser\/html-parser.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/parser\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/parser\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/compiler\/parser\/text-parser.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/compiler\/parser\/text-parser.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/components\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/components\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/components\/keep-alive.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/components\/keep-alive.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/config.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/global-api\/assets.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/global-api\/assets.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/global-api\/extend.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/global-api\/extend.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/global-api\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/global-api\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/global-api\/mixin.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/global-api\/mixin.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/global-api\/use.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/global-api\/use.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/instance\/events.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/instance\/events.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/instance\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/instance\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/instance\/init.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/instance\/init.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/instance\/lifecycle.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/instance\/lifecycle.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/instance\/proxy.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/instance\/proxy.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/instance\/render.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/instance\/render.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/instance\/state.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/instance\/state.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/observer\/array.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/observer\/array.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/observer\/dep.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/observer\/dep.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/observer\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/observer\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/observer\/scheduler.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/observer\/scheduler.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/observer\/watcher.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/observer\/watcher.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/util\/debug.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/util\/debug.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/util\/env.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/util\/env.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/util\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/util\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/util\/lang.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/util\/lang.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/util\/options.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/util\/options.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/util\/props.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/util\/props.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/create-component.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/create-component.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/create-element.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/create-element.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/helpers\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/helpers\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/helpers\/merge-hook.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/helpers\/merge-hook.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/helpers\/normalize-children.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/helpers\/normalize-children.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/helpers\/update-listeners.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/helpers\/update-listeners.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/modules\/directives.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/modules\/directives.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/modules\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/modules\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/modules\/ref.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/modules\/ref.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/patch.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/patch.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/core\/vdom\/vnode.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/core\/vdom\/vnode.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/entries\/web-compiler.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/entries\/web-compiler.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/entries\/web-runtime-with-compiler.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/entries\/web-runtime-with-compiler.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/entries\/web-runtime.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/entries\/web-runtime.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/entries\/web-server-renderer.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/entries\/web-server-renderer.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/compiler\/directives\/html.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/compiler\/directives\/html.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/compiler\/directives\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/compiler\/directives\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/compiler\/directives\/model.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/compiler\/directives\/model.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/compiler\/directives\/text.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/compiler\/directives\/text.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/compiler\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/compiler\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/compiler\/modules\/class.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/compiler\/modules\/class.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/compiler\/modules\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/compiler\/modules\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/compiler\/modules\/style.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/compiler\/modules\/style.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/class-util.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/class-util.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/components\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/components\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/components\/transition-group.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/components\/transition-group.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/components\/transition.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/components\/transition.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/directives\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/directives\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/directives\/model.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/directives\/model.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/directives\/show.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/directives\/show.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/attrs.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/attrs.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/class.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/class.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/dom-props.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/dom-props.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/events.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/events.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/style.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/style.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/transition.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/modules\/transition.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/node-ops.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/node-ops.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/patch.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/patch.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/runtime\/transition-util.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/runtime\/transition-util.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/server\/directives\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/server\/directives\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/server\/directives\/show.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/server\/directives\/show.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/attrs.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/attrs.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/class.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/class.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/dom-props.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/dom-props.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/style.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/server\/modules\/style.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/util\/attrs.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/util\/attrs.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/util\/class.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/util\/class.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/util\/compat.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/util\/compat.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/util\/element.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/util\/element.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/platforms\/web\/util\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/platforms\/web\/util\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/server\/create-bundle-renderer.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/server\/create-bundle-renderer.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/server\/create-renderer.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/server\/create-renderer.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/server\/render-stream.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/server\/render-stream.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/server\/render.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/server\/render.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/server\/run-in-vm.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/server\/run-in-vm.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/server\/write.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/src\/server\/write.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/sfc\/parser.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/sfc\/parser.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/src\/shared\/util.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/src\/shared\/util.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/.eslintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/.eslintrc",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/runner.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/runner.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/specs\/commits.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/specs\/commits.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/specs\/grid.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/specs\/grid.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/specs\/markdown.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/specs\/markdown.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/specs\/modal.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/specs\/modal.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/specs\/select2.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/specs\/select2.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/specs\/svg.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/specs\/svg.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/specs\/todomvc.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/specs\/todomvc.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/e2e\/specs\/tree.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/e2e\/specs\/tree.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/helpers\/.eslintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/helpers\/.eslintrc",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/test\/helpers\/classlist.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/helpers\/classlist.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/helpers\/to-equal.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/helpers\/to-equal.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/helpers\/to-have-been-warned.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/test\/helpers\/to-have-been-warned.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/helpers\/trigger-event.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/helpers\/trigger-event.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/helpers\/vdom.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/helpers\/vdom.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/helpers\/wait-for-update.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/helpers\/wait-for-update.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/ssr\/.eslintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/.eslintrc",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/test\/ssr\/fixtures\/app.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/fixtures\/app.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/ssr\/fixtures\/cache.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/fixtures\/cache.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/ssr\/fixtures\/error.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/fixtures\/error.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/ssr\/jasmine.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/jasmine.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/vue\/test\/ssr\/ssr-bundle-render.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/ssr-bundle-render.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/ssr\/ssr-env.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/ssr-env.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/ssr\/ssr-stream.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/ssr-stream.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/ssr\/ssr-string.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/ssr\/ssr-string.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/.eslintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/.eslintrc",
+		"oF": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/component\/component-async.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/component\/component-async.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/component\/component-keep-alive.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/component\/component-keep-alive.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/component\/component-slot.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/component\/component-slot.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/component\/component.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/component\/component.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/bind.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/bind.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/class.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/class.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/cloak.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/cloak.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/for.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/for.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/html.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/html.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/if.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/if.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/model-checkbox.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/model-checkbox.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/model-component.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/model-component.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/model-dynamic.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/model-dynamic.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/model-file.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/model-file.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/model-radio.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/model-radio.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/model-select.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/model-select.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/model-text.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/model-text.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/on.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/on.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/once.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/once.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/pre.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/pre.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/show.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/show.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/style.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/style.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/directives\/text.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/directives\/text.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/filter\/filter.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/filter\/filter.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/global-api\/assets.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/global-api\/assets.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/global-api\/compile.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/global-api\/compile.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/global-api\/config.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/global-api\/config.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/global-api\/extend.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/global-api\/extend.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/global-api\/mixin.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/global-api\/mixin.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/global-api\/set-delete.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/global-api\/set-delete.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/global-api\/use.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/global-api\/use.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/instance\/init.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/instance\/init.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/instance\/methods-data.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/instance\/methods-data.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/instance\/methods-events.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/instance\/methods-events.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/instance\/methods-lifecycle.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/instance\/methods-lifecycle.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/instance\/properties.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/instance\/properties.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/_scopeId.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/_scopeId.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/components.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/components.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/computed.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/computed.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/data.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/data.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/delimiters.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/delimiters.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/directives.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/directives.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/el.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/el.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/extends.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/extends.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/functional.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/functional.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/lifecycle.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/lifecycle.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/methods.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/methods.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/mixins.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/mixins.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/name.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/name.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/parent.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/parent.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/props.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/props.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/propsData.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/propsData.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/render.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/render.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/template.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/template.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/options\/watch.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/options\/watch.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/ref.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/ref.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/transition\/inject-styles.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/transition\/inject-styles.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/transition\/transition-group.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/transition\/transition-group.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/transition\/transition-mode.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/transition\/transition-mode.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/features\/transition\/transition.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/features\/transition\/transition.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/index.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/index.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/compiler\/codegen.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/compiler\/codegen.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/compiler\/compiler-options.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/compiler\/compiler-options.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/compiler\/optimizer.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/compiler\/optimizer.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/compiler\/parser.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/compiler\/parser.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/observer\/observer.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/observer\/observer.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/observer\/scheduler.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/observer\/scheduler.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/observer\/watcher.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/observer\/watcher.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/sfc\/sfc-parser.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/sfc\/sfc-parser.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/create-component.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/create-component.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/create-element.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/create-element.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/attrs.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/attrs.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/class.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/class.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/directive.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/directive.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/dom-props.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/dom-props.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/events.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/events.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/style.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/modules\/style.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/children.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/children.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/edge-cases.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/edge-cases.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/element.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/element.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/hooks.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/hooks.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/hydration.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/test\/unit\/modules\/vdom\/patch\/hydration.spec.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bower_components\/vue\/types\/index.d.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/types\/index.d.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
+	"\/bower_components\/vue\/types\/options.d.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/types\/options.d.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
+	"\/bower_components\/vue\/types\/plugin.d.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/types\/plugin.d.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
+	"\/bower_components\/vue\/types\/test\/augmentation-test.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/types\/test\/augmentation-test.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
+	"\/bower_components\/vue\/types\/test\/options-test.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/types\/test\/options-test.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
+	"\/bower_components\/vue\/types\/test\/plugin-test.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/types\/test\/plugin-test.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
+	"\/bower_components\/vue\/types\/test\/tsconfig.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/types\/test\/tsconfig.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/vue\/types\/test\/vue-test.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/types\/test\/vue-test.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
+	"\/bower_components\/vue\/types\/typings.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/bower_components\/vue\/types\/typings.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/bower_components\/vue\/types\/vnode.d.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/types\/vnode.d.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
+	"\/bower_components\/vue\/types\/vue.d.ts": {
+		"cDF": 0,
+		"ft": 128,
+		"jxM": 0,
+		"ma": 0,
+		"mi": 0,
+		"moR": 0,
+		"moT": 0,
+		"nIA": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/vue\/types\/vue.d.ts",
+		"oF": 0,
+		"pCE": 0,
+		"rC": 0,
+		"sIE": 0,
+		"tEC": 0
+		},
 	"\/codekit-config.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -14770,6 +17812,12 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/includes\/_foot-vue.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/includes\/_foot-vue.html",
+		"oF": 0
 		},
 	"\/includes\/_foot.kit": {
 		"ft": 2048,
@@ -14781,6 +17829,12 @@
 		"ft": 2048,
 		"oA": 1,
 		"oAP": "\/includes\/_head-nojs.html",
+		"oF": 0
+		},
+	"\/includes\/_head-vue.kit": {
+		"ft": 2048,
+		"oA": 1,
+		"oAP": "\/includes\/_head-vue.html",
 		"oF": 0
 		},
 	"\/includes\/_head.kit": {
@@ -17160,6 +20214,190 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/prototypes\/09-vue-app\/.babelrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/09-vue-app\/.babelrc",
+		"oF": 0
+		},
+	"\/prototypes\/09-vue-app\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/09-vue-app\/.gitignore",
+		"oF": 0
+		},
+	"\/prototypes\/09-vue-app\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/09-vue-app\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/09-vue-app\/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "\/build\/prototypes\/09-vue-app\/node_modules",
+		"oF": 0
+		},
+	"\/prototypes\/09-vue-app\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/09-vue-app\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/09-vue-app\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/prototypes\/09-vue-app\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/prototypes\/09-vue-app\/src\/App.vue": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/09-vue-app\/src\/App.vue",
+		"oF": 0
+		},
+	"\/prototypes\/09-vue-app\/src\/assets\/logo.png": {
+		"ft": 32768,
+		"iS": 6849,
+		"oA": 0,
+		"oAP": "\/prototypes\/09-vue-app\/src\/assets\/logo.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/09-vue-app\/src\/main.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/09-vue-app\/src\/min\/main-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/09-vue-app\/webpack.config.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/09-vue-app\/min\/webpack.config-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/09-vue\/app.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/09-vue\/min\/app-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/09-vue\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/09-vue\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/09-vue\/index.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/prototypes\/09-vue\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/09-vue\/min\/app-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/09-vue\/min\/min\/app-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/09-vue\/src\/test.vue": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/09-vue\/src\/test.vue",
+		"oF": 0
+		},
+	"\/prototypes\/10-serp\/01-default\/01.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/10-serp\/01-default\/01-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/01-default\/01.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/prototypes\/10-serp\/01-default\/01.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/prototypes\/10-serp\/01-default\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/10-serp\/01-default\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/10-serp\/01-default\/index.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/prototypes\/10-serp\/01-default\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/10-serp\/_default.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/css\/_default.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/prototypes\/10-serp\/app.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/10-serp\/min\/app-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/10-serp\/min\/app-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/10-serp\/min\/min\/app-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 0,
@@ -17204,6 +20442,9 @@
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"async-generator-functions": {
+			"active": 0
+			},
 		"async-to-generator": {
 			"active": 0
 			},
@@ -18292,6 +21533,10 @@
 			"active": 0,
 			"optionString": "{'ignoreDestructuring': false, 'ignoreImport': false, 'ignoreExport': false}"
 			},
+		"no-useless-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-var": {
 			"active": 0,
 			"optionString": ""
@@ -18359,10 +21604,6 @@
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
-			},
-		"prefer-reflect": {
-			"active": 0,
-			"optionString": "{'exceptions': []}"
 			},
 		"prefer-rest-params": {
 			"active": 0,

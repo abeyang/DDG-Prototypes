@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
@@ -13,6 +12,7 @@
     
 </head>
 <body ng-controller="UserPageController">
+
 
 <!-- Load all other resources here: -->
 <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" charset="utf-8">
@@ -35,6 +35,7 @@
 <script src="users/mattr555.js"></script>
 <script src="users/MrChrisW.js"></script>
 <script src="users/all_ias.js"></script>
+
 <script src="UserPage.js"></script>
 
 <!-- Toggle between users -->
@@ -43,44 +44,48 @@
 	  <option ng-repeat="user in users | filter: {hasInfo:true}" value="{{user.username}}">{{user.username}}</option>
 	</select>	
 </div>
+
 <!-- Header -->
 <header>
 	<div class="container">
-	<div class="stats">
-		<div class="third">
-			<span>All Instant Answers</span>
-			<h2>{{count.all_ias}}</h2>
-		</div>
-		<div class="third">
-			<span>Open Pull Requests</span>
-			<h2>{{count.open_prs}}</h2>
-		</div>
-		<div class="third">
-			<span>Closed Pull Requests</span>
-			<h2>{{count.closed_prs}}</h2>
-		</div>
-	</div>		
-</div></header>
+		<div class="stats">
+			<div class="third">
+				<span>All Instant Answers</span>
+				<h2>{{count.all_ias}}</h2>
+			</div>
+			<div class="third">
+				<span>Open Pull Requests</span>
+				<h2>{{count.open_prs}}</h2>
+			</div>
+			<div class="third">
+				<span>Closed Pull Requests</span>
+				<h2>{{count.closed_prs}}</h2>
+			</div>
+		</div>		
+	</div>
+</header>
 
 <div class="container">
 	
 	<!-- Sidebar -->
 	<aside>
 		<div class="profile card">
-	<img src="{{user.avatar_url || user.gh_data.avatar_url}}" />
-	<div class="content">
-		<h3>{{user.name}}</h3>
-		<div class="gray">
-			<a href="http://github.com/{{user.login}}">@{{user.login}}</a>
-			<br />{{user.location}}		
+			<img src="{{user.avatar_url || user.gh_data.avatar_url}}" />
+			<div class="content">
+				<h3>{{user.name}}</h3>
+				<div class="gray">
+					<a href="http://github.com/{{user.login}}">@{{user.login}}</a>
+					<br />{{user.location}}		
+				</div>
+				
+			</div>
 		</div>
 		
-	</div>
-</div>
 		<div class="topic" ng-repeat="t in topics | orderBy:'-amount'">
-	<span class="amt">{{t.amount}}</span>
-	{{t.topic}}
-</div>	</aside>
+					<span class="amt">{{t.amount}}</span>
+					{{t.topic}}
+				</div>
+	</aside>
 
 	<!-- Main -->
 	<main>
