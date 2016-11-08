@@ -7,7 +7,8 @@
   padding: 10px;
   border-radius: 3px; }
   .result:hover {
-    background-color: #F7F7F7; }
+    background-color: #F7F7F7;
+    cursor: pointer; }
     .result:hover .url .more {
       display: inline-block; }
     .result:hover h4 a, .result:hover h4 a b {

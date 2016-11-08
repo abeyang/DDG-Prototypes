@@ -7,6 +7,8 @@ $neue-gray:		#999;
 $gray: 			#888;
 $dark-gray: 	#333;
 $current-blue: 	#4495d4;
+$purple:		#5558D8;
+$dark-purple:	#474BB8;
 
 #serp {
 	margin-top: 10px;
@@ -20,6 +22,7 @@ $current-blue: 	#4495d4;
 
 	&:hover {
 		background-color: #F7F7F7;
+		cursor: pointer;
 
 		.url .more { display: inline-block; }
 
@@ -61,7 +64,7 @@ $current-blue: 	#4495d4;
 	}
 }
 
-// functions
+// functions + generic classes
 @function em($px, $base: $base-font-size) {
     @return ($px / $base) * 1em;
 }

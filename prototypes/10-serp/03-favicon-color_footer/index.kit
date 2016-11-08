@@ -1,12 +1,10 @@
-<!-- THOM'S VERSION -->
-<!-- $title: 02 -->
+<!-- $title: 03 -->
 
 <!-- $dir: ../../../ -->
 <!-- @include ../../../includes/head-vue -->
 
 <!-- Load all other resources here: -->
 <link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
-
 
 <div id="serp" class="container serp">
 	<div v-for="serp in serps">
@@ -18,10 +16,13 @@
 <template id="serp-result">
 	<div class="result" @click="gotoLink()">
 		<h4><a :href="getLink()" v-html="serp.title"></a></h4>
-		<p class="snippet" v-html="serp.snippet"></p>
+		<p class="snippet">
+			<span v-if="serp.date">{{ getDate() }} &mdash; </span>
+			<span v-html="serp.snippet"></span>
+		</p>
 		<p class="url">
+			<img height="16" width="16" :src="serp.favicon">
 			<a :href="getLink()">{{ serp.url }}</a>
-			<a class="more" href="#">More results</a>
 		</p>
 	</div>
 </template>

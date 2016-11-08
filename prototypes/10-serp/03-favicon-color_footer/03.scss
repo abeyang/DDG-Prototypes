@@ -8,6 +8,11 @@
 			color: $dark-gray; 
 			text-decoration: none;
 		}
+
+		.url img {
+			opacity: 1;
+			filter: grayscale(0);
+		}
 	}
 
 	h4 { font-size: em(17px, 14px) }
@@ -20,19 +25,16 @@
 
 	.url {
 		margin-top: 0.1em; 
+
+		img { 
+			opacity: 0.5; 
+			filter: grayscale(1);
+		}
+
 		a { 
-			padding-left: 0;
 			color: $current-blue; 
 
 			&:visited { color: purple; }
-
-			&.more {
-				margin-left: 12px;
-				padding-left: 12px;
-				border-left: 1px solid $lighter-gray;
-				float: none;
-				color: $neue-gray;
-			}
 		}
 	}
 }

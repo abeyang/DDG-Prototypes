@@ -12,6 +12,7 @@
 
 	<!-- JS -->
 	<script src="../../../assets/js/vue.js"></script>
+	<script src="../../../assets/js/moment.min.js"></script>
     
 </head>
 <body>
@@ -41,12 +42,12 @@
 </div><!-- /.container.serp -->
 
 <template id="serp-result">
-	<div class="result">
-		<h4><a v-bind:href="'http://' + serp.url" v-html="serp.title"></a></h4>
+	<div class="result" @click="gotoLink()">
+		<h4><a :href="getLink()" v-html="serp.title"></a></h4>
 		<p class="snippet" v-html="serp.snippet"></p>
 		<p class="url">
 			<a class="more" href="#">More results</a>
-			<img height="16" width="16" v-bind:src="serp.favicon"> <a v-bind:href="'http://' + serp.url">{{ serp.url }}</a>
+			<img height="16" width="16" :src="serp.favicon"> <a :href="getLink()">{{ serp.url }}</a>
 		</p>
 	</div>
 </template>

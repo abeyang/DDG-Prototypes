@@ -42,6 +42,10 @@
   color: #333;
   text-decoration: none; }
 
+#serp .result:hover .url img {
+  opacity: 1;
+  filter: grayscale(0); }
+
 #serp .result h4 {
   font-size: 1.2142857143em; }
 
@@ -52,14 +56,10 @@
 
 #serp .result .url {
   margin-top: 0.1em; }
+  #serp .result .url img {
+    opacity: 0.5;
+    filter: grayscale(1); }
   #serp .result .url a {
-    padding-left: 0;
     color: #4495d4; }
     #serp .result .url a:visited {
       color: purple; }
-    #serp .result .url a.more {
-      margin-left: 12px;
-      padding-left: 12px;
-      border-left: 1px solid #ddd;
-      float: none;
-      color: #999; }
