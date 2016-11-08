@@ -1,6 +1,9 @@
 // DEFAULT
 // try to mimic default settings as much as possible
 
+$lightest-gray:	#eee;
+$lighter-gray:	#ddd;
+$neue-gray:		#999;
 $gray: 			#888;
 $dark-gray: 	#333;
 $current-blue: 	#4495d4;
@@ -56,4 +59,9 @@ $current-blue: 	#4495d4;
 			display: none;
 		}
 	}
+}
+
+// functions
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
 }

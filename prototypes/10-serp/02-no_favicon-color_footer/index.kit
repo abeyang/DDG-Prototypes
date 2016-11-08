@@ -1,0 +1,29 @@
+<!-- THOM'S VERSION -->
+<!-- $title: 02 -->
+
+<!-- $dir: ../../../ -->
+<!-- @include ../../../includes/head-vue -->
+
+<!-- Load all other resources here: -->
+<link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
+
+
+<div id="serp" class="container serp">
+	<div v-for="serp in serps">
+		<serp-result :serp="serp"></serp-result>	
+	</div>
+			
+</div><!-- /.container.serp -->
+
+<template id="serp-result">
+	<div class="result">
+		<h4><a v-bind:href="'http://' + serp.url" v-html="serp.title"></a></h4>
+		<p class="snippet" v-html="serp.snippet"></p>
+		<p class="url">
+			<a v-bind:href="'http://' + serp.url">{{ serp.url }}</a>
+			<a class="more" href="#">More results</a>
+		</p>
+	</div>
+</template>
+
+<!-- @include ../../../includes/foot-vue -->

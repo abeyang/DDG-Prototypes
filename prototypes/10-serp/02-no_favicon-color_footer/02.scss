@@ -1,0 +1,39 @@
+// Import default SERP SCSS
+@import "../default";
+
+// Changes
+#serp .result {
+	&:hover {
+		h4 a, h4 a b { 
+			color: $dark-gray; 
+			text-decoration: none;
+		}
+	}
+
+	h4 { font-size: em(17px, 14px) }
+
+	p { 
+		margin-top: 0.3em;
+		font-size: em(14px, 14px); 
+		line-height: 1.5;
+	}
+
+	.url {
+		margin-top: 0.1em; 
+		a { 
+			padding-left: 0;
+			color: $current-blue; 
+
+			&:visited { color: purple; }
+
+			&.more {
+				margin-left: 12px;
+				padding-left: 12px;
+				border-left: 1px solid $lighter-gray;
+				display: inline-block;
+				float: none;
+				color: $neue-gray;
+			}
+		}
+	}
+}

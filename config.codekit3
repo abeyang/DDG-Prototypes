@@ -20367,6 +20367,41 @@
 		"oAP": "\/prototypes\/10-serp\/01-default\/index.html",
 		"oF": 0
 		},
+	"\/prototypes\/10-serp\/02-no_favicon-color_footer\/02.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/10-serp\/02-no_favicon-color_footer\/02-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/02-no_favicon-color_footer\/02.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/prototypes\/10-serp\/02-no_favicon-color_footer\/02.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/prototypes\/10-serp\/02-no_favicon-color_footer\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/10-serp\/02-no_favicon-color_footer\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/10-serp\/02-no_favicon-color_footer\/index.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/prototypes\/10-serp\/02-no_favicon-color_footer\/index.html",
+		"oF": 0
+		},
 	"\/prototypes\/10-serp\/_default.scss": {
 		"aP": 0,
 		"bl": 0,

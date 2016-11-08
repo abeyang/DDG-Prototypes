@@ -1,0 +1,65 @@
+#serp {
+  margin-top: 10px;
+  margin-left: 100px; }
+
+.result {
+  margin-bottom: 0.4em;
+  padding: 10px;
+  border-radius: 3px; }
+  .result:hover {
+    background-color: #F7F7F7; }
+    .result:hover .url .more {
+      display: inline-block; }
+    .result:hover h4 a, .result:hover h4 a b {
+      color: #4495d4; }
+  .result h4 {
+    font-weight: 400; }
+  .result p {
+    margin: 0;
+    margin-top: 0.1em; }
+  .result b {
+    color: #333; }
+  .result a {
+    color: #333;
+    text-decoration: none; }
+    .result a:hover {
+      color: #4495d4;
+      text-decoration: underline; }
+  .result .url a {
+    padding-left: 3px;
+    color: #888; }
+    .result .url a:hover {
+      color: #4495d4; }
+  .result .url img {
+    position: relative;
+    top: -1px; }
+  .result .url .more {
+    float: right;
+    display: none; }
+
+#serp .result:hover h4 a, #serp .result:hover h4 a b {
+  color: #333;
+  text-decoration: none; }
+
+#serp .result h4 {
+  font-size: 1.2142857143em; }
+
+#serp .result p {
+  margin-top: 0.3em;
+  font-size: 1em;
+  line-height: 1.5; }
+
+#serp .result .url {
+  margin-top: 0.1em; }
+  #serp .result .url a {
+    padding-left: 0;
+    color: #4495d4; }
+    #serp .result .url a:visited {
+      color: purple; }
+    #serp .result .url a.more {
+      margin-left: 12px;
+      padding-left: 12px;
+      border-left: 1px solid #ddd;
+      display: inline-block;
+      float: none;
+      color: #999; }
