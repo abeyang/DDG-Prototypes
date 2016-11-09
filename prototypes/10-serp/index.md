@@ -11,3 +11,5 @@ Playing around with Thom's version. Simplified on-hover.
 - put the favicon back in, but simplified it. 
 - added dates
 - removed "more results"
+
+## 04. [Custom](04-custom/)

@@ -20402,6 +20402,16 @@
 		"oAP": "\/prototypes\/10-serp\/02-no_favicon-color_footer\/index.html",
 		"oF": 0
 		},
+	"\/prototypes\/10-serp\/03-favicon-color_footer\/03.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/10-serp\/03-favicon-color_footer\/03-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/prototypes\/10-serp\/03-favicon-color_footer\/03.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -20425,6 +20435,31 @@
 		"ft": 2048,
 		"oA": 0,
 		"oAP": "\/prototypes\/10-serp\/03-favicon-color_footer\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/04.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/04.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/prototypes\/10-serp\/04-custom\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/index.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/index.html",
 		"oF": 0
 		},
 	"\/prototypes\/10-serp\/_default.scss": {

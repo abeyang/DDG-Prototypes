@@ -44,12 +44,12 @@
 	<div class="result" @click="gotoLink()">
 		<h4><a :href="getLink()" v-html="serp.title"></a></h4>
 		<p class="snippet">
-			<span v-if="serp.date">{{ getDate() }} &mdash; </span>
 			<span v-html="serp.snippet"></span>
 		</p>
 		<p class="url">
 			<img height="16" width="16" :src="serp.favicon">
 			<a :href="getLink()">{{ serp.url }}</a>
+			<span class="date" v-if="serp.date">{{ getDate() }}</span>
 		</p>
 	</div>
 </template>

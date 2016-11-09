@@ -63,3 +63,9 @@
     color: #4495d4; }
     #serp .result .url a:visited {
       color: purple; }
+
+#serp .result .date {
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid #ddd;
+  color: #999; }

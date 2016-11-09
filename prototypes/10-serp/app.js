@@ -11,7 +11,7 @@ var app = new Vue({
 
 // serp
 Vue.component('serp-result', {
-	props: ['serp'],
+	props: ['serp', 'x'],
 	template: '#serp-result',
 	methods: {
 		// a computed getter
@@ -38,19 +38,19 @@ var serp = new Vue({
 			{
 				title: '<b>Tycho</b>',
 				snippet: 'RECORD LABELS. Worldwide minus Japan: Ghostly International / Jeff Owens - jeff@ghostly.com Japan: Hostess / Ben Munro - ben@hostess.co.jp Australia/NewZealand',
-				url: 'tychomusic.com',
+				url: '<b>tycho</b>music.com',
 				favicon: 'https://icons.duckduckgo.com/ip2/tychomusic.com.ico'
 			},
 			{
 				title: '<b>Tycho</b> Brahe - Wikipedia',
 				snippet: '<b>Tycho</b> was born as heir to several of Denmark\'s most influential noble families and in addition to his immediate ancestry with the Brahe and the Bille',
-				url: 'en.wikipedia.org/wiki/Tycho_Brahe',
+				url: 'en.wikipedia.org/wiki/<b>Tycho</b>_Brahe',
 				favicon: 'https://duckduckgo.com/assets/icons/favicons/wikipedia.2x.png'
 			},
 			{
 				title: '<b>Tycho</b> — Free listening, videos, concerts, stats and photos at ...',
 				snippet: 'Scott Hansen (born 1976/1977), professionally known as <b>Tycho</b>, is an American ambient music artist and producer, who is known as ISO50 for his photographic and design',
-				url: 'last.fm/music/Tycho',
+				url: 'last.fm/music/<b>Tycho</b>',
 				favicon: 'https://icons.duckduckgo.com/ip2/www.last.fm.ico'
 			},
 			{
@@ -70,7 +70,7 @@ var serp = new Vue({
 			{
 				title: '<b>Tycho</b> — Ghostly International',
 				snippet: 'As <b>Tycho</b>, Scott Hansen blends swirling melodies into vaguely triumphant arcs that crisscross between stuttering beats and vocal samples, creating rolling sonic',
-				url: 'ghostly.com/artists/tycho',
+				url: 'ghostly.com/artists/<b>tycho</b>',
 				favicon: 'https://icons.duckduckgo.com/ip2/ghostly.com.ico'
 			},
 			{
@@ -83,10 +83,55 @@ var serp = new Vue({
 			{
 				title: 'Chandra :: Photo Album :: <b>Tycho\'s</b> Supernova Remnant :: May 12...',
 				snippet: 'For the first time, a movie has been made of the evolution of <b>Tycho\'s</b> supernova remnant. This sequence includes X-rays observations from Chandra spaced out over a',
-				url: 'chandra.harvard.edu/photo/2016/tycho/',
+				url: 'chandra.harvard.edu/photo/2016/<b>tycho</b>/',
 				favicon: 'https://icons.duckduckgo.com/ip2/chandra.harvard.edu.ico',
 				date: '20160512'
 			}
-		]
+		],
+		// dark ui toggles:
+		toggle: {
+			title: true,
+			snippet: true,
+			url: true,
+			favicon: true,
+			result: true,
+			onhover: false,
+			presets: false
+		},
+		// settings:
+		x: {
+			title: {
+				color: '#333',
+				size: '17px',
+				weight: 'bold',	// bold | normal | unbold
+				margin: '0.3em'
+			},
+			snippet: {
+				color: '#666',
+				size: '14px',
+				weight: 'normal',	// normal | unbold
+				lineheight: '1.5',
+				margin: '0.1em'
+			},
+			url: {
+				color: '#888',
+				size: '14px',
+				weight: 'unbold',	// normal | unbold
+				aftersnippet: true
+			},
+			favicon: {
+				type: 'grayscale'	// hide | default | grayscale
+			},
+			result: {
+				margin: '0.4em',
+				width: '540px',
+				separator: false
+			}
+		}
+	},
+	methods: {
+		showhide: function(item) {
+			this.toggle[item] = !this.toggle[item];
+		}
 	}
 });

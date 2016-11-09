@@ -1,0 +1,136 @@
+// DEFAULT
+// try to mimic default settings as much as possible
+
+$white:			#fff;
+$lightest-gray:	#eee;
+$lighter-gray:	#ddd;
+$neue-gray:		#999;
+$gray: 			#888;
+$slight-gray:	#4a4a4a;
+$dark-gray: 	#333;
+$current-blue: 	#4495d4;
+$purple:		#5558D8;
+$dark-purple:	#474BB8;
+
+$ui:			13px;
+$pad:			10px 15px;
+
+#serp {
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+h4.bold, .bold { font-weight: 600; }
+h4.normal, .normal { font-weight: 400; }
+h4.unbold, .unbold { 
+	font-weight: 400; 
+
+	b { font-weight: 400; }
+}
+
+.result {
+	padding: 10px;
+	border-radius: 3px;
+
+	&:hover {
+		background-color: #F7F7F7;
+		cursor: pointer;
+
+		.url .more { display: inline-block; }
+
+		h4 a, h4 a b { color: $current-blue; }
+	}
+
+	p {
+		margin: 0;
+	}
+	// b { color: #333; }
+
+	a { 
+		color: inherit;
+		text-decoration: none;
+
+		&:hover { 
+			color: $current-blue;
+			text-decoration: underline; 
+		}
+	}
+	.url {
+
+		a { 
+			// color: $gray; 
+
+			// &:hover { color: $current-blue; }
+		}
+		img {
+			position: relative;
+			top: -1px;
+			margin-right: 3px;
+
+			&.grayscale {
+				opacity: 0.5; 
+				filter: grayscale(1);
+
+				// TODO: NEED ON-HOVER STATE
+			}
+		}
+		.more { 
+			float: right; 
+			display: none;
+		}
+	}
+}
+
+// functions + generic classes
+.hide { display: none;}
+
+#x {
+	position: absolute;
+	top: 120px;
+	right: 40px;
+	width: 360px;
+
+	border-radius: 3px;
+
+	background-color: $slight-gray;
+	color: $white;
+	font-size: $ui;
+
+	.section {
+		padding: $pad;
+	}
+	.row {
+		padding-bottom: 10px;
+	}
+
+	h5, h6, p, strong { font-size: $ui }
+
+	h5 {
+		padding: $pad;
+		background-color: $dark-gray;
+		border-top: 1px solid #222;
+
+		&:hover { cursor: pointer; }
+	}
+
+	strong {
+		font-weight: normal;
+		text-align: right;
+		color: rgba(255,255,255, 0.5);
+		display: inline-block;
+		width: 100px;
+		padding-right: 10px;
+	}
+
+	label { 
+		display: inline-block;
+		width: 45px; 
+	}
+	input {
+		background: #333;
+		border: 1px solid #222;
+		color: #ccc;
+
+		&[type="text"] { width: 100px; }
+	}
+}

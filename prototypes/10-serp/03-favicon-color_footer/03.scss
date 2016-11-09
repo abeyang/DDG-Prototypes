@@ -37,4 +37,11 @@
 			&:visited { color: purple; }
 		}
 	}
+
+	.date {
+		margin-left: 12px;
+		padding-left: 12px;
+		border-left: 1px solid $lighter-gray;
+		color: $neue-gray;
+	}
 }
