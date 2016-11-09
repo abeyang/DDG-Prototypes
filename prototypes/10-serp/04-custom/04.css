@@ -58,6 +58,15 @@ h4.unbold, .unbold {
     padding: 10px 15px; }
   #x .row {
     padding-bottom: 10px; }
+  #x .tabs {
+    padding-bottom: 0; }
+    #x .tabs span {
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-right: 10px;
+      cursor: pointer; }
+      #x .tabs span.active {
+        border-bottom: 2px solid #4495d4; }
   #x h5, #x h6, #x p, #x strong {
     font-size: 13px; }
   #x h5 {

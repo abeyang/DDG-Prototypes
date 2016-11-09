@@ -39,8 +39,15 @@
 	</div>
 
 	<aside id="x">
+		<div class="tabs section">
+			<span @click="toggle.onhover = false" :class="{active: !toggle.onhover}">Default</span>
+			<span @click="toggle.onhover = true" :class="{active: toggle.onhover}">On-Hover</span>
+
+			<!-- TODO: show presets here -->
+		</div>
+
 		<h5 @click="showhide('result')">SERP Result</h5>
-		<div class="section" v-show="toggle.result">
+		<div class="section" v-show="toggle.result && !toggle.onhover">
 			<div class="row">
 				<strong>width</strong>
 				<input type="text" v-model="x.result.width">
@@ -53,7 +60,11 @@
 
 			<!-- TODO: add "separator" -->
 		</div>
-		
+		<!-- on-hover: -->
+		<div class="section" v-show="toggle.result && toggle.onhover">
+			todo...
+		</div>
+
 		<h5 @click="showhide('title')">Title</h5>
 		<div class="section" v-show="toggle.title">
 			<div class="row">

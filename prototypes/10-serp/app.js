@@ -95,10 +95,9 @@ var serp = new Vue({
 			url: true,
 			favicon: true,
 			result: true,
-			onhover: false,
-			presets: false
+			onhover: false
 		},
-		// settings:
+		// default settings:
 		x: {
 			title: {
 				color: '#333',
