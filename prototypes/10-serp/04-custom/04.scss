@@ -33,35 +33,33 @@ h4.unbold, .unbold {
 	border-radius: 3px;
 
 	&:hover {
-		background-color: #F7F7F7;
 		cursor: pointer;
 
 		.url .more { display: inline-block; }
 
-		h4 a, h4 a b { color: $current-blue; }
+		// h4 a, h4 a b { color: $current-blue; }
 	}
 
 	p {
 		margin: 0;
 	}
-	// b { color: #333; }
 
 	a { 
 		color: inherit;
 		text-decoration: none;
 
 		&:hover { 
-			color: $current-blue;
-			text-decoration: underline; 
+			// color: $current-blue;
+			// text-decoration: underline; 
+		}
+
+		&:visited { 
+			&.default { color: default; }
+			&.purple { color: #6d59a3; }
+			&.gray { color: #888; }
 		}
 	}
 	.url {
-
-		a { 
-			// color: $gray; 
-
-			// &:hover { color: $current-blue; }
-		}
 		img {
 			position: relative;
 			top: -1px;
@@ -70,8 +68,11 @@ h4.unbold, .unbold {
 			&.grayscale {
 				opacity: 0.5; 
 				filter: grayscale(1);
+			}
 
-				// TODO: NEED ON-HOVER STATE
+			&.default {
+				opacity: 1;
+				filter: grayscale(0);
 			}
 		}
 		.more { 

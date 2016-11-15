@@ -17,20 +17,20 @@ h4.unbold, .unbold {
   padding: 10px;
   border-radius: 3px; }
   .result:hover {
-    background-color: #F7F7F7;
     cursor: pointer; }
     .result:hover .url .more {
       display: inline-block; }
-    .result:hover h4 a, .result:hover h4 a b {
-      color: #4495d4; }
   .result p {
     margin: 0; }
   .result a {
     color: inherit;
     text-decoration: none; }
-    .result a:hover {
-      color: #4495d4;
-      text-decoration: underline; }
+    .result a:visited.default {
+      color: default; }
+    .result a:visited.purple {
+      color: #6d59a3; }
+    .result a:visited.gray {
+      color: #888; }
   .result .url img {
     position: relative;
     top: -1px;
@@ -38,6 +38,9 @@ h4.unbold, .unbold {
     .result .url img.grayscale {
       opacity: 0.5;
       filter: grayscale(1); }
+    .result .url img.default {
+      opacity: 1;
+      filter: grayscale(0); }
   .result .url .more {
     float: right;
     display: none; }

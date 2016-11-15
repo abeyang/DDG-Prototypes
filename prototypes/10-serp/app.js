@@ -17,7 +17,9 @@ Vue.component('serp-result', {
 		// a computed getter
 		getLink: function () {
 			// `this` points to the vm instance
-			return 'http://' + this.serp.url;
+			var url = this.serp.url;
+			// strip html (b tags):
+			return 'http://' + String(url).replace('<b>', '').replace('</b>', '');
 		},
 		gotoLink: function() {
 			location.assign(this.getLink());
@@ -27,6 +29,28 @@ Vue.component('serp-result', {
 			if (date) {
 				return moment(date, "YYYYMMDD").format("MMM DD, YYYY");
 			}
+		},
+		hoverResult: function(event) {
+			// console.log(event.currentTarget.getElementsByClassName('titlelink')[0].style);
+			// backing:
+			event.currentTarget.style.backgroundColor = this.x.result.backing
+			// title:
+			event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.result.title_hover;
+			// url:
+			event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.result.url_hover;
+			// favicon: 
+			event.currentTarget.getElementsByTagName('img')[0].className = this.x.result.favicon_hover;
+		},
+		outResult: function(event) {
+			// console.log(event.currentTarget.style);
+			// backing:
+			event.currentTarget.style.backgroundColor = 'transparent';
+			// title:
+			event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.title.color;
+			// url:
+			event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.url.color;
+			// favicon:
+			event.currentTarget.getElementsByTagName('img')[0].className = this.x.favicon.type;
 		}
 	}
 });
@@ -95,15 +119,16 @@ var serp = new Vue({
 			url: true,
 			favicon: true,
 			result: true,
-			onhover: false
+			misc: false
 		},
 		// default settings:
 		x: {
 			title: {
 				color: '#333',
 				size: '17px',
-				weight: 'bold',	// bold | normal | unbold
-				margin: '0.3em'
+				weight: 'bold',		// bold | normal | unbold
+				margin: '0.3em',
+				visited: 'default'	// default | purple | gray
 			},
 			snippet: {
 				color: '#666',
@@ -113,10 +138,11 @@ var serp = new Vue({
 				margin: '0.1em'
 			},
 			url: {
-				color: '#888',
+				color: '#0090ff',
 				size: '14px',
 				weight: 'unbold',	// normal | unbold
-				aftersnippet: true
+				aftersnippet: true,
+				visited: 'purple'	// default | purple | gray
 			},
 			favicon: {
 				type: 'grayscale'	// hide | default | grayscale
@@ -124,7 +150,11 @@ var serp = new Vue({
 			result: {
 				margin: '0.4em',
 				width: '540px',
-				separator: false
+				separator: false,
+				title_hover: 'inherit',
+				url_hover: 'inherit',
+				favicon_hover: 'default', // hide | default | grayscale
+				backing: '#F7F7F7'
 			}
 		}
 	},
@@ -132,5 +162,6 @@ var serp = new Vue({
 		showhide: function(item) {
 			this.toggle[item] = !this.toggle[item];
 		}
+
 	}
 });
