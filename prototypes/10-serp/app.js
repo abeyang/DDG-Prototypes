@@ -35,9 +35,9 @@ Vue.component('serp-result', {
 			// backing:
 			event.currentTarget.style.backgroundColor = this.x.result.backing
 			// title:
-			event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.result.title_hover;
+			// event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.result.title_hover;
 			// url:
-			event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.result.url_hover;
+			// event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.result.url_hover;
 			// favicon: 
 			event.currentTarget.getElementsByTagName('img')[0].className = this.x.result.favicon_hover;
 		},
@@ -46,9 +46,9 @@ Vue.component('serp-result', {
 			// backing:
 			event.currentTarget.style.backgroundColor = 'transparent';
 			// title:
-			event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.title.color;
+			// event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.title.color;
 			// url:
-			event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.url.color;
+			// event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.url.color;
 			// favicon:
 			event.currentTarget.getElementsByTagName('img')[0].className = this.x.favicon.type;
 		}
@@ -128,7 +128,8 @@ var serp = new Vue({
 				size: '17px',
 				weight: 'bold',		// bold | normal | unbold
 				margin: '0.3em',
-				visited: 'default'	// default | purple | gray
+				visited: 'default',	// default | purple | gray
+				underline: []		// [] | ['underline']
 			},
 			snippet: {
 				color: '#666',
@@ -138,11 +139,12 @@ var serp = new Vue({
 				margin: '0.1em'
 			},
 			url: {
-				color: '#0090ff',
+				color: '#4495d4',
 				size: '14px',
 				weight: 'unbold',	// normal | unbold
 				aftersnippet: true,
-				visited: 'purple'	// default | purple | gray
+				visited: 'purple',	// default | purple | gray
+				underline: []		// [] | ['underline']
 			},
 			favicon: {
 				type: 'grayscale'	// hide | default | grayscale

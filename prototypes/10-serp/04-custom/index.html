@@ -62,14 +62,14 @@
 		</div>
 		<!-- misc: -->
 		<div class="section" v-show="toggle.result && toggle.misc">
-			<div class="row">
+			<!-- <div class="row">
 				<strong>title (hover)</strong>
 				<input type="text" v-model="x.result.title_hover">
 			</div>
 			<div class="row">
 				<strong>url (hover)</strong>
 				<input type="text" v-model="x.result.url_hover">
-			</div>
+			</div> -->
 			<div class="row">
 				<strong>favicon (hover)</strong>
 				<input type="radio" value="default" v-model="x.result.favicon_hover"> <label>default</label>
@@ -116,10 +116,14 @@
 				<input type="radio" value="purple" v-model="x.title.visited"> <label>purple</label>
 				<input type="radio" value="gray" v-model="x.title.visited"> <label>gray</label>
 			</div>
+			<div class="row">
+				<strong>:hover</strong>
+				<input type="checkbox" v-model="x.title.underline" value="underline"> <label>underline</label>
+			</div>
 		</div>
 
 		<h5 @click="showhide('snippet')">Snippet</h5>
-		<div class="section" v-show="toggle.snippet">
+		<div class="section" v-show="toggle.snippet && !toggle.misc">
 			<div class="row">
 				<strong>font-size</strong>
 				<input type="radio" value="13px" v-model="x.snippet.size"> <label>13px</label>
@@ -177,10 +181,14 @@
 				<input type="radio" value="purple" v-model="x.url.visited"> <label>purple</label>
 				<input type="radio" value="gray" v-model="x.url.visited"> <label>gray</label>
 			</div>
+			<div class="row">
+				<strong>:hover</strong>
+				<input type="checkbox" v-model="x.url.underline" value="underline"> <label>underline</label>
+			</div>
 		</div>
 
 		<h5 @click="showhide('favicon')">Favicon</h5>
-		<div class="section" v-show="toggle.favicon">
+		<div class="section" v-show="toggle.favicon && !toggle.misc">
 			<strong>type</strong>
 			<input type="radio" value="hide" v-model="x.favicon.type"> <label>hide</label>
 			<input type="radio" value="default" v-model="x.favicon.type"> <label>default</label>
@@ -195,13 +203,13 @@
 
 <template id="serp-result">
 	<div class="result" :style="{'margin-bottom': x.result.margin, 'width': x.result.width}" @click="gotoLink()" @mouseover="hoverResult" @mouseout="outResult">
-		<h4 :style="{'color': x.title.color, 'font-size': x.title.size, 'margin-bottom': x.title.margin}" :class="x.title.weight"><a :href="getLink()" class="titlelink" :class="x.title.visited"v-html="serp.title"></a></h4>
+		<h4 :style="{'color': x.title.color, 'font-size': x.title.size, 'margin-bottom': x.title.margin}" :class="x.title.weight"><a :href="getLink()" class="titlelink" :class="[x.title.visited, x.title.underline[0]]"v-html="serp.title"></a></h4>
 		<p class="snippet" :style="{'color': x.snippet.color, 'font-size': x.snippet.size, 'line-height': x.snippet.lineheight, 'margin-bottom': x.snippet.margin}" :class="x.snippet.weight">
 			<span v-html="serp.snippet"></span>
 		</p>
 		<p class="url" :style="{'color': x.url.color, 'font-size': x.url.size}" :class="[x.url.weight, x.url.visited]">
 			<img height="16" width="16" :src="serp.favicon" :class="x.favicon.type">
-			<a :href="getLink()" class="urllink" :class="x.url.visited" v-html="serp.url"></a>
+			<a :href="getLink()" class="urllink" :class="[x.url.visited, x.url.underline[0]]" v-html="serp.url"></a>
 		</p>
 	</div>
 </template>
