@@ -11,7 +11,7 @@ var app = new Vue({
 
 // serp
 Vue.component('serp-result', {
-	props: ['serp', 'x'],
+	props: ['serp', 'x', 'presets'],
 	template: '#serp-result',
 	methods: {
 		// a computed getter
@@ -119,51 +119,68 @@ var serp = new Vue({
 			url: true,
 			favicon: true,
 			result: true,
-			misc: false
+			misc: false,
+			export: false
 		},
-		// default settings:
-		x: {
-			title: {
-				color: '#333',
-				size: '17px',
-				weight: 'bold',		// bold | normal | unbold
-				margin: '0.3em',
-				visited: 'default',	// default | purple | gray
-				underline: []		// [] | ['underline']
+		// default setting:
+		x: {},
+		presets: {
+			'Abe - gray favicon': {
+				title: {
+					color: '#333',
+					size: '17px',
+					weight: 'bold',		// bold | normal | unbold
+					margin: '0.3em',
+					visited: 'default',	// default | purple | gray
+					underline: []		// [] | ['underline']
+				},
+				snippet: {
+					color: '#666',
+					size: '14px',
+					weight: 'normal',	// normal | unbold
+					lineheight: '1.5',
+					margin: '0.1em'
+				},
+				url: {
+					color: '#4495d4',
+					size: '14px',
+					weight: 'unbold',	// normal | unbold
+					aftersnippet: true,
+					visited: 'purple',	// default | purple | gray
+					underline: []		// [] | ['underline']
+				},
+				favicon: {
+					type: 'grayscale'	// hide | default | grayscale
+				},
+				result: {
+					margin: '0.4em',
+					width: '540px',
+					separator: false,
+					title_hover: 'inherit',
+					url_hover: 'inherit',
+					favicon_hover: 'default', // hide | default | grayscale
+					backing: '#F7F7F7'
+				}
 			},
-			snippet: {
-				color: '#666',
-				size: '14px',
-				weight: 'normal',	// normal | unbold
-				lineheight: '1.5',
-				margin: '0.1em'
-			},
-			url: {
-				color: '#4495d4',
-				size: '14px',
-				weight: 'unbold',	// normal | unbold
-				aftersnippet: true,
-				visited: 'purple',	// default | purple | gray
-				underline: []		// [] | ['underline']
-			},
-			favicon: {
-				type: 'grayscale'	// hide | default | grayscale
-			},
-			result: {
-				margin: '0.4em',
-				width: '540px',
-				separator: false,
-				title_hover: 'inherit',
-				url_hover: 'inherit',
-				favicon_hover: 'default', // hide | default | grayscale
-				backing: '#F7F7F7'
-			}
+			'Blue titles / gray favicon': { "title": { "color": "#4495d4", "size": "17px", "weight": "bold", "margin": "0.3em", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#777", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "default", "underline": [] }, "favicon": { "type": "grayscale" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
+			'Thom - no favicon': { "title": { "color": "#333", "size": "17px", "weight": "normal", "margin": "0.2em", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#4495d4", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "hide" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "hide", "backing": "#F7F7F7" } },
+			'DDG 11/15/16': { "title": { "color": "#333", "size": "19px", "weight": "normal", "margin": "0.2em", "visited": "default", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.2", "margin": "0.1em" }, "url": { "color": "#888", "size": "13px", "weight": "unbold", "aftersnippet": true, "visited": "gray", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "result": { "margin": "0.4em", "width": "620px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } }
 		}
 	},
 	methods: {
 		showhide: function(item) {
 			this.toggle[item] = !this.toggle[item];
+		},
+		setPreset: function(key) {
+			this.x = this.presets[key];
+		},
+		changePreset: function(event) {
+			// the 'key' is actually event's value (confusing, I know)
+			var key = event.target.value
+			this.setPreset(key);
 		}
 
 	}
 });
+
+serp.setPreset('Abe - gray favicon');

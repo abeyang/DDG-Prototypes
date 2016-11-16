@@ -13,159 +13,178 @@
 
 	<aside id="x">
 		<div class="tabs section">
-			<span @click="toggle.misc = false" :class="{active: !toggle.misc}">Default</span>
-			<span @click="toggle.misc = true" :class="{active: toggle.misc}">Misc</span>
+			<select class="right" @change="changePreset">
+				<option disabled>Presets:</option>
+				<option v-for="(value, key) in presets" :value="key">
+					{{ key }} 
+				</option>
+			</select>
+
+			<span @click="toggle.misc = false; toggle.export = false" :class="{active: !toggle.misc && !toggle.export}">Default</span>
+			<span @click="toggle.misc = true; toggle.export = false" :class="{active: toggle.misc && !toggle.export}">Misc</span>
+			<span @click="toggle.export = true" :class="{active: toggle.export}">Export</span>
 
 			<!-- TODO: show presets here -->
 		</div>
 
-		<h5 @click="showhide('result')">SERP Result</h5>
-		<div class="section" v-show="toggle.result && !toggle.misc">
-			<div class="row">
-				<strong>width</strong>
-				<input type="text" v-model="x.result.width">
+		<div v-show="!toggle.export">
+			<h5 @click="showhide('result')">SERP Result</h5>
+			<div class="section" v-show="toggle.result && !toggle.misc">
+				<div class="row">
+					<strong>width</strong>
+					<input type="text" v-model="x.result.width">
+				</div>
+
+				<div class="row">
+					<strong>margin-bottom</strong>
+					<input type="text" v-model="x.result.margin">
+				</div>
+
+				<!-- TODO: add "separator" -->
+			</div>
+			<!-- misc: -->
+			<div class="section" v-show="toggle.result && toggle.misc">
+				<!-- <div class="row">
+					<strong>title (hover)</strong>
+					<input type="text" v-model="x.result.title_hover">
+				</div>
+				<div class="row">
+					<strong>url (hover)</strong>
+					<input type="text" v-model="x.result.url_hover">
+				</div> -->
+				<div class="row">
+					<strong>:hover bg-color</strong>
+					<input type="text" v-model="x.result.backing">
+				</div>
+				<div class="row">
+					<strong>:hover > favicon</strong>
+					<input type="radio" value="hide" v-model="x.result.favicon_hover"> <label>hide</label>
+					<input type="radio" value="default" v-model="x.result.favicon_hover"> <label>default</label>
+					<input type="radio" value="grayscale" v-model="x.result.favicon_hover"> <label>grayscale</label>
+				</div>
 			</div>
 
-			<div class="row">
-				<strong>margin-bottom</strong>
-				<input type="text" v-model="x.result.margin">
+
+			<h5 @click="showhide('title')">Title</h5>
+			<div class="section" v-show="toggle.title && !toggle.misc">
+				<div class="row">
+					<strong>font-size</strong>
+					<input type="radio" value="14px" v-model="x.title.size"> <label>14px</label>
+					<input type="radio" value="17px" v-model="x.title.size"> <label>17px</label>
+					<input type="radio" value="19px" v-model="x.title.size"> <label>19px</label>
+				</div>
+
+				<div class="row">
+					<strong>font weight</strong>
+					<input type="radio" value="bold" v-model="x.title.weight"> <label>bold</label>
+					<input type="radio" value="normal" v-model="x.title.weight"> <label>normal</label>
+					<input type="radio" value="unbold" v-model="x.title.weight"> <label>unbold</label>
+				</div>
+				
+				<div class="row">
+					<strong>color</strong>
+					<input type="text" v-model="x.title.color">
+				</div>
+
+				<div class="row">
+					<strong>margin-bottom</strong>
+					<input type="text" v-model="x.title.margin">
+				</div>
+			</div>
+			<!-- misc: -->
+			<div class="section" v-show="toggle.title && toggle.misc">
+				<div class="row">
+					<strong>:visited</strong>
+					<input type="radio" value="default" v-model="x.title.visited"> <label>default</label>
+					<input type="radio" value="purple" v-model="x.title.visited"> <label>purple</label>
+					<input type="radio" value="gray" v-model="x.title.visited"> <label>gray</label>
+				</div>
+				<div class="row">
+					<strong>:hover</strong>
+					<input type="checkbox" v-model="x.title.underline" value="underline"> <label>underline</label>
+				</div>
 			</div>
 
-			<!-- TODO: add "separator" -->
+			<h5 @click="showhide('snippet')">Snippet</h5>
+			<div class="section" v-show="toggle.snippet && !toggle.misc">
+				<div class="row">
+					<strong>font-size</strong>
+					<input type="radio" value="13px" v-model="x.snippet.size"> <label>13px</label>
+					<input type="radio" value="14px" v-model="x.snippet.size"> <label>14px</label>
+				</div>
+
+				<div class="row">
+					<strong>font weight</strong>
+					<input type="radio" value="normal" v-model="x.snippet.weight"> <label>normal</label>
+					<input type="radio" value="unbold" v-model="x.snippet.weight"> <label>unbold</label>
+				</div>
+				
+				<div class="row">
+					<strong>color</strong>
+					<input type="text" v-model="x.snippet.color">
+				</div>
+
+				<div class="row">
+					<strong>line-height</strong>
+					<input type="text" v-model="x.snippet.lineheight">
+				</div>
+
+				<div class="row">
+					<strong>margin-bottom</strong>
+					<input type="text" v-model="x.snippet.margin">
+				</div>
+			</div>
+
+			<h5 @click="showhide('url')">URL</h5>
+			<div class="section" v-show="toggle.url && !toggle.misc">
+				<div class="row">
+					<strong>font-size</strong>
+					<input type="radio" value="13px" v-model="x.url.size"> <label>13px</label>
+					<input type="radio" value="14px" v-model="x.url.size"> <label>14px</label>
+				</div>
+
+				<div class="row">
+					<strong>font weight</strong>
+					<input type="radio" value="normal" v-model="x.url.weight"> <label>normal</label>
+					<input type="radio" value="unbold" v-model="x.url.weight"> <label>unbold</label>
+				</div>
+				
+				<div class="row">
+					<strong>color</strong>
+					<input type="text" v-model="x.url.color">
+				</div>
+
+				<!-- TODO: add "aftersnippet" -->
+			</div>
+			<!-- misc: -->
+			<div class="section" v-show="toggle.url && toggle.misc">
+				<div class="row">
+					<strong>:visited</strong>
+					<input type="radio" value="default" v-model="x.url.visited"> <label>default</label>
+					<input type="radio" value="purple" v-model="x.url.visited"> <label>purple</label>
+					<input type="radio" value="gray" v-model="x.url.visited"> <label>gray</label>
+				</div>
+				<div class="row">
+					<strong>:hover</strong>
+					<input type="checkbox" v-model="x.url.underline" value="underline"> <label>underline</label>
+				</div>
+			</div>
+
+			<h5 @click="showhide('favicon')">Favicon</h5>
+			<div class="section" v-show="toggle.favicon && !toggle.misc">
+				<strong>type</strong>
+				<input type="radio" value="hide" v-model="x.favicon.type"> <label>hide</label>
+				<input type="radio" value="default" v-model="x.favicon.type"> <label>default</label>
+				<input type="radio" value="grayscale" v-model="x.favicon.type"> <label>grayscale</label>
+			</div>
 		</div>
-		<!-- misc: -->
-		<div class="section" v-show="toggle.result && toggle.misc">
-			<!-- <div class="row">
-				<strong>title (hover)</strong>
-				<input type="text" v-model="x.result.title_hover">
+		
+		<!-- Export:  -->
+		<div v-show="toggle.export">
+			<h5>Result (copy/paste to Abe)</h5>
+			<div class="section">
+				{{ x }}
 			</div>
-			<div class="row">
-				<strong>url (hover)</strong>
-				<input type="text" v-model="x.result.url_hover">
-			</div> -->
-			<div class="row">
-				<strong>favicon (hover)</strong>
-				<input type="radio" value="default" v-model="x.result.favicon_hover"> <label>default</label>
-				<input type="radio" value="grayscale" v-model="x.result.favicon_hover"> <label>grayscale</label>
-			</div>
-			<div class="row">
-				<strong>backing</strong>
-				<input type="text" v-model="x.result.backing">
-			</div>
-		</div>
-
-
-		<h5 @click="showhide('title')">Title</h5>
-		<div class="section" v-show="toggle.title && !toggle.misc">
-			<div class="row">
-				<strong>font-size</strong>
-				<input type="radio" value="14px" v-model="x.title.size"> <label>14px</label>
-				<input type="radio" value="17px" v-model="x.title.size"> <label>17px</label>
-				<input type="radio" value="19px" v-model="x.title.size"> <label>19px</label>
-			</div>
-
-			<div class="row">
-				<strong>font weight</strong>
-				<input type="radio" value="bold" v-model="x.title.weight"> <label>bold</label>
-				<input type="radio" value="normal" v-model="x.title.weight"> <label>normal</label>
-				<input type="radio" value="unbold" v-model="x.title.weight"> <label>unbold</label>
-			</div>
-			
-			<div class="row">
-				<strong>color</strong>
-				<input type="text" v-model="x.title.color">
-			</div>
-
-			<div class="row">
-				<strong>margin-bottom</strong>
-				<input type="text" v-model="x.title.margin">
-			</div>
-		</div>
-		<!-- misc: -->
-		<div class="section" v-show="toggle.title && toggle.misc">
-			<div class="row">
-				<strong>:visited</strong>
-				<input type="radio" value="default" v-model="x.title.visited"> <label>default</label>
-				<input type="radio" value="purple" v-model="x.title.visited"> <label>purple</label>
-				<input type="radio" value="gray" v-model="x.title.visited"> <label>gray</label>
-			</div>
-			<div class="row">
-				<strong>:hover</strong>
-				<input type="checkbox" v-model="x.title.underline" value="underline"> <label>underline</label>
-			</div>
-		</div>
-
-		<h5 @click="showhide('snippet')">Snippet</h5>
-		<div class="section" v-show="toggle.snippet && !toggle.misc">
-			<div class="row">
-				<strong>font-size</strong>
-				<input type="radio" value="13px" v-model="x.snippet.size"> <label>13px</label>
-				<input type="radio" value="14px" v-model="x.snippet.size"> <label>14px</label>
-			</div>
-
-			<div class="row">
-				<strong>font weight</strong>
-				<input type="radio" value="normal" v-model="x.snippet.weight"> <label>normal</label>
-				<input type="radio" value="unbold" v-model="x.snippet.weight"> <label>unbold</label>
-			</div>
-			
-			<div class="row">
-				<strong>color</strong>
-				<input type="text" v-model="x.snippet.color">
-			</div>
-
-			<div class="row">
-				<strong>line-height</strong>
-				<input type="text" v-model="x.snippet.lineheight">
-			</div>
-
-			<div class="row">
-				<strong>margin-bottom</strong>
-				<input type="text" v-model="x.snippet.margin">
-			</div>
-		</div>
-
-		<h5 @click="showhide('url')">URL</h5>
-		<div class="section" v-show="toggle.url && !toggle.misc">
-			<div class="row">
-				<strong>font-size</strong>
-				<input type="radio" value="13px" v-model="x.url.size"> <label>13px</label>
-				<input type="radio" value="14px" v-model="x.url.size"> <label>14px</label>
-			</div>
-
-			<div class="row">
-				<strong>font weight</strong>
-				<input type="radio" value="normal" v-model="x.url.weight"> <label>normal</label>
-				<input type="radio" value="unbold" v-model="x.url.weight"> <label>unbold</label>
-			</div>
-			
-			<div class="row">
-				<strong>color</strong>
-				<input type="text" v-model="x.url.color">
-			</div>
-
-			<!-- TODO: add "aftersnippet" -->
-		</div>
-		<!-- misc: -->
-		<div class="section" v-show="toggle.url && toggle.misc">
-			<div class="row">
-				<strong>:visited</strong>
-				<input type="radio" value="default" v-model="x.url.visited"> <label>default</label>
-				<input type="radio" value="purple" v-model="x.url.visited"> <label>purple</label>
-				<input type="radio" value="gray" v-model="x.url.visited"> <label>gray</label>
-			</div>
-			<div class="row">
-				<strong>:hover</strong>
-				<input type="checkbox" v-model="x.url.underline" value="underline"> <label>underline</label>
-			</div>
-		</div>
-
-		<h5 @click="showhide('favicon')">Favicon</h5>
-		<div class="section" v-show="toggle.favicon && !toggle.misc">
-			<strong>type</strong>
-			<input type="radio" value="hide" v-model="x.favicon.type"> <label>hide</label>
-			<input type="radio" value="default" v-model="x.favicon.type"> <label>default</label>
-			<input type="radio" value="grayscale" v-model="x.favicon.type"> <label>grayscale</label>
 		</div>
 
 	</aside> <!-- /#x -->

@@ -50,6 +50,9 @@ h4.unbold, .unbold {
 .hide {
   display: none; }
 
+.right {
+  float: right; }
+
 #x {
   position: absolute;
   top: 120px;
