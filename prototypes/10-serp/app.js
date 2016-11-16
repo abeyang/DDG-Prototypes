@@ -55,6 +55,16 @@ Vue.component('serp-result', {
 	}
 });
 
+
+// Blues:
+// #1669aa  
+// #0967aa  
+// #084999  
+// #0562a4  
+// #03548b
+// Green:
+// #26804b
+
 var serp = new Vue({
 	el: '#serp',
 	data: {
@@ -142,7 +152,7 @@ var serp = new Vue({
 					margin: '0.1em'
 				},
 				url: {
-					color: '#4495d4',
+					color: '#1669aa',
 					size: '14px',
 					weight: 'normal',	// normal | unbold
 					aftersnippet: true,
@@ -162,7 +172,8 @@ var serp = new Vue({
 					backing: '#F7F7F7'
 				}
 			},
-			'Blue titles / gray favicon': { "title": { "color": "#4495d4", "size": "17px", "weight": "bold", "margin": "0.3em", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#777", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "default", "underline": [] }, "favicon": { "type": "grayscale" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
+			'Blue titles / gray favicon': { "title": { "color": "#0967aa", "size": "17px", "weight": "bold", "margin": "0.3em", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#777", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "default", "underline": [] }, "favicon": { "type": "grayscale" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
+			'Green + Purple links': { "title": { "color": "#333", "size": "17px", "weight": "bold", "margin": "0.3em", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#26804b", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [] }, "favicon": { "type": "default" }, "result": { "margin": "0.4em", "width": "560px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
 			'Thom - no favicon': { "title": { "color": "#333", "size": "17px", "weight": "normal", "margin": "0.2em", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#4495d4", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "hide" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "hide", "backing": "#F7F7F7" } },
 			'DDG 11/15/16': { "title": { "color": "#333", "size": "19px", "weight": "normal", "margin": "0.2em", "visited": "default", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.2", "margin": "0.1em" }, "url": { "color": "#888", "size": "13px", "weight": "unbold", "aftersnippet": true, "visited": "gray", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "result": { "margin": "0.4em", "width": "620px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } }
 		}
