@@ -144,7 +144,7 @@ var serp = new Vue({
 				url: {
 					color: '#4495d4',
 					size: '14px',
-					weight: 'unbold',	// normal | unbold
+					weight: 'normal',	// normal | unbold
 					aftersnippet: true,
 					visited: 'purple',	// default | purple | gray
 					underline: []		// [] | ['underline']
