@@ -163,6 +163,11 @@
 					<strong></strong>
 					<input type="checkbox" v-model="x.url.aftersnippet"> After Snippet
 				</div>
+				<div class="row">
+					<strong>margin-bottom (em)</strong>
+					<input type="text" v-model="x.url.margin" :disabled="x.url.aftersnippet" min="0" max="0.5">
+					<input type="range" v-model="x.url.margin" :disabled="x.url.aftersnippet" min="0" max="0.5" step="0.05">
+				</div>
 				<!-- TODO: need margin-bottom (for when it's above snippet) -->
 			</div>
 			<!-- misc: -->
@@ -218,7 +223,7 @@
 <template id="serp-result">
 	<div class="result" :style="{'margin-bottom': x.result.margin+'em', 'width': x.result.width+'px'}" @click="gotoLink()" @mouseover="hoverResult" @mouseout="outResult" :class="x.result.font">
 		<h4 :style="{'color': x.title.color, 'font-size': x.title.size+'px', 'margin-bottom': x.title.margin+'em'}" :class="x.title.weight"><a :href="getLink()" class="titlelink" :class="[x.title.visited, x.title.underline[0]]"v-html="serp.title"></a></h4>
-		<p v-show="!x.url.aftersnippet" class="url" :style="{'color': x.url.color, 'font-size': x.url.size+'px'}" :class="[x.url.weight, x.url.visited]">
+		<p v-show="!x.url.aftersnippet" class="url" :style="{'color': x.url.color, 'font-size': x.url.size+'px', 'margin-bottom': x.url.margin+'em'}" :class="[x.url.weight, x.url.visited]">
 			<img height="16" width="16" :src="serp.favicon" :class="x.favicon.type">
 			<a :href="getLink()" class="urllink" :class="[x.url.visited, x.url.underline[0]]" v-html="serp.url"></a>
 			<a class="more" :class="[x.more.type, x.url.underline[0]]"  :style="{'color': x.more.color}" href="#">More results</a>

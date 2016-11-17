@@ -163,12 +163,7 @@ h4.unbold, .unbold {
 			position: relative;
 			top: 5px;
 
-			// &::-webkit-slider-runnable-track {
-			// 	height: 4px;
-			// 	background-color: #111;
-			// 	border: 0.2px solid #010101;
-			// 	box-shadow: none;
-			// }
+			&:disabled { opacity: 0.33; }
 		}
 		&:disabled { color: #666; }
 	}

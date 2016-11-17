@@ -72,10 +72,6 @@ Vue.component('serp-result', {
 // #26804b
 // #107a47
 
-// todo:
-// √ add 18px to title
-// - add margin to url (for above snippet)
-
 var serp = new Vue({
 	el: '#serp',
 	data: {
@@ -168,7 +164,8 @@ var serp = new Vue({
 					weight: 'normal',	// normal | unbold
 					aftersnippet: true,
 					visited: 'purple',	// default | purple | gray
-					underline: []		// [] | ['underline']
+					underline: [],		// [] | ['underline']
+					margin: '0'
 				},
 				favicon: {
 					type: 'grayscale'	// hide | default | grayscale

@@ -120,5 +120,7 @@ h4.unbold, .unbold {
       width: 135px;
       position: relative;
       top: 5px; }
+      #x input[type="range"]:disabled {
+        opacity: 0.33; }
     #x input:disabled {
       color: #666; }
