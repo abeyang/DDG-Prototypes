@@ -58,7 +58,7 @@ h4.unbold, .unbold {
 
 		&:visited { 
 			&.default { color: default; }
-			&.purple { color: #6d59a3; }
+			&.purple { color: #785ebd; }
 			&.gray { color: #888; }
 		}
 	}
@@ -157,7 +157,7 @@ h4.unbold, .unbold {
 		border: 1px solid #222;
 		color: #ccc;
 
-		&[type="text"] { width: 60px; }
+		&[type="text"], &[type="number"] { width: 60px; }
 		&[type="range"] { 
 			width: 135px;
 			position: relative;

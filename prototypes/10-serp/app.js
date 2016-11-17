@@ -9,19 +9,6 @@ var app = new Vue({
 	}
 });
 
-// url
-// Vue.component('url', {
-// 	props: ['serp', 'x'],
-// 	template: '#url'
-// });
-
-
-// TODO:
-// √ add rollover color to title
-// √ add "more results"
-// - add ability to move url to above snippet
-// √ add diff font options (helvetica neue, arial)
-
 // serp
 Vue.component('serp-result', {
 	props: ['serp', 'x', 'presets'],
@@ -84,6 +71,10 @@ Vue.component('serp-result', {
 // Green:
 // #26804b
 // #107a47
+
+// todo:
+// √ add 18px to title
+// - add margin to url (for above snippet)
 
 var serp = new Vue({
 	el: '#serp',
@@ -158,7 +149,7 @@ var serp = new Vue({
 			'Abe - gray favicon': {
 				title: {
 					color: '#333',
-					size: '17px',
+					size: '17',
 					weight: 'bold',		// bold | normal | unbold
 					margin: '0.3',
 					visited: 'default',	// default | purple | gray
@@ -166,14 +157,14 @@ var serp = new Vue({
 				},
 				snippet: {
 					color: '#666',
-					size: '14px',
+					size: '14',
 					weight: 'normal',	// normal | unbold
 					lineheight: '1.5',
 					margin: '0.1'
 				},
 				url: {
 					color: '#1669aa',
-					size: '14px',
+					size: '14',
 					weight: 'normal',	// normal | unbold
 					aftersnippet: true,
 					visited: 'purple',	// default | purple | gray
@@ -189,7 +180,7 @@ var serp = new Vue({
 				result: {
 					font: 'proxima',	// proxima | helvetica | arial
 					margin: '0.4',
-					width: '540',
+					width: '560',
 					separator: false,
 					title_hover_enable: false,
 					title_hover: 'inherit',
@@ -199,11 +190,11 @@ var serp = new Vue({
 					backing: '#F7F7F7'
 				}
 			},
-			'Olivia - dark hover, big title': { "title": { "color": "#333", "size": "19px", "weight": "bold", "margin": "0.2", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.4", "margin": "0.4" }, "url": { "color": "#1669aa", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888'	}, "result": { "font": "proxima", "margin": "1", "width": "560", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F2F2F2F2" } },
-			'Blue titles / gray favicon': { "title": { "color": "#0967aa", "size": "17px", "weight": "bold", "margin": "0.3", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#777", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "default", "underline": [] }, "favicon": { "type": "grayscale" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "540", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
-			'Green + Purple links': { "title": { "color": "#333", "size": "17px", "weight": "bold", "margin": "0.3", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#26804b", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "560px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
-			'Thom - no favicon': { "title": { "color": "#333", "size": "17px", "weight": "normal", "margin": "0.2", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#4495d4", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "hide" }, "more": { "type": "withurl", "color": "#888" }, "result": { "font": "proxima", "margin": "0.4", "width": "540", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "hide", "backing": "#F7F7F7" } },
-			'DDG 11/15/16': { "title": { "color": "#333", "size": "19px", "weight": "normal", "margin": "0", "visited": "default", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.4", "margin": "0.2" }, "url": { "color": "#888", "size": "13px", "weight": "unbold", "aftersnippet": true, "visited": "gray", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "620", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } }
+			'Olivia - dark hover, big title': { "title": { "color": "#333", "size": "19", "weight": "bold", "margin": "0.2", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13", "weight": "normal", "lineheight": "1.4", "margin": "0.4" }, "url": { "color": "#1669aa", "size": "14", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888'	}, "result": { "font": "proxima", "margin": "1", "width": "560", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F2F2F2F2" } },
+			'Blue titles / gray favicon': { "title": { "color": "#0967aa", "size": "17", "weight": "bold", "margin": "0.3", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "14", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#777", "size": "14", "weight": "unbold", "aftersnippet": true, "visited": "default", "underline": [] }, "favicon": { "type": "grayscale" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "540", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
+			'Green + Purple links': { "title": { "color": "#333", "size": "17", "weight": "bold", "margin": "0.3", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#26804b", "size": "14", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "560", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
+			'Thom - no favicon': { "title": { "color": "#333", "size": "17", "weight": "normal", "margin": "0.2", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#4495d4", "size": "14", "weight": "unbold", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "hide" }, "more": { "type": "withurl", "color": "#888" }, "result": { "font": "proxima", "margin": "0.4", "width": "540", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "hide", "backing": "#F7F7F7" } },
+			'DDG 11/15/16': { "title": { "color": "#333", "size": "19", "weight": "normal", "margin": "0", "visited": "default", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13", "weight": "normal", "lineheight": "1.4", "margin": "0.2" }, "url": { "color": "#888", "size": "13", "weight": "unbold", "aftersnippet": true, "visited": "gray", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "620", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } }
 		}
 	},
 	methods: {
