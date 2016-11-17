@@ -9,6 +9,19 @@ var app = new Vue({
 	}
 });
 
+// url
+// Vue.component('url', {
+// 	props: ['serp', 'x'],
+// 	template: '#url'
+// });
+
+
+// TODO:
+// √ add rollover color to title
+// - add "more results"
+// - add ability to move url to above snippet
+// √ add diff font options (helvetica neue, arial)
+
 // serp
 Vue.component('serp-result', {
 	props: ['serp', 'x', 'presets'],
@@ -31,24 +44,30 @@ Vue.component('serp-result', {
 			}
 		},
 		hoverResult: function(event) {
-			// console.log(event.currentTarget.getElementsByClassName('titlelink')[0].style);
 			// backing:
 			event.currentTarget.style.backgroundColor = this.x.result.backing
 			// title:
-			// event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.result.title_hover;
+			if (this.x.result.title_hover_enable) {
+				event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.result.title_hover;	
+			}
 			// url:
-			// event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.result.url_hover;
+			if (this.x.result.url_hover_enable) {
+				event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.result.url_hover;
+			}
 			// favicon: 
 			event.currentTarget.getElementsByTagName('img')[0].className = this.x.result.favicon_hover;
 		},
 		outResult: function(event) {
-			// console.log(event.currentTarget.style);
 			// backing:
 			event.currentTarget.style.backgroundColor = 'transparent';
 			// title:
-			// event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.title.color;
+			if (this.x.result.title_hover_enable) {
+				event.currentTarget.getElementsByClassName('titlelink')[0].style.color = this.x.title.color;
+			}
 			// url:
-			// event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.url.color;
+			if (this.x.result.url_hover_enable) {
+				event.currentTarget.getElementsByClassName('urllink')[0].style.color = this.x.url.color;
+			}
 			// favicon:
 			event.currentTarget.getElementsByTagName('img')[0].className = this.x.favicon.type;
 		}
@@ -64,6 +83,7 @@ Vue.component('serp-result', {
 // #03548b
 // Green:
 // #26804b
+// #107a47
 
 var serp = new Vue({
 	el: '#serp',
@@ -132,7 +152,7 @@ var serp = new Vue({
 			misc: false,
 			export: false
 		},
-		// default setting:
+		// x = current settings
 		x: {},
 		presets: {
 			'Abe - gray favicon': {
@@ -163,19 +183,23 @@ var serp = new Vue({
 					type: 'grayscale'	// hide | default | grayscale
 				},
 				result: {
+					font: 'proxima',	// proxima | helvetica | arial
 					margin: '0.4em',
 					width: '540px',
 					separator: false,
+					title_hover_enable: false,
 					title_hover: 'inherit',
+					url_hover_enable: false,
 					url_hover: 'inherit',
 					favicon_hover: 'default', // hide | default | grayscale
 					backing: '#F7F7F7'
 				}
 			},
+			'Olivia - dark hover, big title': { "title": { "color": "#333", "size": "19px", "weight": "bold", "margin": "0.2em", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.4", "margin": "0.4em" }, "url": { "color": "#1669aa", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "result": { "margin": "1em", "width": "560px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F2F2F2F2" } },
 			'Blue titles / gray favicon': { "title": { "color": "#0967aa", "size": "17px", "weight": "bold", "margin": "0.3em", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#777", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "default", "underline": [] }, "favicon": { "type": "grayscale" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
 			'Green + Purple links': { "title": { "color": "#333", "size": "17px", "weight": "bold", "margin": "0.3em", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#26804b", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [] }, "favicon": { "type": "default" }, "result": { "margin": "0.4em", "width": "560px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
 			'Thom - no favicon': { "title": { "color": "#333", "size": "17px", "weight": "normal", "margin": "0.2em", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#4495d4", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "hide" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "hide", "backing": "#F7F7F7" } },
-			'DDG 11/15/16': { "title": { "color": "#333", "size": "19px", "weight": "normal", "margin": "0.2em", "visited": "default", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.2", "margin": "0.1em" }, "url": { "color": "#888", "size": "13px", "weight": "unbold", "aftersnippet": true, "visited": "gray", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "result": { "margin": "0.4em", "width": "620px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } }
+			'DDG 11/15/16': { "title": { "color": "#333", "size": "19px", "weight": "normal", "margin": "0em", "visited": "default", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.4", "margin": "0.2em" }, "url": { "color": "#888", "size": "13px", "weight": "unbold", "aftersnippet": true, "visited": "gray", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "result": { "margin": "0.4em", "width": "620px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } }
 		}
 	},
 	methods: {
@@ -194,4 +218,5 @@ var serp = new Vue({
 	}
 });
 
+// set x as this preset:
 serp.setPreset('Abe - gray favicon');

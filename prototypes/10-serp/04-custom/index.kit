@@ -23,13 +23,20 @@
 			<span @click="toggle.misc = false; toggle.export = false" :class="{active: !toggle.misc && !toggle.export}">Default</span>
 			<span @click="toggle.misc = true; toggle.export = false" :class="{active: toggle.misc && !toggle.export}">Misc</span>
 			<span @click="toggle.export = true" :class="{active: toggle.export}">Export</span>
-
-			<!-- TODO: show presets here -->
 		</div>
 
 		<div v-show="!toggle.export">
 			<h5 @click="showhide('result')">SERP Result</h5>
 			<div class="section" v-show="toggle.result && !toggle.misc">
+				<div class="row">
+					<strong>font</strong>
+					<select v-model="x.result.font">
+						<option>proxima</option>
+						<option>helvetica</option>
+						<option>arial</option>
+					</select>
+				</div>
+
 				<div class="row">
 					<strong>width</strong>
 					<input type="text" v-model="x.result.width">
@@ -44,14 +51,16 @@
 			</div>
 			<!-- misc: -->
 			<div class="section" v-show="toggle.result && toggle.misc">
-				<!-- <div class="row">
+				<div class="row">
 					<strong>title (hover)</strong>
-					<input type="text" v-model="x.result.title_hover">
+					<input type="text" v-model="x.result.title_hover" :disabled="!x.result.title_hover_enable">
+					<input type="checkbox" v-model="x.result.title_hover_enable">
 				</div>
 				<div class="row">
 					<strong>url (hover)</strong>
-					<input type="text" v-model="x.result.url_hover">
-				</div> -->
+					<input type="text" v-model="x.result.url_hover" :disabled="!x.result.url_hover_enable">
+					<input type="checkbox" v-model="x.result.url_hover_enable">
+				</div>
 				<div class="row">
 					<strong>:hover bg-color</strong>
 					<input type="text" v-model="x.result.backing">
@@ -119,10 +128,10 @@
 					<input type="radio" value="unbold" v-model="x.snippet.weight"> <label>unbold</label>
 				</div>
 				
-				<div class="row">
+<!-- 				<div class="row">
 					<strong>color</strong>
 					<input type="text" v-model="x.snippet.color">
-				</div>
+				</div> -->
 
 				<div class="row">
 					<strong>line-height</strong>
@@ -194,7 +203,7 @@
 
 
 <template id="serp-result">
-	<div class="result" :style="{'margin-bottom': x.result.margin, 'width': x.result.width}" @click="gotoLink()" @mouseover="hoverResult" @mouseout="outResult">
+	<div class="result" :style="{'margin-bottom': x.result.margin, 'width': x.result.width}" @click="gotoLink()" @mouseover="hoverResult" @mouseout="outResult" :class="x.result.font">
 		<h4 :style="{'color': x.title.color, 'font-size': x.title.size, 'margin-bottom': x.title.margin}" :class="x.title.weight"><a :href="getLink()" class="titlelink" :class="[x.title.visited, x.title.underline[0]]"v-html="serp.title"></a></h4>
 		<p class="snippet" :style="{'color': x.snippet.color, 'font-size': x.snippet.size, 'line-height': x.snippet.lineheight, 'margin-bottom': x.snippet.margin}" :class="x.snippet.weight">
 			<span v-html="serp.snippet"></span>

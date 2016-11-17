@@ -22,6 +22,10 @@ h4.unbold, .unbold {
       display: inline-block; }
   .result p {
     margin: 0; }
+  .result .snippet {
+    color: #666; }
+    .result .snippet.normal b {
+      color: #333; }
   .result a {
     color: inherit;
     text-decoration: none; }
@@ -46,6 +50,12 @@ h4.unbold, .unbold {
   .result .url .more {
     float: right;
     display: none; }
+  .result.proxima h4, .result.proxima p, .result.proxima div {
+    font-family: 'proxima-nova'; }
+  .result.helvetica h4, .result.helvetica p, .result.helvetica div {
+    font-family: 'helvetica neue'; }
+  .result.arial h4, .result.arial p, .result.arial div {
+    font-family: 'arial'; }
 
 .hide {
   display: none; }
@@ -99,3 +109,5 @@ h4.unbold, .unbold {
     color: #ccc; }
     #x input[type="text"] {
       width: 100px; }
+    #x input:disabled {
+      color: #666; }
