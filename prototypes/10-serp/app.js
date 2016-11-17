@@ -18,7 +18,7 @@ var app = new Vue({
 
 // TODO:
 // √ add rollover color to title
-// - add "more results"
+// √ add "more results"
 // - add ability to move url to above snippet
 // √ add diff font options (helvetica neue, arial)
 
@@ -160,7 +160,7 @@ var serp = new Vue({
 					color: '#333',
 					size: '17px',
 					weight: 'bold',		// bold | normal | unbold
-					margin: '0.3em',
+					margin: '0.3',
 					visited: 'default',	// default | purple | gray
 					underline: []		// [] | ['underline']
 				},
@@ -169,7 +169,7 @@ var serp = new Vue({
 					size: '14px',
 					weight: 'normal',	// normal | unbold
 					lineheight: '1.5',
-					margin: '0.1em'
+					margin: '0.1'
 				},
 				url: {
 					color: '#1669aa',
@@ -182,10 +182,14 @@ var serp = new Vue({
 				favicon: {
 					type: 'grayscale'	// hide | default | grayscale
 				},
+				more: {
+					type: 'floatright', // floatright | withurl | hide
+					color: '#888',
+				},
 				result: {
 					font: 'proxima',	// proxima | helvetica | arial
-					margin: '0.4em',
-					width: '540px',
+					margin: '0.4',
+					width: '540',
 					separator: false,
 					title_hover_enable: false,
 					title_hover: 'inherit',
@@ -195,11 +199,11 @@ var serp = new Vue({
 					backing: '#F7F7F7'
 				}
 			},
-			'Olivia - dark hover, big title': { "title": { "color": "#333", "size": "19px", "weight": "bold", "margin": "0.2em", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.4", "margin": "0.4em" }, "url": { "color": "#1669aa", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "result": { "margin": "1em", "width": "560px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F2F2F2F2" } },
-			'Blue titles / gray favicon': { "title": { "color": "#0967aa", "size": "17px", "weight": "bold", "margin": "0.3em", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#777", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "default", "underline": [] }, "favicon": { "type": "grayscale" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
-			'Green + Purple links': { "title": { "color": "#333", "size": "17px", "weight": "bold", "margin": "0.3em", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#26804b", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [] }, "favicon": { "type": "default" }, "result": { "margin": "0.4em", "width": "560px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
-			'Thom - no favicon': { "title": { "color": "#333", "size": "17px", "weight": "normal", "margin": "0.2em", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1em" }, "url": { "color": "#4495d4", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "hide" }, "result": { "margin": "0.4em", "width": "540px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "hide", "backing": "#F7F7F7" } },
-			'DDG 11/15/16': { "title": { "color": "#333", "size": "19px", "weight": "normal", "margin": "0em", "visited": "default", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.4", "margin": "0.2em" }, "url": { "color": "#888", "size": "13px", "weight": "unbold", "aftersnippet": true, "visited": "gray", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "result": { "margin": "0.4em", "width": "620px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } }
+			'Olivia - dark hover, big title': { "title": { "color": "#333", "size": "19px", "weight": "bold", "margin": "0.2", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.4", "margin": "0.4" }, "url": { "color": "#1669aa", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888'	}, "result": { "font": "proxima", "margin": "1", "width": "560", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F2F2F2F2" } },
+			'Blue titles / gray favicon': { "title": { "color": "#0967aa", "size": "17px", "weight": "bold", "margin": "0.3", "visited": "purple", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#777", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "default", "underline": [] }, "favicon": { "type": "grayscale" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "540", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
+			'Green + Purple links': { "title": { "color": "#333", "size": "17px", "weight": "bold", "margin": "0.3", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#26804b", "size": "14px", "weight": "normal", "aftersnippet": true, "visited": "purple", "underline": [] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "560px", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } },
+			'Thom - no favicon': { "title": { "color": "#333", "size": "17px", "weight": "normal", "margin": "0.2", "visited": "default", "underline": [] }, "snippet": { "color": "#666", "size": "14px", "weight": "normal", "lineheight": "1.5", "margin": "0.1" }, "url": { "color": "#4495d4", "size": "14px", "weight": "unbold", "aftersnippet": true, "visited": "purple", "underline": [ "underline" ] }, "favicon": { "type": "hide" }, "more": { "type": "withurl", "color": "#888" }, "result": { "font": "proxima", "margin": "0.4", "width": "540", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "hide", "backing": "#F7F7F7" } },
+			'DDG 11/15/16': { "title": { "color": "#333", "size": "19px", "weight": "normal", "margin": "0", "visited": "default", "underline": [ "underline" ] }, "snippet": { "color": "#666", "size": "13px", "weight": "normal", "lineheight": "1.4", "margin": "0.2" }, "url": { "color": "#888", "size": "13px", "weight": "unbold", "aftersnippet": true, "visited": "gray", "underline": [ "underline" ] }, "favicon": { "type": "default" }, "more": { "type": 'floatright', "color": '#888' }, "result": { "font": "proxima", "margin": "0.4", "width": "620", "separator": false, "title_hover": "inherit", "url_hover": "inherit", "favicon_hover": "default", "backing": "#F7F7F7" } }
 		}
 	},
 	methods: {
@@ -215,8 +219,9 @@ var serp = new Vue({
 			this.setPreset(key);
 		}
 
+	},
+	created: function() {
+		// set x as this preset:
+		this.setPreset('Abe - gray favicon');
 	}
 });
-
-// set x as this preset:
-serp.setPreset('Abe - gray favicon');

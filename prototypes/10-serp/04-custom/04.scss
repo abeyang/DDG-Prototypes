@@ -36,6 +36,7 @@ h4.unbold, .unbold {
 		cursor: pointer;
 
 		.url .more { display: inline-block; }
+		.url .more.hide { display: none; }
 	}
 
 	p {
@@ -78,8 +79,13 @@ h4.unbold, .unbold {
 			}
 		}
 		.more { 
-			float: right; 
 			display: none;
+			&.floatright { float: right; }
+			&.withurl { 
+				margin-left: 12px;
+				padding-left: 12px;
+				border-left: 1px solid $lighter-gray;
+			}
 		}
 	}
 
@@ -138,7 +144,7 @@ h4.unbold, .unbold {
 		text-align: right;
 		color: rgba(255,255,255, 0.5);
 		display: inline-block;
-		width: 100px;
+		width: 125px;
 		padding-right: 10px;
 	}
 
@@ -151,7 +157,19 @@ h4.unbold, .unbold {
 		border: 1px solid #222;
 		color: #ccc;
 
-		&[type="text"] { width: 100px; }
+		&[type="text"] { width: 60px; }
+		&[type="range"] { 
+			width: 135px;
+			position: relative;
+			top: 5px;
+
+			// &::-webkit-slider-runnable-track {
+			// 	height: 4px;
+			// 	background-color: #111;
+			// 	border: 0.2px solid #010101;
+			// 	box-shadow: none;
+			// }
+		}
 		&:disabled { color: #666; }
 	}
 }

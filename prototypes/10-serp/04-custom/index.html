@@ -65,13 +65,15 @@
 				</div>
 
 				<div class="row">
-					<strong>width</strong>
+					<strong>width (px)</strong>
 					<input type="text" v-model="x.result.width">
+					<input type="range" v-model="x.result.width" min="500" max="700" step="10">
 				</div>
 
 				<div class="row">
-					<strong>margin-bottom</strong>
-					<input type="text" v-model="x.result.margin">
+					<strong>margin-bottom (em)</strong>
+					<input type="text" v-model="x.result.margin" min="0" max="2">
+					<input type="range" v-model="x.result.margin" min="0" max="2" step="0.1">
 				</div>
 
 				<!-- TODO: add "separator" -->
@@ -123,8 +125,9 @@
 				</div>
 
 				<div class="row">
-					<strong>margin-bottom</strong>
-					<input type="text" v-model="x.title.margin">
+					<strong>margin-bottom (em)</strong>
+					<input type="text" v-model="x.title.margin" min="0" max="0.75">
+					<input type="range" v-model="x.title.margin" min="0" max="0.75" step="0.05">
 				</div>
 			</div>
 			<!-- misc: -->
@@ -154,20 +157,17 @@
 					<input type="radio" value="normal" v-model="x.snippet.weight"> <label>normal</label>
 					<input type="radio" value="unbold" v-model="x.snippet.weight"> <label>unbold</label>
 				</div>
-				
-<!-- 				<div class="row">
-					<strong>color</strong>
-					<input type="text" v-model="x.snippet.color">
-				</div> -->
 
 				<div class="row">
 					<strong>line-height</strong>
-					<input type="text" v-model="x.snippet.lineheight">
+					<input type="text" v-model="x.snippet.lineheight" min="1" max="2">
+					<input type="range" v-model="x.snippet.lineheight" min="1" max="2" step="0.05">
 				</div>
 
 				<div class="row">
-					<strong>margin-bottom</strong>
-					<input type="text" v-model="x.snippet.margin">
+					<strong>margin-bottom (em)</strong>
+					<input type="text" v-model="x.snippet.margin" min="0" max="0.5">
+					<input type="range" v-model="x.snippet.margin" min="0" max="0.5" step="0.05">
 				</div>
 			</div>
 
@@ -190,7 +190,11 @@
 					<input type="text" v-model="x.url.color">
 				</div>
 
-				<!-- TODO: add "aftersnippet" -->
+				<div class="row">
+					<strong></strong>
+					<input type="checkbox" v-model="x.url.aftersnippet"> After Snippet
+				</div>
+				<!-- TODO: need margin-bottom (for when it's above snippet) -->
 			</div>
 			<!-- misc: -->
 			<div class="section" v-show="toggle.url && toggle.misc">
@@ -206,13 +210,26 @@
 				</div>
 			</div>
 
-			<h5 @click="showhide('favicon')">Favicon</h5>
+			<h5 @click="showhide('favicon')">Favicon + More Results</h5>
 			<div class="section" v-show="toggle.favicon && !toggle.misc">
-				<strong>type</strong>
-				<input type="radio" value="hide" v-model="x.favicon.type"> <label>hide</label>
-				<input type="radio" value="default" v-model="x.favicon.type"> <label>default</label>
-				<input type="radio" value="grayscale" v-model="x.favicon.type"> <label>grayscale</label>
+				<div class="row">
+					<strong>favicon type</strong>
+					<input type="radio" value="hide" v-model="x.favicon.type"> <label>hide</label>
+					<input type="radio" value="default" v-model="x.favicon.type"> <label>default</label>
+					<input type="radio" value="grayscale" v-model="x.favicon.type"> <label>grayscale</label>
+				</div>
+				<div class="row">
+					<strong>more results</strong>
+					<input type="radio" value="floatright" v-model="x.more.type"> <label>right</label>
+					<input type="radio" value="withurl" v-model="x.more.type"> <label>with url</label>
+					<input type="radio" value="hide" v-model="x.more.type"> <label>hide</label>
+				</div>
+				<div class="row">
+					<strong>color</strong>
+					<input type="text" v-model="x.more.color">
+				</div>
 			</div>
+
 		</div>
 		
 		<!-- Export:  -->
@@ -230,14 +247,20 @@
 
 
 <template id="serp-result">
-	<div class="result" :style="{'margin-bottom': x.result.margin, 'width': x.result.width}" @click="gotoLink()" @mouseover="hoverResult" @mouseout="outResult" :class="x.result.font">
-		<h4 :style="{'color': x.title.color, 'font-size': x.title.size, 'margin-bottom': x.title.margin}" :class="x.title.weight"><a :href="getLink()" class="titlelink" :class="[x.title.visited, x.title.underline[0]]"v-html="serp.title"></a></h4>
-		<p class="snippet" :style="{'color': x.snippet.color, 'font-size': x.snippet.size, 'line-height': x.snippet.lineheight, 'margin-bottom': x.snippet.margin}" :class="x.snippet.weight">
-			<span v-html="serp.snippet"></span>
-		</p>
-		<p class="url" :style="{'color': x.url.color, 'font-size': x.url.size}" :class="[x.url.weight, x.url.visited]">
+	<div class="result" :style="{'margin-bottom': x.result.margin+'em', 'width': x.result.width+'px'}" @click="gotoLink()" @mouseover="hoverResult" @mouseout="outResult" :class="x.result.font">
+		<h4 :style="{'color': x.title.color, 'font-size': x.title.size, 'margin-bottom': x.title.margin+'em'}" :class="x.title.weight"><a :href="getLink()" class="titlelink" :class="[x.title.visited, x.title.underline[0]]"v-html="serp.title"></a></h4>
+		<p v-show="!x.url.aftersnippet" class="url" :style="{'color': x.url.color, 'font-size': x.url.size}" :class="[x.url.weight, x.url.visited]">
 			<img height="16" width="16" :src="serp.favicon" :class="x.favicon.type">
 			<a :href="getLink()" class="urllink" :class="[x.url.visited, x.url.underline[0]]" v-html="serp.url"></a>
+			<a class="more" :class="[x.more.type, x.url.underline[0]]"  :style="{'color': x.more.color}" href="#">More results</a>
+		</p>
+		<p class="snippet" :style="{'color': x.snippet.color, 'font-size': x.snippet.size, 'line-height': x.snippet.lineheight, 'margin-bottom': x.snippet.margin+'em'}" :class="x.snippet.weight">
+			<span v-html="serp.snippet"></span>
+		</p>
+		<p v-show="x.url.aftersnippet" class="url" :style="{'color': x.url.color, 'font-size': x.url.size}" :class="[x.url.weight, x.url.visited]">
+			<img height="16" width="16" :src="serp.favicon" :class="x.favicon.type">
+			<a :href="getLink()" class="urllink" :class="[x.url.visited, x.url.underline[0]]" v-html="serp.url"></a>
+			<a class="more" :class="[x.more.type, x.url.underline[0]]"  :style="{'color': x.more.color}" href="#">More results</a>
 		</p>
 	</div>
 </template>
