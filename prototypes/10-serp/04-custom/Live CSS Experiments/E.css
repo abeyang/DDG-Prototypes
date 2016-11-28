@@ -31,6 +31,9 @@
 .highlight .result__a, .highlight .result__a:hover {
   text-decoration: underline;
 }
+.highlight .result__url:hover, .highlight .result__menu:hover {
+  text-decoration: underline;
+}
 
 /* modify snippet */
 .result__title {
@@ -68,11 +71,17 @@
 
 .result__url, .result__url:hover, .result__url:visited,
 .result__menu, .result__menu:hover, /* "more results" */
-.module__official-url, .module__wikipedia-url,.module__official-url:hover, .module__wikipedia-url:hover, /* module */
-.result--ad .result__url, .result--ad .result__url:hover, .sponsored__url, .sponsored__sitelink, .sponsored__sitelink:hover  /* ads */
+.module__official-url, .module__wikipedia-url, /* module */
+.result--ad .result__url, .sponsored__url, .sponsored__sitelink /* ads */
 {
-  color: #479371; /* green */
+  color: #26804b; /* green */
   text-decoration: none;
+}
+.module__official-url:hover, .module__wikipedia-url:hover, /* module */
+.result--ad .result__url:hover, .sponsored__sitelink:hover  /* ads */
+{
+  color: #26804b; /* green */
+  text-decoration: underline;
 }
 .result--url-above-snippet .result__menu {
   border-left: 1px solid #ddd;
