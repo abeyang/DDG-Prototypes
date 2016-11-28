@@ -1,0 +1,74 @@
+/*  "Google Theme #1"
+    hover: no backing
+    title: blue, thin
+    visited title: purple
+    url: green (under snippet)
+    favicons: colored
+*/
+
+/*  get livecsseditor for chrome / safari:
+    http://www.livecsseditor.com/
+    copy/paste the following code in:
+*/
+
+/* results */
+.result__check {
+  display: none;  /* remove checkmark */
+} 
+
+.result {
+  margin-bottom: 1em;
+}
+
+.result.highlight {
+  /* remove backing */
+  background-color: transparent;
+}
+.result.highlight .result__url, 
+.result.highlight .result__menu {
+  text-decoration: none;
+}
+.highlight .result__a, .highlight .result__a:hover {
+  text-decoration: underline;
+}
+
+/* modify snippet */
+.result__title {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+}
+.result__title b {
+  font-weight: 400;
+}
+
+.result__a {
+  color: #3a77c9; /* blue */
+}
+.result__a:visited {
+  color: #845cb8; /* purple */
+}
+
+.result__snippet {
+  font-size: 1em;
+  line-height: 1.45;
+  margin-bottom: 0.2em;
+}
+
+/* footer */
+.result__extras {
+  font-size: 1em;
+}
+
+.result__icon__img, .result__icon img {
+  margin-top: -0.1em;
+}
+
+.result__url, .result__url:hover, .result__url:visited,
+.result__menu, .result__menu:hover, /* "more results" */
+.module__official-url, .module__wikipedia-url,.module__official-url:hover, .module__wikipedia-url:hover, /* module */
+.result--ad .result__url, .result--ad .result__url:hover, .sponsored__url, .sponsored__sitelink, .sponsored__sitelink:hover  /* ads */
+{
+  color: #479371; /* green */
+  text-decoration: none;
+}

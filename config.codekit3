@@ -20,7 +20,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/font-awesome.min-ck.css",
 		"oF": 0,
 		"oS": 0
@@ -40,7 +40,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/octicons-ck.css",
 		"oF": 0,
 		"oS": 0
@@ -50,7 +50,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/assets\/css\/slider-ck.css",
 		"oF": 0,
 		"oS": 0
@@ -20337,7 +20337,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/prototypes\/10-serp\/01-default\/01-ck.css",
 		"oF": 0,
 		"oS": 0
@@ -20372,7 +20372,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/prototypes\/10-serp\/02-no_favicon-color_footer\/02-ck.css",
 		"oF": 0,
 		"oS": 0
@@ -20407,7 +20407,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/prototypes\/10-serp\/03-favicon-color_footer\/03-ck.css",
 		"oF": 0,
 		"oS": 0
@@ -20442,7 +20442,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/prototypes\/10-serp\/04-custom\/04-ck.css",
 		"oF": 0,
 		"oS": 0
@@ -20471,6 +20471,56 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/10-serp\/04-custom\/index.html",
 		"oF": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/C.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/C-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/D copy.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/D copy-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/D.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/D-ck.css",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/prototypes\/10-serp\/_default.scss": {
 		"aP": 0,
@@ -22229,7 +22279,7 @@
 		"syntaxCheckerStyle": 1
 		},
 	"languageDefaultsCSS": {
-		"autoOutputAction": 2,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*-ck.css",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
