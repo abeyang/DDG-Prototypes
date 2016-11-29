@@ -1,8 +1,8 @@
-/*  "Google Theme #2"
+/*  "Google Theme #1"
     hover: no backing
-    title: blue
+    title: blue, thin
     visited title: purple
-    url: green (ABOVE snippet) -- needs to be toggled in pref
+    url: green (under snippet)
     favicons: colored
 */
 
@@ -39,6 +39,7 @@
 .result__title {
   font-size: 1.2em;
   font-weight: 400;
+  margin-bottom: 0.3em;
 }
 .result__title b {
   font-weight: 400;
@@ -54,18 +55,15 @@
 .result__snippet {
   font-size: 1em;
   line-height: 1.45;
+  margin-bottom: 0.2em;
 }
 
 /* footer */
-.result--url-above-snippet .result__extras {
-  margin: 0.25em 0;
-}
-
 .result__extras {
   font-size: 1em;
 }
 
-.result__icon__img, .result__icon img {
+.result__icon img {
   margin-top: -0.1em;
 }
 
@@ -82,9 +80,4 @@
 {
   color: #26804b; /* green */
   text-decoration: underline;
-}
-.result--url-above-snippet .result__menu {
-  border-left: 1px solid #ddd;
-  margin-left: 0.7em;
-  padding-left: 0.7em;
 }

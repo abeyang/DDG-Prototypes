@@ -54,7 +54,7 @@
   font-size: 1em;
 }
 
-.result__icon__img, .result__icon img {
+.result__icon img {
   margin-top: -0.1em;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .result__url:visited {
-  color: #888; /* gray */
+  color: #5843bf; /* purple */
 }
 
 /* ads */

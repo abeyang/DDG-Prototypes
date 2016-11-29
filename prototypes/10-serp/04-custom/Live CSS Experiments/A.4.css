@@ -1,9 +1,5 @@
-/*  "Google Theme #1"
-    hover: no backing
-    title: blue, thin
-    visited title: purple
-    url: green (under snippet)
-    favicons: colored
+/*  "Controlled Experiment #4"
+    (same as #1, but with grayscale icons + thinner,darker titles)
 */
 
 /*  get livecsseditor for chrome / safari:
@@ -29,10 +25,15 @@
   text-decoration: none;
 }
 .highlight .result__a, .highlight .result__a:hover {
+  color: inherit;
   text-decoration: underline;
 }
 .highlight .result__url:hover, .highlight .result__menu:hover {
   text-decoration: underline;
+}
+.highlight .result__icon img {
+  opacity: 1;
+  filter: grayscale(0);
 }
 
 /* modify snippet */
@@ -40,16 +41,10 @@
   font-size: 1.2em;
   font-weight: 400;
   margin-bottom: 0.3em;
+  color: #111;
 }
 .result__title b {
   font-weight: 400;
-}
-
-.result__a {
-  color: #3a77c9; /* blue */
-}
-.result__a:visited {
-  color: #845cb8; /* purple */
 }
 
 .result__snippet {
@@ -63,21 +58,30 @@
   font-size: 1em;
 }
 
-.result__icon__img, .result__icon img {
+.result__icon img {
   margin-top: -0.1em;
+  opacity: 0.66; 
+  filter: grayscale(1);
 }
 
-.result__url, .result__url:hover, .result__url:visited,
-.result__menu, .result__menu:hover, /* "more results" */
+.result__url, 
+.result__menu, /* "more results" */
 .module__official-url, .module__wikipedia-url, /* module */
 .result--ad .result__url, .sponsored__url, .sponsored__sitelink /* ads */
 {
-  color: #26804b; /* green */
-  text-decoration: none;
+  color: #3a77c9; /* blue */
 }
-.module__official-url:hover, .module__wikipedia-url:hover, /* module */
-.result--ad .result__url:hover, .sponsored__sitelink:hover  /* ads */
-{
-  color: #26804b; /* green */
-  text-decoration: underline;
+
+.result__url:visited {
+  color: #5843bf; /* purple */
+}
+
+/* ads */
+.result__badge {
+  padding: 2px;
+  line-height: 1;
+  height: 13px;
+}
+.badge--ad {
+  background-color: #3b79c6; /* off-blue */
 }
