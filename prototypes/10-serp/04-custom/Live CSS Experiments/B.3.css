@@ -89,6 +89,12 @@
   text-decoration: underline; 
 }
 
+.result--url-above-snippet .result__menu {
+  border-left: 1px solid #ddd;
+  margin-left: 0.7em;
+  padding-left: 0.7em;
+}
+
 /* module */
 .module__text, .module__official-url, .about-info-box {
   font-size: 1em;
