@@ -74,10 +74,15 @@ Vue.component('serp-result', {
 // #084999  
 // #0562a4  
 // #03548b
-// url: 
-// #3375cc
-// Purple:
-// #5843bf
+
+// URL: 
+// Blue: #3375cc
+// Purple: #5843bf
+
+// TITLE:
+// Blue: #084999
+// Purple: #5536b3
+
 // Green:
 // #26804b
 // #107a47
