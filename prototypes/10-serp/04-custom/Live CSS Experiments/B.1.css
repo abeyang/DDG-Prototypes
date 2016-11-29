@@ -45,10 +45,10 @@
   font-weight: 400;
 }
 
-.result__a {
+.result__a, .highlight .result__a, .highlight .result__a:hover {
   color: #084999; /* blue */
 }
-.result__a:visited {
+.result__a:visited, .result__a:visited:hover {
   color: #5536b3; /* purple */
 }
 
@@ -68,16 +68,50 @@
 }
 
 .result__url, .result__url:hover, .result__url:visited,
-.result__menu, .result__menu:hover, /* "more results" */
-.module__official-url, .module__wikipedia-url, /* module */
 .result--ad .result__url, .sponsored__url, .sponsored__sitelink /* ads */
 {
   color: #26804b; /* green */
   text-decoration: none;
 }
-.module__official-url:hover, .module__wikipedia-url:hover, /* module */
 .result--ad .result__url:hover, .sponsored__sitelink:hover  /* ads */
 {
   color: #26804b; /* green */
   text-decoration: underline;
+}
+
+.result__menu, /* "more results" */
+.module__official-url, .module__wikipedia-url /* module */
+{
+  color: #3a77c9; /* blue */
+}
+.result__menu:hover, /* "more results" */
+.module__official-url:hover, .module__wikipedia-url:hover /* module */
+{
+  color: #3a77c9; /* blue */
+  text-decoration: underline; 
+}
+
+/* module */
+.module__text, .module__official-url, .about-info-box {
+  font-size: 1em;
+  line-height: 1.45;
+}
+.module__title__sub, .about-info-box__info-label {
+  font-size: 14.4px;
+  margin-top: 2px;
+}
+/* ads */
+.result--ad.result--ad--small .result__a {
+  font-size: 14.4px;
+}
+.result--ad.result--ad--small .result__snippet, .result--ad.result--ad--small .result__extras {
+  font-size: 1em;
+}
+.result__badge {
+  padding: 2px;
+  line-height: 1;
+  height: 13px;
+}
+.badge--ad {
+  background-color: #3b79c6; /* off-blue */
 }
