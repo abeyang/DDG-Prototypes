@@ -4,6 +4,7 @@
     visited title: purple
     url: green (under snippet)
     favicons: colored
+    more results: hidden
 */
 
 /*  get livecsseditor for chrome / safari:
@@ -51,6 +52,10 @@
 .result__a:visited, .result__a:visited:hover {
   color: #5536b3; /* purple */
 }
+.result__menu, .highlight .result__menu /* "more results" */
+{
+  display: none;
+}
 
 .result__snippet {
   font-size: 1em;
@@ -79,12 +84,10 @@
   text-decoration: underline;
 }
 
-.result__menu, /* "more results" */
 .module__official-url, .module__wikipedia-url /* module */
 {
   color: #3a77c9; /* blue */
 }
-.result__menu:hover, /* "more results" */
 .module__official-url:hover, .module__wikipedia-url:hover /* module */
 {
   color: #3a77c9; /* blue */
