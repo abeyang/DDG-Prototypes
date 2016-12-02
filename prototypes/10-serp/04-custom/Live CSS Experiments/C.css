@@ -1,6 +1,5 @@
-/*  "Base Changes"
-    - increase margins between results
-    - slight update to ad badge
+/*  "Blue/Purple Titles"
+
 */
 
 /*  get livecsseditor for chrome / safari:
@@ -8,6 +7,10 @@
     copy/paste the following code in:
 */
 
+/* results */
+.result__check {
+  display: none;  /* remove checkmark */
+} 
 .result {
   margin-bottom: 1em;
 }
@@ -15,6 +18,13 @@
 /* modify snippet */
 .result__title {
   margin-bottom: 0.3em;
+}
+
+.result__a, .highlight .result__a, .highlight .result__a:hover {
+  color: #084999; /* blue */
+}
+.result__a:visited, .result__a:visited:hover {
+  color: #5536b3; /* purple */
 }
 
 .result__snippet {

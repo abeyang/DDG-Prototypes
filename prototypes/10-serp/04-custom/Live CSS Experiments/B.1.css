@@ -58,16 +58,11 @@
 }
 
 .result__snippet {
-  font-size: 1em;
   line-height: 1.45;
   margin-bottom: 0.2em;
 }
 
 /* footer */
-.result__extras {
-  font-size: 1em;
-}
-
 .result__icon img {
   margin-top: -0.1em;
 }
@@ -94,22 +89,7 @@
   text-decoration: underline; 
 }
 
-/* module */
-.module__text, .module__official-url, .about-info-box {
-  font-size: 1em;
-  line-height: 1.45;
-}
-.module__title__sub, .about-info-box__info-label {
-  font-size: 14.4px;
-  margin-top: 2px;
-}
-/* ads */
-.result--ad.result--ad--small .result__a {
-  font-size: 14.4px;
-}
-.result--ad.result--ad--small .result__snippet, .result--ad.result--ad--small .result__extras {
-  font-size: 1em;
-}
+/* badge */
 .result__badge {
   padding: 2px;
   line-height: 1;

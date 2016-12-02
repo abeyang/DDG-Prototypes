@@ -20175,6 +20175,20 @@
 		"oAP": "\/prototypes\/08-animations\/02-thank-you\/index.html",
 		"oF": 0
 		},
+	"\/prototypes\/08-animations\/03-store-info\/data.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/03-store-info\/data-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/03-store-info\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/03-store-info\/index.html",
+		"oF": 0
+		},
 	"\/prototypes\/08-animations\/assets\/Adobe After Effects Auto-Save\/animations auto-save 1.aep": {
 		"ft": 8192,
 		"oA": 2,
@@ -20472,53 +20486,83 @@
 		"oAP": "\/prototypes\/10-serp\/04-custom\/index.html",
 		"oF": 0
 		},
-	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.css": {
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/_base.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A-ck.css",
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/_base-ck.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.css": {
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.1.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B-ck.css",
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.1-ck.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/C.css": {
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.2.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/C-ck.css",
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.2-ck.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/D copy.css": {
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.3.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/D copy-ck.css",
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.3-ck.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/D.css": {
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.4.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/D-ck.css",
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/A.4-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.1.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.1-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.2.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.2-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.3.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.3-ck.css",
 		"oF": 0,
 		"oS": 0
 		},
