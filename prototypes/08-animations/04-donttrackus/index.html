@@ -3,37 +3,28 @@
 <head>
 	<!-- https://github.com/bodymovin/bodymovin -->
 	<script src="../js/bodymovin.js" type="text/javascript"></script>
+	<script src="../../../assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
 
-	<style type="text/css">
-		body, html{
-		  margin:0;
-		  width:100%;
-		  height:100%;
-		  background-color:#fff;
-		  overflow: hidden;
-		}
-		#container{
-		  width: 100%;
-		  height:100%;
-		  display: block;
-		  overflow: hidden;
-		  background-color: #56CCF2;
-		  /*transform: translate3d(0,0,0);*/
-		}
-		#toggle {
-			position: absolute;
-			top: 30px;
-			left: 50%;
-			z-index: 50;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../main.css">
 
-	<title>04 donttrack.us - Main</title>
+	<title>DontTrack.Us</title>
 </head>
 
 <body>
 	<button id="toggle">toggle</button>
-	<div id="container"></div>
+	<div id="container">
+		<div class="msg-container">
+			<div class="message" id="msg1a">
+				<strong>We don’t ever, ever track you.</strong>
+				<p>So you can browse the web, safely and confidently.</p>
+			</div>
+
+			<div class="message" id="msg1b">
+				<strong>Google tracks your search history.</strong>
+				<p>And knows just about everything that you do online.</p>
+			</div>
+		</div>
+	</div>
 </body>
 
 <script>
@@ -47,6 +38,7 @@ var animData = {
 var anim = bodymovin.loadAnimation(animData);;
 
 // start animation onload
+$('#msg1b').hide();
 anim.addEventListener('DOMLoaded',startAnimation);
 
 // global vars
@@ -73,6 +65,9 @@ function toggleMonster() {
 // start monster
 function startMonster() {
 	showmonster = true;
+	$('#msg1a').fadeOut(300, function() {
+		$('#msg1b').delay(1000).fadeIn(300);
+	});
 	anim.playSegments([frame_startmonster_begin, frame_startmonster_end],true);
 	anim.addEventListener('loopComplete',monsterComplete);
 }
@@ -83,12 +78,16 @@ function monsterComplete() {
 // end monster
 function endMonster() {
 	showmonster = false;
+	$('#msg1b').fadeOut(300, function() {
+		$('#msg1a').delay(1000).fadeIn(300);
+	});
     anim.playSegments([frame_endmonster_begin, frame_endmonster_end],true);
 	anim.addEventListener('loopComplete',startAnimation);
 }
 
 // onload animation
 function startAnimation(){
+	
 	anim.playSegments([frame_startnormal_begin, frame_startnormal_end],true);
 }
 </script>

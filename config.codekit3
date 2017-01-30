@@ -20348,6 +20348,29 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/prototypes\/08-animations\/main.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/main-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/08-animations\/main.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/main.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/prototypes\/09-vue-app\/.babelrc": {
 		"ft": 8192,
 		"oA": 2,
