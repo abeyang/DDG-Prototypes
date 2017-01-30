@@ -39,18 +39,15 @@
 /* modify snippet */
 .result__title {
   font-size: 1.2em;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 0.3em;
-}
-.result__title b {
-  font-weight: 400;
 }
 
 .result__a, .highlight .result__a, .highlight .result__a:hover {
-  color: #084999; /* blue */
+  color: #004799; /* blue */
 }
 .result__a:visited, .result__a:visited:hover {
-  color: #5536b3; /* purple */
+  color: #6800ad; /* purple */
 }
 .result__menu, .highlight .result__menu /* "more results" */
 {

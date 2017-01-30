@@ -7,7 +7,7 @@
 		"uuidString": "895943A5-9C86-4208-BFC4-1E3EF9710283"
 		}
 	],
-"creatorBuild": "25444",
+"creatorBuild": "25504",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -20189,6 +20189,126 @@
 		"oAP": "\/prototypes\/08-animations\/03-store-info\/index.html",
 		"oF": 0
 		},
+	"\/prototypes\/08-animations\/04-donttrackus\/comp1.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/comp1.html",
+		"oF": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/comp1.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/comp1-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/comp2.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/comp2.html",
+		"oF": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/comp2.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/comp2-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/demo.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/demo.html",
+		"oF": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_0.png": {
+		"ft": 32768,
+		"iS": 2047,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_0.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_1.png": {
+		"ft": 32768,
+		"iS": 1617,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_1.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_2.png": {
+		"ft": 32768,
+		"iS": 1905,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_2.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_3.png": {
+		"ft": 32768,
+		"iS": 851,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_3.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_4.png": {
+		"ft": 32768,
+		"iS": 4107,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_4.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_5.png": {
+		"ft": 32768,
+		"iS": 2793,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_5.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_6.png": {
+		"ft": 32768,
+		"iS": 3056,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_6.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_7.png": {
+		"ft": 32768,
+		"iS": 2986,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_7.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_8.png": {
+		"ft": 32768,
+		"iS": 3309,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_8.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/index.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/index-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/prototypes\/08-animations\/assets\/Adobe After Effects Auto-Save\/animations auto-save 1.aep": {
 		"ft": 8192,
 		"oA": 2,
@@ -20563,6 +20683,16 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/B.3-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/C.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/10-serp\/04-custom\/Live CSS Experiments\/C-ck.css",
 		"oF": 0,
 		"oS": 0
 		},
@@ -21092,6 +21222,10 @@
 			"active": 0,
 			"optionString": "{'properties': 'always'}"
 			},
+		"capitalized-comments": {
+			"active": 0,
+			"optionString": "'always', {'ignoreInlineComments': false, 'ignoreConsecutiveComments': false}"
+			},
 		"class-methods-use-this": {
 			"active": 0,
 			"optionString": "{'exceptMethods': []}"
@@ -21256,6 +21390,10 @@
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
 			},
+		"max-statements-per-line": {
+			"active": 0,
+			"optionString": "{'max': 1}"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -21285,6 +21423,10 @@
 			"optionString": ""
 			},
 		"no-array-constructor": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -21620,6 +21762,10 @@
 			"active": 0,
 			"optionString": "'except-parens'"
 			},
+		"no-return-await": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-script-url": {
 			"active": 0,
 			"optionString": ""
@@ -21824,6 +21970,10 @@
 			"active": 0,
 			"optionString": "{'destructuring': 'any', 'ignoreReadBeforeAssign': false}"
 			},
+		"prefer-destructuring": {
+			"active": 0,
+			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
@@ -21851,6 +22001,10 @@
 		"radix": {
 			"active": 0,
 			"optionString": "'always'"
+			},
+		"require-await": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-jsdoc": {
 			"active": 0,
@@ -22684,6 +22838,10 @@
 			},
 		"space-colon": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"support-ie8": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"toplevel": {
