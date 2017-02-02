@@ -4,92 +4,194 @@
 	<!-- https://github.com/bodymovin/bodymovin -->
 	<script src="../js/bodymovin.js" type="text/javascript"></script>
 	<script src="../../../assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="../../../assets/js/jquery.onepage-scroll.min.js" type="text/javascript"></script>
 
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/onepage-scroll.css">
 	<link rel="stylesheet" type="text/css" href="../main.css">
 
 	<title>DontTrack.Us</title>
 </head>
 
 <body>
-	<button id="toggle">toggle</button>
-	<div id="container">
-		<div class="msg-container">
-			<div class="message" id="msg1a">
-				<strong>We don’t ever, ever track you.</strong>
-				<p>So you can browse the web, safely and confidently.</p>
+	<div class="main">
+		<section>
+			<div id="container0" class="container">
+				This is the first section
 			</div>
+		</section>
 
-			<div class="message" id="msg1b">
-				<strong>Google tracks your search history.</strong>
-				<p>And knows just about everything that you do online.</p>
+		<section>
+			<div id="container1" class="container">
+				<div class="header">
+					<div class="company">DuckDuckGo</div>
+					<div class="wrap">
+						<input type="checkbox" id="toggle1" />
+						<label class="slider-v2" for="toggle1"></label>
+					</div> <!-- /.wrap -->
+					<div class="company">Google</div>
+				</div>				
+
+				<div class="msg-container">
+					<div class="message" id="msg1a">
+						<strong>We don’t ever, ever track you.</strong>
+						<p>So you can browse the web, safely and confidently.</p>
+					</div>
+
+					<div class="message" id="msg1b">
+						<strong>Google tracks your search history.</strong>
+						<p>And knows just about everything that you do online.</p>
+					</div>
+				</div> <!-- /.msg-container -->
 			</div>
-		</div>
-	</div>
+		</section>
+
+		<section>
+			<div id="container2" class="container">
+				<div class="header">
+					<div class="company">DuckDuckGo</div>
+					<div class="wrap">
+						<input type="checkbox" id="toggle2" />
+						<label class="slider-v2" for="toggle2"></label>
+					</div> <!-- /.wrap -->
+					<div class="company">Google</div>
+				</div>				
+
+				<div class="msg-container">
+					<div class="message" id="msg2a">
+						<strong>We show ads based only on searches.</strong>
+						<p>Imagine that!</p>
+					</div>
+
+					<div class="message" id="msg2b">
+						<strong>Google follows you around with ads.</strong>
+						<p>Remember searching for that <em>one thing</em> a long time ago? Yeah…</p>
+					</div>
+				</div> <!-- /.msg-container -->
+			</div>
+		</section>
+	</div> <!-- /.main -->
+
 </body>
 
 <script>
-var animData = {
-        container: document.getElementById('container'),
+
+// -----------
+// ANIMATION 1
+var anim1Data = {
+        container: document.getElementById('container1'),
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: './index.json'
+        path: './main1b.json'
     };
-var anim = bodymovin.loadAnimation(animData);;
+var anim1 = bodymovin.loadAnimation(anim1Data);;
 
 // start animation onload
-$('#msg1b').hide();
-anim.addEventListener('DOMLoaded',startAnimation);
+anim1.addEventListener('DOMLoaded',startAnimation1);
 
 // global vars
-var showmonster = false;
+var showmonster1 = false;
 
-var frame_startmonster_begin = 67;
-var frame_startmonster_loop = 111;
-var frame_startmonster_end = 176;
+var frame_startmonster_begin1 = 67;
+var frame_startmonster_loop1 = 111;
+var frame_startmonster_end1 = 176;
 
-var frame_endmonster_begin = frame_startmonster_end + 1;
-var frame_endmonster_end = 215;
+var frame_endmonster_begin1 = frame_startmonster_end1 + 1;
+var frame_endmonster_end1 = 215;
 
-var frame_startnormal_begin = 0;
-var frame_startnormal_end = frame_startmonster_begin - 1;
+var frame_startnormal_begin1 = 0;
+var frame_startnormal_end1 = frame_startmonster_begin1 - 1;
 
-var toggle = document.getElementById('toggle');
-toggle.onclick = toggleMonster;
+var toggle1 = document.getElementById('toggle1');
+toggle1.onclick = toggleMonster1;
 
-function toggleMonster() {
-	if (!showmonster) startMonster();
-	else endMonster();
+function toggleMonster1() {
+	if (!showmonster1) startMonster1();
+	else endMonster1();
 }
 
 // start monster
-function startMonster() {
-	showmonster = true;
+function startMonster1() {
+	showmonster1 = true;
 	$('#msg1a').fadeOut(300, function() {
 		$('#msg1b').delay(1000).fadeIn(300);
 	});
-	anim.playSegments([frame_startmonster_begin, frame_startmonster_end],true);
-	anim.addEventListener('loopComplete',monsterComplete);
+	anim1.playSegments([frame_startmonster_begin1, frame_startmonster_end1],true);
+	anim1.addEventListener('loopComplete',monsterComplete1);
 }
-function monsterComplete() {
-	anim.playSegments([frame_startmonster_loop, frame_startmonster_end],true);
+function monsterComplete1() {
+	anim1.playSegments([frame_startmonster_loop1, frame_startmonster_end1],true);
 }
 
 // end monster
-function endMonster() {
-	showmonster = false;
+function endMonster1() {
+	showmonster1 = false;
 	$('#msg1b').fadeOut(300, function() {
 		$('#msg1a').delay(1000).fadeIn(300);
 	});
-    anim.playSegments([frame_endmonster_begin, frame_endmonster_end],true);
-	anim.addEventListener('loopComplete',startAnimation);
+    anim1.playSegments([frame_endmonster_begin1, frame_endmonster_end1],true);
+	anim1.addEventListener('loopComplete',startAnimation1);
 }
 
 // onload animation
-function startAnimation(){
-	
-	anim.playSegments([frame_startnormal_begin, frame_startnormal_end],true);
+function startAnimation1(){
+	anim1.playSegments([frame_startnormal_begin1, frame_startnormal_end1],true);
 }
+
+// -----------
+// ANIMATION 2
+var anim2Data = {
+        container: document.getElementById('container2'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './main2.json'
+    };
+var anim2 = bodymovin.loadAnimation(anim2Data);;
+anim2.stop();
+
+// global vars
+
+var frame_startnormal_begin2 = 0;
+var frame_loop_begin2 = 128;
+var frame_loop_end2 = 218;
+var frame_startnormal_end2 = 248;
+
+// onload animation
+function startAnimation2(){
+	anim2.playSegments([frame_startnormal_begin2, frame_loop_end2],true);
+	anim2.addEventListener('loopComplete',loopNormal2);
+}
+function loopNormal2() {
+	anim2.playSegments([frame_loop_begin2, frame_loop_end2],true);
+}
+function endAnimation2(){
+	anim2.playSegments([frame_loop_end2+1, frame_startnormal_end2],true);
+	anim2.addEventListener('loopComplete',anim2.stop);
+}
+
+// -------------
+// PAGE SCROLLER
+$(".main").onepage_scroll({
+	loop: false,
+	afterMove: function(index) {
+		// console.log(index);
+		if (index == 3) {
+			// make sure checkbox is false + correct messages are displayed
+			$('#toggle2').prop('checked',false);
+			$('#msg2a').show();
+			$('#msg2b').hide();
+			
+			// need to load animation from beginning
+			startAnimation2();
+		}
+	},
+	beforeMove: function(index) {
+		if (index == 3) {
+			endAnimation2;
+		}
+	}
+});
 </script>
 
 </html>

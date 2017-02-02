@@ -26,26 +26,85 @@
   font-weight: normal;
   font-style: italic; }
 
-body, html {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  overflow: hidden; }
-
-#container {
+.container {
   width: 100%;
   height: 100%;
   display: block;
-  overflow: hidden;
-  background-color: #56CCF2;
-  /*transform: translate3d(0,0,0);*/ }
+  overflow: hidden; }
 
-#toggle {
+#container0 {
+  background: linear-gradient(to right bottom, #fff 50%, #333 50%); }
+
+#container1 {
+  background-color: #56CCF2; }
+
+#container2 {
+  background-color: #70CE96; }
+
+.header {
+  height: 100px;
+  width: 100%;
   position: absolute;
-  top: 30px;
-  left: 50%;
+  top: 0;
+  background: #fff;
+  text-align: center;
   z-index: 50; }
+  .header div {
+    display: inline-block; }
+    .header div.company {
+      position: relative;
+      top: -41px;
+      color: #aaa;
+      font-size: 21px; }
+
+.wrap {
+  text-align: center;
+  margin: auto 0; }
+
+label {
+  margin: 1.5em 0.6em; }
+
+input {
+  position: absolute;
+  left: -9999px; }
+
+.slider-v2 {
+  position: relative;
+  display: inline-block;
+  width: 5.5em;
+  height: 3em;
+  cursor: pointer;
+  border-radius: 1.5em;
+  transition: 350ms; }
+
+.slider-v2::after {
+  position: absolute;
+  content: '';
+  width: 2em;
+  height: 2em;
+  top: 0.5em;
+  left: 0.5em;
+  border-radius: 50%;
+  transition: 250ms ease-in-out;
+  background: #ccc; }
+
+.slider-v2::before {
+  position: absolute;
+  content: '';
+  width: 4em;
+  height: 1.5em;
+  top: 0.75em;
+  left: 0.75em;
+  border-radius: 0.75em;
+  transition: 250ms ease-in-out;
+  background: #72CE99;
+  box-shadow: 0 0.08em 0.15em -0.1em rgba(0, 0, 0, 0.5) inset, 0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7), 0 0 0 0 #da5a40 inset; }
+
+input:checked + .slider-v2::before {
+  box-shadow: 0 0.08em 0.15em -0.1em rgba(0, 0, 0, 0.5) inset, 0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7), 3em 0 0 0 #da5a40 inset; }
+
+input:checked + .slider-v2::after {
+  left: 3em; }
 
 div, p {
   font-family: 'proxima-nova'; }
@@ -56,7 +115,7 @@ p {
 
 .msg-container {
   position: absolute;
-  top: 100px;
+  top: 180px;
   width: 100%;
   z-index: 100; }
 
@@ -67,3 +126,6 @@ p {
   font-size: 21px;
   line-height: 1.4;
   color: #fff; }
+
+#msg1b, #msg2b {
+  display: none; }

@@ -45,6 +45,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/assets\/css\/onepage-scroll.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/onepage-scroll-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/assets\/css\/slider.css": {
 		"aP": 0,
 		"bl": 0,
@@ -375,6 +385,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/jquery.bridget-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/jquery.onepage-scroll.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/jquery.onepage-scroll.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -20189,6 +20208,24 @@
 		"oAP": "\/prototypes\/08-animations\/03-store-info\/index.html",
 		"oF": 0
 		},
+	"\/prototypes\/08-animations\/04-donttrackus\/assets\/ddh-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/assets\/ddh-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/assets\/goog-logo.png": {
+		"ft": 32768,
+		"iS": 5969,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/assets\/goog-logo.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/prototypes\/08-animations\/04-donttrackus\/comp1.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -20301,10 +20338,26 @@
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/index.html",
 		"oF": 0
 		},
-	"\/prototypes\/08-animations\/04-donttrackus\/index.json": {
+	"\/prototypes\/08-animations\/04-donttrackus\/main1a.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/index-min.json",
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/main1a-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/main1b.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/main1b-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/04-donttrackus\/main2.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/main2-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
