@@ -16,7 +16,7 @@
 	<div class="main">
 		<section>
 			<div id="container0" class="container">
-				This is the first section
+				<h1><img src="assets/ddg-logo.svg" class="ddg logo"> vs <img src="assets/goog-logo.png" class="goog logo"></h1>
 			</div>
 		</section>
 
@@ -151,11 +151,48 @@ var anim2 = bodymovin.loadAnimation(anim2Data);;
 anim2.stop();
 
 // global vars
+var showmonster2 = false;
 
 var frame_startnormal_begin2 = 0;
 var frame_loop_begin2 = 128;
 var frame_loop_end2 = 218;
 var frame_startnormal_end2 = 248;
+
+var frame_goog_begin2 = frame_startnormal_end2+1;
+var frame_monster_start2 = 407;
+var frame_monster_end2 = 497;
+var frame_goog_end2 = 548;
+
+var toggle2 = document.getElementById('toggle2');
+toggle2.onclick = toggleMonster2;
+
+function toggleMonster2() {
+	if (!showmonster2) startMonster2();
+	else endMonster2();
+}
+
+// start monster
+function startMonster2() {
+	showmonster2 = true;
+	$('#msg2a').fadeOut(300, function() {
+		$('#msg2b').delay(2000).fadeIn(300);
+	});
+	anim2.playSegments([frame_goog_begin2, frame_monster_end2],true);
+	anim2.addEventListener('loopComplete',monsterComplete2);
+}
+function monsterComplete2() {
+	anim2.playSegments([frame_monster_start2, frame_monster_end2],true);
+}
+
+// end monster
+function endMonster2() {
+	showmonster2 = false;
+	$('#msg2b').fadeOut(300, function() {
+		$('#msg2a').delay(2000).fadeIn(300);
+	});
+    anim2.playSegments([frame_monster_end2+1, frame_goog_end2],true);
+	anim2.addEventListener('loopComplete',startAnimation2);
+}
 
 // onload animation
 function startAnimation2(){
@@ -179,6 +216,7 @@ $(".main").onepage_scroll({
 		if (index == 3) {
 			// make sure checkbox is false + correct messages are displayed
 			$('#toggle2').prop('checked',false);
+			showmonster2 = false;
 			$('#msg2a').show();
 			$('#msg2b').hide();
 			

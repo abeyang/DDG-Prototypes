@@ -64,9 +64,38 @@ $container2: #70CE96;
 	display: block;
 	overflow: hidden;
 }
-#container0 { background: linear-gradient(to right bottom, #fff 50%, #333 50%); }
+#container0 { 
+	// background: linear-gradient(to right bottom, #fff 50%, #333 50%); 
+	background-color: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	h1 { 
+		max-width: 80%; 
+		font-weight: 300;
+		font-size: 72px;
+		color: #aaa;
+	}
+
+	.logo { position: relative; }
+	.ddg { 
+		height: 120px;
+		top: 53px;
+		left: 20px;
+	}
+	.goog { 
+		height: 80px; 
+		top: 30px;
+		left: 15px;
+	}
+}
 #container1 { background-color: $container1; }
-#container2 { background-color: $container2; }
+#container2 { 
+	background-color: $container2; 
+
+	.msg-container { top: 120px; }
+}
 
 // Toggle
 
@@ -75,7 +104,7 @@ $container2: #70CE96;
 	width: 100%;
 	position: absolute;
 	top: 0;
-	background: #fff;
+	background: rgba(255,255,255,0.85);
 	text-align: center;
 	z-index: 50;
 

@@ -33,20 +33,40 @@
   overflow: hidden; }
 
 #container0 {
-  background: linear-gradient(to right bottom, #fff 50%, #333 50%); }
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #container0 h1 {
+    max-width: 80%;
+    font-weight: 300;
+    font-size: 72px;
+    color: #aaa; }
+  #container0 .logo {
+    position: relative; }
+  #container0 .ddg {
+    height: 120px;
+    top: 53px;
+    left: 20px; }
+  #container0 .goog {
+    height: 80px;
+    top: 30px;
+    left: 15px; }
 
 #container1 {
   background-color: #56CCF2; }
 
 #container2 {
   background-color: #70CE96; }
+  #container2 .msg-container {
+    top: 120px; }
 
 .header {
   height: 100px;
   width: 100%;
   position: absolute;
   top: 0;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
   text-align: center;
   z-index: 50; }
   .header div {
