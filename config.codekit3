@@ -7,7 +7,7 @@
 		"uuidString": "895943A5-9C86-4208-BFC4-1E3EF9710283"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25849",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -275,7 +275,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/grid-20.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/grid-26.png": {
 		"ft": 32768,
@@ -283,7 +286,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/grid-26.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/img\/stripes.png": {
 		"ft": 32768,
@@ -291,7 +297,10 @@
 		"oA": 0,
 		"oAP": "\/assets\/img\/stripes.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/js\/angular-masonry.js": {
 		"ft": 64,
@@ -1598,7 +1607,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/app\/assets\/img\/AngularJS-small.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/app\/assets\/img\/bullet.png": {
 		"ft": 32768,
@@ -1606,7 +1618,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/app\/assets\/img\/bullet.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/app\/assets\/img\/glyphicons-halflings-white.png": {
 		"ft": 32768,
@@ -1614,7 +1629,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/app\/assets\/img\/glyphicons-halflings-white.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/app\/assets\/img\/glyphicons-halflings.png": {
 		"ft": 32768,
@@ -1622,7 +1640,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/app\/assets\/img\/glyphicons-halflings.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/app\/assets\/js\/angular-bootstrap\/bootstrap.js": {
 		"ft": 64,
@@ -2771,7 +2792,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/angular_parts.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/form_data_flow.png": {
 		"ft": 32768,
@@ -2779,7 +2803,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/form_data_flow.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-databinding1.png": {
 		"ft": 32768,
@@ -2787,7 +2814,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-databinding1.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-databinding2.png": {
 		"ft": 32768,
@@ -2795,7 +2825,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-databinding2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-directive.png": {
 		"ft": 32768,
@@ -2803,7 +2836,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-directive.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-module-injector.png": {
 		"ft": 32768,
@@ -2811,7 +2847,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-module-injector.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-module-service.png": {
 		"ft": 32768,
@@ -2819,7 +2858,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-module-service.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-runtime.png": {
 		"ft": 32768,
@@ -2827,7 +2869,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-runtime.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-scope-watch-strategies.png": {
 		"ft": 32768,
@@ -2835,7 +2880,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-scope-watch-strategies.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-scope.png": {
 		"ft": 32768,
@@ -2843,7 +2891,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-scope.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-startup.png": {
 		"ft": 32768,
@@ -2851,7 +2902,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-startup.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-view.png": {
 		"ft": 32768,
@@ -2859,7 +2913,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/concepts-view.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/di_sequence_final.png": {
 		"ft": 32768,
@@ -2867,7 +2924,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/di_sequence_final.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/dom_scope_final.png": {
 		"ft": 32768,
@@ -2875,7 +2935,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/dom_scope_final.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/forms-debounce.gif": {
 		"ft": 4194304,
@@ -2899,7 +2962,9 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/hashbang_vs_regular_url.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/scenario_runner.png": {
 		"ft": 32768,
@@ -2907,7 +2972,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/scenario_runner.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/guide\/simple_scope_final.png": {
 		"ft": 32768,
@@ -2915,7 +2983,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/guide\/simple_scope_final.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/helloworld.png": {
 		"ft": 32768,
@@ -2923,7 +2994,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/helloworld.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/helloworld_2way.png": {
 		"ft": 32768,
@@ -2931,7 +3005,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/helloworld_2way.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/One_Way_Data_Binding.png": {
 		"ft": 32768,
@@ -2939,7 +3016,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/One_Way_Data_Binding.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/catalog_screen.png": {
 		"ft": 32768,
@@ -2947,7 +3027,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/catalog_screen.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_00.png": {
 		"ft": 32768,
@@ -2955,7 +3038,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_00.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_00_final.png": {
 		"ft": 32768,
@@ -2963,7 +3049,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_00_final.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_02.png": {
 		"ft": 32768,
@@ -2971,7 +3060,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_02.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_03.png": {
 		"ft": 32768,
@@ -2979,7 +3071,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_03.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_04.png": {
 		"ft": 32768,
@@ -2987,7 +3082,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_04.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_05.png": {
 		"ft": 32768,
@@ -2995,7 +3093,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_05.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_05.pptx": {
 		"ft": 8192,
@@ -3009,7 +3110,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_07_final.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_08-09_final.png": {
 		"ft": 32768,
@@ -3017,7 +3121,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_08-09_final.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_10-11_final.png": {
 		"ft": 32768,
@@ -3025,7 +3132,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/tutorial_10-11_final.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/xhr_service_final.png": {
 		"ft": 32768,
@@ -3033,7 +3143,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/tutorial\/xhr_service_final.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/img\/Two_Way_Data_Binding.png": {
 		"ft": 32768,
@@ -3041,7 +3154,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/docs\/img\/Two_Way_Data_Binding.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/docs\/protractor-conf.js": {
 		"ft": 64,
@@ -3314,7 +3430,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/css\/indicator-wait.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/data.plist": {
 		"ft": 8192,
@@ -3328,7 +3447,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image1.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image2.png": {
 		"ft": 32768,
@@ -3336,7 +3458,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image4.png": {
 		"ft": 32768,
@@ -3344,7 +3469,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image4.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image8.png": {
 		"ft": 32768,
@@ -3352,7 +3480,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image8.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image9.png": {
 		"ft": 32768,
@@ -3360,7 +3491,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/image9.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/Diagrams.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3398,7 +3532,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/guide\/concepts.graffle\/image1.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/guide\/concepts.graffle\/image4.png": {
 		"ft": 32768,
@@ -3406,7 +3543,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/guide\/concepts.graffle\/image4.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/guide\/concepts.graffle\/image5.png": {
 		"ft": 32768,
@@ -3414,7 +3554,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/guide\/concepts.graffle\/image5.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/guide\/di_sequence.graffle": {
 		"ft": 8192,
@@ -3452,7 +3595,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/guide\/simple_scope.graffle\/image7.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/guide\/simple_scope.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3484,7 +3630,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/simple_scope.graffle\/image7.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/simple_scope.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3516,7 +3665,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_02.graffle\/image11.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_02.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3542,7 +3694,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_03.graffle\/image13.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_03.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3568,7 +3723,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_04.graffle\/image15.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_04.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3594,7 +3752,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_07.graffle\/image9.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_07.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3620,7 +3781,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_08-09.graffle\/image10.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_08-09.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3646,7 +3810,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_10-11.graffle\/image10.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_10-11.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3672,7 +3839,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_proto.graffle\/image7.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/docs\/tutorial\/tutorial_proto.graffle\/QuickLook\/Preview.pdf": {
 		"ft": 8192,
@@ -3704,7 +3874,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS-Shield.exports\/AngularJS-Shield-huge.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS-Shield.exports\/AngularJS-Shield-large.png": {
 		"ft": 32768,
@@ -3712,7 +3885,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS-Shield.exports\/AngularJS-Shield-large.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS-Shield.exports\/AngularJS-Shield-medium.png": {
 		"ft": 32768,
@@ -3720,7 +3896,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS-Shield.exports\/AngularJS-Shield-medium.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS-Shield.exports\/AngularJS-Shield-small.png": {
 		"ft": 32768,
@@ -3728,7 +3907,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS-Shield.exports\/AngularJS-Shield-small.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS-Shield.exports\/AngularJS-Shield.eps": {
 		"ft": 8192,
@@ -3754,7 +3936,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.exports\/AngularJS-huge.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.exports\/AngularJS-large.png": {
 		"ft": 32768,
@@ -3762,7 +3947,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.exports\/AngularJS-large.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.exports\/AngularJS-medium.png": {
 		"ft": 32768,
@@ -3770,7 +3958,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.exports\/AngularJS-medium.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.exports\/AngularJS-small.png": {
 		"ft": 32768,
@@ -3778,7 +3969,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.exports\/AngularJS-small.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.exports\/AngularJS.eps": {
 		"ft": 8192,
@@ -3804,7 +3998,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.graffle\/image1.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.graffle\/image2.png": {
 		"ft": 32768,
@@ -3812,7 +4009,10 @@
 		"oA": 2,
 		"oAP": "\/bower_components\/angular-1.1.6\/images\/logo\/AngularJS.graffle\/image2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/bower_components\/angular-1.1.6\/init-repo.sh": {
 		"ft": 8192,
@@ -17904,7 +18104,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/earth.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/earth@2x.png": {
 		"ft": 32768,
@@ -17912,7 +18115,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/earth@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/jupiter.png": {
 		"ft": 32768,
@@ -17920,7 +18126,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/jupiter.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/jupiter@2x.png": {
 		"ft": 32768,
@@ -17928,7 +18137,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/jupiter@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/mars.png": {
 		"ft": 32768,
@@ -17936,7 +18148,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/mars.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/mars@2x.png": {
 		"ft": 32768,
@@ -17944,7 +18159,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/mars@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/mercury.png": {
 		"ft": 32768,
@@ -17952,7 +18170,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/mercury.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/mercury@2x.png": {
 		"ft": 32768,
@@ -17960,7 +18181,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/mercury@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/moon.png": {
 		"ft": 32768,
@@ -17968,7 +18192,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/moon.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/moon@2x.png": {
 		"ft": 32768,
@@ -17976,7 +18203,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/moon@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/neptune.png": {
 		"ft": 32768,
@@ -17984,7 +18214,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/neptune.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/neptune@2x.png": {
 		"ft": 32768,
@@ -17992,7 +18225,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/neptune@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/pluto.png": {
 		"ft": 32768,
@@ -18000,7 +18236,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/pluto.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/pluto@2x.png": {
 		"ft": 32768,
@@ -18008,7 +18247,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/pluto@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/saturn.png": {
 		"ft": 32768,
@@ -18016,7 +18258,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/saturn.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/saturn@2x.png": {
 		"ft": 32768,
@@ -18024,7 +18269,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/saturn@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/sun.png": {
 		"ft": 32768,
@@ -18032,7 +18280,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/sun.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/sun@2x.png": {
 		"ft": 32768,
@@ -18040,7 +18291,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/sun@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/uranus.png": {
 		"ft": 32768,
@@ -18048,7 +18302,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/uranus.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/uranus@2x.png": {
 		"ft": 32768,
@@ -18056,7 +18313,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/uranus@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/venus.png": {
 		"ft": 32768,
@@ -18064,7 +18324,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/venus.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/img\/venus@2x.png": {
 		"ft": 32768,
@@ -18072,7 +18335,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/01-planets\/img\/venus@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/01-planets\/index.html": {
 		"ft": 8192,
@@ -18417,7 +18683,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/chef.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/img\/creation.jpg": {
 		"ft": 16384,
@@ -18425,7 +18693,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/creation.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/img\/dreams.jpg": {
 		"ft": 16384,
@@ -18433,7 +18703,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/dreams.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/img\/folks.jpg": {
 		"ft": 16384,
@@ -18441,7 +18713,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/folks.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/img\/holmes.jpg": {
 		"ft": 16384,
@@ -18449,7 +18723,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/holmes.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/img\/ironman.jpg": {
 		"ft": 16384,
@@ -18457,7 +18733,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/ironman.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/img\/lastsamurai.jpg": {
 		"ft": 16384,
@@ -18465,7 +18743,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/lastsamurai.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/img\/minorityreport.jpg": {
 		"ft": 16384,
@@ -18473,7 +18753,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/minorityreport.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/img\/wonderboys.jpg": {
 		"ft": 16384,
@@ -18481,7 +18763,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/05-detail-blur\/img\/wonderboys.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/05-detail-blur\/index.html": {
 		"ft": 8192,
@@ -19119,7 +19403,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/anthonyneace.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/avatars\/guiltydolphin.png": {
 		"ft": 32768,
@@ -19127,7 +19413,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/guiltydolphin.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/avatars\/jagtalon.jpeg": {
 		"ft": 16384,
@@ -19135,7 +19424,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/jagtalon.jpeg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/avatars\/mattr555.jpeg": {
 		"ft": 16384,
@@ -19143,7 +19434,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/mattr555.jpeg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/avatars\/mintsoft.png": {
 		"ft": 32768,
@@ -19151,7 +19444,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/mintsoft.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/avatars\/moollaza.jpeg": {
 		"ft": 16384,
@@ -19159,7 +19455,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/moollaza.jpeg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/avatars\/MrChrisW.jpeg": {
 		"ft": 16384,
@@ -19167,7 +19465,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/MrChrisW.jpeg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/avatars\/pjhampton.jpg": {
 		"ft": 16384,
@@ -19175,7 +19475,9 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/pjhampton.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/avatars\/riqpe.png": {
 		"ft": 32768,
@@ -19183,7 +19485,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/06-user-pages\/avatars\/riqpe.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/06-user-pages\/includes\/_a-header.kit": {
 		"ft": 2048,
@@ -20234,7 +20539,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/assets\/goog-logo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/comp1.html": {
 		"ft": 8192,
@@ -20276,7 +20584,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_0.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_1.png": {
 		"ft": 32768,
@@ -20284,7 +20595,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_1.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_2.png": {
 		"ft": 32768,
@@ -20292,7 +20606,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_3.png": {
 		"ft": 32768,
@@ -20300,7 +20617,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_3.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_4.png": {
 		"ft": 32768,
@@ -20308,7 +20628,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_4.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_5.png": {
 		"ft": 32768,
@@ -20316,7 +20639,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_5.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_6.png": {
 		"ft": 32768,
@@ -20324,7 +20650,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_6.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_7.png": {
 		"ft": 32768,
@@ -20332,7 +20661,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_7.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/images\/img_8.png": {
 		"ft": 32768,
@@ -20340,7 +20672,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/04-donttrackus\/images\/img_8.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/08-animations\/04-donttrackus\/index.html": {
 		"ft": 8192,
@@ -20372,11 +20707,60 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/prototypes\/08-animations\/05-donttrackus\/images\/img_0.png": {
+		"ft": 32768,
+		"iS": 3309,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/images\/img_0.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/images\/img_1.png": {
+		"ft": 32768,
+		"iS": 35191,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/images\/img_1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/images\/img_2.png": {
+		"ft": 32768,
+		"iS": 277812,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/images\/img_2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/prototypes\/08-animations\/05-donttrackus\/index.html": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/index.html",
 		"oF": 0
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series1-loop.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series1-loop-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series1.bk-good.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series1.bk-good-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/prototypes\/08-animations\/05-donttrackus\/series1.json": {
 		"ft": 524288,
@@ -20385,6 +20769,76 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series2-loop.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series2-loop-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series2.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series2-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series3-loop-v3-nolayercomp.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series3-loop-v3-nolayercomp-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series3-loop-v3.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series3-loop-v3-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series3-loop.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series3-loop-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series3.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series3-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series4.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series4-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series4.v4.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series4.v4-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/prototypes\/08-animations\/05-donttrackus\/simple.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/simple.html",
+		"oF": 0
 		},
 	"\/prototypes\/08-animations\/assets\/Adobe After Effects Auto-Save\/animations auto-save 1.aep": {
 		"ft": 8192,
@@ -20416,11 +20870,29 @@
 		"oAP": "\/prototypes\/08-animations\/assets\/ghostai.ai",
 		"oF": 0
 		},
+	"\/prototypes\/08-animations\/js\/bodymovin.bk.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/min\/bodymovin.bk-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/prototypes\/08-animations\/js\/bodymovin.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/js\/min\/bodymovin-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/08-animations\/js\/min\/bodymovin-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/min\/min\/bodymovin-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -20510,7 +20982,10 @@
 		"oA": 0,
 		"oAP": "\/prototypes\/09-vue-app\/src\/assets\/logo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/prototypes\/09-vue-app\/src\/main.js": {
 		"ft": 64,
@@ -20850,6 +21325,64 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/prototypes\/11-landing-page\/01-reddit\/01.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/11-landing-page\/01-reddit\/01-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/prototypes\/11-landing-page\/01-reddit\/01.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/prototypes\/11-landing-page\/01-reddit\/01.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/prototypes\/11-landing-page\/01-reddit\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/11-landing-page\/01-reddit\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/11-landing-page\/01-reddit\/index.kit": {
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/prototypes\/11-landing-page\/01-reddit\/index.html",
+		"oF": 0
+		},
+	"\/prototypes\/11-landing-page\/01-reddit\/wolf-sheep.jpg": {
+		"ft": 16384,
+		"iS": 96331,
+		"oA": 0,
+		"oAP": "\/prototypes\/11-landing-page\/01-reddit\/wolf-sheep.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/prototypes\/11-landing-page\/_default.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/prototypes\/css\/_default.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/README.md": {
 		"cS": 0,
@@ -21550,6 +22083,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-cond-assign": {
 			"active": 1,
 			"optionString": "'except-parens'"
@@ -21750,6 +22287,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -21827,6 +22368,10 @@
 			"optionString": ""
 			},
 		"no-proto": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-prototype-builtins": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -22026,6 +22571,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
+			},
 		"object-curly-newline": {
 			"active": 0,
 			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
@@ -22077,6 +22626,10 @@
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
+			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
 			},
 		"prefer-rest-params": {
 			"active": 0,
@@ -22171,6 +22724,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
@@ -22617,7 +23174,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -22640,14 +23198,6 @@
 		"autoOutputPathStyle": 0,
 		"orderOutput": 0,
 		"outputStyle": 1
-		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
@@ -22710,7 +23260,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"optimizerType": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
@@ -22795,6 +23347,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
