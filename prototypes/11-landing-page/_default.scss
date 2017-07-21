@@ -1,0 +1,59 @@
+// VARIABLES
+// try to mimic default settings as much as possible
+
+$white: 		#fff;
+$off-white:		#fafafa;
+$lightest-gray:	#eee;
+$lighter-gray:	#ddd;
+$neue-gray:		#999;
+$gray: 			#888;
+$dark-gray: 	#333;
+$current-blue: 	#4495d4;
+$teal:			#63C8C9;
+$purple:		#5558D8;
+$dark-purple:	#474BB8;
+$red:			#EE785F;
+
+// TAGS
+
+h1 {
+	line-height: 1.1;
+}
+
+// GENERIC CLASSES
+.subtitle {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+}
+
+a.btn {
+	padding: 10px;
+	border-radius: 3px;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: $off-white;
+	color: $dark-gray;
+	border: 1px solid $lighter-gray;
+
+	&.btn-red {
+		background-color: $red;
+		color: $white;
+		border-width: 0;
+	}
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+
+	.flex-item {
+		max-width: 45%;
+	}
+}
+
+// FUNCTIONS 
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
