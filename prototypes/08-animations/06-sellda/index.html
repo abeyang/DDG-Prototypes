@@ -64,7 +64,7 @@
 			margin: 0;
 			padding: 0;
 			background: #eee; 
-			overflow: none;
+			overflow: hidden;
 		}
 		
 		#container {
@@ -83,7 +83,7 @@
 		}
 
 		.msg {
-			/*display: none;*/
+			display: none;
 			position: fixed;
 			top: 80px;
 			left: 80px;
@@ -123,11 +123,7 @@
 <body>
 	<div id="container">
 		<div id="game">
-			<div id="msg1" class="msg">
-				It's a typical day on the internet!
-				<br />Let's take a scroll &mdash; I mean, stroll &mdash; through the neighborhood...
-				<br />What could go possibly wrong?
-			</div>
+			<div id="msg" class="msg"></div>
 			
 			<div id="guy"></div>
 			<div id="sucker1" class="sucker"></div>
@@ -141,9 +137,11 @@
 var ddg = {
 	width: 1200,
 	height: 5600,
-	fps: 24,			// how many "frames" for each step (for #guy)
+	fps: 24,		// how many "frames" for each step (for #guy)
 	step: 0,		// used for #guy
-	scroll: 0		// scroll position
+	scroll: 0,		// scroll position
+	msg_id: 0,		// current message (id)
+	show_msg: false // flag for showing messages
 };
 
 // sprite info
@@ -152,16 +150,24 @@ var sprite = {
 	sucker2: { top: 1051, left: 304}
 };
 
+// message info
+var msg = [
+	{
+		start: 0,
+		duration: 400,
+		text: "It's a typical day on the internet!<br />Let's take a scroll &mdash; I mean, stroll &mdash; through the neighborhood...<br />What could go possibly wrong?"
+	}
+];
+
 // ON PAGE LOAD
 $(document).ready(function() {
 	// load sprite positions
 	_.each(sprite, function(list, key) {
-		// console.log(key + ' ' + list.top);
 		$('#'+key).css(list);
 	});
 });
 
-// SCROLLING
+// ON SCROLL
 $('#container').scroll(function() {
 	// update scroll position
 	ddg.scroll = $('#container').scrollTop();
@@ -172,6 +178,26 @@ $('#container').scroll(function() {
 		ddg.step = step;
 		$('#guy').removeClass().addClass('step' + ddg.step);
 		// console.log(ddg.scroll);
+	}
+
+	// check to show messages
+	// TODO: need to implement scrolling up.. this only works for scrolling down
+	var next = msg[ddg.msg_id];
+	
+	// if show_msg is OFF, get ready to show the next message
+	if (!ddg.show_msg) {
+		if (ddg.scroll > next.start) {
+			$('#msg').html(next.text).fadeIn();
+			ddg.show_msg = true;
+		}
+	}
+	// if show_msg is ON, get ready to hide the message
+	else {
+		if (ddg.scroll > next.start + next.duration) {
+			$('#msg').fadeOut();
+			ddg.show_msg = false;
+			ddg.msg_id++;				// update message counter
+		}
 	}
 });
 
