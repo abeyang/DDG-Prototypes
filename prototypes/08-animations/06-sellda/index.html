@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../../../assets/js/underscore-min.js" type="text/javascript"></script>
+	<script src="../../../assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="../js/ScrollMagic.js" type="text/javascript"></script>
+
+
+	<style type="text/css">
+		@font-face {
+		    font-family: 'proxima-nova';
+		    src: url('../../../assets/fonts/ProximaNova-Semibold-webfont.eot');
+		    src: url('../../../assets/fonts/ProximaNova-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../../../assets/fonts/ProximaNova-Semibold-webfont.woff2') format('woff2'),
+		         url('../../../assets/fonts/ProximaNova-Semibold-webfont.woff') format('woff'),
+		         url('../../../assets/fonts/ProximaNova-Semibold-webfont.ttf') format('truetype'),
+		         url('../../../assets/fonts/ProximaNova-Semibold-webfont.svg#proxima_nova_rgbold') format('svg');
+		    font-weight: 600;
+		    font-style: normal;
+
+		}
+
+		@font-face {
+		    font-family: 'proxima-nova';
+		    src: url('../../../assets/fonts/ProximaNova-Light-webfont.eot');
+		    src: url('../../../assets/fonts/ProximaNova-Light-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../../../assets/fonts/ProximaNova-Light-webfont.woff2') format('woff2'),
+		         url('../../../assets/fonts/ProximaNova-Light-webfont.woff') format('woff'),
+		         url('../../../assets/fonts/ProximaNova-Light-webfont.ttf') format('truetype'),
+		         url('../../../assets/fonts/ProximaNova-Light-webfont.svg#proxima_novalight') format('svg');
+		    font-weight: 300;
+		    font-style: normal;
+
+		}
+
+		@font-face {
+		    font-family: 'proxima-nova';
+		    src: url('../../../assets/fonts/ProximaNova-Regular-webfont.eot');
+		    src: url('../../../assets/fonts/ProximaNova-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../../../assets/fonts/ProximaNova-Regular-webfont.woff2') format('woff2'),
+		         url('../../../assets/fonts/ProximaNova-Regular-webfont.woff') format('woff'),
+		         url('../../../assets/fonts/ProximaNova-Regular-webfont.ttf') format('truetype'),
+		         url('../../../assets/fonts/ProximaNova-Regular-webfont.svg#proxima_nova_rgregular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+
+		@font-face {
+		    font-family: 'proxima-nova';
+		    src: url('../../../assets/fonts/ProximaNova-RegularItalic-webfont.eot');
+		    src: url('../../../assets/fonts/ProximaNova-RegularItalic-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('../../../assets/fonts/ProximaNova-RegularItalic-webfont.woff2') format('woff2'),
+		         url('../../../assets/fonts/ProximaNova-RegularItalic-webfont.woff') format('woff'),
+		         url('../../../assets/fonts/ProximaNova-RegularItalic-webfont.ttf') format('truetype'),
+		         url('../../../assets/fonts/ProximaNova-RegularItalic-webfont.svg#proxima_novaregular_italic') format('svg');
+		    font-weight: normal;
+		    font-style: italic;
+
+		}
+
+
+		body { 
+			margin: 0;
+			padding: 0;
+			background: #eee; 
+			overflow: none;
+		}
+		
+		#container {
+			margin: 0;
+			background: #fff;
+			width: 1200px;
+			height: 800px;
+			overflow-y: scroll;
+		}
+
+		#game {
+			position: relative;
+			background: #ccc;
+			height: 5600px;
+			background: #78C878 url(assets/BACKGROUND.svg) no-repeat;
+		}
+
+		.msg {
+			/*display: none;*/
+			position: fixed;
+			top: 80px;
+			left: 80px;
+			width: 960px;
+			height: 180px;
+			padding: 40px;
+			color: #fff;
+			font-family: proxima-nova, arial;
+			font-size: 25px;
+			line-height: 1.4;
+			background: rgba(0,0,0,.75);
+			z-index: 1000;
+		}
+
+		#guy {
+			position: fixed;
+			top: 400px;
+			left: 576px;	
+			height: 100px;
+			width: 50px;
+			background: url(assets/sprites.svg) no-repeat 0 0;
+		}
+		#guy.step1 { background-position-x: -50px; }
+		#guy.step3 { background-position-x: -100px; }
+
+		.sucker {
+			position: absolute;
+			height: 54px;
+			width: 64px;
+			background: url(assets/sprites.svg) no-repeat -87px -100px;
+		}
+	</style>
+
+	<title>SellDa(ta)</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="game">
+			<div id="msg1" class="msg">
+				It's a typical day on the internet!
+				<br />Let's take a scroll &mdash; I mean, stroll &mdash; through the neighborhood...
+				<br />What could go possibly wrong?
+			</div>
+			
+			<div id="guy"></div>
+			<div id="sucker1" class="sucker"></div>
+			<div id="sucker2" class="sucker"></div>
+		</div>
+	</div>
+</body>
+
+<script>
+// global
+var ddg = {
+	width: 1200,
+	height: 5600,
+	fps: 24,			// how many "frames" for each step (for #guy)
+	step: 0,		// used for #guy
+	scroll: 0		// scroll position
+};
+
+// sprite info
+var sprite = {
+	sucker1: { top: 900, left: 362},
+	sucker2: { top: 1051, left: 304}
+};
+
+// ON PAGE LOAD
+$(document).ready(function() {
+	// load sprite positions
+	_.each(sprite, function(list, key) {
+		// console.log(key + ' ' + list.top);
+		$('#'+key).css(list);
+	});
+});
+
+// SCROLLING
+$('#container').scroll(function() {
+	// update scroll position
+	ddg.scroll = $('#container').scrollTop();
+
+	// update #guy walking
+	var step = Math.floor(ddg.scroll/ddg.fps)%4;
+	if (step != ddg.step) {
+		ddg.step = step;
+		$('#guy').removeClass().addClass('step' + ddg.step);
+		// console.log(ddg.scroll);
+	}
+});
+
+// embarassing searches:
+// weird rash
+// bankruptcy
+// i love ponies
+
+// ENABLE / DISABLE SCROLLING
+// https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
+
+/*
+// init controller
+var controller = new ScrollMagic.Controller();
+
+// create a scene
+new ScrollMagic.Scene({
+        duration: 100,    // the scene should last for a scroll distance of ___px
+        offset: 0        // start this scene after scrolling for ___px
+    })
+    .setPin("#guy") // pins the element for the the scene's duration
+    .addTo(controller); // assign the scene to the controller
+
+*/
+
+</script>
+
+</html>

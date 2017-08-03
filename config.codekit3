@@ -20802,6 +20802,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/prototypes\/08-animations\/05-donttrackus\/series3-loop-v4.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/series3-loop-v4-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/prototypes\/08-animations\/05-donttrackus\/series3-loop.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -20838,6 +20846,32 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/prototypes\/08-animations\/05-donttrackus\/simple.html",
+		"oF": 0
+		},
+	"\/prototypes\/08-animations\/06-sellda\/assets\/BACKGROUND.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/06-sellda\/assets\/BACKGROUND.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/08-animations\/06-sellda\/assets\/sprites.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/06-sellda\/assets\/sprites.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/08-animations\/06-sellda\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/08-animations\/06-sellda\/index.html",
 		"oF": 0
 		},
 	"\/prototypes\/08-animations\/assets\/Adobe After Effects Auto-Save\/animations auto-save 1.aep": {
@@ -20893,6 +20927,24 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/prototypes\/08-animations\/js\/min\/min\/bodymovin-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/08-animations\/js\/min\/ScrollMagic.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/min\/min\/ScrollMagic.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/08-animations\/js\/ScrollMagic.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/min\/ScrollMagic-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

@@ -1,0 +1,363 @@
+<svg width="150" height="200" viewBox="0 0 150 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>sprites</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1994 -1600)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 1994 1600L 2144 1600L 2144 1800L 1994 1800L 1994 1600Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="sprites" clip-path="url(#clip-0)">
+<g id="Guy">
+<g id="shadow">
+<use xlink:href="#path0_fill" transform="translate(1995 1675.67)" fill="#000000" fill-opacity="0.15"/>
+</g>
+<g id="--Body">
+<g id="R-foot-1">
+<use xlink:href="#path1_fill" transform="matrix(0.838671 -0.544639 0.544639 0.838671 1998.55 1684.29)" fill="#723C28"/>
+</g>
+<g id="L-foot-1">
+<use xlink:href="#path1_fill" transform="matrix(-0.838671 -0.544639 -0.544639 0.838671 2039.1 1684.29)" fill="#723C28"/>
+</g>
+<g id="body">
+<use xlink:href="#path2_stroke" transform="translate(2018.61 1652.36)" fill="#27A5E8"/>
+</g>
+<g id="R-arm-1">
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="translate(1999 1651.36)" fill="#FFFFFF"/>
+</g>
+<g id="hand">
+<use xlink:href="#path4_fill" transform="translate(1995 1665.36)" fill="#FDB165"/>
+</g>
+</g>
+<g id="L-arm-1">
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="translate(2039 1651.36)" fill="#FFFFFF"/>
+</g>
+<g id="hand">
+<use xlink:href="#path4_fill" transform="translate(2035 1665.36)" fill="#FDB165"/>
+</g>
+</g>
+</g>
+<g id="--Head">
+<g id="face">
+<use xlink:href="#path2_stroke" transform="translate(2018.61 1628.36)" fill="#FDB165"/>
+</g>
+<g id="beard">
+<use xlink:href="#path5_fill" transform="translate(1998.61 1643.36)" fill="#B27439"/>
+</g>
+<g id="smile">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2012.55 1660.36)" fill="#282828"/>
+</g>
+<g id="ear">
+<use xlink:href="#path7_stroke" transform="translate(2038 1630.36)" fill="#FDB165"/>
+</g>
+<g id="ear">
+<use xlink:href="#path7_stroke" transform="translate(1999 1630.36)" fill="#FDB165"/>
+</g>
+<g id="eye">
+<use xlink:href="#path8_stroke" transform="translate(2011.61 1642.36)" fill="#282828"/>
+</g>
+<g id="eye">
+<use xlink:href="#path8_stroke" transform="translate(2025.61 1642.36)" fill="#282828"/>
+</g>
+<g id="hair">
+<use xlink:href="#path9_fill" transform="matrix(1 0 0 -1 1998.61 1635.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2022.55 1610.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 2023.43 1612.73)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2027.55 1614.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2027.55 1619.36)" fill="#412710"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path10_fill" transform="matrix(-0.911643 0.410984 0.410984 0.911643 2024.4 1619.39)" fill="#95593C"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path11_fill" transform="matrix(-0.510065 0.860136 0.860136 0.510065 2014.18 1619.1)" fill="#95593C"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path12_fill" transform="matrix(-0.98287 -0.1843 -0.1843 0.98287 2030.5 1624.6)" fill="#95593C"/>
+</g>
+</g>
+</g>
+<g id="Guy">
+<g id="shadow">
+<use xlink:href="#path0_fill" transform="translate(2095 1675.67)" fill="#000000" fill-opacity="0.15"/>
+</g>
+<g id="--Body">
+<g id="L-foot-0">
+<use xlink:href="#path1_fill" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 2136.72 1683.41)" fill="#723C28"/>
+</g>
+<g id="L-arm-0">
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="matrix(0.965926 0.258819 -0.258819 0.965926 2138.85 1651.74)" fill="#FFFFFF"/>
+</g>
+<g id="hand">
+<use xlink:href="#path4_fill" transform="matrix(0.965926 0.258819 -0.258819 0.965926 2131.36 1664.23)" fill="#FDB165"/>
+</g>
+</g>
+<g id="body">
+<use xlink:href="#path2_stroke" transform="translate(2118.61 1652.36)" fill="#27A5E8"/>
+</g>
+<g id="R-foot-2">
+<use xlink:href="#path13_fill" transform="matrix(0.555332 -0.831629 0.831629 0.555332 2101.38 1688.29)" fill="#723C28"/>
+</g>
+<g id="R-arm-2">
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="matrix(0.866025 -0.5 0.5 0.866025 2098.5 1655.84)" fill="#FFFFFF"/>
+</g>
+<g id="hand">
+<use xlink:href="#path4_fill" transform="matrix(0.866025 -0.5 0.5 0.866025 2102.04 1669.96)" fill="#FDB165"/>
+</g>
+</g>
+</g>
+<g id="--Head">
+<g id="face">
+<use xlink:href="#path2_stroke" transform="translate(2118.61 1628.36)" fill="#FDB165"/>
+</g>
+<g id="beard">
+<use xlink:href="#path5_fill" transform="translate(2098.61 1643.36)" fill="#B27439"/>
+</g>
+<g id="smile">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2112.55 1660.36)" fill="#282828"/>
+</g>
+<g id="ear">
+<use xlink:href="#path7_stroke" transform="translate(2138 1630.36)" fill="#FDB165"/>
+</g>
+<g id="ear">
+<use xlink:href="#path7_stroke" transform="translate(2099 1630.36)" fill="#FDB165"/>
+</g>
+<g id="eye">
+<use xlink:href="#path8_stroke" transform="translate(2111.61 1642.36)" fill="#282828"/>
+</g>
+<g id="eye">
+<use xlink:href="#path8_stroke" transform="translate(2125.61 1642.36)" fill="#282828"/>
+</g>
+<g id="hair">
+<use xlink:href="#path9_fill" transform="matrix(1 0 0 -1 2098.61 1635.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2122.55 1610.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 2123.43 1612.73)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2127.55 1614.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2127.55 1619.36)" fill="#412710"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path14_fill" transform="matrix(-0.911643 0.410984 0.410984 0.911643 2124.4 1619.39)" fill="#95593C"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path15_fill" transform="matrix(-0.510065 0.860136 0.860136 0.510065 2114.18 1619.1)" fill="#95593C"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path16_fill" transform="matrix(-0.98287 -0.1843 -0.1843 0.98287 2130.5 1624.6)" fill="#95593C"/>
+</g>
+</g>
+</g>
+<g id="Guy">
+<g id="shadow">
+<use xlink:href="#path0_fill" transform="translate(2045 1675.67)" fill="#000000" fill-opacity="0.15"/>
+</g>
+<g id="--Body">
+<g id="R-foot-0">
+<use xlink:href="#path1_fill" transform="matrix(0.707107 -0.707107 0.707107 0.707107 2050.93 1683.41)" fill="#723C28"/>
+</g>
+<g id="R-arm-0">
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="matrix(0.965926 -0.258819 0.258819 0.965926 2048.15 1651.74)" fill="#FFFFFF"/>
+</g>
+<g id="hand">
+<use xlink:href="#path4_fill" transform="matrix(0.965926 -0.258819 0.258819 0.965926 2047.91 1666.3)" fill="#FDB165"/>
+</g>
+</g>
+<g id="body">
+<use xlink:href="#path2_stroke" transform="translate(2068.61 1652.36)" fill="#27A5E8"/>
+</g>
+<g id="L-foot-2">
+<use xlink:href="#path13_fill" transform="matrix(-0.555332 -0.831629 -0.831629 0.555332 2087.98 1688.29)" fill="#723C28"/>
+</g>
+<g id="L-arm-2">
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="matrix(0.866025 0.5 -0.5 0.866025 2089.5 1655.84)" fill="#FFFFFF"/>
+</g>
+<g id="hand">
+<use xlink:href="#path4_fill" transform="matrix(0.866025 0.5 -0.5 0.866025 2079.04 1665.96)" fill="#FDB165"/>
+</g>
+</g>
+</g>
+<g id="--Head">
+<g id="face">
+<use xlink:href="#path2_stroke" transform="translate(2068.61 1628.36)" fill="#FDB165"/>
+</g>
+<g id="beard">
+<use xlink:href="#path5_fill" transform="translate(2048.61 1643.36)" fill="#B27439"/>
+</g>
+<g id="smile">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2062.55 1660.36)" fill="#282828"/>
+</g>
+<g id="ear">
+<use xlink:href="#path7_stroke" transform="translate(2088 1630.36)" fill="#FDB165"/>
+</g>
+<g id="ear">
+<use xlink:href="#path7_stroke" transform="translate(2049 1630.36)" fill="#FDB165"/>
+</g>
+<g id="eye">
+<use xlink:href="#path8_stroke" transform="translate(2061.61 1642.36)" fill="#282828"/>
+</g>
+<g id="eye">
+<use xlink:href="#path8_stroke" transform="translate(2075.61 1642.36)" fill="#282828"/>
+</g>
+<g id="hair">
+<use xlink:href="#path9_fill" transform="matrix(1 0 0 -1 2048.61 1635.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2072.55 1610.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 2073.43 1612.73)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2077.55 1614.36)" fill="#412710"/>
+</g>
+<g id="hair-flick">
+<use xlink:href="#path6_fill" transform="matrix(1 0 0 -1 2077.55 1619.36)" fill="#412710"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path17_fill" transform="matrix(-0.911643 0.410984 0.410984 0.911643 2074.4 1619.39)" fill="#95593C"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path11_fill" transform="matrix(-0.510065 0.860136 0.860136 0.510065 2064.18 1619.1)" fill="#95593C"/>
+</g>
+<g id="hair-hilite">
+<use xlink:href="#path12_fill" transform="matrix(-0.98287 -0.1843 -0.1843 0.98287 2080.5 1624.6)" fill="#95593C"/>
+</g>
+</g>
+</g>
+<g id="Monster-side">
+<g id="shadow">
+<use xlink:href="#path18_fill" transform="translate(1997.1 1733.69)" fill="#000000" fill-opacity="0.15"/>
+</g>
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="translate(2016.75 1725.19)" fill="#3C3C3C"/>
+</g>
+<g id="head">
+<use xlink:href="#path19_fill" transform="translate(2012.75 1700)" fill="#595959"/>
+<mask id="mask0_outline_ins">
+<use xlink:href="#path19_fill" fill="white" transform="translate(2012.75 1700)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path20_stroke_2x" transform="translate(2012.75 1700)" fill="#3C3C3C"/>
+</g>
+</g>
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="translate(2028.75 1731.19)" fill="#3C3C3C"/>
+</g>
+<g id="arm">
+<use xlink:href="#path21_stroke" transform="matrix(0.707107 -0.707107 0.707107 0.707107 2031.1 1733.53)" fill="#3C3C3C"/>
+</g>
+<g id="arm">
+<use xlink:href="#path21_stroke" transform="matrix(0.393658 -0.919257 0.919257 0.393658 2037.06 1732.49)" fill="#3C3C3C"/>
+</g>
+<g id="monster-lips-vacuum">
+<g id="lip-extension">
+<use xlink:href="#path22_stroke" transform="translate(2007.15 1732.66)" fill="#EEB733"/>
+</g>
+<g id="lips">
+<use xlink:href="#path23_fill" transform="translate(1994 1720.21)" fill="#EEB733"/>
+</g>
+<g id="hole">
+<use xlink:href="#path24_fill" transform="translate(1995.98 1723.08)" fill="#282828"/>
+</g>
+</g>
+<g id="eye">
+<use xlink:href="#path25_fill" transform="matrix(0.707107 -0.707107 0.707107 0.707107 2013.03 1732.22)" fill="#FFFFFF"/>
+</g>
+<g id="pupil">
+<use xlink:href="#path26_fill" transform="translate(2016.44 1729.19)" fill="#282828"/>
+</g>
+</g>
+<g id="Monster-side">
+<g id="shadow">
+<use xlink:href="#path18_fill" transform="matrix(-1 0 0 1 2140.9 1733.69)" fill="#000000" fill-opacity="0.15"/>
+</g>
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="matrix(-1 0 0 1 2121.25 1725.19)" fill="#3C3C3C"/>
+</g>
+<g id="head">
+<use xlink:href="#path19_fill" transform="matrix(-1 0 0 1 2125.25 1700)" fill="#595959"/>
+<mask id="mask1_outline_ins">
+<use xlink:href="#path19_fill" fill="white" transform="matrix(-1 0 0 1 2125.25 1700)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path20_stroke_2x" transform="matrix(-1 0 0 1 2125.25 1700)" fill="#3C3C3C"/>
+</g>
+</g>
+<g id="arm">
+<use xlink:href="#path3_stroke" transform="matrix(-1 0 0 1 2109.25 1731.19)" fill="#3C3C3C"/>
+</g>
+<g id="arm">
+<use xlink:href="#path21_stroke" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 2106.9 1733.53)" fill="#3C3C3C"/>
+</g>
+<g id="arm">
+<use xlink:href="#path21_stroke" transform="matrix(-0.393658 -0.919257 -0.919257 0.393658 2100.94 1732.49)" fill="#3C3C3C"/>
+</g>
+<g id="monster-lips-vacuum">
+<g id="lip-extension">
+<use xlink:href="#path22_stroke" transform="matrix(-1 0 0 1 2130.85 1732.66)" fill="#EEB733"/>
+</g>
+<g id="lips">
+<use xlink:href="#path23_fill" transform="matrix(-1 0 0 1 2144 1720.21)" fill="#EEB733"/>
+</g>
+<g id="hole">
+<use xlink:href="#path24_fill" transform="matrix(-1 0 0 1 2142.02 1723.08)" fill="#282828"/>
+</g>
+</g>
+<g id="eye">
+<use xlink:href="#path25_fill" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 2124.97 1732.22)" fill="#FFFFFF"/>
+</g>
+<g id="pupil">
+<use xlink:href="#path26_fill" transform="matrix(-1 0 0 1 2121.56 1729.19)" fill="#282828"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 48 10C 48 15.5228 37.2548 20 24 20C 10.7452 20 0 15.5228 0 10C 0 4.47715 10.7452 0 24 0C 37.2548 0 48 4.47715 48 10Z"/>
+<path id="path1_fill" d="M 18 5C 18 7.76142 13.9706 10 9 10C 4.02944 10 0 7.76142 0 5C 0 2.23858 4.02944 0 9 0C 13.9706 0 18 2.23858 18 5Z"/>
+<path id="path2_stroke" d="M 20 0C 20 -11.0457 11.0457 -20 0 -20C -11.0457 -20 -20 -11.0457 -20 0L 20 0ZM -20 14C -20 25.0457 -11.0457 34 0 34C 11.0457 34 20 25.0457 20 14L -20 14ZM -20 0L -20 14L 20 14L 20 0L -20 0Z"/>
+<path id="path3_stroke" d="M 4 0C 4 -2.20914 2.20914 -4 0 -4C -2.20914 -4 -4 -2.20914 -4 0L 4 0ZM -4 16C -4 18.2091 -2.20914 20 0 20C 2.20914 20 4 18.2091 4 16L -4 16ZM -4 0L -4 16L 4 16L 4 0L -4 0Z"/>
+<path id="path4_fill" d="M 8 4C 8 6.20914 6.20914 8 4 8C 1.79086 8 0 6.20914 0 4C 0 1.79086 1.79086 0 4 0C 6.20914 0 8 1.79086 8 4Z"/>
+<path id="path5_fill" d="M 0 0C 0 0 6 7 20 7C 34 7 40 0 40 0L 40 0C 40 11.0457 31.0457 20 20 20L 20 20C 8.9543 20 0 11.0457 0 0L 0 0Z"/>
+<path id="path6_fill" d="M 6 0C 2.68629 0 0 2.68629 0 6L 12 6C 12 2.68629 9.31371 0 6 0Z"/>
+<path id="path7_stroke" d="M 3 0C 3 -1.65685 1.65685 -3 0 -3C -1.65685 -3 -3 -1.65685 -3 0L 3 0ZM -3 6C -3 7.65685 -1.65685 9 0 9C 1.65685 9 3 7.65685 3 6L -3 6ZM -3 0L -3 6L 3 6L 3 0L -3 0Z"/>
+<path id="path8_stroke" d="M 2 0C 2 -1.10457 1.10457 -2 0 -2C -1.10457 -2 -2 -1.10457 -2 0L 2 0ZM -2 0L -2 4L 2 4L 2 0L -2 0Z"/>
+<path id="path9_fill" d="M 0 1C 0 1 9.6424 6.78693 20 0C 28.8924 6.53693 40 1 40 1L 40 16C 40 24.2843 33.2843 31 25 31L 15 31C 6.71573 31 0 24.2843 0 16L 0 1Z"/>
+<path id="path10_fill" fill-rule="evenodd" d="M 12.2777 11.3965C 10.0465 13.0862 6.22104 12.341 3.26161 9.49034C 0.252099 6.59155 -0.81288 2.52611 0.649478 0C 0.29865 2.51456 1.63551 5.79957 4.27875 8.34568C 6.86107 10.8333 9.97777 11.9287 12.2777 11.3965Z"/>
+<path id="path11_fill" fill-rule="evenodd" d="M 12.2776 11.3967C 10.0461 13.0865 6.22109 12.3412 3.26171 9.49048C 0.252039 6.59152 -0.812848 2.526 0.649462 0C 0.298478 2.5146 1.63526 5.79971 4.27863 8.34592C 6.86107 10.8336 9.97752 11.9289 12.2776 11.3967Z"/>
+<path id="path12_fill" fill-rule="evenodd" d="M 0.649438 0C 0.298527 2.51453 1.63518 5.79957 4.27846 8.34573C 6.86095 10.8333 9.97757 11.9288 12.2775 11.3965C 10.0462 13.0864 6.22103 12.341 3.26164 9.49031C 0.252045 6.59143 -0.812828 2.52597 0.649438 0Z"/>
+<path id="path13_fill" d="M 14.9268 5C 14.9268 7.76142 11.5853 10 7.4634 10C 3.34148 10 0 7.76142 0 5C 0 2.23858 3.34148 0 7.4634 0C 11.5853 0 14.9268 2.23858 14.9268 5Z"/>
+<path id="path14_fill" fill-rule="evenodd" d="M 12.2776 11.3967C 10.0461 13.0866 6.22103 12.3412 3.2616 9.4905C 0.251991 6.59149 -0.812876 2.526 0.649532 0C 0.298593 2.51461 1.63512 5.79977 4.27852 8.34594C 6.86096 10.8335 9.97754 11.929 12.2776 11.3967Z"/>
+<path id="path15_fill" fill-rule="evenodd" d="M 12.2776 11.3967C 10.0461 13.0865 6.22109 12.3412 3.26171 9.49048C 0.252039 6.59152 -0.812848 2.526 0.649462 0C 0.298478 2.5146 1.63526 5.79971 4.27863 8.34592C 6.86107 10.8336 9.97752 11.9289 12.2776 11.3967Z"/>
+<path id="path16_fill" fill-rule="evenodd" d="M 0.649438 0C 0.298527 2.51453 1.63518 5.79957 4.27846 8.34573C 6.86095 10.8333 9.97757 11.9288 12.2775 11.3965C 10.0462 13.0864 6.22103 12.341 3.26164 9.49031C 0.252045 6.59143 -0.812828 2.52597 0.649438 0Z"/>
+<path id="path17_fill" fill-rule="evenodd" d="M 12.2776 11.3967C 10.0461 13.0866 6.22103 12.3412 3.2616 9.4905C 0.251991 6.59149 -0.812876 2.526 0.649532 0C 0.298593 2.51461 1.63512 5.79977 4.27852 8.34594C 6.86096 10.8335 9.97754 11.929 12.2776 11.3967Z"/>
+<path id="path18_fill" d="M 60 10C 60 15.5228 46.5685 20 30 20C 13.4315 20 0 15.5228 0 10C 0 4.47715 13.4315 0 30 0C 46.5685 0 60 4.47715 60 10Z"/>
+<path id="path19_fill" d="M 0 15C 0 6.71573 6.71573 0 15 0L 15 0C 23.2843 0 30 6.71573 30 15L 30 22.6918C 30 30.9761 23.2843 37.6918 15 37.6918L 15 37.6918C 6.71573 37.6918 0 30.9761 0 22.6918L 0 15Z"/>
+<path id="path20_stroke_2x" d="M 28 15L 28 22.6918L 32 22.6918L 32 15L 28 15ZM 2 22.6918L 2 15L -2 15L -2 22.6918L 2 22.6918ZM 15 -2C 5.61116 -2 -2 5.61116 -2 15L 2 15C 2 7.8203 7.8203 2 15 2L 15 -2ZM 15 2C 22.1797 2 28 7.8203 28 15L 32 15C 32 5.61116 24.3888 -2 15 -2L 15 2ZM 28 22.6918C 28 29.8715 22.1797 35.6918 15 35.6918L 15 39.6918C 24.3888 39.6918 32 32.0807 32 22.6918L 28 22.6918ZM 15 35.6918C 7.8203 35.6918 2 29.8715 2 22.6918L -2 22.6918C -2 32.0807 5.61116 39.6918 15 39.6918L 15 35.6918Z"/>
+<path id="path21_stroke" d="M 8.24264 0C 8.24264 -2.20914 6.45178 -4 4.24264 -4C 2.0335 -4 0.24264 -2.20914 0.24264 0L 8.24264 0ZM -3.53381 14.1259C -4.56884 16.0776 -3.82575 18.4988 -1.87409 19.5338C 0.0775837 20.5688 2.49878 19.8258 3.53381 17.8741L -3.53381 14.1259ZM 4.24264 8L 7.77645 9.87409L 8.24264 8.99503L 8.24264 8L 4.24264 8ZM 0.24264 0L 0.24264 8L 8.24264 8L 8.24264 0L 0.24264 0ZM 0.708832 6.12591L -3.53381 14.1259L 3.53381 17.8741L 7.77645 9.87409L 0.708832 6.12591Z"/>
+<path id="path22_stroke" d="M 0 -3C -1.65685 -3 -3 -1.65685 -3 0C -3 1.65685 -1.65685 3 0 3L 0 -3ZM 12.1006 3C 13.7574 3 15.1006 1.65685 15.1006 0C 15.1006 -1.65685 13.7574 -3 12.1006 -3L 12.1006 3ZM 0 3L 12.1006 3L 12.1006 -3L 0 -3L 0 3Z"/>
+<path id="path23_fill" d="M 18.8452 12.1249C 18.8452 18.8214 14.6266 24.2499 9.42262 24.2499C 4.21865 24.2499 0 18.8214 0 12.1249C 0 5.42852 4.21865 0 9.42262 0C 14.6266 0 18.8452 5.42852 18.8452 12.1249Z"/>
+<path id="path24_fill" d="M 10.6735 9.25704C 10.6735 14.3696 8.28415 18.5141 5.33675 18.5141C 2.38934 18.5141 0 14.3696 0 9.25704C 0 4.14452 2.38934 0 5.33675 0C 8.28415 0 10.6735 4.14452 10.6735 9.25704Z"/>
+<path id="path25_fill" d="M 7 11.9798C 10.866 11.9798 14 8.84581 14 4.97981L 2.0805 0C 0.795987 1.26905 0 3.03148 0 4.97981C 0 8.84581 3.13401 11.9798 7 11.9798Z"/>
+<path id="path26_fill" d="M 5 2.5C 5 3.88071 3.88071 5 2.5 5C 1.11929 5 0 3.88071 0 2.5C 0 1.11929 1.11929 0 2.5 0C 3.88071 0 5 1.11929 5 2.5Z"/>
+</defs>
+</svg>
