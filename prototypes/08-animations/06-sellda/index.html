@@ -3,8 +3,10 @@
 <head>
 	<script src="../../../assets/js/underscore-min.js" type="text/javascript"></script>
 	<script src="../../../assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="../js/min/TweenMax.min.js" type="text/javascript"></script>
+	<script src="../js/min/TimelineLite.min.js" type="text/javascript"></script>
 	<script src="../js/ScrollMagic.js" type="text/javascript"></script>
-
+	<script src="../js/plugins/animation.gsap.min.js" type="text/javascript"></script>
 
 	<style type="text/css">
 		@font-face {
@@ -17,7 +19,6 @@
 		         url('../../../assets/fonts/ProximaNova-Semibold-webfont.svg#proxima_nova_rgbold') format('svg');
 		    font-weight: 600;
 		    font-style: normal;
-
 		}
 
 		@font-face {
@@ -30,7 +31,6 @@
 		         url('../../../assets/fonts/ProximaNova-Light-webfont.svg#proxima_novalight') format('svg');
 		    font-weight: 300;
 		    font-style: normal;
-
 		}
 
 		@font-face {
@@ -43,7 +43,6 @@
 		         url('../../../assets/fonts/ProximaNova-Regular-webfont.svg#proxima_nova_rgregular') format('svg');
 		    font-weight: normal;
 		    font-style: normal;
-
 		}
 
 		@font-face {
@@ -56,7 +55,6 @@
 		         url('../../../assets/fonts/ProximaNova-RegularItalic-webfont.svg#proxima_novaregular_italic') format('svg');
 		    font-weight: normal;
 		    font-style: italic;
-
 		}
 
 
@@ -83,12 +81,13 @@
 		}
 
 		.msg {
-			display: none;
+			/*display: none;*/
+			opacity: 0;
 			position: fixed;
 			top: 80px;
 			left: 80px;
 			width: 960px;
-			height: 180px;
+			height: 100px;
 			padding: 40px;
 			color: #fff;
 			font-family: proxima-nova, arial;
@@ -114,6 +113,15 @@
 			height: 54px;
 			width: 64px;
 			background: url(assets/sprites.svg) no-repeat -87px -100px;
+			z-index: 2;
+		}
+		.ball {
+			position: absolute;
+			background: #333;
+			height: 14px;
+			width: 14px;
+			border-radius: 10px;
+			z-index: 1;
 		}
 	</style>
 
@@ -123,16 +131,27 @@
 <body>
 	<div id="container">
 		<div id="game">
-			<div id="msg" class="msg"></div>
+			<div id="msg1" class="msg">
+				It's a typical day on the internet!
+				<br />Let's take a scroll &mdash; I mean, stroll &mdash; through the neighborhood...
+				<br />What could go possibly wrong?
+			</div>
+			<div id="msg2" class="msg">
+				Uh oh! Be wary of them Search History Suckers...
+			</div>
 			
 			<div id="guy"></div>
+
 			<div id="sucker1" class="sucker"></div>
 			<div id="sucker2" class="sucker"></div>
+			<div id="ball1" class="ball"></div>
+			<div id="ball2" class="ball"></div>
 		</div>
 	</div>
 </body>
 
 <script>
+
 // global
 var ddg = {
 	width: 1200,
@@ -140,26 +159,53 @@ var ddg = {
 	fps: 24,		// how many "frames" for each step (for #guy)
 	step: 0,		// used for #guy
 	scroll: 0,		// scroll position
-	msg_id: 0,		// current message (id)
-	show_msg: false // flag for showing messages
+	msg_fade: 0.33,	// fade duration for messages
+	offset: 600		// offset for sprite animations
 };
 
 // sprite info
 var sprite = {
-	sucker1: { top: 900, left: 362},
-	sucker2: { top: 1051, left: 304}
+	sucker1: { top: 1219, left: 362},
+	ball1: { top: 1249, left: 412},
+	sucker2: { top: 1372, left: 304},
+	ball2: { top: 1372, left: 304}
 };
 
-// message info
-var msg = [
-	{
-		start: 0,
-		duration: 400,
-		text: "It's a typical day on the internet!<br />Let's take a scroll &mdash; I mean, stroll &mdash; through the neighborhood...<br />What could go possibly wrong?"
-	}
-];
+// SCROLLMAGIC
+
+// init controller
+var controller = new ScrollMagic.Controller({container: '#container'});
+
+// show/hide msg 1
+new ScrollMagic.Scene({ offset: 0})
+	.setTween('#msg1', ddg.msg_fade, {opacity: 1})
+	.addTo(controller);
+new ScrollMagic.Scene({ offset: 200})
+	.setTween('#msg1', ddg.msg_fade, {opacity: 0})
+    .addTo(controller);
+
+// show/hide msg 2
+new ScrollMagic.Scene({ offset: 600})
+	.setTween('#msg2', ddg.msg_fade, {opacity: 1})
+	.addTo(controller);
+new ScrollMagic.Scene({ offset: 800})
+	.setTween('#msg2', ddg.msg_fade, {opacity: 0})
+    .addTo(controller);
+
+// suckers
+var tl = new TimelineLite();
+tl.to('#sucker1', 2, {left: '+=50'})
+  .to('#ball1', 1, {left: '+=160'});
+
+new ScrollMagic.Scene({ 
+	offset: sprite.sucker1.top - ddg.offset,
+	duration: 200
+	})
+	.setTween(tl)
+	.addTo(controller);
 
 // ON PAGE LOAD
+
 $(document).ready(function() {
 	// load sprite positions
 	_.each(sprite, function(list, key) {
@@ -167,7 +213,9 @@ $(document).ready(function() {
 	});
 });
 
+
 // ON SCROLL
+
 $('#container').scroll(function() {
 	// update scroll position
 	ddg.scroll = $('#container').scrollTop();
@@ -177,29 +225,12 @@ $('#container').scroll(function() {
 	if (step != ddg.step) {
 		ddg.step = step;
 		$('#guy').removeClass().addClass('step' + ddg.step);
-		// console.log(ddg.scroll);
+		console.log(ddg.scroll);
 	}
 
-	// check to show messages
-	// TODO: need to implement scrolling up.. this only works for scrolling down
-	var next = msg[ddg.msg_id];
-	
-	// if show_msg is OFF, get ready to show the next message
-	if (!ddg.show_msg) {
-		if (ddg.scroll > next.start) {
-			$('#msg').html(next.text).fadeIn();
-			ddg.show_msg = true;
-		}
-	}
-	// if show_msg is ON, get ready to hide the message
-	else {
-		if (ddg.scroll > next.start + next.duration) {
-			$('#msg').fadeOut();
-			ddg.show_msg = false;
-			ddg.msg_id++;				// update message counter
-		}
-	}
 });
+
+
 
 // embarassing searches:
 // weird rash
@@ -211,6 +242,7 @@ $('#container').scroll(function() {
 
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+/*
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 function preventDefault(e) {
@@ -244,20 +276,8 @@ function enableScroll() {
     window.ontouchmove = null;  
     document.onkeydown = null;  
 }
-
-/*
-// init controller
-var controller = new ScrollMagic.Controller();
-
-// create a scene
-new ScrollMagic.Scene({
-        duration: 100,    // the scene should last for a scroll distance of ___px
-        offset: 0        // start this scene after scrolling for ___px
-    })
-    .setPin("#guy") // pins the element for the the scene's duration
-    .addTo(controller); // assign the scene to the controller
-
 */
+
 
 </script>
 

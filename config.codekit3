@@ -20940,6 +20940,60 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/prototypes\/08-animations\/js\/min\/TimelineLite.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/min\/min\/TimelineLite.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/08-animations\/js\/min\/TweenMax.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/min\/min\/TweenMax.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/08-animations\/js\/plugins\/animation.gsap.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/plugins\/min\/animation.gsap.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/08-animations\/js\/plugins\/animation.velocity.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/plugins\/min\/animation.velocity.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/08-animations\/js\/plugins\/debug.addIndicators.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/plugins\/min\/debug.addIndicators.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/prototypes\/08-animations\/js\/plugins\/jquery.ScrollMagic.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/prototypes\/08-animations\/js\/plugins\/min\/jquery.ScrollMagic.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/prototypes\/08-animations\/js\/ScrollMagic.js": {
 		"ft": 64,
 		"mi": 1,
