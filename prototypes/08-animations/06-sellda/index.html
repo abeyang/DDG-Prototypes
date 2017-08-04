@@ -64,6 +64,12 @@
 			background: #eee; 
 			overflow: hidden;
 		}
+
+		div, p {
+			font-family: proxima-nova, arial;
+			line-height: 1.4;
+			font-size: 18px;
+		}
 		
 		#container {
 			margin: 0;
@@ -78,10 +84,53 @@
 			background: #ccc;
 			height: 5600px;
 			background: #78C878 url(assets/BACKGROUND.svg) no-repeat;
+			/*background: #eee;*/
+		}
+
+		#header {
+			/*display: none;*/
+			position: fixed;
+			height: 80px;
+			width: 1120px;
+			padding: 40px 40px 0;
+			z-index: 500;
+		}
+		#header #item {
+			float: left;
+			height: 80px;
+			width: 80px;
+			border-radius: 10px;
+			border: 4px solid #fff;
+			background: #282828;
+		}
+		#header #privacy {
+			float: left;
+			margin-left: 24px;
+			margin-top: 18px;
+			font-size: 14px;
+			color: #fff;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			text-shadow: 0 2px rgba(0,0,0,0.5);
+		}
+		#header p { margin: 6px; }
+		#header .heart {
+			float: left;
+			width: 16px;
+			height: 14px;
+			margin-left: 4px;
+			background: url(assets/heart.svg) no-repeat;
+		}
+		#header #menu {
+			float: right;
+			width: 24px;
+			height: 17px;
+			margin-top: 36px;
+			background: url(assets/icon-menu.svg) no-repeat;
 		}
 
 		.msg {
-			/*display: none;*/
 			opacity: 0;
 			position: fixed;
 			top: 80px;
@@ -90,11 +139,18 @@
 			height: 100px;
 			padding: 40px;
 			color: #fff;
-			font-family: proxima-nova, arial;
 			font-size: 25px;
-			line-height: 1.4;
 			background: rgba(0,0,0,.75);
 			z-index: 1000;
+		}
+
+		#shield {
+			position: absolute;
+			height: 48px;
+			width: 48px;
+			top: 257px;
+			left: 576px;
+			background: url(assets/shield.svg) no-repeat;
 		}
 
 		#guy {
@@ -108,6 +164,8 @@
 		#guy.step1 { background-position-x: -50px; }
 		#guy.step3 { background-position-x: -100px; }
 
+		/* LEVEL 1 */
+		
 		.sucker {
 			position: absolute;
 			height: 54px;
@@ -115,7 +173,10 @@
 			background: url(assets/sprites.svg) no-repeat -87px -100px;
 			z-index: 2;
 		}
+		.sucker.reverse { background-position-x: 0; }
+		
 		.ball {
+			opacity: 0;
 			position: absolute;
 			background: #333;
 			height: 14px;
@@ -123,29 +184,64 @@
 			border-radius: 10px;
 			z-index: 1;
 		}
+
+		.query {
+			opacity: 0;
+			position: absolute;
+			background: #fff url(assets/icon-magnify-glass.svg) no-repeat 10px 15px;
+			color: #666;
+			border-radius: 5px;
+			padding: 15px;
+			padding-left: 40px;
+			width: 120px;
+		}
 	</style>
 
-	<title>SellDa(ta)</title>
+	<title>SellDa(ta) - A Link that is Tracked</title>
 </head>
 
 <body>
 	<div id="container">
 		<div id="game">
+			<!-- HEADER -->
+			<div id="header">
+				<div id="item"></div>
+				<div id="privacy">
+					privacy
+					<p>
+						<!-- note: order is weird b/c of how monsters are set up... -->
+						<div id="heart2" class="heart"></div>
+						<div id="heart3" class="heart"></div>
+						<div id="heart1" class="heart"></div>
+					</p>
+				</div>
+				<div id="menu"></div>
+			</div>
+
+			<!-- MESSAGES -->
 			<div id="msg1" class="msg">
 				It's a typical day on the internet!
 				<br />Let's take a scroll &mdash; I mean, stroll &mdash; through the neighborhood...
 				<br />What could go possibly wrong?
 			</div>
 			<div id="msg2" class="msg">
-				Uh oh! Be wary of them Search History Suckers...
+				Uh oh! Be wary of them Search History Invaders...
 			</div>
-			
+
+			<!-- LEVEL 0 -->
+			<div id="shield"></div>
 			<div id="guy"></div>
 
+			<!-- LEVEL 1 -->
 			<div id="sucker1" class="sucker"></div>
 			<div id="sucker2" class="sucker"></div>
+			<div id="sucker3" class="sucker reverse"></div>
 			<div id="ball1" class="ball"></div>
 			<div id="ball2" class="ball"></div>
+			<div id="ball3" class="ball"></div>
+			<div id="query1" class="query">weird rash</div>
+			<div id="query2" class="query">i love ponies</div>
+			<div id="query3" class="query">bankruptcy</div>
 		</div>
 	</div>
 </body>
@@ -166,10 +262,24 @@ var ddg = {
 // sprite info
 var sprite = {
 	sucker1: { top: 1219, left: 362},
-	ball1: { top: 1249, left: 412},
-	sucker2: { top: 1372, left: 304},
-	ball2: { top: 1372, left: 304}
+	sucker2: { top: 1472, left: 304},
+	sucker3: { top: 1338, left: 1024},
+	ball1: { top: 0, left: 0},
+	ball2: { top: 0, left: 0},
+	ball3: { top: 0, left: 0},
+	query1: { top: 0, left: 576},
+	query2: { top: 0, left: 576},
+	query3: { top: 0, left: 576}
 };
+
+// update ball + query positioning
+_.each([1,2,3], function(i) {
+	sprite['ball'+i].top = sprite['sucker'+i].top+30;
+	sprite['ball'+i].left = sprite['sucker'+i].left+50;
+
+	sprite['query'+i].top = sprite['sucker'+i].top;
+});
+sprite.ball3.left -= 54;
 
 // SCROLLMAGIC
 
@@ -193,16 +303,61 @@ new ScrollMagic.Scene({ offset: 800})
     .addTo(controller);
 
 // suckers
-var tl = new TimelineLite();
-tl.to('#sucker1', 2, {left: '+=50'})
-  .to('#ball1', 1, {left: '+=160'});
+var t1 = new TimelineLite();
+t1.to('#sucker1', 2, {left: '+=50'})
+  .set('#ball1', {opacity: 1})
+  .to('#ball1', 1, {left: '+=160'})
+  .set('#ball1', {opacity: 0})
+  .to('#guy', .2, {left: '+=20', opacity: 0.5})
+  .set('#query1', {opacity: 1})
+  .to('#guy', .2, {left: '-=20', opacity: 1})
+  .to('#query1', 1, {left: '+=700'}, '-=0.2')
+  .to('#heart1', .5, {scale: 0}, '-=0.7');
 
 new ScrollMagic.Scene({ 
 	offset: sprite.sucker1.top - ddg.offset,
+	duration: 300
+	})
+	.setTween(t1)
+	.addTo(controller);
+
+var t2 = new TimelineLite();
+t2.to('#sucker2', 2, {left: '+=50'})
+  .set('#ball2', {opacity: 1})
+  .to('#ball2', 1, {left: '+=220'})
+  .set('#ball2', {opacity: 0})
+  .to('#guy', .2, {left: '+=20', opacity: 0.5})
+  .set('#query2', {opacity: 1})
+  .to('#guy', .2, {left: '-=20', opacity: 1})
+  .to('#query2', 1, {left: '+=700'}, '-=0.2')
+  .to('#heart2', .5, {scale: 0}, '-=0.7');
+
+new ScrollMagic.Scene({ 
+	offset: sprite.sucker2.top - ddg.offset,
 	duration: 200
 	})
-	.setTween(tl)
+	.setTween(t2)
 	.addTo(controller);
+
+var t3 = new TimelineLite();
+t3.to('#sucker3', 2, {left: '-=50'})
+  .set('#ball3', {opacity: 1})
+  .to('#ball3', 1, {left: '-=400'})
+  .set('#ball3', {opacity: 0})
+  .to('#guy', .2, {left: '-=20', opacity: 0.5})
+  .set('#query3', {opacity: 1})
+  .to('#guy', .2, {left: '+=20', opacity: 1})
+  .to('#query3', 1, {left: '-=800'}, '-=0.2')
+  .to('#heart3', .5, {scale: 0}, '-=0.7');
+
+new ScrollMagic.Scene({ 
+	offset: sprite.sucker3.top - ddg.offset,
+	duration: 200
+	})
+	.setTween(t3)
+	.addTo(controller);
+
+
 
 // ON PAGE LOAD
 
@@ -225,17 +380,10 @@ $('#container').scroll(function() {
 	if (step != ddg.step) {
 		ddg.step = step;
 		$('#guy').removeClass().addClass('step' + ddg.step);
-		console.log(ddg.scroll);
+		// console.log(ddg.scroll);
 	}
 
 });
-
-
-
-// embarassing searches:
-// weird rash
-// bankruptcy
-// i love ponies
 
 // ENABLE / DISABLE SCROLLING
 // https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily

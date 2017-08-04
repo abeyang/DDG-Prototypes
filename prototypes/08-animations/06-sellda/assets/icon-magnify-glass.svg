@@ -1,0 +1,14 @@
+<svg width="24" height="26" viewBox="0 0 24 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>icon-magnify-glass</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1820 -77)">
+<g id="icon-magnify-glass">
+<g id="magnify-glass">
+<use xlink:href="#path0_fill" transform="translate(1820 77.9412)" fill="#1A87E0"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 16.9015 18.8235C 15.1295 20.1883 12.9095 21 10.5 21C 4.70105 21 0 16.299 0 10.5C 0 4.70102 4.70105 0 10.5 0C 16.299 0 21 4.70102 21 10.5C 21 12.8073 20.2557 14.9408 18.9943 16.6736L 21.6902 19.3695C 22.276 19.9553 22.276 20.905 21.6902 21.4908C 21.1044 22.0766 20.1547 22.0766 19.5688 21.4908L 16.9015 18.8235ZM 19 10.5C 19 15.1944 15.1945 19 10.5 19C 5.80554 19 2 15.1944 2 10.5C 2 5.80557 5.80554 2 10.5 2C 15.1945 2 19 5.80557 19 10.5Z"/>
+</defs>
+</svg>
