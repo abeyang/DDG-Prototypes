@@ -3,9 +3,10 @@ $spacing:	70px;
 // Import default SERP SCSS
 @import "../default";
 
-body, html {
+html, body {
 	height: 100%;
 }
+
 body {
 	background: #f7f7f7 linear-gradient(309.41deg, #88B5F9 -38.89%, rgba(136, 190, 249, 0) 76.71%);
 	overflow: scroll;
@@ -37,8 +38,4 @@ li {
 
 .pad-top { margin-top: $spacing; }
 
-.flex-item.first {
-	padding-bottom: $spacing*1.5;
-	padding-right: 1.5em;
-}
 
