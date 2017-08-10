@@ -2,11 +2,34 @@
 @import "../default";
 
 body, html {
-	background-color: $teal;
 	height: 100%;
+}
+body {
+	// background: #f7f7f7 linear-gradient(to bottom right, rgba(136, 190, 249, 0), rgba(136, 190, 249, 100));
+	background: #f7f7f7 linear-gradient(309.41deg, #88B5F9 -38.89%, rgba(136, 190, 249, 0) 76.71%);
 }
 
 body, html, div, p, h1, h2, h3, h4 {
-	color: $white;
+	color: $dark-gray;
 }
 
+h1 { font-size: 44px; }
+div, p, ul { font-size: 24px; }
+
+ul {
+	max-width: 520px;
+	margin: 30px 0;
+	padding-left: 1em;
+	padding-right: 0;
+	list-style-image: url('dot.svg');
+}
+li { 
+	padding-left: 0.5em; 
+	margin-bottom: 0.35em;
+}
+
+.flex-item.first {
+	padding: 160px 0;
+	background: url(ddg-logo.svg) top left no-repeat;
+	background-size: 92px;
+}

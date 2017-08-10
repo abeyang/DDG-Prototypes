@@ -13,6 +13,7 @@ $teal:			#63C8C9;
 $purple:		#5558D8;
 $dark-purple:	#474BB8;
 $red:			#EE785F;
+$ddg-red:		#DE5833;
 
 // TAGS
 
@@ -21,13 +22,15 @@ h1 {
 }
 
 // GENERIC CLASSES
+.pad-top { margin-top: 80px; }
+
 .subtitle {
 	margin-top: 1em;
 	margin-bottom: 1.5em;
 }
 
 a.btn {
-	padding: 10px;
+	padding: 15px;
 	border-radius: 3px;
 	text-decoration: none;
 	font-weight: bold;
@@ -39,6 +42,8 @@ a.btn {
 		background-color: $red;
 		color: $white;
 		border-width: 0;
+
+		&:hover { background-color: $ddg-red; }
 	}
 }
 
