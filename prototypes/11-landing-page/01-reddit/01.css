@@ -7,7 +7,7 @@ h1 {
 
 a.btn {
   padding: 15px;
-  border-radius: 3px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   background-color: #fafafa;
@@ -30,11 +30,20 @@ a.btn {
   .flex .flex-item {
     max-width: 45%; }
 
+@media (max-width: 960px) {
+  .flex {
+    margin-left: 50px;
+    justify-content: left; }
+    .flex .flex-item {
+      min-width: 450px;
+      padding-right: 1.5em; } }
+
 body, html {
   height: 100%; }
 
 body {
-  background: #f7f7f7 linear-gradient(309.41deg, #88B5F9 -38.89%, rgba(136, 190, 249, 0) 76.71%); }
+  background: #f7f7f7 linear-gradient(309.41deg, #88B5F9 -38.89%, rgba(136, 190, 249, 0) 76.71%);
+  overflow: scroll; }
 
 body, html, div, p, h1, h2, h3, h4 {
   color: #333; }
@@ -62,3 +71,7 @@ li {
 
 .pad-top {
   margin-top: 70px; }
+
+.flex-item.first {
+  padding-bottom: 105px;
+  padding-right: 1.5em; }
