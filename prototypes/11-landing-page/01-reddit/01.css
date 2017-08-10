@@ -50,7 +50,8 @@ a.btn {
 
 @media (max-height: 550px) {
   .flex-container {
-    height: 640px; } }
+    height: 640px;
+    padding-top: 25px; } }
 
 html, body {
   height: 100%; }
