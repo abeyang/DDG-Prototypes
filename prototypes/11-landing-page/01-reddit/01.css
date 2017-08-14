@@ -57,7 +57,7 @@ a.btn {
   .flex-item.first {
     padding-right: 4em; } }
 
-@media (max-height: 550px) {
+@media (max-height: 730px) {
   .flex-container {
     height: 640px;
     padding-top: 25px; }
