@@ -21547,6 +21547,25 @@
 		"oAP": "\/prototypes\/11-landing-page\/01-reddit\/index.html",
 		"oF": 0
 		},
+	"\/prototypes\/11-landing-page\/01-reddit\/index2.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/11-landing-page\/01-reddit\/index2.html",
+		"oF": 0
+		},
+	"\/prototypes\/11-landing-page\/01-reddit\/reddit.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/prototypes\/11-landing-page\/01-reddit\/reddit.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/prototypes\/11-landing-page\/01-reddit\/wolf-sheep.jpg": {
 		"ft": 16384,
 		"iS": 96331,
