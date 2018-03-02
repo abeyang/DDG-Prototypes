@@ -1,0 +1,27 @@
+// COLORS
+
+$lightest-gray:	#eee;
+$lighter-gray:	#ddd;
+$neue-gray:		#999;
+$gray: 			#888;
+$dark-gray: 	#333;
+$current-blue: 	#4495d4;
+$purple:		#5558D8;
+$dark-purple:	#474BB8;
+
+.button {
+	display: inline-block;
+	padding: 10px;
+	background: $lighter-gray;
+
+	&.active {
+		color: $white;
+		background: $current-blue;
+	}
+}
+
+
+// functions + generic classes
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}

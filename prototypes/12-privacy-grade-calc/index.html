@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>privacygrade / DDG Prototypes</title>
+    <meta name="description" content="DuckDuckGo Prototypes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
+
+	<!-- JS -->
+	<script src="../../assets/js/underscore-min.js"></script>
+    <script src="../../assets/js/vue.js"></script>
+	
+    
+</head>
+<body>
+
+<link rel="stylesheet" href="privacygrade.css" charset="utf-8">
+
+
+<div class="container">
+	<div id="pg">
+		<div v-for="(row, index) in rows">
+			<card :row="row" :index="index" :x="x"></card>
+		</div>
+		<!-- <div class="card-wrap" :class="{toggle: rows[0].toggle}">
+			<div class="card">
+				<div class="column">
+					(icon)
+				</div>
+				<titlesnippet :row="rows[0]"></titlesnippet>	
+				<div class="column col3">
+					<span @click="x.isencrypted = true; calculateScore()" :class="{active: x.isencrypted}" class="button">Encrypted</span>
+					<span @click="x.isencrypted = false; calculateScore()" :class="{active: !x.isencrypted}" class="button">Unencrypted</span>
+				</div>
+				<div class="column">
+					{{ rows[0].points }}
+				</div>
+			</div>
+			<description :row="rows[0]"></description>
+		</div> -->
+		
+
+		<div> Total score: {{ score }} </div>
+		
+	</div> <!-- /#pg -->
+</div> <!-- /.container -->
+
+
+<!-- Templates -->
+<template id="card">
+	<div :id="row.id" :class="{toggle: row.toggle}" class="card-wrap">
+		<div class="card">
+			<div class="column">
+				(icon)
+			</div>
+			<div class="column col3">
+				<strong>{{ row.title }} </strong>
+				<div>{{ row.snippet }}</div>
+			</div>
+
+			<!-- Options -->
+			<div class="column col3">
+				<div v-if="index === 0">
+					<span @click="x.isencrypted = true; calculateScore()" :class="{active: x.isencrypted}" class="button">Encrypted</span>
+					<span @click="x.isencrypted = false; calculateScore()" :class="{active: !x.isencrypted}" class="button">Unencrypted</span>
+				</div>
+				<div v-else-if="index === 1">
+					Slider!
+				</div>
+			</div>
+			
+			<div class="column">
+				{{ row.points }}
+			</div>
+		</div>
+		<div class="card desc" v-show="row.toggle">
+			<div class="column">
+				&nbsp;
+			</div>
+			<div class="column col6">
+				{{ row.desc }}
+			</div>
+			<div class="column">
+				&nbsp;
+			</div>
+		</div>
+	</div>
+</template>
+
+<template id="titlesnippet">
+	<div class="column col3">
+		<strong>{{ row.title }} </strong>
+		<div>{{ row.snippet }}</div>
+	</div>
+</template>
+
+<template id="description">
+	<div class="card desc" v-show="row.toggle">
+		<div class="column">
+			&nbsp;
+		</div>
+		<div class="column col6">
+			{{ row.desc }}
+		</div>
+		<div class="column">
+			&nbsp;
+		</div>
+	</div>
+</template>
+
+<script src="./app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+// COLORS
+
+$white: 		#fff;
+$lightest-gray:	#eee;
+$lighter-gray:	#ddd;
+$neue-gray:		#999;
+$gray: 			#888;
+$dark-gray: 	#333;
+$current-blue: 	#4495d4;
+$purple:		#5558D8;
+$dark-purple:	#474BB8;
+
+.container {
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.card-wrap {
+	padding: 20px;
+	border: 1px solid $lightest-gray; 
+
+	.desc {
+		display: hide;
+	}
+	&.toggle .desc {
+		display: show;
+	}
+}
+.card {
+	display: flex;
+	flex-direction: row;
+
+
+}
+.column {
+	/*flex-grow: 1;*/
+	flex-basis: 98px;
+
+	&.col3 { flex-grow: 3; }
+	&.col6 { flex-grow: 6; }
+}
+
+.button {
+	display: inline-block;
+	padding: 10px;
+	background: $lighter-gray;
+
+	&.active {
+		color: $white;
+		background: $current-blue;
+	}
+}
+
+// functions + generic classes
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
