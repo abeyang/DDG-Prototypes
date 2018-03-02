@@ -7,26 +7,10 @@
 
 <div class="container">
 	<div id="pg">
+		<!-- TODO: add header -->
 		<div v-for="(row, index) in rows">
-			<card :row="row" :index="index" :x="x"></card>
+			<card :row="row" :index="index" :x="x" v-on:update="calculateScore()"></card>
 		</div>
-		<!-- <div class="card-wrap" :class="{toggle: rows[0].toggle}">
-			<div class="card">
-				<div class="column">
-					(icon)
-				</div>
-				<titlesnippet :row="rows[0]"></titlesnippet>	
-				<div class="column col3">
-					<span @click="x.isencrypted = true; calculateScore()" :class="{active: x.isencrypted}" class="button">Encrypted</span>
-					<span @click="x.isencrypted = false; calculateScore()" :class="{active: !x.isencrypted}" class="button">Unencrypted</span>
-				</div>
-				<div class="column">
-					{{ rows[0].points }}
-				</div>
-			</div>
-			<description :row="rows[0]"></description>
-		</div> -->
-		
 
 		<div> Total score: {{ score }} </div>
 		
@@ -49,8 +33,8 @@
 			<!-- Options -->
 			<div class="column col3">
 				<div v-if="index === 0">
-					<span @click="x.isencrypted = true; calculateScore()" :class="{active: x.isencrypted}" class="button">Encrypted</span>
-					<span @click="x.isencrypted = false; calculateScore()" :class="{active: !x.isencrypted}" class="button">Unencrypted</span>
+					<span @click="x.isencrypted = true; update()"  :class="{active: x.isencrypted}" class="button">Encrypted</span>
+					<span @click="x.isencrypted = false; update()" :class="{active: !x.isencrypted}" class="button">Unencrypted</span>
 				</div>
 				<div v-else-if="index === 1">
 					Slider!
@@ -71,27 +55,6 @@
 			<div class="column">
 				&nbsp;
 			</div>
-		</div>
-	</div>
-</template>
-
-<template id="titlesnippet">
-	<div class="column col3">
-		<strong>{{ row.title }} </strong>
-		<div>{{ row.snippet }}</div>
-	</div>
-</template>
-
-<template id="description">
-	<div class="card desc" v-show="row.toggle">
-		<div class="column">
-			&nbsp;
-		</div>
-		<div class="column col6">
-			{{ row.desc }}
-		</div>
-		<div class="column">
-			&nbsp;
 		</div>
 	</div>
 </template>

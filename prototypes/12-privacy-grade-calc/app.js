@@ -5,20 +5,9 @@ Vue.component('card', {
 	props: ['row', 'index', 'x'],
 	template: '#card',
 	methods: {
-	}
-});
-
-Vue.component('titlesnippet', {
-	props: ['row'],
-	template: '#titlesnippet',
-	methods: {
-	}
-});
-
-Vue.component('description', {
-	props: ['row'],
-	template: '#description',
-	methods: {
+		update: function() {
+			this.$emit('update');
+		}
 	}
 });
 
