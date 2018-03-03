@@ -12,7 +12,7 @@
 			<card :row="row" :index="index" :x="x" v-on:update="calculateScore()"></card>
 		</div>
 
-		<div> Total score: {{ score }} </div>
+		<strong> Total score: {{ score }} </strong>
 		
 	</div> <!-- /#pg -->
 </div> <!-- /.container -->
@@ -37,7 +37,22 @@
 					<span @click="x.isencrypted = false; update()" :class="{active: !x.isencrypted}" class="button">Unencrypted</span>
 				</div>
 				<div v-else-if="index === 1">
-					Slider!
+					<input type="range" v-model="x.trackers" min="0" max="20" step="1" :input="update()"> {{x.trackers}}
+				</div>
+				<div v-if="index === 2">
+					<span @click="x.major.google = !x.major.google; update()" :class="{active: x.major.google}" class="button">G</span>
+					<span @click="x.major.facebook = !x.major.facebook; update()" :class="{active: x.major.facebook}" class="button">F</span>
+					<span @click="x.major.twitter = !x.major.twitter; update()" :class="{active: x.major.twitter}" class="button">T</span>
+					<span @click="x.major.amazon = !x.major.amazon; update()" :class="{active: x.major.amazon}" class="button">Am</span>
+					<span @click="x.major.appnexus = !x.major.appnexus; update()" :class="{active: x.major.appnexus}" class="button">Ap</span>
+					<span @click="x.major.oracle = !x.major.oracle; update()" :class="{active: x.major.oracle}" class="button">O</span>
+				</div>
+				<div v-if="index === 3">
+					<span @click="x.isthismajor = false; update()" :class="{active: !x.isthismajor}" class="button">No</span>
+					<span @click="x.isthismajor = true; update()"  :class="{active: x.isthismajor}" class="button">Yes</span>
+				</div>
+				<div v-else>
+					(More options...)
 				</div>
 			</div>
 			
