@@ -9,6 +9,7 @@
 
     <!-- CSS -->
 	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/fontawesome-all.min.css" charset="utf-8">
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" charset="utf-8">
 
 	<!-- JS -->
@@ -97,7 +98,7 @@
 			
 			<div class="col text-right">
 				<span v-if="row.points == 0">
-					<span class="btn btn-round btn-success">{{ row.points }}</span>
+					<span class="btn btn-round btn-success"><i class="fas fa-check"></i></span>
 				</span>
 				<span v-else>
 					<span class="btn btn-round btn-danger">{{ row.points }}</span>
