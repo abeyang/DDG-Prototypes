@@ -16,6 +16,16 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/assets\/css\/bootstrap.min.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/bootstrap.min-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/assets\/css\/font-awesome.min.css": {
 		"aP": 0,
 		"bl": 0,
@@ -373,6 +383,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/app-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/bootstrap.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/bootstrap.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

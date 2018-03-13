@@ -106,9 +106,13 @@ var pg = new Vue({
 			_.each(point_arr, function(n) {
 				total += n;
 			});
+			
 			this.score = total;
 			
-			
+			if (total == 0) this.grade = 'A';
+			else if (total == -1) this.grade = 'B';
+			else if (total >= -3) this.grade = 'C';
+			else this.grade = 'D';
 		}
 
 	},
