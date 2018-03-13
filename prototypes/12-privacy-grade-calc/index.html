@@ -30,19 +30,21 @@
 		<div class="header">
 			<div class="row-wrap">
 				<div class="row">
-					<div class="col">
-						Domain Name
+					<div class="col-3">
+						<div class="label">Domain</div>
+						<strong>{{ name }}</strong>
 					</div>
-					<div class="col-9">
-						{{ grade }}
+					<div class="col-6">
+						<div class="grade shadow" :class="'bg-' + gradeclass"><strong>{{ grade }}</strong></div>
 					</div>
 					<div class="col text-right">
-						<span class="btn btn-round text-danger">{{ score }}</span>
+						<div class="label">Total Score</div>
+						<span class="btn btn-round" :class="'text-' + gradeclass"><strong>{{ score }}</strong></span>
 					</div>
 				</div> <!-- /.row -->
 			</div> <!-- /.row-wrap -->
 			<div class="progress">
-			  <div class="progress-bar bg-danger" role="progressbar" :style="{width: score / worst * 100 + '%'}"></div>
+			  <div class="progress-bar" :class="'bg-' + gradeclass" role="progressbar" :style="{width: score / worst * 100 + '%'}"></div>
 			</div>
 		</div> <!-- /.header -->
 
@@ -57,10 +59,10 @@
 
 <!-- Templates -->
 <template id="card">
-	<div :id="row.id" :class="{toggle: row.toggle}" class="row-wrap">
-		<div class="row">
-			<div class="col">
-				(icon)
+	<div :id="row.id" :class="{toggle: row.toggle}" class="row-wrap" @mouseover="hoverResult" @mouseout="outResult">
+		<div class="row" >
+			<div class="col icon" :class="'icon-' + row.id">
+				&nbsp;
 			</div>
 			<div class="col-5">
 				<strong>{{ row.title }}</strong>
@@ -68,41 +70,47 @@
 			</div>
 
 			<!-- Options -->
-			<div class="col-4">
+			<div class="col-4 v-center">
 				<div v-if="index === 0">
-					<span @click="x.isencrypted = true; update()"  :class="{'btn-dark': x.isencrypted, 'btn-light': !x.isencrypted}" class="btn">Encrypted</span>
-					<span @click="x.isencrypted = false; update()" :class="{'btn-dark': !x.isencrypted, 'btn-light': x.isencrypted}" class="btn">Unencrypted</span>
+					<span @click="x.isencrypted = true; update()"  :class="{'btn-dark': x.isencrypted, 'btn-light': !x.isencrypted}" class="btn btn-reg">Encrypted</span>
+					<span @click="x.isencrypted = false; update()" :class="{'btn-dark': !x.isencrypted, 'btn-light': x.isencrypted}" class="btn btn-reg">Unencrypted</span>
 				</div>
 				<div v-else-if="index === 1">
 					<input type="range" v-model="x.trackers" min="0" max="20" step="1" :input="update()"> {{x.trackers}}
 				</div>
 				<div v-else-if="index === 2">
-					<span @click="x.major.google = !x.major.google; update()" :class="{'btn-dark': x.major.google, 'btn-light': !x.major.google}" class="btn btn-round">G</span>
-					<span @click="x.major.facebook = !x.major.facebook; update()" :class="{'btn-dark': x.major.facebook, 'btn-light': !x.major.facebook}" class="btn btn-round">F</span>
-					<span @click="x.major.twitter = !x.major.twitter; update()" :class="{'btn-dark': x.major.twitter, 'btn-light': !x.major.twitter}" class="btn btn-round">T</span>
-					<span @click="x.major.amazon = !x.major.amazon; update()" :class="{'btn-dark': x.major.amazon, 'btn-light': !x.major.amazon}" class="btn btn-round">Am</span>
-					<span @click="x.major.appnexus = !x.major.appnexus; update()" :class="{'btn-dark': x.major.appnexus, 'btn-light': !x.major.appnexus}" class="btn btn-round">Ap</span>
-					<span @click="x.major.oracle = !x.major.oracle; update()" :class="{'btn-dark': x.major.oracle, 'btn-light': !x.major.oracle}" class="btn btn-round">O</span>
+					<span @click="x.major.google = !x.major.google; update()" :class="{'btn-dark': x.major.google, 'btn-light': !x.major.google}" class="btn btn-round"><i class="fab fa-google"></i></span>
+					<span @click="x.major.facebook = !x.major.facebook; update()" :class="{'btn-dark': x.major.facebook, 'btn-light': !x.major.facebook}" class="btn btn-round"><i class="fab fa-facebook-f"></i></span>
+					<span @click="x.major.twitter = !x.major.twitter; update()" :class="{'btn-dark': x.major.twitter, 'btn-light': !x.major.twitter}" class="btn btn-round"><i class="fab fa-twitter"></i></span>
+					<span @click="x.major.amazon = !x.major.amazon; update()" :class="{'btn-dark': x.major.amazon, 'btn-light': !x.major.amazon}" class="btn btn-round"><i class="fab fa-amazon"></i></span>
+					<span @click="x.major.appnexus = !x.major.appnexus; update()" :class="{'btn-dark': x.major.appnexus, 'btn-light': !x.major.appnexus}" class="btn btn-round"><i class="fab fa-medapps"></i></span>
+					<span @click="x.major.oracle = !x.major.oracle; update()" :class="{'btn-dark': x.major.oracle, 'btn-light': !x.major.oracle}" class="btn btn-round"><i class="fab fa-opera"></i></span>
 				</div>
 				<div v-else-if="index === 3">
-					<span @click="x.isthismajor = false; update()" :class="{'btn-dark': !x.isthismajor, 'btn-light': x.isthismajor}" class="btn">No</span>
-					<span @click="x.isthismajor = true; update()"  :class="{'btn-dark': x.isthismajor, 'btn-light': !x.isthismajor}" class="btn">Yes</span>
+					<span @click="x.isthismajor = false; update()" :class="{'btn-dark': !x.isthismajor, 'btn-light': x.isthismajor}" class="btn btn-reg">No</span>
+					<span @click="x.isthismajor = true; update()"  :class="{'btn-dark': x.isthismajor, 'btn-light': !x.isthismajor}" class="btn btn-reg">Yes</span>
 				</div>
 				<div v-else-if="index === 4">
-					<input type="range" v-model="x.percent" min="0" max="100" step="1" :input="update()"> {{x.percent}}%
+					<input type="range" v-model="x.percent" min="10" max="80" step="2" :input="update()"> {{x.percent}}%
 				</div>
 				<div v-else>
-					(More options...)
+					<span @click="x.practices = 0; update()" :class="{'btn-dark': x.practices == 0, 'btn-light': x.practices != 0}" class="btn btn-round">0</span>
+					<span @click="x.practices = -1; update()" :class="{'btn-dark': x.practices == -1, 'btn-light': x.practices != -1}" class="btn btn-round">-1</span>
+					<span @click="x.practices = -2; update()" :class="{'btn-dark': x.practices == -2, 'btn-light': x.practices != -2}" class="btn btn-round">-2</span>
+					<span @click="x.practices = -3; update()" :class="{'btn-dark': x.practices == -3, 'btn-light': x.practices != -3}" class="btn btn-round">-3</span>
+					<span @click="x.practices = -4; update()" :class="{'btn-dark': x.practices == -4, 'btn-light': x.practices != -4}" class="btn btn-round">-4</span>
 				</div>
 			</div>
 			
-			<div class="col text-right">
+			<div class="col text-right v-center">
 				<span v-if="row.points == 0">
 					<span class="btn btn-round btn-success"><i class="fas fa-check"></i></span>
 				</span>
 				<span v-else>
 					<span class="btn btn-round btn-danger">{{ row.points }}</span>
 				</span>
+
+				<span @click="row.toggle = !row.toggle" :class="{active: row.toggle}" class="btn btn-round btn-dark btn-float shadow"><i class="far fa-plus"></i></span>
 			</div>
 		</div> <!-- /.row -->
 		<div class="row desc" v-show="row.toggle">

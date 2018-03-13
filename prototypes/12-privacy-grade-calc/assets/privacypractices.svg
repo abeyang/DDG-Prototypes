@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="100px" viewBox="0 0 98 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>v5 / Icons / Privacy Practices</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,32 L6,32 L6,34 L4,34 L4,36 L2,36 L2,34 L0,34 L0,32 L2,32 L2,30 L4,30 L4,32 Z M47,20 L49,20 L49,22 L47,22 L47,24 L45,24 L45,22 L43,22 L43,20 L45,20 L45,18 L47,18 L47,20 Z M32,3 L8,3 L8,0 L38,0 L38,3 L38,13 L32,19 L32,3 Z" id="path-1"></path>
+        <path d="M16,16 L10,10 L10,0 L16,0 L16,16 Z M22,0 L28,0 L28,16 L22,16 L22,0 Z M1,17 L2,17 C2.55228475,17 3,17.4477153 3,18 L3,19 C3,19.5522847 2.55228475,20 2,20 L1,20 C0.44771525,20 6.76353751e-17,19.5522847 0,19 L0,18 C-6.76353751e-17,17.4477153 0.44771525,17 1,17 Z M46,29 L47,29 C47.5522847,29 48,29.4477153 48,30 L48,31 C48,31.5522847 47.5522847,32 47,32 L46,32 C45.4477153,32 45,31.5522847 45,31 L45,30 C45,29.4477153 45.4477153,29 46,29 Z" id="path-3"></path>
+        <circle id="path-5" cx="14" cy="14" r="14"></circle>
+        <circle id="path-7" cx="10" cy="10" r="10"></circle>
+    </defs>
+    <g id="v5-/-Icons-/-Privacy-Practices" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dark" transform="translate(26.000000, 30.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#C0C0C0" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="v5-/-Color-/-Icon-Dark" mask="url(#mask-2)">
+                <g transform="translate(-9.000000, -10.000000)"></g>
+            </g>
+        </g>
+        <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="40" y="33" width="6" height="16"></rect>
+        <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="52" y="33" width="6" height="16"></rect>
+        <g id="med" transform="translate(24.000000, 33.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#E5E5E5" fill-rule="nonzero" xlink:href="#path-3"></use>
+            <g id="v5-/-Color-/-Icon-Med" mask="url(#mask-4)">
+                <g transform="translate(-4.000000, -10.000000)"></g>
+            </g>
+        </g>
+        <g id="dark" transform="translate(35.000000, 42.000000)">
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <use id="Oval-path" fill="#C0C0C0" xlink:href="#path-5"></use>
+            <g id="v5-/-Color-/-Icon-Dark" mask="url(#mask-6)">
+                <g transform="translate(-18.000000, -22.000000)"></g>
+            </g>
+        </g>
+        <g id="Group" transform="translate(39.000000, 46.000000)">
+            <mask id="mask-8" fill="white">
+                <use xlink:href="#path-7"></use>
+            </mask>
+            <use id="Oval" fill="#DADADA" fill-rule="nonzero" xlink:href="#path-7"></use>
+            <g id="v5-/-Color-/-Icon-Med" mask="url(#mask-8)">
+                <g transform="translate(-19.000000, -23.000000)"></g>
+            </g>
+        </g>
+        <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="49 49.46 50.8 53.82 55.54 54.16 51.91 57.2 53.04 61.77 49 59.29 44.96 61.77 46.09 57.2 42.46 54.16 47.2 53.82"></polygon>
+    </g>
+</svg>

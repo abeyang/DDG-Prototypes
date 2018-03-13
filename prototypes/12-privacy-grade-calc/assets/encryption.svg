@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="100px" viewBox="0 0 98 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>v5 / Icons / Encryption</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8,4 C9.08121184,3.92847224 10.140719,4.32687419 10.9069224,5.09307758 C11.6731258,5.85928097 12.0715278,6.91878816 12,8 L12,16 L4,16 L4,8 C3.92847224,6.91878816 4.32687419,5.85928097 5.09307758,5.09307758 C5.85928097,4.32687419 6.91878816,3.92847224 8,4 Z M8,1 C6.12006956,0.919892487 4.29266759,1.63163183 2.96214971,2.96214971 C1.63163183,4.29266759 0.919892487,6.12006956 1,8 L1,19 L15,19 L15,8 C15.0801075,6.12006956 14.3683682,4.29266759 13.0378503,2.96214971 C11.7073324,1.63163183 9.87993044,0.919892487 8,1 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="26" height="24" rx="4"></rect>
+        <path d="M50.5,10 L43,10 L43,7 L49,7 L49,1 L52,1 L52,8.5 C52,9.32842712 51.3284271,10 50.5,10 Z M50.5,12 C51.3284271,12 52,12.6715729 52,13.5 L52,21 L49,21 L49,15 L43,15 L43,12 L50.5,12 Z M3,20 L0,20 L0,13.5 C0,12.6715729 0.671572875,12 1.5,12 L9,12 L9,15 L3,15 L3,20 Z M3,2 L3,7 L9,7 L9,10 L1.5,10 C0.671572875,10 0,9.32842712 0,8.5 L0,2 L3,2 Z M15,0 L17,0 L17,24 L15,24 C13.8954305,24 13,23.1045695 13,22 L13,2 C13,0.8954305 13.8954305,0 15,0 Z" id="path-5"></path>
+        <path d="M26,17.5839563 C24.2340952,16.8123997 23,15.050319 23,13 C23,10.2385763 25.2385763,8 28,8 C30.7614237,8 33,10.2385763 33,13 C33,15.050319 31.7659048,16.8123997 30,17.5839563 L30,21 L26,21 L26,17.5839563 Z M53,6 C51.3431458,6 50,4.65685425 50,3 C50,1.34314575 51.3431458,0 53,0 C54.6568542,0 56,1.34314575 56,3 C56,4.65685425 54.6568542,6 53,6 Z M53,26 C51.3431458,26 50,24.6568542 50,23 C50,21.3431458 51.3431458,20 53,20 C54.6568542,20 56,21.3431458 56,23 C56,24.6568542 54.6568542,26 53,26 Z M3,26 C1.34314575,26 0,24.6568542 0,23 C0,21.3431458 1.34314575,20 3,20 C4.65685425,20 6,21.3431458 6,23 C6,24.6568542 4.65685425,26 3,26 Z M3,6 C1.34314575,6 0,4.65685425 0,3 C0,1.34314575 1.34314575,0 3,0 C4.65685425,0 6,1.34314575 6,3 C6,4.65685425 4.65685425,6 3,6 Z M39,2 C40.1045695,2 41,2.8954305 41,4 L41,24 C41,25.1045695 40.1045695,26 39,26 L37,26 L37,2 L39,2 Z" id="path-7"></path>
+        <circle id="path-9" cx="29" cy="31" r="2"></circle>
+    </defs>
+    <g id="v5-/-Icons-/-Encryption" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dark" transform="translate(41.000000, 33.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#C0C0C0" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="v5-/-Color-/-Icon-Dark" mask="url(#mask-2)">
+                <g transform="translate(-21.000000, -10.000000)"></g>
+            </g>
+        </g>
+        <g id="med" transform="translate(36.000000, 43.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="Rectangle-path" fill="#DADADA" fill-rule="nonzero" xlink:href="#path-3"></use>
+            <g id="v5-/-Color-/-Icon-Med" mask="url(#mask-4)">
+                <g transform="translate(-16.000000, -20.000000)"></g>
+            </g>
+        </g>
+        <g id="light" transform="translate(23.000000, 43.000000)">
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#E5E5E5" fill-rule="nonzero" xlink:href="#path-5"></use>
+            <g id="v5-/-Color-/-Icon-Light" mask="url(#mask-6)">
+                <g transform="translate(-3.000000, -20.000000)"></g>
+            </g>
+        </g>
+        <g id="dark" transform="translate(21.000000, 41.000000)">
+            <mask id="mask-8" fill="white">
+                <use xlink:href="#path-7"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#C0C0C0" fill-rule="nonzero" xlink:href="#path-7"></use>
+            <g id="v5-/-Color-/-Icon-Dark" mask="url(#mask-8)">
+                <g transform="translate(-1.000000, -18.000000)"></g>
+            </g>
+        </g>
+        <g id="med" transform="translate(20.000000, 23.000000)">
+            <mask id="mask-10" fill="white">
+                <use xlink:href="#path-9"></use>
+            </mask>
+            <use id="Oval" fill="#DADADA" fill-rule="nonzero" xlink:href="#path-9"></use>
+            <g id="v5-/-Color-/-Icon-Med" mask="url(#mask-10)"></g>
+        </g>
+    </g>
+</svg>

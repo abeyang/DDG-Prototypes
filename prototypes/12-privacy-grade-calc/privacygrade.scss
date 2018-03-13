@@ -12,13 +12,22 @@ $current-blue: 	#4495d4;
 $purple:		#5558D8;
 $dark-purple:	#474BB8;
 
+$row-height:	110px;
+$row-pad:		20px;
+$header-top:	80px;
+$button-height: 40px;
+
 body, div, p {
 	font-family: proxima-nova;
+	font-size: 14px;
+}
+
+body {
+	padding-top: $header-top;
+	padding-bottom: $header-top;
 }
 
 .header {
-	margin-top: 40px;
-
 	.row-wrap {
 		background: $offwhite;
 	}
@@ -29,11 +38,62 @@ body, div, p {
 	}
 }
 
+.label {
+	font-size: 12px;
+	color: $slight-gray;
+	letter-spacing: 2.5px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.grade {
+	// absolute center
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -($row-height/2);
+	margin: auto;
+
+	width: $row-height;
+	height: $row-height;
+	border-radius: $row-height/2;
+	line-height: $row-height;
+	text-align: center;
+	color: #fff;
+
+	strong { font-size: 48px; }
+}
+
+.shadow {
+	box-shadow: 0 10px 10px -5px rgba(0,0,0,0.25);
+}
+
 .row-wrap {
-	padding: 20px;
+	/*height: $row-height;*/
 	background: $white;
 	border: 1px solid $lightest-gray;
+	
+	.v-center { line-height: $row-height/2; }
 }
+.row {
+	padding: $row-pad;
+}
+.desc {
+	background: $offwhite;
+}
+
+.icon {
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	&.icon-connection { background-image: url(assets/encryption.svg); }
+	&.icon-trackers { background-image: url(assets/shield.svg); }
+	// TODO: need to output majortrackers as svg...
+	&.icon-majornetworks, &.icon-ismajornetwork { background-image: url(assets/majortrackers.png); }
+	&.icon-privacypractices { background-image: url(assets/privacypractices.svg); }
+}
+
 
 .btn {
 	&.btn-light {
@@ -41,19 +101,39 @@ body, div, p {
 		background: $lighter-gray;
 	}
 
+	&.btn-reg {
+		height: $button-height;
+		line-height: $button-height - 10; // vertical center
+		width: $button-height * 3 + 10;
+	}
+
 	&.btn-round {
-		width: 36px;
-		border-radius: 18px;
+		margin-right: 2px;
+		width: $button-height;
+		height: $button-height;
+		border-radius: $button-height/2;
 		text-align: center;
+		line-height: $button-height - 10; // vertical center
+		white-space: nowrap;
+	}
+
+	&.btn-float {
+		position: absolute;
+		top: 8px;
+
+		&.active i { transform: rotate(45deg);  }
 	}
 }
+
+// input range
+// http://www.cssportal.com/style-input-range/
+// https://jsfiddle.net/3JJJb/542/
 
 strong { 
 	font-size: 18px; 
 }
 .subtitle {
 	margin-top: 4px;
-	font-size: 14px;
 	line-height: 18px;
 	color: $slight-gray;
 }

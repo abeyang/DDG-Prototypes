@@ -7,6 +7,18 @@ Vue.component('card', {
 	methods: {
 		update: function() {
 			this.$emit('update');
+		},
+		hoverResult: function(event) {
+			var row = event.currentTarget;
+			row.style.backgroundColor = '#fafafa';
+			// TODO: need to figure out how to check the toggle is on...
+			// - MAYBE it is toggling another field..?
+			// console.log(event);
+		},
+		outResult: function(event) {
+			// console.log(event);
+			var row = event.currentTarget;
+			row.style.backgroundColor = '#fff';
 		}
 	}
 });
@@ -66,13 +78,15 @@ var pg = new Vue({
 				points: 0
 			},
 		],
+		name: '',
 		score: 0,
 		grade: 'A',
+		gradeclass: 'success',
 		worst: -21,		// worst possible grade
 		// x = current settings
 		x: {},
 		presets: {
-			'default': {
+			'Random Site': {
 				isencrypted: false, 
 				trackers: 10,
 				major: {
@@ -84,8 +98,23 @@ var pg = new Vue({
 					oracle: false
 				},
 				isthismajor: true,
-				percent: 35,
+				percent: 36,
 				practices: -2
+			},
+			'Google': {
+				isencrypted: true, 
+				trackers: 0,
+				major: {
+					google: false,
+					facebook: false,
+					twitter: false,
+					amazon: false,
+					appnexus: false,
+					oracle: false
+				},
+				isthismajor: true,
+				percent: 76,
+				practices: -3
 			}
 		}
 	},
@@ -95,6 +124,7 @@ var pg = new Vue({
 		},
 		setPreset: function(key) {
 			this.x = this.presets[key];
+			this.name = key;
 			// TODO: needs to update elements
 		},
 		changePreset: function(event) {
@@ -109,7 +139,7 @@ var pg = new Vue({
 			this.rows[1].points = -Math.floor(this.x.trackers/4);
 			this.rows[2].points = -_.filter(this.x.major, function(val, key) { return val==true}).length;
 			this.rows[3].points = (this.x.isthismajor) ? -1 : 0;
-			this.rows[4].points = -Math.floor(this.x.percent/25);
+			this.rows[4].points = -Math.floor(this.x.percent/10);
 			this.rows[5].points = this.x.practices;
 
 			var total = 0;
@@ -120,16 +150,16 @@ var pg = new Vue({
 			
 			this.score = total;
 			
-			if (total == 0) this.grade = 'A';
-			else if (total == -1) this.grade = 'B';
-			else if (total >= -3) this.grade = 'C';
-			else this.grade = 'D';
+			if (total == 0) { 		this.grade = 'A'; this.gradeclass = 'success'; }
+			else if (total == -1) {	this.grade = 'B'; this.gradeclass = 'success'; }
+			else if (total >= -3) {	this.grade = 'C'; this.gradeclass = 'warning'; }
+			else { 					this.grade = 'D'; this.gradeclass = 'danger'; }
 		}
 
 	},
 	created: function() {
 		// set x as this preset:
-		this.setPreset('default');
+		this.setPreset('Random Site');
 		this.calculateScore();
 	}
 });

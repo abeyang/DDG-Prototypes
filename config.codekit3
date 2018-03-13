@@ -3481,6 +3481,57 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/Encryption.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/Encryption.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/majortrackers.png": {
+		"ft": 32768,
+		"iS": 2828,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/majortrackers.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/majortrackers.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/majortrackers.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/privacypractices.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/privacypractices.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/Shield.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/Shield.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/prototypes\/12-privacy-grade-calc\/index.html": {
 		"cB": 0,
 		"ft": 8192,
