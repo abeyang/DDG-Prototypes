@@ -1,55 +1,63 @@
 // COLORS
 
 $white: 		#fff;
+$offwhite:		#fafafa;
 $lightest-gray:	#eee;
 $lighter-gray:	#ddd;
 $neue-gray:		#999;
 $gray: 			#888;
+$slight-gray:	#777;
 $dark-gray: 	#333;
 $current-blue: 	#4495d4;
 $purple:		#5558D8;
 $dark-purple:	#474BB8;
 
-.container {
-	width: 1000px;
-	margin: 20px auto;
+body, div, p {
+	font-family: proxima-nova;
 }
 
-.card-wrap {
+.header {
+	margin-top: 40px;
+
+	.row-wrap {
+		background: $offwhite;
+	}
+
+	.progress {
+		height: 4px;
+		border-radius: 0;
+	}
+}
+
+.row-wrap {
 	padding: 20px;
-	border: 1px solid $lightest-gray; 
+	background: $white;
+	border: 1px solid $lightest-gray;
+}
 
-	.desc {
-		display: hide;
+.btn {
+	&.btn-light {
+		// padding: 10px;
+		background: $lighter-gray;
 	}
-	&.toggle .desc {
-		display: show;
-	}
-}
-.card {
-	display: flex;
-	flex-direction: row;
 
-
-}
-.column {
-	/*flex-grow: 1;*/
-	flex-basis: 98px;
-
-	&.col3 { flex-grow: 3; }
-	&.col6 { flex-grow: 6; }
-}
-
-.button {
-	display: inline-block;
-	padding: 10px;
-	background: $lighter-gray;
-
-	&.active {
-		color: $white;
-		background: $current-blue;
+	&.btn-round {
+		width: 36px;
+		border-radius: 18px;
+		text-align: center;
 	}
 }
+
+strong { 
+	font-size: 18px; 
+}
+.subtitle {
+	margin-top: 4px;
+	font-size: 14px;
+	line-height: 18px;
+	color: $slight-gray;
+}
+
 
 // functions + generic classes
 @function em($px, $base: $base-font-size) {

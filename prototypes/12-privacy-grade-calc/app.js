@@ -49,19 +49,26 @@ var pg = new Vue({
 				desc: 'You may realize that hidden trackers lurk on many sites you visit. What you may not realize, though, is 76 percent of websites now contain hidden Google trackers, 24 percent have hidden Facebook trackers, and several other major tracker networks are at 10%+.Because these major tracker networks are on so many pages…',
 				points: 0
 			},
+			{
+				id: 'percentsites',
+				title: 'Percentage of Sites that have this',
+				snippet: 'How widely disseminated across the internet is this tracker network?',
+				toggle: false,
+				desc: 'You may realize that hidden trackers lurk on many sites you visit. What you may not realize, though, is 76 percent of websites now contain hidden Google trackers, 24 percent have hidden Facebook trackers, and several other major tracker networks are at 10%+.Because these major tracker networks are on so many pages…',
+				points: 0
+			},
+			{
+				id: 'privacypractices',
+				title: 'Privacy Practices Score',
+				snippet: 'Scoring on Privacy Practices',
+				toggle: false,
+				desc: 'You may realize that hidden trackers lurk on many sites you visit. What you may not realize, though, is 76 percent of websites now contain hidden Google trackers, 24 percent have hidden Facebook trackers, and several other major tracker networks are at 10%+.Because these major tracker networks are on so many pages…',
+				points: 0
+			},
 		],
 		score: 0,
 		grade: 'A',
-		// dark ui toggles:
-		toggle: {
-			title: true,
-			snippet: true,
-			url: true,
-			favicon: true,
-			result: true,
-			misc: false,
-			export: false
-		},
+		worst: -21,		// worst possible grade
 		// x = current settings
 		x: {},
 		presets: {
@@ -76,7 +83,9 @@ var pg = new Vue({
 					appnexus: true,
 					oracle: false
 				},
-				isthismajor: true
+				isthismajor: true,
+				percent: 35,
+				practices: -2
 			}
 		}
 	},
@@ -100,6 +109,8 @@ var pg = new Vue({
 			this.rows[1].points = -Math.floor(this.x.trackers/4);
 			this.rows[2].points = -_.filter(this.x.major, function(val, key) { return val==true}).length;
 			this.rows[3].points = (this.x.isthismajor) ? -1 : 0;
+			this.rows[4].points = -Math.floor(this.x.percent/25);
+			this.rows[5].points = this.x.practices;
 
 			var total = 0;
 			var point_arr = _.pluck(this.rows, 'points');

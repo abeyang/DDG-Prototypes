@@ -25,13 +25,30 @@
 
 <div class="container">
 	<div id="pg">
-		<!-- TODO: add header -->
+		<!-- header -->
+		<div class="header">
+			<div class="row-wrap">
+				<div class="row">
+					<div class="col">
+						Domain Name
+					</div>
+					<div class="col-9">
+						{{ grade }}
+					</div>
+					<div class="col text-right">
+						<span class="btn btn-round text-danger">{{ score }}</span>
+					</div>
+				</div> <!-- /.row -->
+			</div> <!-- /.row-wrap -->
+			<div class="progress">
+			  <div class="progress-bar bg-danger" role="progressbar" :style="{width: score / worst * 100 + '%'}"></div>
+			</div>
+		</div> <!-- /.header -->
+
+		<!-- rows -->
 		<div v-for="(row, index) in rows">
 			<card :row="row" :index="index" :x="x" v-on:update="calculateScore()"></card>
 		</div>
-
-		<strong> Total score: {{ score }} </strong> <br />
-		Grade: {{ grade }}
 		
 	</div> <!-- /#pg -->
 </div> <!-- /.container -->
@@ -39,58 +56,66 @@
 
 <!-- Templates -->
 <template id="card">
-	<div :id="row.id" :class="{toggle: row.toggle}" class="card-wrap">
-		<div class="card">
-			<div class="column">
+	<div :id="row.id" :class="{toggle: row.toggle}" class="row-wrap">
+		<div class="row">
+			<div class="col">
 				(icon)
 			</div>
-			<div class="column col3">
-				<strong>{{ row.title }} </strong>
-				<div>{{ row.snippet }}</div>
+			<div class="col-5">
+				<strong>{{ row.title }}</strong>
+				<div class="subtitle">{{ row.snippet }}</div>
 			</div>
 
 			<!-- Options -->
-			<div class="column col3">
+			<div class="col-4">
 				<div v-if="index === 0">
-					<span @click="x.isencrypted = true; update()"  :class="{active: x.isencrypted}" class="button">Encrypted</span>
-					<span @click="x.isencrypted = false; update()" :class="{active: !x.isencrypted}" class="button">Unencrypted</span>
+					<span @click="x.isencrypted = true; update()"  :class="{'btn-dark': x.isencrypted, 'btn-light': !x.isencrypted}" class="btn">Encrypted</span>
+					<span @click="x.isencrypted = false; update()" :class="{'btn-dark': !x.isencrypted, 'btn-light': x.isencrypted}" class="btn">Unencrypted</span>
 				</div>
 				<div v-else-if="index === 1">
 					<input type="range" v-model="x.trackers" min="0" max="20" step="1" :input="update()"> {{x.trackers}}
 				</div>
 				<div v-else-if="index === 2">
-					<span @click="x.major.google = !x.major.google; update()" :class="{active: x.major.google}" class="button">G</span>
-					<span @click="x.major.facebook = !x.major.facebook; update()" :class="{active: x.major.facebook}" class="button">F</span>
-					<span @click="x.major.twitter = !x.major.twitter; update()" :class="{active: x.major.twitter}" class="button">T</span>
-					<span @click="x.major.amazon = !x.major.amazon; update()" :class="{active: x.major.amazon}" class="button">Am</span>
-					<span @click="x.major.appnexus = !x.major.appnexus; update()" :class="{active: x.major.appnexus}" class="button">Ap</span>
-					<span @click="x.major.oracle = !x.major.oracle; update()" :class="{active: x.major.oracle}" class="button">O</span>
+					<span @click="x.major.google = !x.major.google; update()" :class="{'btn-dark': x.major.google, 'btn-light': !x.major.google}" class="btn btn-round">G</span>
+					<span @click="x.major.facebook = !x.major.facebook; update()" :class="{'btn-dark': x.major.facebook, 'btn-light': !x.major.facebook}" class="btn btn-round">F</span>
+					<span @click="x.major.twitter = !x.major.twitter; update()" :class="{'btn-dark': x.major.twitter, 'btn-light': !x.major.twitter}" class="btn btn-round">T</span>
+					<span @click="x.major.amazon = !x.major.amazon; update()" :class="{'btn-dark': x.major.amazon, 'btn-light': !x.major.amazon}" class="btn btn-round">Am</span>
+					<span @click="x.major.appnexus = !x.major.appnexus; update()" :class="{'btn-dark': x.major.appnexus, 'btn-light': !x.major.appnexus}" class="btn btn-round">Ap</span>
+					<span @click="x.major.oracle = !x.major.oracle; update()" :class="{'btn-dark': x.major.oracle, 'btn-light': !x.major.oracle}" class="btn btn-round">O</span>
 				</div>
 				<div v-else-if="index === 3">
-					<span @click="x.isthismajor = false; update()" :class="{active: !x.isthismajor}" class="button">No</span>
-					<span @click="x.isthismajor = true; update()"  :class="{active: x.isthismajor}" class="button">Yes</span>
+					<span @click="x.isthismajor = false; update()" :class="{'btn-dark': !x.isthismajor, 'btn-light': x.isthismajor}" class="btn">No</span>
+					<span @click="x.isthismajor = true; update()"  :class="{'btn-dark': x.isthismajor, 'btn-light': !x.isthismajor}" class="btn">Yes</span>
+				</div>
+				<div v-else-if="index === 4">
+					<input type="range" v-model="x.percent" min="0" max="100" step="1" :input="update()"> {{x.percent}}%
 				</div>
 				<div v-else>
 					(More options...)
 				</div>
 			</div>
 			
-			<div class="column">
-				{{ row.points }}
+			<div class="col text-right">
+				<span v-if="row.points == 0">
+					<span class="btn btn-round btn-success">{{ row.points }}</span>
+				</span>
+				<span v-else>
+					<span class="btn btn-round btn-danger">{{ row.points }}</span>
+				</span>
 			</div>
-		</div>
-		<div class="card desc" v-show="row.toggle">
-			<div class="column">
+		</div> <!-- /.row -->
+		<div class="row desc" v-show="row.toggle">
+			<div class="col">
 				&nbsp;
 			</div>
-			<div class="column col6">
+			<div class="col-9">
 				{{ row.desc }}
 			</div>
-			<div class="column">
+			<div class="col">
 				&nbsp;
 			</div>
-		</div>
-	</div>
+		</div> <!-- /.row.desc -->
+	</div> <!-- /.row-wrap -->
 </template>
 
 <script src="./app.js"></script>
