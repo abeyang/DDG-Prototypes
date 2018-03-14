@@ -77,7 +77,7 @@
 					<span @click="x.major.oracle = !x.major.oracle; update()" :class="{'btn-dark': x.major.oracle, 'btn-light': !x.major.oracle}" class="btn btn-round"><i class="fab fa-opera"></i></span>
 				</div>
 				<div v-else-if="index === 3">
-					<input type="range" v-model="x.percent" min="10" max="80" step="2" :input="update()"> {{x.percent}}%
+					<input type="range" v-model="x.percent" min="0" max="90" step="15" :input="update()"> {{x.percent}}%
 				</div>
 				<div v-else>
 					<span @click="x.practices = 0; update()" :class="{'btn-dark': x.practices == 0, 'btn-light': x.practices != 0}" class="btn btn-round">0</span>
