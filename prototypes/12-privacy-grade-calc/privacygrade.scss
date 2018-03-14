@@ -76,12 +76,33 @@ body {
 	border-top: none;
 	
 	.v-center { line-height: $row-height/2; }
+	.btn-float { display: none; }
+
+	&.hover { 
+		background: $offwhite; 
+
+		.btn-float { display: inline; }
+	}
+	&.toggle {
+		border: none;
+		margin-bottom: 20px;
+
+		&.hover { background: $white; }
+		.row, .desc {  }
+		.row { 
+			border: 1px solid $lightest-gray;
+			background: $white; 
+
+			&.desc { background: $offwhite; }
+		}
+		.btn-float { 
+			display: inline; 
+			right: -42px;
+		}
+	}
 }
 .row {
 	padding: $row-pad;
-}
-.desc {
-	background: $offwhite;
 }
 
 .icon {
@@ -92,7 +113,7 @@ body {
 	&.icon-connection { background-image: url(assets/encryption.svg); }
 	&.icon-trackers { background-image: url(assets/shield.svg); }
 	// TODO: need to output majortrackers as svg...
-	&.icon-majornetworks, &.icon-ismajornetwork { background-image: url(assets/majortrackers.png); }
+	&.icon-majornetworks, &.icon-percentsites { background-image: url(assets/majortrackers.png); }
 	&.icon-privacypractices { background-image: url(assets/privacypractices.svg); }
 }
 
@@ -122,6 +143,7 @@ body {
 	&.btn-float {
 		position: absolute;
 		top: 8px;
+		right: -26px;
 
 		&.active i { transform: rotate(45deg);  }
 	}

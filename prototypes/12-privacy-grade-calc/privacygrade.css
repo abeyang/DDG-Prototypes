@@ -46,12 +46,28 @@ body {
   border-top: none; }
   .row-wrap .v-center {
     line-height: 55px; }
+  .row-wrap .btn-float {
+    display: none; }
+  .row-wrap.hover {
+    background: #fafafa; }
+    .row-wrap.hover .btn-float {
+      display: inline; }
+  .row-wrap.toggle {
+    border: none;
+    margin-bottom: 20px; }
+    .row-wrap.toggle.hover {
+      background: #fff; }
+    .row-wrap.toggle .row {
+      border: 1px solid #eee;
+      background: #fff; }
+      .row-wrap.toggle .row.desc {
+        background: #fafafa; }
+    .row-wrap.toggle .btn-float {
+      display: inline;
+      right: -42px; }
 
 .row {
   padding: 20px; }
-
-.desc {
-  background: #fafafa; }
 
 .icon {
   background-size: auto;
@@ -61,7 +77,7 @@ body {
     background-image: url(assets/encryption.svg); }
   .icon.icon-trackers {
     background-image: url(assets/shield.svg); }
-  .icon.icon-majornetworks, .icon.icon-ismajornetwork {
+  .icon.icon-majornetworks, .icon.icon-percentsites {
     background-image: url(assets/majortrackers.png); }
   .icon.icon-privacypractices {
     background-image: url(assets/privacypractices.svg); }
@@ -85,7 +101,8 @@ body {
 
 .btn.btn-float {
   position: absolute;
-  top: 8px; }
+  top: 8px;
+  right: -26px; }
   .btn.btn-float.active i {
     transform: rotate(45deg); }
 

@@ -10,15 +10,15 @@ Vue.component('card', {
 		},
 		hoverResult: function(event) {
 			var row = event.currentTarget;
-			row.style.backgroundColor = '#fafafa';
+			$(row).addClass('hover');
 			// TODO: need to figure out how to check the toggle is on...
 			// - MAYBE it is toggling another field..?
-			// console.log(event);
+			// console.log(this.row);
 		},
 		outResult: function(event) {
-			// console.log(event);
+			// console.log(event.currentTarget);
 			var row = event.currentTarget;
-			row.style.backgroundColor = '#fff';
+			$(row).removeClass('hover');
 		}
 	}
 });
@@ -54,17 +54,9 @@ var pg = new Vue({
 				points: 0
 			},
 			{
-				id: 'ismajornetwork',
-				title: 'Is this a Major Tracker Network?',
-				snippet: 'Is this site itself a major tracker network?',
-				toggle: false,
-				desc: 'You may realize that hidden trackers lurk on many sites you visit. What you may not realize, though, is 76 percent of websites now contain hidden Google trackers, 24 percent have hidden Facebook trackers, and several other major tracker networks are at 10%+.Because these major tracker networks are on so many pages…',
-				points: 0
-			},
-			{
 				id: 'percentsites',
-				title: 'Percentage of Sites that have this',
-				snippet: 'How widely disseminated across the internet is this tracker network?',
+				title: 'How widely disseminated is this site?',
+				snippet: 'Anything over 10% would be considered a major tracker network',
 				toggle: false,
 				desc: 'You may realize that hidden trackers lurk on many sites you visit. What you may not realize, though, is 76 percent of websites now contain hidden Google trackers, 24 percent have hidden Facebook trackers, and several other major tracker networks are at 10%+.Because these major tracker networks are on so many pages…',
 				points: 0
@@ -97,7 +89,6 @@ var pg = new Vue({
 					appnexus: true,
 					oracle: false
 				},
-				isthismajor: true,
 				percent: 36,
 				practices: -2
 			},
@@ -112,7 +103,6 @@ var pg = new Vue({
 					appnexus: false,
 					oracle: false
 				},
-				isthismajor: true,
 				percent: 12,
 				practices: -2
 			},
@@ -127,7 +117,6 @@ var pg = new Vue({
 					appnexus: false,
 					oracle: false
 				},
-				isthismajor: true,
 				percent: 76,
 				practices: -2
 			},
@@ -142,7 +131,6 @@ var pg = new Vue({
 					appnexus: true,
 					oracle: false
 				},
-				isthismajor: false,
 				percent: 0,
 				practices: -4
 			},
@@ -157,7 +145,6 @@ var pg = new Vue({
 					appnexus: false,
 					oracle: false
 				},
-				isthismajor: true,
 				percent: 12,
 				practices: -4
 			},
@@ -172,7 +159,6 @@ var pg = new Vue({
 					appnexus: false,
 					oracle: false
 				},
-				isthismajor: false,
 				percent: 0,
 				practices: -4
 			},
@@ -187,7 +173,6 @@ var pg = new Vue({
 					appnexus: false,
 					oracle: false
 				},
-				isthismajor: false,
 				percent: 0,
 				practices: -2
 			}
@@ -206,9 +191,8 @@ var pg = new Vue({
 			this.rows[0].points = (this.x.isencrypted) ? 0 : -1;
 			this.rows[1].points = -Math.floor(this.x.trackers/4);
 			this.rows[2].points = -_.filter(this.x.major, function(val, key) { return val==true}).length;
-			this.rows[3].points = (this.x.isthismajor) ? -1 : 0;
-			this.rows[4].points = -Math.floor(this.x.percent/10);
-			this.rows[5].points = this.x.practices;
+			this.rows[3].points = -Math.floor(this.x.percent/10);
+			this.rows[4].points = this.x.practices;
 
 			var total = 0;
 			var point_arr = _.pluck(this.rows, 'points');
