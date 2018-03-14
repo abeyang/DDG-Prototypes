@@ -4,7 +4,6 @@
 <!-- @include ../../includes/nohead-vue -->
 <link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
 
-
 <div class="container">
 	<div id="pg">
 		<!-- header -->
@@ -13,7 +12,17 @@
 				<div class="row">
 					<div class="col-3">
 						<div class="label">Domain</div>
-						<strong>{{ name }}</strong>
+						
+						<div class="dropdown show">
+						  <a class="dropdown-toggle text-dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <strong>{{ name }}</strong>
+						  </a>
+
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						    <a v-for="(value, key) in presets" class="dropdown-item" @click="setPreset(key)" href="#">{{ key }}</a>
+						  </div>
+						</div> <!-- /.dropdown -->
+					
 					</div>
 					<div class="col-6">
 						<div class="grade shadow" :class="'bg-' + gradeclass"><strong>{{ grade }}</strong></div>
@@ -31,7 +40,7 @@
 
 		<!-- rows -->
 		<div v-for="(row, index) in rows">
-			<card :row="row" :index="index" :x="x" v-on:update="calculateScore()"></card>
+			<card :row="row" :index="index" :x="x" :update="calculateScore()"></card>
 		</div>
 		
 	</div> <!-- /#pg -->

@@ -101,6 +101,21 @@ var pg = new Vue({
 				percent: 36,
 				practices: -2
 			},
+			'Amazon': {
+				isencrypted: true, 
+				trackers: 1,
+				major: {
+					google: false,
+					facebook: false,
+					twitter: false,
+					amazon: false,
+					appnexus: false,
+					oracle: false
+				},
+				isthismajor: true,
+				percent: 12,
+				practices: -2
+			},
 			'Google': {
 				isencrypted: true, 
 				trackers: 0,
@@ -114,26 +129,79 @@ var pg = new Vue({
 				},
 				isthismajor: true,
 				percent: 76,
-				practices: -3
+				practices: -2
+			},
+			'LinkedIn': {
+				isencrypted: true, 
+				trackers: 8,
+				major: {
+					google: true,
+					facebook: false,
+					twitter: false,
+					amazon: false,
+					appnexus: true,
+					oracle: false
+				},
+				isthismajor: false,
+				percent: 0,
+				practices: -4
+			},
+			'Twitter': {
+				isencrypted: true, 
+				trackers: 5,
+				major: {
+					google: true,
+					facebook: false,
+					twitter: false,
+					amazon: false,
+					appnexus: false,
+					oracle: false
+				},
+				isthismajor: true,
+				percent: 12,
+				practices: -4
+			},
+			'Wikipedia': {
+				isencrypted: true, 
+				trackers: 0,
+				major: {
+					google: false,
+					facebook: false,
+					twitter: false,
+					amazon: false,
+					appnexus: false,
+					oracle: false
+				},
+				isthismajor: false,
+				percent: 0,
+				practices: -4
+			},
+			'Youtube': {
+				isencrypted: true, 
+				trackers: 0,
+				major: {
+					google: false,
+					facebook: false,
+					twitter: false,
+					amazon: false,
+					appnexus: false,
+					oracle: false
+				},
+				isthismajor: false,
+				percent: 0,
+				practices: -2
 			}
 		}
 	},
 	methods: {
-		showhide: function(item) {
-			this.toggle[item] = !this.toggle[item];
-		},
 		setPreset: function(key) {
 			this.x = this.presets[key];
 			this.name = key;
-			// TODO: needs to update elements
-		},
-		changePreset: function(event) {
-			// the 'key' is actually event's value (confusing, I know)
-			var key = event.target.value
-			this.setPreset(key);
 		},
 
 		// calculates total score 
+		// this gets called whenever a "filter element" on the page changes
+		// thus, changing presets ("domain") will call this automatically
 		calculateScore: function() {
 			this.rows[0].points = (this.x.isencrypted) ? 0 : -1;
 			this.rows[1].points = -Math.floor(this.x.trackers/4);
@@ -157,10 +225,10 @@ var pg = new Vue({
 		}
 
 	},
+
 	created: function() {
 		// set x as this preset:
 		this.setPreset('Random Site');
-		this.calculateScore();
 	}
 });
 

@@ -7,7 +7,8 @@ body {
   padding-bottom: 80px; }
 
 .header .row-wrap {
-  background: #fafafa; }
+  background: #fafafa;
+  border-top: 1px solid #eee; }
 
 .header .progress {
   height: 4px;
@@ -41,7 +42,8 @@ body {
 .row-wrap {
   /*height: $row-height;*/
   background: #fff;
-  border: 1px solid #eee; }
+  border: 1px solid #eee;
+  border-top: none; }
   .row-wrap .v-center {
     line-height: 55px; }
 
