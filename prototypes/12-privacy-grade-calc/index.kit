@@ -10,7 +10,7 @@
 		<div class="header">
 			<div class="row-wrap">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-3 text-left">
 						<div class="label">Domain</div>
 						
 						<div class="dropdown show">
@@ -32,9 +32,22 @@
 						<span class="btn btn-round" :class="'text-' + gradeclass"><strong>{{ score }}</strong></span>
 					</div>
 				</div> <!-- /.row -->
+				<div class="row gradescale">
+					<span class="text-center" :style="{width: -1 / worst * 100 + '%'}">A</span>
+					<span class="text-center" :style="{width: -1 / worst * 100 + '%'}">B</span>
+					<span class="text-center" :style="{width: -2 / worst * 100 + '%'}">C</span>
+					<span class="text-center" :style="{width: (worst+4)/worst*100 + '%'}">D</span>
+				</div>
+				<div class="row gradescale gradeticks">
+					<span class="text-center" :style="{width: -1 / worst * 100 + '%'}">&nbsp;</span>
+					<span class="text-center" :style="{width: -1 / worst * 100 + '%'}">&nbsp;</span>
+					<span class="text-center" :style="{width: -2 / worst * 100 + '%'}">&nbsp;</span>
+					<span class="text-center" :style="{width: (worst+4)/worst*100 + '%'}">&nbsp;</span>
+				</div>
 			</div> <!-- /.row-wrap -->
+
 			<div class="progress">
-			  <div class="progress-bar" :class="'bg-' + gradeclass" role="progressbar" :style="{width: score / worst * 100 + '%'}"></div>
+			  <div class="progress-bar" :class="'bg-' + gradeclass" role="progressbar" :style="{width: (score-1) / worst * 100 + '%'}"></div>
 			</div>
 		</div> <!-- /.header -->
 
@@ -50,23 +63,24 @@
 <!-- Templates -->
 <template id="card">
 	<div :id="row.id" :class="{'toggle shadow': row.toggle}" class="row-wrap" @mouseover="hoverResult" @mouseout="outResult">
-		<div class="row" >
+		<div class="row" @click="toggleCard(row, $event)">
 			<div class="col icon" :class="'icon-' + row.id">
 				&nbsp;
 			</div>
 			<div class="col-5">
 				<strong>{{ row.title }}</strong>
-				<div class="subtitle">{{ row.snippet }}</div>
+				<div class="subtitle">{{ row.snippet }} <a href="#" v-show="!row.toggle">Read more</a><a href="#" v-show="row.toggle">Read less</a></div>
 			</div>
 
 			<!-- Options -->
-			<div class="col-4 v-center">
+			<div class="col-4 text-center v-center">
 				<div v-if="index === 0">
 					<span @click="x.isencrypted = true; update()"  :class="{'btn-dark': x.isencrypted, 'btn-light': !x.isencrypted}" class="btn btn-reg">Encrypted</span>
 					<span @click="x.isencrypted = false; update()" :class="{'btn-dark': !x.isencrypted, 'btn-light': x.isencrypted}" class="btn btn-reg">Unencrypted</span>
 				</div>
 				<div v-else-if="index === 1">
-					<input type="range" v-model="x.trackers" min="0" max="20" step="1" :input="update()"> {{x.trackers}}
+					<input type="range" v-model="x.trackers" min="0" max="20" step="1" :input="update()">
+					<div class="info">{{x.trackers}}</div>
 				</div>
 				<div v-else-if="index === 2">
 					<span @click="x.major.google = !x.major.google; update()" :class="{'btn-dark': x.major.google, 'btn-light': !x.major.google}" class="btn btn-round"><i class="fab fa-google"></i></span>
@@ -75,16 +89,19 @@
 					<span @click="x.major.amazon = !x.major.amazon; update()" :class="{'btn-dark': x.major.amazon, 'btn-light': !x.major.amazon}" class="btn btn-round"><i class="fab fa-amazon"></i></span>
 					<span @click="x.major.appnexus = !x.major.appnexus; update()" :class="{'btn-dark': x.major.appnexus, 'btn-light': !x.major.appnexus}" class="btn btn-round"><i class="fab fa-medapps"></i></span>
 					<span @click="x.major.oracle = !x.major.oracle; update()" :class="{'btn-dark': x.major.oracle, 'btn-light': !x.major.oracle}" class="btn btn-round"><i class="fab fa-opera"></i></span>
+					<div class="info pad">Info</div>
 				</div>
 				<div v-else-if="index === 3">
-					<input type="range" v-model="x.percent" min="0" max="90" step="15" :input="update()"> {{x.percent}}%
+					<input type="range" v-model="x.percent" min="0" max="90" step="15" :input="update()">
+					<div class="info">{{x.percent}}%</div>
 				</div>
 				<div v-else>
-					<span @click="x.practices = 0; update()" :class="{'btn-dark': x.practices == 0, 'btn-light': x.practices != 0}" class="btn btn-round">0</span>
+					<span @click="x.practices = 0; update()" :class="{'btn-dark': x.practices == 0, 'btn-light': x.practices != 0}" class="btn btn-round">😀</span>
 					<span @click="x.practices = -1; update()" :class="{'btn-dark': x.practices == -1, 'btn-light': x.practices != -1}" class="btn btn-round">-1</span>
 					<span @click="x.practices = -2; update()" :class="{'btn-dark': x.practices == -2, 'btn-light': x.practices != -2}" class="btn btn-round">-2</span>
 					<span @click="x.practices = -3; update()" :class="{'btn-dark': x.practices == -3, 'btn-light': x.practices != -3}" class="btn btn-round">-3</span>
 					<span @click="x.practices = -4; update()" :class="{'btn-dark': x.practices == -4, 'btn-light': x.practices != -4}" class="btn btn-round">-4</span>
+					<div class="info pad">{{ x.info.practices }}</div>
 				</div>
 			</div>
 			
@@ -96,7 +113,7 @@
 					<span class="btn btn-round btn-danger">{{ row.points }}</span>
 				</span>
 
-				<span @click="row.toggle = !row.toggle" :class="{active: row.toggle}" class="btn btn-round btn-dark btn-float shadow"><i class="far fa-plus"></i></span>
+				<!-- <span @click="row.toggle = !row.toggle" :class="{active: row.toggle}" class="btn btn-round btn-dark btn-float shadow"><i class="far fa-plus"></i></span> -->
 			</div>
 		</div> <!-- /.row -->
 		<div class="row desc" v-show="row.toggle">

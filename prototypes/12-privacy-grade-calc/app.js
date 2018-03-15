@@ -8,6 +8,13 @@ Vue.component('card', {
 		update: function() {
 			this.$emit('update');
 		},
+		toggleCard: function(row, event) {
+			// console.log($(event.target).prop('tagName') );
+			var thistag = $(event.target).prop('tagName');
+			if ( (thistag != 'SPAN') && (thistag != 'INPUT') ) {
+				row.toggle = !row.toggle;	
+			}
+		},
 		hoverResult: function(event) {
 			var row = event.currentTarget;
 			$(row).addClass('hover');
@@ -56,7 +63,7 @@ var pg = new Vue({
 			{
 				id: 'percentsites',
 				title: 'How widely disseminated is this site?',
-				snippet: 'Anything over 10% would be considered a major tracker network',
+				snippet: 'Anything over 10% would be considered a major tracker network.',
 				toggle: false,
 				desc: 'You may realize that hidden trackers lurk on many sites you visit. What you may not realize, though, is 76 percent of websites now contain hidden Google trackers, 24 percent have hidden Facebook trackers, and several other major tracker networks are at 10%+.Because these major tracker networks are on so many pages…',
 				points: 0
@@ -64,7 +71,7 @@ var pg = new Vue({
 			{
 				id: 'privacypractices',
 				title: 'Privacy Practices Score',
-				snippet: 'Scoring on Privacy Practices',
+				snippet: 'Scoring on Privacy Practices.',
 				toggle: false,
 				desc: 'You may realize that hidden trackers lurk on many sites you visit. What you may not realize, though, is 76 percent of websites now contain hidden Google trackers, 24 percent have hidden Facebook trackers, and several other major tracker networks are at 10%+.Because these major tracker networks are on so many pages…',
 				points: 0
@@ -89,7 +96,7 @@ var pg = new Vue({
 					appnexus: true,
 					oracle: false
 				},
-				percent: 36,
+				percent: 30,
 				practices: -2
 			},
 			'Amazon': {
@@ -103,7 +110,7 @@ var pg = new Vue({
 					appnexus: false,
 					oracle: false
 				},
-				percent: 12,
+				percent: 15,
 				practices: -2
 			},
 			'Google': {
@@ -117,7 +124,7 @@ var pg = new Vue({
 					appnexus: false,
 					oracle: false
 				},
-				percent: 76,
+				percent: 75,
 				practices: -2
 			},
 			'LinkedIn': {
@@ -145,7 +152,7 @@ var pg = new Vue({
 					appnexus: false,
 					oracle: false
 				},
-				percent: 12,
+				percent: 15,
 				practices: -4
 			},
 			'Wikipedia': {
@@ -181,27 +188,45 @@ var pg = new Vue({
 	methods: {
 		setPreset: function(key) {
 			this.x = this.presets[key];
+			this.x.info = {};
 			this.name = key;
 		},
 
 		// calculates total score 
 		// this gets called whenever a "filter element" on the page changes
 		// thus, changing presets ("domain") will call this automatically
+		// this.x.info.majornetworks 
 		calculateScore: function() {
 			this.rows[0].points = (this.x.isencrypted) ? 0 : -1;
 			this.rows[1].points = -Math.floor(this.x.trackers/4);
-			this.rows[2].points = -_.filter(this.x.major, function(val, key) { return val==true}).length;
+			var networks_arr = _.pick(this.x.major, function(val, key) { return val==true });
+			this.rows[2].points = -_.size(networks_arr);
 			this.rows[3].points = -Math.floor(this.x.percent/10);
 			this.rows[4].points = this.x.practices;
 
+			// update info
+			switch (this.x.practices) {
+				case 0: 	this.x.info.practices = 'Excellent'; 	break;
+				case -1: 	this.x.info.practices = 'Good'; 		break;
+				case -2: 	this.x.info.practices = 'Poor'; 		break;
+				case -3: 	this.x.info.practices = 'Mixed'; 		break;
+				default: 	this.x.info.practices = 'Unknown'; 
+			}
+
+			var str = '';
+			networks_arr = _.filter(networks_arr, function(val, key) { return key; });
+			console.log(networks_arr);
+			// _.reduce(networks_arr, function(str, ) {}, '')
+			
+			// update total score
 			var total = 0;
 			var point_arr = _.pluck(this.rows, 'points');
 			_.each(point_arr, function(n) {
 				total += n;
 			});
-			
 			this.score = total;
 			
+			// update grade
 			if (total == 0) { 		this.grade = 'A'; this.gradeclass = 'success'; }
 			else if (total == -1) {	this.grade = 'B'; this.gradeclass = 'success'; }
 			else if (total >= -3) {	this.grade = 'C'; this.gradeclass = 'warning'; }

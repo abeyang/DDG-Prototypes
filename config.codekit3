@@ -484,6 +484,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/jquery.radios-to-slider.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/jquery.radios-to-slider.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/main.js": {
 		"ft": 64,
 		"ma": 0,

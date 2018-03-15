@@ -7,7 +7,7 @@ $lighter-gray:	#ddd;
 $neue-gray:		#999;
 $gray: 			#888;
 $slight-gray:	#777;
-$dark-gray: 	#333;
+$dark-gray: 	#343A40;	// bootstrap
 $current-blue: 	#4495d4;
 $purple:		#5558D8;
 $dark-purple:	#474BB8;
@@ -15,7 +15,9 @@ $dark-purple:	#474BB8;
 $row-height:	110px;
 $row-pad:		20px;
 $header-top:	80px;
+$header-pad:	40px;
 $button-height: 40px;
+$progress-height: 4px;
 
 body, div, p {
 	font-family: proxima-nova;
@@ -33,8 +35,30 @@ body {
 		border-top: 1px solid $lightest-gray;
 	}
 
+	.text-left { padding-left: $header-pad; }
+	.text-right { padding-right: $header-pad; }
+
+	.gradescale {
+		padding: 0 15px 10px;
+
+		span {
+			font-size: 12px;
+			color: $slight-gray;
+		}
+	}
+
+	.gradeticks {
+		padding-bottom: 0;
+		position: relative;
+		top: $progress-height;
+		height: $progress-height;
+
+		span { border-left: $progress-height solid $white; }
+		span:first-child { border-left: none; }
+	}
+
 	.progress {
-		height: 4px;
+		height: $progress-height;
 		border-radius: 0;
 	}
 }
@@ -73,10 +97,12 @@ body {
 	/*height: $row-height;*/
 	background: $white;
 	border: 1px solid $lightest-gray;
-	border-top: none;
+	border-bottom: none;
 	
 	.v-center { line-height: $row-height/2; }
 	.btn-float { display: none; }
+
+	&:last-child { border-bottom: 1px solid $lightest-gray; }
 
 	&.hover { 
 		background: $offwhite; 
@@ -149,9 +175,98 @@ body {
 	}
 }
 
-// input range
+// INPUT SLIDER
 // http://www.cssportal.com/style-input-range/
 // https://jsfiddle.net/3JJJb/542/
+
+input[type=range] {
+  height: 36px;
+  -webkit-appearance: none;
+  margin: 0;
+  width: 266px;
+  background: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #EAEAEA;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,0.25);
+  border: 1px solid #EAEAEA;
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background: $white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #EAEAEA;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #EAEAEA;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 5px 5px 5px #000000;
+  border: 1px solid #EAEAEA;
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  /*background: #FFFFFF;*/
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #333;
+  border: 0px solid #000000;
+  border-radius: 2px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #EAEAEA;
+  border: 0px solid #000000;
+  border-radius: 2px;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 5px 5px 5px #000000;
+  border: 1px solid #EAEAEA;
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #333;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #EAEAEA;
+}
+
+// MISC
 
 strong { 
 	font-size: 18px; 
@@ -160,8 +275,14 @@ strong {
 	margin-top: 4px;
 	line-height: 18px;
 	color: $slight-gray;
-}
 
+	a {
+		color: $slight-gray;
+		text-decoration: underline;
+	}
+}
+.info { line-height: 0; }
+.info.pad { line-height: 1.8; }
 
 // functions + generic classes
 @function em($px, $base: $base-font-size) {
