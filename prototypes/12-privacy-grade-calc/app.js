@@ -49,7 +49,7 @@ var pg = new Vue({
 				title: 'How many tracker networks?',
 				snippet: 'Tracker networks aggregate your web activity into a data profile, which they sell to advertisers.',
 				toggle: false,
-				desc: ' Trackers lurk on almost every website you visit. The most common types of trackers are used by advertising companies to collect information about your web activity. Advertising companies rely on networks of these trackers to collect as much information as possible about you and your online activity so they can target you with ads.',
+				desc: 'Trackers lurk on almost every website you visit. The most common types of trackers are used by advertising companies to collect information about your web activity. Advertising companies rely on networks of these trackers to collect as much information as possible about you and your online activity so they can target you with ads.',
 				points: 0
 			},
 			{
@@ -62,8 +62,8 @@ var pg = new Vue({
 			},
 			{
 				id: 'percentsites',
-				title: 'Is this a network, and what is its reach?',
-				snippet: 'If the sites itself owns a major tracker network, it will have access to more of your personal data.',
+				title: 'Is this site a major network, and what is its reach?',
+				snippet: 'If the site itself is a major tracker network, it will have access to more of your personal data.',
 				toggle: false,
 				desc: 'Some popular web companies also operate tracking networks. These companies will collect any information you share on their websites and combine it with data collected by their tracker network on other sites. This ensures that their profile on you is as robust as possible. The greater the reach of their network, the more personal data they can collect.',
 				points: 0
