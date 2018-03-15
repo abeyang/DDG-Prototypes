@@ -214,9 +214,11 @@ var pg = new Vue({
 			}
 
 			var str = '';
-			networks_arr = _.filter(networks_arr, function(val, key) { return key; });
-			console.log(networks_arr);
-			// _.reduce(networks_arr, function(str, ) {}, '')
+			_.each(networks_arr, function(val, key) {
+				// Title case, and appending a comma to the end
+				str += key.substr(0,1).toUpperCase() + key.substr(1, key.length) + ', ';
+			});
+			this.x.info.majornetworks = str.substring(0, str.length-2);
 			
 			// update total score
 			var total = 0;

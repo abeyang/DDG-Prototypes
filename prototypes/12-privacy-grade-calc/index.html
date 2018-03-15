@@ -110,28 +110,28 @@
 					<span @click="x.major.amazon = !x.major.amazon; update()" :class="{'btn-dark': x.major.amazon, 'btn-light': !x.major.amazon}" class="btn btn-round"><i class="fab fa-amazon"></i></span>
 					<span @click="x.major.appnexus = !x.major.appnexus; update()" :class="{'btn-dark': x.major.appnexus, 'btn-light': !x.major.appnexus}" class="btn btn-round"><i class="fab fa-medapps"></i></span>
 					<span @click="x.major.oracle = !x.major.oracle; update()" :class="{'btn-dark': x.major.oracle, 'btn-light': !x.major.oracle}" class="btn btn-round"><i class="fab fa-opera"></i></span>
-					<div class="info pad">Info</div>
+					<div class="info pad">{{ x.info.majornetworks }}</div>
 				</div>
 				<div v-else-if="index === 3">
 					<input type="range" v-model="x.percent" min="0" max="90" step="15" :input="update()">
 					<div class="info">{{x.percent}}%</div>
 				</div>
 				<div v-else>
-					<span @click="x.practices = 0; update()" :class="{'btn-dark': x.practices == 0, 'btn-light': x.practices != 0}" class="btn btn-round">😀</span>
-					<span @click="x.practices = -1; update()" :class="{'btn-dark': x.practices == -1, 'btn-light': x.practices != -1}" class="btn btn-round">-1</span>
-					<span @click="x.practices = -2; update()" :class="{'btn-dark': x.practices == -2, 'btn-light': x.practices != -2}" class="btn btn-round">-2</span>
-					<span @click="x.practices = -3; update()" :class="{'btn-dark': x.practices == -3, 'btn-light': x.practices != -3}" class="btn btn-round">-3</span>
-					<span @click="x.practices = -4; update()" :class="{'btn-dark': x.practices == -4, 'btn-light': x.practices != -4}" class="btn btn-round">-4</span>
+					<span @click="x.practices = 0; update()" :class="{'btn-dark': x.practices == 0, 'btn-light': x.practices != 0}" class="btn btn-round practice"><i class="fas fa-trophy"></i></span>
+					<span @click="x.practices = -1; update()" :class="{'btn-dark': x.practices == -1, 'btn-light': x.practices != -1}" class="btn btn-round practice"><i class="fas fa-thumbs-up"></i></span>
+					<span @click="x.practices = -2; update()" :class="{'btn-dark': x.practices == -2, 'btn-light': x.practices != -2}" class="btn btn-round practice"><i class="fas fa-thumbs-down"></i></span>
+					<span @click="x.practices = -3; update()" :class="{'btn-dark': x.practices == -3, 'btn-light': x.practices != -3}" class="btn btn-round practice"><i class="fas fa-poo"></i></span>
+					<span @click="x.practices = -4; update()" :class="{'btn-dark': x.practices == -4, 'btn-light': x.practices != -4}" class="btn btn-round practice"><i class="fas fa-user-secret"></i></span>
 					<div class="info pad">{{ x.info.practices }}</div>
 				</div>
 			</div>
 			
 			<div class="col text-center v-center">
 				<span v-if="row.points == 0">
-					<span class="btn btn-round btn-success"><i class="fas fa-check"></i></span>
+					<span class="btn btn-round btn-outline-success"><i class="fas fa-check"></i></span>
 				</span>
 				<span v-else>
-					<span class="btn btn-round btn-danger">{{ row.points }}</span>
+					<span class="btn btn-round btn-outline-danger">{{ row.points }}</span>
 				</span>
 
 				<!-- <span @click="row.toggle = !row.toggle" :class="{active: row.toggle}" class="btn btn-round btn-dark btn-float shadow"><i class="far fa-plus"></i></span> -->
