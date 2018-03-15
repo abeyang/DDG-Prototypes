@@ -90,7 +90,7 @@
 			</div>
 			<div class="col-5">
 				<strong>{{ row.title }}</strong>
-				<div class="subtitle">{{ row.snippet }} <a href="#" v-show="!row.toggle">Read more</a><a href="#" v-show="row.toggle">Read less</a></div>
+				<div class="subtitle">{{ row.snippet }} <u v-show="!row.toggle">Read more</u><u v-show="row.toggle">Read less</u></div>
 			</div>
 
 			<!-- Options -->
@@ -128,10 +128,10 @@
 			
 			<div class="col text-center v-center">
 				<span v-if="row.points == 0">
-					<span class="btn btn-round btn-outline-success"><i class="fas fa-check"></i></span>
+					<span class="btn btn-round btn-outline-success disabled"><i class="fas fa-check"></i></span>
 				</span>
 				<span v-else>
-					<span class="btn btn-round btn-outline-danger">{{ row.points }}</span>
+					<span class="btn btn-round btn-outline-danger disabled">{{ row.points }}</span>
 				</span>
 
 				<!-- <span @click="row.toggle = !row.toggle" :class="{active: row.toggle}" class="btn btn-round btn-dark btn-float shadow"><i class="far fa-plus"></i></span> -->

@@ -178,6 +178,8 @@ body {
 
 		&.active i { transform: rotate(45deg);  }
 	}
+
+	&.disabled { opacity: 100; }
 }
 
 // INPUT SLIDER
@@ -281,9 +283,8 @@ strong {
 	line-height: 18px;
 	color: $slight-gray;
 
-	a {
-		color: $slight-gray;
-		text-decoration: underline;
+	u {
+		cursor: pointer;
 	}
 }
 .info { line-height: 0; }

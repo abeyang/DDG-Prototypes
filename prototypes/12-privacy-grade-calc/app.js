@@ -15,6 +15,9 @@ Vue.component('card', {
 				row.toggle = !row.toggle;	
 			}
 		},
+		doNothing: function(event) {
+			event.stopPropagation();
+		},
 		hoverResult: function(event) {
 			var row = event.currentTarget;
 			$(row).addClass('hover');

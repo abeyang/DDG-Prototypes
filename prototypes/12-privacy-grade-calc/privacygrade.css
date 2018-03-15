@@ -133,6 +133,9 @@ body {
   .btn.btn-float.active i {
     transform: rotate(45deg); }
 
+.btn.disabled {
+  opacity: 100; }
+
 input[type=range] {
   height: 36px;
   -webkit-appearance: none;
@@ -226,9 +229,8 @@ strong {
   margin-top: 4px;
   line-height: 18px;
   color: #777; }
-  .subtitle a {
-    color: #777;
-    text-decoration: underline; }
+  .subtitle u {
+    cursor: pointer; }
 
 .info {
   line-height: 0; }
