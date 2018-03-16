@@ -14,7 +14,7 @@ $dark-purple:	#474BB8;
 
 $row-height:	110px;
 $row-pad:		20px;
-$header-top:	80px;
+$header-top:	40px;
 $header-pad:	40px;
 $button-height: 40px;
 $progress-height: 4px;
@@ -25,11 +25,15 @@ body, div, p {
 }
 
 body {
-	padding-top: $header-top;
+	padding-top: $header-top / 2;
 	padding-bottom: $header-top;
 }
 
+.top { margin-bottom: $header-top; }
+
 .header {
+	margin-top: $header-top;
+
 	.row-wrap {
 		background: $offwhite;
 		border-top: 1px solid $lightest-gray;
@@ -99,7 +103,6 @@ body {
 	border: 1px solid $lightest-gray;
 	border-bottom: none;
 	
-	.v-center { line-height: $row-height/2; }
 	.btn-float { display: none; }
 
 	&:last-child { border-bottom: 1px solid $lightest-gray; }
@@ -141,6 +144,13 @@ body {
 	// TODO: need to output majortrackers as svg...
 	&.icon-majornetworks, &.icon-percentsites { background-image: url(assets/majortrackers.png); }
 	&.icon-privacypractices { background-image: url(assets/privacypractices.svg); }
+	
+	&.icon-logo { 
+		height: 48px;
+		background-image: url(assets/ddg-logo.svg); 
+		background-size: 48px 48px; 
+		background-position: $header-pad center;
+	}
 }
 
 
@@ -288,7 +298,7 @@ strong {
 	}
 }
 .info { line-height: 0; }
-.info.pad { line-height: 1.8; }
+.v-center { line-height: $row-height/2; }
 
 // functions + generic classes
 @function em($px, $base: $base-font-size) {
