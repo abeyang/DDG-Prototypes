@@ -76,7 +76,7 @@
 
 <!-- Templates -->
 <template id="card">
-	<div :id="row.id" :class="{'toggle shadow': row.toggle}" class="row-wrap" @mouseover="hoverResult" @mouseout="outResult">
+	<div :id="row.id" :class="{'toggle shadow-card': row.toggle}" class="row-wrap" @mouseover="hoverResult" @mouseout="outResult">
 		<div class="row" @click="toggleCard(row, $event)">
 			<div class="col icon" :class="'icon-' + row.id">
 				&nbsp;

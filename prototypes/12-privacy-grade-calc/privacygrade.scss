@@ -27,6 +27,7 @@ body, div, p {
 body {
 	padding-top: $header-top / 2;
 	padding-bottom: $header-top;
+	background: #F9F9F9;
 }
 
 .top { margin-bottom: $header-top; }
@@ -95,6 +96,9 @@ body {
 
 .shadow {
 	box-shadow: 0 10px 10px -5px rgba(0,0,0,0.25);
+}
+.shadow-card {
+	box-shadow: 0 10px 20px -10px rgba(0,0,0,0.25);
 }
 
 .row-wrap {
