@@ -153,8 +153,9 @@ body {
 	&.btn-reg {
 		height: $button-height;
 		line-height: $button-height - 10; // vertical center
-		width: $button-height * 3 + 10;
 	}
+
+	&.btn-pair { width: $button-height * 3 + 10; }
 
 	&.btn-round {
 		margin-right: 2px;

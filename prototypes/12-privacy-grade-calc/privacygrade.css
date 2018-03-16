@@ -111,7 +111,9 @@ body {
 
 .btn.btn-reg {
   height: 40px;
-  line-height: 30px;
+  line-height: 30px; }
+
+.btn.btn-pair {
   width: 130px; }
 
 .btn.btn-round {

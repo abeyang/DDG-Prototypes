@@ -94,10 +94,7 @@ var pg = new Vue({
 				major: {
 					google: true,
 					facebook: true,
-					twitter: false,
-					amazon: false,
-					appnexus: true,
-					oracle: false
+					other: true
 				},
 				percent: 30,
 				practices: -2
@@ -108,10 +105,7 @@ var pg = new Vue({
 				major: {
 					google: false,
 					facebook: false,
-					twitter: false,
-					amazon: false,
-					appnexus: false,
-					oracle: false
+					other: false
 				},
 				percent: 15,
 				practices: -2
@@ -122,10 +116,7 @@ var pg = new Vue({
 				major: {
 					google: false,
 					facebook: false,
-					twitter: false,
-					amazon: false,
-					appnexus: false,
-					oracle: false
+					other: false
 				},
 				percent: 75,
 				practices: -2
@@ -136,13 +127,10 @@ var pg = new Vue({
 				major: {
 					google: true,
 					facebook: false,
-					twitter: false,
-					amazon: false,
-					appnexus: true,
-					oracle: false
+					other: false
 				},
 				percent: 0,
-				practices: -4
+				practices: -3
 			},
 			'Twitter': {
 				isencrypted: true, 
@@ -150,13 +138,10 @@ var pg = new Vue({
 				major: {
 					google: true,
 					facebook: false,
-					twitter: false,
-					amazon: false,
-					appnexus: false,
-					oracle: false
+					other: false
 				},
 				percent: 15,
-				practices: -4
+				practices: -3
 			},
 			'Wikipedia': {
 				isencrypted: true, 
@@ -164,13 +149,10 @@ var pg = new Vue({
 				major: {
 					google: false,
 					facebook: false,
-					twitter: false,
-					amazon: false,
-					appnexus: false,
-					oracle: false
+					other: false
 				},
 				percent: 0,
-				practices: -4
+				practices: -3
 			},
 			'Youtube': {
 				isencrypted: true, 
@@ -178,10 +160,7 @@ var pg = new Vue({
 				major: {
 					google: false,
 					facebook: false,
-					twitter: false,
-					amazon: false,
-					appnexus: false,
-					oracle: false
+					other: false
 				},
 				percent: 0,
 				practices: -2
@@ -191,7 +170,6 @@ var pg = new Vue({
 	methods: {
 		setPreset: function(key) {
 			this.x = this.presets[key];
-			this.x.info = {};
 			this.name = key;
 		},
 
@@ -201,27 +179,19 @@ var pg = new Vue({
 		// this.x.info.majornetworks 
 		calculateScore: function() {
 			this.rows[0].points = (this.x.isencrypted) ? 0 : -1;
-			this.rows[1].points = -Math.floor(this.x.trackers/4);
-			var networks_arr = _.pick(this.x.major, function(val, key) { return val==true });
-			this.rows[2].points = -_.size(networks_arr);
+
+			if (this.x.trackers == 0) this.rows[1].points = 0;
+			else if (this.x.trackers < 10) this.rows[1].points = -1;
+			else if (this.x.trackers < 20) this.rows[1].points = -2;
+			else this.rows[1].points = -3;
+
+			this.rows[2].points = (_.some(this.x.major, function(val, key) { return val==true })) ? -1 : 0;
+
+			// var networks_arr = _.pick(this.x.major, function(val, key) { return val==true });
+			// this.rows[2].points = -_.size(networks_arr);
+			
 			this.rows[3].points = -Math.floor(this.x.percent/10);
 			this.rows[4].points = this.x.practices;
-
-			// update info
-			switch (this.x.practices) {
-				case 0: 	this.x.info.practices = 'Excellent'; 	break;
-				case -1: 	this.x.info.practices = 'Good'; 		break;
-				case -2: 	this.x.info.practices = 'Poor'; 		break;
-				case -3: 	this.x.info.practices = 'Mixed'; 		break;
-				default: 	this.x.info.practices = 'Unknown'; 
-			}
-
-			var str = '';
-			_.each(networks_arr, function(val, key) {
-				// Title case, and appending a comma to the end
-				str += key.substr(0,1).toUpperCase() + key.substr(1, key.length) + ', ';
-			});
-			this.x.info.majornetworks = str.substring(0, str.length-2);
 			
 			// update total score
 			var total = 0;
@@ -242,7 +212,7 @@ var pg = new Vue({
 
 	created: function() {
 		// set x as this preset:
-		this.setPreset('Random Site');
+		this.setPreset('Wikipedia');
 	}
 });
 
