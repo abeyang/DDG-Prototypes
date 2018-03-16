@@ -9,6 +9,8 @@ body {
 
 .top {
   margin-bottom: 40px; }
+  .top h2 {
+    padding-top: 8px; }
 
 .header {
   margin-top: 40px; }

@@ -30,7 +30,11 @@ body {
 	background: #F9F9F9;
 }
 
-.top { margin-bottom: $header-top; }
+.top { 
+	margin-bottom: $header-top; 
+
+	h2 { padding-top: 8px; }
+}
 
 .header {
 	margin-top: $header-top;
