@@ -186,12 +186,11 @@ var pg = new Vue({
 			else this.rows[1].points = -3;
 
 			this.rows[2].points = (_.some(this.x.major, function(val, key) { return val==true })) ? -1 : 0;
-
-			// var networks_arr = _.pick(this.x.major, function(val, key) { return val==true });
-			// this.rows[2].points = -_.size(networks_arr);
 			
 			this.rows[3].points = -Math.floor(this.x.percent/10);
-			this.rows[4].points = this.x.practices;
+			
+			// "unknown" is also -1, not -3
+			this.rows[4].points = (this.x.practices > -3) ? this.x.practices : -1;
 			
 			// update total score
 			var total = 0;
