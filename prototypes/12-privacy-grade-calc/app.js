@@ -41,7 +41,7 @@ var pg = new Vue({
 		rows: [
 			{
 				id: 'connection',
-				title: 'Is the connection secure?',
+				title: 'Type of connection?',
 				snippet: 'An encrypted connection prevents eavesdropping of any personal information you send to a website.',
 				toggle: false,
 				desc: 'Encrypted connections ensure that only authorized clients can access information sent over the connection. In order to decode the encrypted information, the client must have a unique key, otherwise the information is meaningless to an eavesdropper. Over unencrypted connections, information is sent as plain text so  anyone can read it without authorization.',
@@ -50,31 +50,31 @@ var pg = new Vue({
 			{
 				id: 'trackers',
 				title: 'How many tracker networks?',
-				snippet: 'Tracker networks aggregate your web activity into a data profile, which they sell to advertisers.',
+				snippet: 'Tracker networks aggregate your web activity into a data profile about you.',
 				toggle: false,
 				desc: 'Trackers lurk on almost every website you visit. The most common types of trackers are used by advertising companies to collect information about your web activity. Advertising companies rely on networks of these trackers to collect as much information as possible about you and your online activity so they can target you with ads.',
 				points: 0
 			},
 			{
 				id: 'majornetworks',
-				title: 'Any major tracking networks?',
-				snippet: 'These networks exist on a larger percentage of websites, tracking you across more of the internet.',
+				title: 'Any major tracker networks?',
+				snippet: 'These networks exist on a large percentage of websites, tracking more of your Internet activity.',
 				toggle: false,
 				desc: 'Because major tracking networks have much more web coverage than other networks, they can assemble more information about you, making it even easier for advertisers to target you with invasive ads. 76% of websites now contain hidden Google trackers, 24% have hidden Facebook trackers, and several other major tracker networks are at 10%+.',
 				points: 0
 			},
 			{
 				id: 'percentsites',
-				title: 'Is this site a major network, and what is its reach?',
-				snippet: 'If the site itself is a major tracker network, it will have access to more of your personal data.',
+				title: 'Is website a major tracker network itself?',
+				snippet: 'If the website is itself a major tracker network, it can use your data to target you across the Internet.',
 				toggle: false,
 				desc: 'Some popular web companies also operate tracking networks. These companies will collect any information you share on their websites and combine it with data collected by their tracker network on other sites. This ensures that their profile on you is as robust as possible. The greater the reach of their network, the more personal data they can collect.',
 				points: 0
 			},
 			{
 				id: 'privacypractices',
-				title: 'How well does the site protect your data?',
-				snippet: 'Sites collect and share your personal data, limited to policies outlined in their Terms of Service.',
+				title: 'How good is the website privacy policy?',
+				snippet: 'The website\'s privacy policy outlines how they can collect and share your personal information.',
 				toggle: false,
 				desc: 'Most websites collect information about you to perform functions or provide services. What they collect, how they use it, and who they share it with is outlined in their Terms of Service. These terms are usually very long and hard to decipher so we\'ve partnered with ToSDR to decode these documents and score websites based on their privacy practices.',
 				points: 0
