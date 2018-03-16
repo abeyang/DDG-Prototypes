@@ -84,9 +84,10 @@ var pg = new Vue({
 		score: 0,
 		grade: 'A',
 		gradeclass: 'success',
-		worst: -21,		// worst possible grade
+		worst: -10,		// worst possible grade
 		// x = current settings
 		x: {},
+		// "percent": 1=10%, 2=25%, 3=50%, 4=75%
 		presets: {
 			'Random Site': {
 				isencrypted: false, 
@@ -96,7 +97,7 @@ var pg = new Vue({
 					facebook: true,
 					other: true
 				},
-				percent: 30,
+				percent: 2,
 				practices: -2
 			},
 			'Amazon': {
@@ -107,7 +108,7 @@ var pg = new Vue({
 					facebook: false,
 					other: false
 				},
-				percent: 15,
+				percent: 1,
 				practices: -2
 			},
 			'Google': {
@@ -118,7 +119,7 @@ var pg = new Vue({
 					facebook: false,
 					other: false
 				},
-				percent: 75,
+				percent: 4,
 				practices: -2
 			},
 			'LinkedIn': {
@@ -140,7 +141,7 @@ var pg = new Vue({
 					facebook: false,
 					other: false
 				},
-				percent: 15,
+				percent: 1,
 				practices: -3
 			},
 			'Wikipedia': {
@@ -178,6 +179,7 @@ var pg = new Vue({
 		// thus, changing presets ("domain") will call this automatically
 		// this.x.info.majornetworks 
 		calculateScore: function() {
+			// update points for each row
 			this.rows[0].points = (this.x.isencrypted) ? 0 : -1;
 
 			if (this.x.trackers == 0) this.rows[1].points = 0;
@@ -187,9 +189,20 @@ var pg = new Vue({
 
 			this.rows[2].points = (_.some(this.x.major, function(val, key) { return val==true })) ? -1 : 0;
 			
-			this.rows[3].points = -Math.floor(this.x.percent/10);
+			// "percent": 1=10%, 2=25%, 3=50%, 4=75%
+			this.rows[3].points = -this.x.percent;
+			switch (String(this.x.percent)) {
+				case '1': this.x.percentblurb = '10%'; break;
+				case '2': this.x.percentblurb = '25%'; break;
+				case '3': this.x.percentblurb = '50%'; break;
+				case '4': this.x.percentblurb = '75%'; break;
+				default: this.x.percentblurb = '0%';
+			}
+			this.x.percentblurb = (this.x.percent == 0) ? 
+				'Not a major tracker network — ' + this.x.percentblurb + ' reach' :
+				'Yes — ' + this.x.percentblurb + ' reach';
 			
-			// "unknown" is also -1, not -3
+			// privacy policy: "unknown" is also -1, not -3
 			this.rows[4].points = (this.x.practices > -3) ? this.x.practices : -1;
 			
 			// update total score
@@ -211,7 +224,7 @@ var pg = new Vue({
 
 	created: function() {
 		// set x as this preset:
-		this.setPreset('Wikipedia');
+		this.setPreset('LinkedIn');
 	}
 });
 

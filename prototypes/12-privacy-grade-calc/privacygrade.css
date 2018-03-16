@@ -116,6 +116,10 @@ body {
 .btn.btn-pair {
   width: 130px; }
 
+.btn.btn-pad {
+  padding-left: 15px;
+  padding-right: 15px; }
+
 .btn.btn-round {
   margin-right: 2px;
   width: 40px;
@@ -124,9 +128,6 @@ body {
   text-align: center;
   line-height: 30px;
   white-space: nowrap; }
-  .btn.btn-round.practice {
-    margin-right: 12px;
-    /*font-size: 16px;*/ }
 
 .btn.btn-float {
   position: absolute;

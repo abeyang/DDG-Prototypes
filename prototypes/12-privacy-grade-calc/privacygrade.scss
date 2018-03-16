@@ -156,6 +156,10 @@ body {
 	}
 
 	&.btn-pair { width: $button-height * 3 + 10; }
+	&.btn-pad { 
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 
 	&.btn-round {
 		margin-right: 2px;
@@ -165,11 +169,6 @@ body {
 		text-align: center;
 		line-height: $button-height - 10; // vertical center
 		white-space: nowrap;
-
-		&.practice {
-			margin-right: 12px;
-			/*font-size: 16px;*/
-		}
 	}
 
 	&.btn-float {

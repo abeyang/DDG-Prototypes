@@ -74,7 +74,7 @@
 
 			<!-- Options -->
 			<div class="col-4 text-center v-center">
-				<div v-if="index === 0">
+				<div v-if="index === 0" class="btn-group" role="group">
 					<span @click="x.isencrypted = true; update()"  :class="{'btn-dark': x.isencrypted, 'btn-light': !x.isencrypted}" class="btn btn-reg btn-pair">Encrypted</span>
 					<span @click="x.isencrypted = false; update()" :class="{'btn-dark': !x.isencrypted, 'btn-light': x.isencrypted}" class="btn btn-reg btn-pair">Unencrypted</span>
 				</div>
@@ -83,15 +83,15 @@
 					<div class="info">{{x.trackers}}<span v-show="x.trackers>=20">+</span></div>
 				</div>
 				<div v-else-if="index === 2">
-					<span @click="x.major.google = !x.major.google; update()" :class="{'btn-dark': x.major.google, 'btn-light': !x.major.google}" class="btn btn-reg">Google</span>
-					<span @click="x.major.facebook = !x.major.facebook; update()" :class="{'btn-dark': x.major.facebook, 'btn-light': !x.major.facebook}" class="btn btn-reg">Facebook</span>
-					<span @click="x.major.other = !x.major.other; update()" :class="{'btn-dark': x.major.other, 'btn-light': !x.major.other}" class="btn btn-reg">Others</span>
+					<span @click="x.major.google = !x.major.google; update()" :class="{'btn-dark': x.major.google, 'btn-light': !x.major.google}" class="btn btn-reg btn-pad">Google</span>
+					<span @click="x.major.facebook = !x.major.facebook; update()" :class="{'btn-dark': x.major.facebook, 'btn-light': !x.major.facebook}" class="btn btn-reg btn-pad">Facebook</span>
+					<span @click="x.major.other = !x.major.other; update()" :class="{'btn-dark': x.major.other, 'btn-light': !x.major.other}" class="btn btn-reg btn-pad">Others</span>
 				</div>
 				<div v-else-if="index === 3">
-					<input type="range" v-model="x.percent" min="0" max="90" step="15" :input="update()">
-					<div class="info">{{x.percent}}%</div>
+					<input type="range" v-model="x.percent" min="0" max="4" step="1" :input="update()">
+					<div class="info">{{x.percentblurb}}</div>
 				</div>
-				<div v-else>
+				<div v-else class="btn-group" role="group">
 					<span @click="x.practices = 0; update()" :class="{'btn-dark': x.practices == 0, 'btn-light': x.practices != 0}" class="btn btn-reg">Good</span>
 					<span @click="x.practices = -1; update()" :class="{'btn-dark': x.practices == -1, 'btn-light': x.practices != -1}" class="btn btn-reg">Mixed</span>
 					<span @click="x.practices = -2; update()" :class="{'btn-dark': x.practices == -2, 'btn-light': x.practices != -2}" class="btn btn-reg">Poor</span>
