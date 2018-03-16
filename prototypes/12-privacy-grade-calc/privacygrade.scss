@@ -36,6 +36,9 @@ body {
 	h2 { padding-top: 8px; }
 }
 
+.text-left { padding-left: $header-pad; }
+.text-right { padding-right: $header-pad; }
+
 .header {
 	margin-top: $header-top;
 
@@ -43,9 +46,6 @@ body {
 		background: $offwhite;
 		border-top: 1px solid $lightest-gray;
 	}
-
-	.text-left { padding-left: $header-pad; }
-	.text-right { padding-right: $header-pad; }
 
 	.gradescale {
 		padding: 0 15px 10px;
