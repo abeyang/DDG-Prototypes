@@ -230,7 +230,7 @@ var pg = new Vue({
 
 	created: function() {
 		// set x as this preset:
-		this.setPreset('LinkedIn');
+		this.setPreset('Twitter');
 	}
 });
 
