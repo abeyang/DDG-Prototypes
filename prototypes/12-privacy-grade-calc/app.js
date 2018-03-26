@@ -9,21 +9,23 @@ Vue.component('card', {
 			this.$emit('update');
 		},
 		toggleCard: function(row, event) {
-			// console.log($(event.target).prop('tagName') );
-			var thistag = $(event.target).prop('tagName');
-			if ( (thistag != 'SPAN') && (thistag != 'INPUT') && (thistag != 'I') ) {
+			var e = event.target;
+			// console.log($(e).prop('tagName') );
+			
+			var thistag = $(e).prop('tagName');
+
+			// toggle card
+			if ( ((thistag != 'SPAN') && (thistag != 'INPUT') && (thistag != 'I')) || $(e).hasClass('disabled') ) {
 				row.toggle = !row.toggle;	
 			}
-		},
-		doNothing: function(event) {
-			event.stopPropagation();
+			// otherwise, it's most likely a button -- change website to custom
+			else {
+				pg.name = 'Custom';
+			}
 		},
 		hoverResult: function(event) {
 			var row = event.currentTarget;
 			$(row).addClass('hover');
-			// TODO: need to figure out how to check the toggle is on...
-			// - MAYBE it is toggling another field..?
-			// console.log(this.row);
 		},
 		outResult: function(event) {
 			// console.log(event.currentTarget);
@@ -89,17 +91,6 @@ var pg = new Vue({
 		x: {},
 		// "percent": 1=10%, 2=25%, 3=50%, 4=75%
 		presets: {
-			'Random Site': {
-				isencrypted: false, 
-				trackers: 10,
-				major: {
-					google: true,
-					facebook: true,
-					other: true
-				},
-				percent: 2,
-				practices: -2
-			},
 			'Amazon': {
 				isencrypted: true, 
 				trackers: 1,
@@ -165,12 +156,27 @@ var pg = new Vue({
 				},
 				percent: 0,
 				practices: -2
+			},
+			'Custom': {
+				isencrypted: false, 
+				trackers: 10,
+				major: {
+					google: true,
+					facebook: true,
+					other: true
+				},
+				percent: 2,
+				practices: -2
 			}
 		}
 	},
 	methods: {
-		setPreset: function(key) {
-			this.x = this.presets[key];
+		setPreset: function(key) {		
+			// clone is shallow; need to do another clone for the 'major' property
+			var clone = _.clone(this.presets[key]);
+			clone.major = _.clone(this.presets[key].major);
+
+			this.x = clone;
 			this.name = key;
 		},
 
