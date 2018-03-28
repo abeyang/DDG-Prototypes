@@ -42,7 +42,7 @@ var pg = new Vue({
 	data: {
 		rows: [
 			{
-				id: 'connection',
+				id: 'lock',
 				title: 'Type of connection?',
 				snippet: 'An encrypted connection prevents eavesdropping of any personal information you send to a website.',
 				toggle: false,
@@ -50,7 +50,7 @@ var pg = new Vue({
 				points: 0
 			},
 			{
-				id: 'trackers',
+				id: 'shield',
 				title: 'How many tracker networks?',
 				snippet: 'Tracker networks aggregate your web activity into a data profile about you.',
 				toggle: false,
@@ -58,7 +58,7 @@ var pg = new Vue({
 				points: 0
 			},
 			{
-				id: 'majornetworks',
+				id: 'major',
 				title: 'Any major tracker networks?',
 				snippet: 'These networks exist on a large percentage of websites, tracking more of your Internet activity.',
 				toggle: false,
@@ -74,7 +74,7 @@ var pg = new Vue({
 				points: 0
 			},
 			{
-				id: 'privacypractices',
+				id: 'policy',
 				title: 'How good is the website privacy policy?',
 				snippet: 'The website\'s privacy policy outlines how they can collect and share your personal information.',
 				toggle: false,

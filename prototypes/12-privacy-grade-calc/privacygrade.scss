@@ -11,6 +11,7 @@ $dark-gray: 	#343A40;	// bootstrap
 $current-blue: 	#4495d4;
 $purple:		#5558D8;
 $dark-purple:	#474BB8;
+$royal-purple:  #1F0B42;
 
 $row-height:	110px;
 $row-pad:		20px;
@@ -33,11 +34,11 @@ body {
 .top { 
 	margin-bottom: $header-top; 
 
-	h2 { padding-top: 8px; }
+	h2 { padding-top: 8px;  color: $white; }
 }
 
 .text-left { padding-left: $header-pad; }
-.text-right { padding-right: $header-pad; }
+.text-right { padding-right: $header-pad; color: $white; }
 
 .header {
 	margin-top: $header-top;
@@ -70,6 +71,16 @@ body {
 		height: $progress-height;
 		border-radius: 0;
 	}
+}
+
+.backing {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 230px;
+	background-color: $royal-purple;
+	z-index: -1;
 }
 
 .label {
@@ -143,21 +154,44 @@ body {
 }
 
 .icon {
+	opacity: 0.75;
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center center;
 
-	&.icon-connection { background-image: url(assets/encryption.svg); }
-	&.icon-trackers { background-image: url(assets/shield.svg); }
-	// TODO: need to output majortrackers as svg...
-	&.icon-majornetworks, &.icon-percentsites { background-image: url(assets/majortrackers.png); }
-	&.icon-privacypractices { background-image: url(assets/privacypractices.svg); }
+	&#icon-lock { background-image: url(assets/icons/bw-lock.svg); }
+	&#icon-shield { background-image: url(assets/icons/bw-shield.svg); }
+	&#icon-major, &#icon-percentsites { background-image: url(assets/icons/bw-major.svg); }
+	&#icon-policy { background-image: url(assets/icons/bw-policy.svg); }
+
+	&.bad {
+		&#icon-lock { background-image: url(assets/icons/bw-lock-bad.svg); }
+		&#icon-shield { background-image: url(assets/icons/bw-shield-bad.svg); }
+		&#icon-major, &#icon-percentsites { background-image: url(assets/icons/bw-major-bad.svg); }
+		&#icon-policy { background-image: url(assets/icons/bw-policy-bad.svg); }
+	}
 	
 	&.icon-logo { 
+		opacity: 1;
 		height: 48px;
 		background-image: url(assets/ddg-logo.svg); 
 		background-size: 48px 48px; 
 		background-position: $header-pad center;
+	}
+}
+.toggle .icon, .hover .icon {
+	opacity: 1;
+	
+	&#icon-lock { background-image: url(assets/icons/lock.svg); }
+	&#icon-shield { background-image: url(assets/icons/shield.svg); }
+	&#icon-major, &#icon-percentsites { background-image: url(assets/icons/major.svg); }
+	&#icon-policy { background-image: url(assets/icons/policy.svg); }
+
+	&.bad {
+		&#icon-lock { background-image: url(assets/icons/lock-bad.svg); }
+		&#icon-shield { background-image: url(assets/icons/shield-bad.svg); }
+		&#icon-major, &#icon-percentsites { background-image: url(assets/icons/major-bad.svg); }
+		&#icon-policy { background-image: url(assets/icons/policy-bad.svg); }
 	}
 }
 

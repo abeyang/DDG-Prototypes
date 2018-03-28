@@ -3531,6 +3531,166 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-lock-bad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-lock-bad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-lock0.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-lock0.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-major-bad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-major-bad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-major.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-major.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-policy-bad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-policy-bad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-policy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-policy.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-shield-bad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-shield-bad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-shield.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/bw-shield.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/lock-bad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/lock-bad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/lock.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/lock.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/major-bad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/major-bad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/major.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/major.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/policy-bad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/policy-bad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/policy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/policy.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/shield-bad.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/shield-bad.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/icons\/shield.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/icons\/shield.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/prototypes\/12-privacy-grade-calc\/assets\/majortrackers.png": {
 		"ft": 32768,
 		"iS": 2828,
@@ -3618,6 +3778,13 @@
 		"oF": 3,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/prototypes\/13-charts\/01-facebook.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/prototypes\/13-charts\/01-facebook.html",
+		"oF": 0
 		},
 	"\/prototypes\/13-charts\/01-facebook.kit": {
 		"cB": 0,

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="33px" viewBox="0 0 66 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>shield</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Feature-Icons-V4" transform="translate(-54.000000, -135.000000)">
+            <g id="DDG-Privacy-Grade-Icons-v4" transform="translate(54.000000, 55.000000)">
+                <g id="shield" transform="translate(0.000000, 80.000000)">
+                    <path d="M44,7 C42.1,7 40.5,5.4 40.5,3.5 C40.5,3.2 40.3,3 40,3 L33,3 L26,3 C25.7,3 25.5,3.2 25.5,3.5 C25.5,5.4 23.9,7 22,7 L21,7 L21,16 C21,16.3 21,16.7 21,17 C21.6,27.2 30.9,30.8 33,31.4 C35,30.8 44.4,27.2 45,17 C45,16.7 45,16.3 45,16 L45,7 L44,7 Z" id="Shape" fill="#6FBF5C" fill-rule="nonzero"></path>
+                    <path d="M44,5 C42.9,5 42,4.1 42,3 L42,1 L24,1 L24,3 C24,4.1 23.1,5 22,5 L19,5 L19,8 L19,16 C19,29.5 33,33 33,33 C33,33 47,29.5 47,16 L47,8 C47,8 47,8 47,8 C47,8 47,6.5 47,5 L44,5 Z M44,16 C44,25.4 35.6,29 33,29.9 C30.4,29 22,25.4 22,16 L22,8 C23.1,8 24,7.7 24.8,7.1 C25.8,6.4 26.6,5.3 26.9,4 L39,4 L39.1,4 C39.4,5.3 40.1,6.4 41.2,7.1 C42,7.7 43,8 44,8 L44,16 Z" id="Shape" fill="#447337" fill-rule="nonzero"></path>
+                    <path d="M57.8,26.4 L49.8,15.4 C49.5,14.9 49.4,14.3 49.7,13.8 C50,13.3 50.5,13 51,13 L57,13 L57,16 L53.9,16 L60.2,24.6 L57.8,26.4 Z" id="Shape" fill="#E5E5E5" fill-rule="nonzero"></path>
+                    <path d="M8.2,26.4 L5.8,24.6 L12.1,16 L9,16 L9,13 L15,13 C15.6,13 16.1,13.3 16.3,13.8 C16.6,14.3 16.5,14.9 16.2,15.4 L8.2,26.4 Z" id="Shape" fill="#E5E5E5" fill-rule="nonzero"></path>
+                    <circle id="Oval" fill="#C0C0C0" fill-rule="nonzero" cx="62" cy="15" r="3"></circle>
+                    <circle id="Oval" fill="#C0C0C0" fill-rule="nonzero" cx="4" cy="15" r="3"></circle>
+                    <path d="M55,7 C55,7.5 55.5,8 56,8 L57,8 C57.5,8 58,7.5 58,7 L58,6 C58,5.5 57.5,5 57,5 L56,5 C55.5,5 55,5.5 55,6 L55,7 Z" id="Shape" fill="#E5E5E5" fill-rule="nonzero"></path>
+                    <path d="M8,7 C8,7.5 8.5,8 9,8 L10,8 C10.5,8 11,7.5 11,7 L11,6 C11,5.5 10.5,5 10,5 L9,5 C8.5,5 8,5.5 8,6 L8,7 Z" id="Shape" fill="#E5E5E5" fill-rule="nonzero"></path>
+                    <path d="M63,23 C63,23.5 63.5,24 64,24 L65,24 C65.5,24 66,23.5 66,23 L66,22 C66,21.5 65.5,21 65,21 L64,21 C63.5,21 63,21.5 63,22 L63,23 Z" id="Shape" fill="#E5E5E5" fill-rule="nonzero"></path>
+                    <path d="M0,23 C0,23.5 0.5,24 1,24 L2,24 C2.5,24 3,23.5 3,23 L3,22 C3,21.5 2.5,21 2,21 L1,21 C0.5,21 0,21.5 0,22 L0,23 Z" id="Shape" fill="#E5E5E5" fill-rule="nonzero"></path>
+                    <path d="M27,10 L27,16 C27,20 30.5,24 33,24 C35.5,24 39,20 39,16 L39,10 L27,10 Z" id="Shape" fill="#9BD96F" fill-rule="nonzero"></path>
+                    <rect id="b/w-copy-2" fill="#FFFFFF" style="mix-blend-mode: color;" x="19" y="0" width="28" height="33"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

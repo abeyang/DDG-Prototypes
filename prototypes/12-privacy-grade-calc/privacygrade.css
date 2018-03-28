@@ -10,13 +10,15 @@ body {
 .top {
   margin-bottom: 40px; }
   .top h2 {
-    padding-top: 8px; }
+    padding-top: 8px;
+    color: #fff; }
 
 .text-left {
   padding-left: 40px; }
 
 .text-right {
-  padding-right: 40px; }
+  padding-right: 40px;
+  color: #fff; }
 
 .header {
   margin-top: 40px; }
@@ -40,6 +42,15 @@ body {
   .header .progress {
     height: 4px;
     border-radius: 0; }
+
+.backing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 230px;
+  background-color: #1F0B42;
+  z-index: -1; }
 
 .label {
   font-size: 12px;
@@ -100,22 +111,51 @@ body {
   padding: 20px; }
 
 .icon {
+  opacity: 0.75;
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center center; }
-  .icon.icon-connection {
-    background-image: url(assets/encryption.svg); }
-  .icon.icon-trackers {
-    background-image: url(assets/shield.svg); }
-  .icon.icon-majornetworks, .icon.icon-percentsites {
-    background-image: url(assets/majortrackers.png); }
-  .icon.icon-privacypractices {
-    background-image: url(assets/privacypractices.svg); }
+  .icon#icon-lock {
+    background-image: url(assets/icons/bw-lock.svg); }
+  .icon#icon-shield {
+    background-image: url(assets/icons/bw-shield.svg); }
+  .icon#icon-major, .icon#icon-percentsites {
+    background-image: url(assets/icons/bw-major.svg); }
+  .icon#icon-policy {
+    background-image: url(assets/icons/bw-policy.svg); }
+  .icon.bad#icon-lock {
+    background-image: url(assets/icons/bw-lock-bad.svg); }
+  .icon.bad#icon-shield {
+    background-image: url(assets/icons/bw-shield-bad.svg); }
+  .icon.bad#icon-major, .icon.bad#icon-percentsites {
+    background-image: url(assets/icons/bw-major-bad.svg); }
+  .icon.bad#icon-policy {
+    background-image: url(assets/icons/bw-policy-bad.svg); }
   .icon.icon-logo {
+    opacity: 1;
     height: 48px;
     background-image: url(assets/ddg-logo.svg);
     background-size: 48px 48px;
     background-position: 40px center; }
+
+.toggle .icon, .hover .icon {
+  opacity: 1; }
+  .toggle .icon#icon-lock, .hover .icon#icon-lock {
+    background-image: url(assets/icons/lock.svg); }
+  .toggle .icon#icon-shield, .hover .icon#icon-shield {
+    background-image: url(assets/icons/shield.svg); }
+  .toggle .icon#icon-major, .toggle .icon#icon-percentsites, .hover .icon#icon-major, .hover .icon#icon-percentsites {
+    background-image: url(assets/icons/major.svg); }
+  .toggle .icon#icon-policy, .hover .icon#icon-policy {
+    background-image: url(assets/icons/policy.svg); }
+  .toggle .icon.bad#icon-lock, .hover .icon.bad#icon-lock {
+    background-image: url(assets/icons/lock-bad.svg); }
+  .toggle .icon.bad#icon-shield, .hover .icon.bad#icon-shield {
+    background-image: url(assets/icons/shield-bad.svg); }
+  .toggle .icon.bad#icon-major, .toggle .icon.bad#icon-percentsites, .hover .icon.bad#icon-major, .hover .icon.bad#icon-percentsites {
+    background-image: url(assets/icons/major-bad.svg); }
+  .toggle .icon.bad#icon-policy, .hover .icon.bad#icon-policy {
+    background-image: url(assets/icons/policy-bad.svg); }
 
 .btn.btn-light {
   background: #ddd; }

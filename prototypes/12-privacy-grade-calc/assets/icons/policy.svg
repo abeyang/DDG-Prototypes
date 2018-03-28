@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="40px" viewBox="0 0 50 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>policy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Feature-Icons-V4" transform="translate(-62.000000, -282.000000)" fill-rule="nonzero">
+            <g id="DDG-Privacy-Grade-Icons-v4" transform="translate(54.000000, 55.000000)">
+                <g id="policy" transform="translate(8.000000, 227.000000)">
+                    <g id="Group" transform="translate(10.000000, 3.000000)">
+                        <polygon id="Shape" fill="#9BD96F" points="6 16 0 10 0 0 6 0"></polygon>
+                        <rect id="Rectangle-path" fill="#FFFFFF" x="6" y="0" width="6" height="16"></rect>
+                        <rect id="Rectangle-path" fill="#6FBF5C" x="12" y="0" width="6" height="16"></rect>
+                        <rect id="Rectangle-path" fill="#FFFFFF" x="18" y="0" width="6" height="16"></rect>
+                        <polygon id="Shape" fill="#5A9C4B" points="24 16 30 10 30 0 24 0"></polygon>
+                    </g>
+                    <circle id="Oval" fill="#447337" cx="25" cy="26" r="14"></circle>
+                    <circle id="Oval" fill="#6FBF5C" cx="25" cy="26" r="10"></circle>
+                    <polygon id="Shape" fill="#FFFFFF" points="25 19.5 26.8 23.8 31.5 24.2 27.9 27.2 29 31.8 25 29.3 21 31.8 22.1 27.2 18.5 24.2 23.2 23.8"></polygon>
+                    <rect id="Rectangle-path" fill="#447337" x="10" y="0" width="30" height="3"></rect>
+                    <g id="Group" transform="translate(43.000000, 20.000000)">
+                        <path d="M0,15 C0,15.5 0.5,16 1,16 L2,16 C2.5,16 3,15.5 3,15 L3,14 C3,13.5 2.5,13 2,13 L1,13 C0.5,13 0,13.5 0,14 L0,15 Z" id="Shape" fill="#E5E5E5"></path>
+                        <rect id="Rectangle-path" fill="#C0C0C0" x="3" y="0" width="2" height="6"></rect>
+                        <rect id="Rectangle-path" fill="#C0C0C0" transform="translate(4.000000, 3.000000) rotate(90.000000) translate(-4.000000, -3.000000) " x="3" y="-5.68434189e-14" width="2" height="6"></rect>
+                    </g>
+                    <g id="Group" transform="translate(0.000000, 20.000000)">
+                        <path d="M7,1 C7,0.5 6.5,0 6,0 L5,0 C4.5,0 4,0.5 4,1 L4,2 C4,2.5 4.5,3 5,3 L6,3 C6.5,3 7,2.5 7,2 L7,1 Z" id="Shape" fill="#E5E5E5"></path>
+                        <rect id="Rectangle-path" fill="#C0C0C0" transform="translate(3.000000, 13.000000) rotate(-180.000000) translate(-3.000000, -13.000000) " x="2" y="10" width="2" height="6"></rect>
+                        <rect id="Rectangle-path" fill="#C0C0C0" transform="translate(3.000000, 13.000000) rotate(-90.000000) translate(-3.000000, -13.000000) " x="2" y="10" width="2" height="6"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

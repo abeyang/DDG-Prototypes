@@ -4,6 +4,10 @@
 <!-- @include ../../includes/nohead-vue -->
 <link rel="stylesheet" href="<!-- $title -->.css" charset="utf-8">
 
+<div class="backing">
+	
+</div>
+
 <div class="container">
 	<div id="pg">
 		<div class="top">
@@ -80,9 +84,7 @@
 <template id="card">
 	<div :id="row.id" :class="{'toggle shadow-card': row.toggle}" class="row-wrap" @mouseover="hoverResult" @mouseout="outResult">
 		<div class="row" @click="toggleCard(row, $event)">
-			<div class="col icon" :class="'icon-' + row.id">
-				&nbsp;
-			</div>
+			<div class="col icon" :id="'icon-' + row.id" :class="{bad: row.points}"></div>
 			<div class="col-5">
 				<strong>{{ row.title }}</strong>
 				<div class="subtitle">{{ row.snippet }} <u v-show="!row.toggle">Read more</u><u v-show="row.toggle">Read less</u></div>

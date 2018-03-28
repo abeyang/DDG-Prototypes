@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="33px" viewBox="0 0 72 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>shield-bad</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Feature-Icons-V4" transform="translate(-147.000000, -135.000000)">
+            <g id="DDG-Privacy-Grade-Icons-v4" transform="translate(54.000000, 55.000000)">
+                <g id="shield-bad" transform="translate(93.000000, 80.000000)">
+                    <path d="M36,29.9 C38.6,29 47,25.5 47,16 L47,8.8 L43,12.6 L43,16.3 C43,19.4 40.5,21.9 37.4,21.9 L32.6,21.9 L29,25.4 C31.5,28.1 34.6,29.4 36,29.9 Z" id="Shape" fill="#DE5833" fill-rule="nonzero"></path>
+                    <g id="Group" transform="translate(0.000000, 5.000000)" fill-rule="nonzero">
+                        <g transform="translate(0.000000, 6.000000)">
+                            <path d="M60.8,15.4 L52.8,4.4 C52.5,3.9 52.4,3.3 52.7,2.8 C53,2.3 53.5,2 54,2 L63,2 L63,5 L56.9,5 L63.2,13.6 L60.8,15.4 Z" id="Shape" fill="#E5E5E5"></path>
+                            <path d="M11.2,15.4 L8.8,13.6 L15.1,5 L9,5 L9,2 L18,2 C18.6,2 19.1,2.3 19.3,2.8 C19.6,3.3 19.5,3.9 19.2,4.4 L11.2,15.4 Z" id="Shape" fill="#E5E5E5"></path>
+                            <circle id="Oval" fill="#C0C0C0" cx="69" cy="3" r="3"></circle>
+                            <circle id="Oval" fill="#C0C0C0" cx="3" cy="3" r="3"></circle>
+                        </g>
+                        <path d="M60,2 C60,2.5 60.5,3 61,3 L62,3 C62.5,3 63,2.5 63,2 L63,1 C63,0.5 62.5,0 62,0 L61,0 C60.5,0 60,0.5 60,1 L60,2 Z" id="Shape" fill="#E5E5E5"></path>
+                        <path d="M9,2 C9,2.5 9.5,3 10,3 L11,3 C11.5,3 12,2.5 12,2 L12,1 C12,0.5 11.5,0 11,0 L10,0 C9.5,0 9,0.5 9,1 L9,2 Z" id="Shape" fill="#E5E5E5"></path>
+                        <path d="M67,19 C67,19.5 67.5,20 68,20 L69,20 C69.5,20 70,19.5 70,19 L70,18 C70,17.5 69.5,17 69,17 L68,17 C67.5,17 67,17.5 67,18 L67,19 Z" id="Shape" fill="#E5E5E5"></path>
+                        <path d="M2,19 C2,19.5 2.5,20 3,20 L4,20 C4.5,20 5,19.5 5,19 L5,18 C5,17.5 4.5,17 4,17 L3,17 C2.5,17 2,17.5 2,18 L2,19 Z" id="Shape" fill="#E5E5E5"></path>
+                    </g>
+                    <path d="M25,16 L25,8 C26.1,8 27,7.7 27.8,7.1 C28.8,6.4 29.6,5.3 29.9,4 L42,4 L42.1,4 C42.1,4.1 42.2,4.3 42.2,4.4 C42.3,4.6 42.3,4.8 42.4,5.1 L45,2.6 L45,1 L27,1 L27,3 C27,4.1 26.1,5 25,5 L22,5 L22,8 L22,16 C22,18.7 22.5,20.9 23.4,22.8 L25.7,20.5 C25.3,19.2 25,17.7 25,16 Z" id="Shape" fill="#7D3623" fill-rule="nonzero"></path>
+                    <path d="M46.8,5 L40.7,10.8 C40.3,11.2 40.1,11.7 40.1,12.2 L40.1,17.9 C40.1,18.5 39.7,18.9 39.1,18.9 L32.2,18.9 C31.7,18.9 31.2,19.1 30.8,19.5 L24.7,25.4 L26.8,27.5 C30.9,31.6 36,32.9 36,32.9 C36,32.9 50,29.4 50,15.9 L50,7.9 C50,7.9 50,7.9 50,7.9 C50,7.9 50,6.4 50,4.9 L46.8,4.9 L46.8,5 Z M47,16 C47,25.4 38.6,29 36,29.9 C34.6,29.4 31.5,28.1 28.9,25.6 L32.5,22.1 L40,22.1 C41.7,22.1 43,20.8 43,19.1 L43,12.8 L47,9 L47,16 Z" id="Shape" fill="#7D3623" fill-rule="nonzero"></path>
+                    <path d="M42.2,4.4 C42.2,4.3 42.1,4.1 42.1,4 L42,4 L29.9,4 C29.6,5.3 28.9,6.4 27.8,7.1 C27,7.7 26,8 25,8 L25,16 C25,17.7 25.3,19.2 25.7,20.6 L30,16.3 C30.2,16.1 30.4,16 30.7,16 L35.9,16 C36.5,16 36.9,15.6 36.9,15 L36.9,10.8 C36.9,10.5 37,10.3 37.2,10.1 L42.3,5.1 C42.3,4.9 42.2,4.6 42.2,4.4 Z" id="Shape" fill="#DE5833" fill-rule="nonzero"></path>
+                    <rect id="b/w-copy" fill="#FFFFFF" style="mix-blend-mode: color;" x="22" y="0" width="28" height="33"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
