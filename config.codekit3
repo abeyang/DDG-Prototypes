@@ -3619,6 +3619,13 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/prototypes\/13-charts\/01-facebook.kit": {
+		"cB": 0,
+		"ft": 2048,
+		"oA": 0,
+		"oAP": "\/prototypes\/13-charts\/01-facebook.html",
+		"oF": 0
+		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,

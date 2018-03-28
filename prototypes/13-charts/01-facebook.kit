@@ -1,0 +1,749 @@
+<!-- $title: facebook -->
+
+<!-- $dir: ../../ -->
+<!-- @include ../../includes/nohead-vue -->
+<style type="text/css">
+
+
+	.chart { 
+		width: 760px; 
+		height: 350px;
+	}
+
+	.chart-bg {
+		width: 840px; 
+		padding: 40px;
+		margin: 20px;
+		background: #f9f9f9;
+		position: relative;
+	}
+
+	.block {
+		position: absolute;
+		background: #f9f9f9;
+		width: 200px;
+		height: 30px;
+		bottom: 40px;
+		left: 0;
+		z-index: 999999;
+	}
+
+	.canvasjs-chart-credit { display: none; }
+
+</style>
+
+
+
+<script>
+window.onload = function () {
+	var color = {
+		bg: '#f9f9f9',
+		stem: '#666',
+		grid: '#999',
+		mainfont: '#333',
+		subfont: '#666',
+		ddgblue: '#4495D4',
+		barlabel: '#fff'
+	};
+
+	var font = {
+		family: 'avenir',
+		align: 'left',
+		mainsize: 24,
+		subsize: 18,
+		minor: 16,
+		mini: 14,
+		micro: 12,
+		subweight: 'normal'
+	};
+
+	var val = {
+		tickmargin: 10,
+		submargin: 20,
+		indexplacement: 'inside'
+	}
+
+	var chart1 = new CanvasJS.Chart("chart1", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Please select the option below which best represents your level of awareness regarding the recent news about personal data from 50 million Facebook users being downloaded by Cambridge Analytica and used for political targeting in the 2016 U.S. elections.",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			margin: 79
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: val.indexplacement, 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: color.barlabel,
+				dataPoints: [
+					{ y: 15.47 },
+					{ y: 9.51 },
+					{ y: 16.43 },
+					{ y: 23.82 },
+					{ y: 34.77 }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [15.47-2.2, 15.47+2.2], label: "Not at all aware" },
+					{ y: [9.51-1.78, 9.51+1.78], label: "Slightly aware" },
+					{ y: [16.43-2.25, 16.43+2.25], label: "Somewhat aware" },
+					{ y: [23.82-2.59, 23.82+2.59], label: "Moderately aware" },
+					{ y: [34.77-2.89, 34.77+2.89], label: "Extremely aware" }
+				]
+			}
+		]
+	});
+	chart1.render();
+
+	var chart2 = new CanvasJS.Chart("chart2", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Please select the option below which best represents the level of influence this recent news about Facebook has had on your concern for online privacy.",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: val.indexplacement, 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: color.barlabel,
+         		indexLabelLineColor: color.bg,
+				dataPoints: [
+					{ y: 1.12, indexLabel: ' ' },
+					{ y: 1.12, indexLabel: ' ' },
+					{ y: 32.81 },
+					{ y: 31.80 },
+					{ y: 33.15 }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [1.12-.69, 1.12+.69], label: "Much less concerned" },
+					{ y: [1.12-.69, 1.12+.69], label: "Somewhat less concerned" },
+					{ y: [32.81-3.08, 32.81+3.08], label: "About the same" },
+					{ y: [31.8-3.06, 31.8+3.06], label: "Somewhat more concerned" },
+					{ y: [33.15-3.09, 33.15+3.09], label: "Much more concerned" }
+				]
+			}
+		]
+	});
+	chart2.render();
+
+	var chart3 = new CanvasJS.Chart("chart3", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Please select the option below which best represents the level of influence this recent news about Facebook has had on your likelihood of deleting your Facebook account.",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.mini,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			margin: 26
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: val.indexplacement, 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: color.barlabel,
+         		indexLabelLineColor: color.bg,
+				dataPoints: [
+					{ y: 10.22 },
+					{ y: 27.45 },
+					{ y: 53.78 },
+					{ y: 5.18, indexLabel: ' ' },
+					{ y: 3.36, indexLabel: ' ' }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [10.22-2.22, 10.22+2.22], label: "Much more likely to delete" },
+					{ y: [27.45-3.27, 27.45+3.27], label: "Somewhat more likely to delete" },
+					{ y: [53.78-3.66, 53.78+3.66], label: "About the same" },
+					{ y: [5.18-1.63, 5.18+1.63], label: "Somewhat less likely to delete" },
+					{ y: [3.36-1.32, 3.36+1.32], label: "Much less likely to delete" }
+				]
+			}
+		]
+	});
+	chart3.render();
+
+	var chart4 = new CanvasJS.Chart("chart4", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Please select the option below which best represents the level of influence this recent news about Facebook has had on your likelihood of changing the way you share personal information with Facebook.",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			},
+			{
+				text: "I plan to _______ with Facebook:",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.subfont,
+				fontSize: font.micro,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.micro,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			margin: 22
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: val.indexplacement, 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: color.barlabel,
+         		indexLabelLineColor: color.bg,
+				dataPoints: [
+					{ y: 9.52  },
+					{ y: 40.34  },
+					{ y: 21.71 },
+					{ y: 27.31 },
+					{ y: 0.84, indexLabel: ' ' },
+					{ y: 0.28, indexLabel: ' ' }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [9.52-2.15, 9.52+2.15], label: "Delete or disengage" },
+					{ y: [40.34-3.6, 40.34+3.6], label: "Share much less personal info" },
+					{ y: [21.71-3.02, 21.71+3.02], label: "Share somewhat less personal info" },
+					{ y: [27.31-3.27, 27.31+3.27], label: "Not change how I share personal info" },
+					{ y: [0.84-0.67, 0.84+0.67], label: "Share somewhat more personal info" },
+					{ y: [0, 0.28+0.39], label: "Share much more personal info" }
+				]
+			}
+		]
+	});
+	chart4.render();
+
+	var chart5 = new CanvasJS.Chart("chart5", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Please select the option below which best represents the level of influence this recent news about Facebook has had on your likelihood of seeking out tools and services to protect your online privacy.",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			},
+			{
+				text: "_______ to seek out online privacy tools/services:",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.subfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			margin: 46
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: "inside", 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: '#fff',
+         		indexLabelLineColor: color.bg,
+				dataPoints: [
+					{ y: 23.13 },
+					{ y: 29.27 },
+					{ y: 43.69 },
+					{ y: 1.68, indexLabel: ' ' },
+					{ y: 2.23, indexLabel: ' ' }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [23.13-2.76, 23.13+2.76], label: "Much more likely" },
+					{ y: [29.27-2.98, 29.27+2.98], label: "Somewhat more likely" },
+					{ y: [43.69-3.25, 43.69+3.25], label: "About the same" },
+					{ y: [1.68-0.84, 1.68+0.84], label: "Somewhat less likely" },
+					{ y: [2.23-0.97, 2.23+0.97], label: "Much less likely" }
+				]
+			}
+		]
+	});
+	chart5.render();
+
+	var chart6 = new CanvasJS.Chart("chart6", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Please select the option below which best describes your opinion on the statement, \"I trust Facebook to take appropriate action to protect it's users' online privacy.\"",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			margin: 16
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: "inside", 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: '#fff',
+         		indexLabelLineColor: color.bg,
+				dataPoints: [
+					{ y: 23.13 },
+					{ y: 17.88 },
+					{ y: 14.3 },
+					{ y: 16.76 },
+					{ y: 15.2 },
+					{ y: 8.83 },
+					{ y: 3.91, indexLabel: ' ' }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [23.13-2.76, 23.13+2.76], label: "Strongly disagree" },
+					{ y: [17.88-2.51, 17.88+2.51], label: "Disagree" },
+					{ y: [14.3-2.29, 14.3+2.29], label: "Somewhat disagree" },
+					{ y: [16.76-2.45, 16.76+2.45], label: "Neither agree or disagree" },
+					{ y: [15.2-2.35, 15.2+2.35], label: "Somewhat agree" },
+					{ y: [8.83-1.86, 8.83+1.86], label: "Agree" },
+					{ y: [3.91-1.27, 3.91+1.27], label: "Strongly agree" }
+				]
+			}
+		]
+	});
+	chart6.render();
+
+	var chart7 = new CanvasJS.Chart("chart7", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Please select the option below which best describes your opinion on the statement, \"I believe the government should play a greater role in regulating how Facebook handles user data.\"",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			margin: 16
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: "inside", 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: '#fff',
+         		indexLabelLineColor: color.bg,
+				dataPoints: [
+					{ y: 13.85 },
+					{ y: 11.62 },
+					{ y: 9.72 },
+					{ y: 21.79 },
+					{ y: 17.65 },
+					{ y: 14.53 },
+					{ y: 10.84 }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [13.85-2.26, 13.85+2.26], label: "Strongly disagree" },
+					{ y: [11.62-2.1, 11.62+2.1], label: "Disagree" },
+					{ y: [9.72-1.94, 9.72+1.94], label: "Somewhat disagree" },
+					{ y: [21.79-2.7, 21.79+2.7], label: "Neither agree or disagree" },
+					{ y: [17.65-2.5, 17.65+2.5], label: "Somewhat agree" },
+					{ y: [14.53-2.31, 14.53+2.31], label: "Agree" },
+					{ y: [10.84-2.04, 10.84+2.04], label: "Strongly agree" }
+				]
+			}
+		]
+	});
+	chart7.render();
+
+	var chart8 = new CanvasJS.Chart("chart8", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Before reading this question, were you aware that Facebook owns Instagram?",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.minor,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			margin: 14
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: "inside", 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: '#fff',
+         		indexLabelLineColor: color.bg,
+				dataPoints: [
+					{ y: 0.88, indexLabel: ' '},
+					{ y: 45.30 },
+					{ y: 53.81 }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [0.88-0.61, 0.88+0.61], label: "I've never heard of Instagram" },
+					{ y: [45.30-3.24, 45.30+3.24], label: "Yes, I was aware of that" },
+					{ y: [53.81-3.25, 53.81+3.25], label: "No, I was not aware of that" }
+					
+				]
+			}
+		]
+	});
+	chart8.render();
+
+	var chart9 = new CanvasJS.Chart("chart9", {
+		backgroundColor: color.bg,
+		interactivityEnabled: false,
+		animationEnabled: false,
+
+		subtitles: [
+			{
+				text: "Before reading this question, were you aware that Google owns YouTube?",
+				horizontalAlign: font.align,
+				fontFamily: font.family,
+				fontColor: color.mainfont,
+				fontSize: font.subsize,
+				margin: val.submargin
+			}
+		],
+		
+		axisX: {
+			labelFontSize: font.minor,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			margin: 24
+		},
+		
+		axisY: {
+			interval: 10,
+			maximum: 60,
+			gridColor: color.grid,
+			gridDashType: 'dot',
+			lineThickness: 0,
+			tickLength: val.tickmargin,
+			tickColor: color.bg,
+			suffix: '%',
+			labelFontSize: font.subsize,
+			labelFontColor: color.subfont,
+			labelFontFamily: font.family
+		},
+
+		data: [
+			{
+				type: "bar",
+				color: color.ddgblue,
+				indexLabel: '{y}%',
+         		indexLabelPlacement: "inside", 
+         		indexLabelFontSize: font.mini,
+         		indexLabelFontColor: '#fff',
+         		indexLabelLineColor: color.bg,
+				dataPoints: [
+					{ y: 0.37, indexLabel: ' '},
+					{ y: 54.44 },
+					{ y: 45.19 }
+				]
+			},
+			{
+				type: "error",
+				stemColor: color.stem,
+				whiskerColor: color.stem,
+				dataPoints: [
+					{ y: [0.37-0.37, 0.37+0.37], label: "I've never heard of YouTube" },
+					{ y: [54.44-2.98, 54.44+2.98], label: "Yes, I was aware of that" },
+					{ y: [45.19-2.98, 45.19+2.98], label: "No, I was not aware of that" }
+					
+				]
+			}
+		]
+	});
+	chart9.render();
+}
+</script>
+</head>
+<body>
+	<div class="chart-bg"><div class="block"></div><div id="chart1" class="chart"></div></div>
+	<div class="chart-bg"><div class="block"></div><div id="chart2" class="chart"></div></div>
+	<div class="chart-bg"><div class="block"></div><div id="chart3" class="chart"></div></div>
+	<div class="chart-bg"><div class="block"></div><div id="chart4" class="chart"></div></div>
+	<div class="chart-bg"><div class="block"></div><div id="chart5" class="chart"></div></div>
+	<div class="chart-bg"><div class="block"></div><div id="chart6" class="chart"></div></div>
+	<div class="chart-bg"><div class="block"></div><div id="chart7" class="chart"></div></div>
+	<div class="chart-bg"><div class="block"></div><div id="chart8" class="chart"></div></div>
+	<div class="chart-bg"><div class="block"></div><div id="chart9" class="chart"></div></div>
+	
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+</body>
+</html>
