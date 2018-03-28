@@ -3,7 +3,11 @@
 <!-- $dir: ../../ -->
 <!-- @include ../../includes/nohead-vue -->
 <style type="text/css">
-
+	aside {
+		position: fixed;
+		top: 40px;
+		right: 40px;
+	}
 
 	.chart { 
 		width: 760px; 
@@ -60,7 +64,8 @@ window.onload = function () {
 	var val = {
 		tickmargin: 10,
 		submargin: 20,
-		indexplacement: 'inside'
+		indexplacement: 'inside',
+		errorthickness: 1
 	}
 
 	var chart1 = new CanvasJS.Chart("chart1", {
@@ -111,23 +116,25 @@ window.onload = function () {
          		indexLabelFontSize: font.mini,
          		indexLabelFontColor: color.barlabel,
 				dataPoints: [
-					{ y: 15.47 },
-					{ y: 9.51 },
-					{ y: 16.43 },
-					{ y: 23.82 },
-					{ y: 34.77 }
+					{ y: 14.66 },
+					{ y: 9.28 },
+					{ y: 15.78 },
+					{ y: 24.37 },
+					{ y: 35.91 }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [15.47-2.2, 15.47+2.2], label: "Not at all aware" },
-					{ y: [9.51-1.78, 9.51+1.78], label: "Slightly aware" },
-					{ y: [16.43-2.25, 16.43+2.25], label: "Somewhat aware" },
-					{ y: [23.82-2.59, 23.82+2.59], label: "Moderately aware" },
-					{ y: [34.77-2.89, 34.77+2.89], label: "Extremely aware" }
+					{ y: [14.66-2.04, 14.66+2.04], label: "Not at all aware" },
+					{ y: [9.28-1.67, 9.28+1.67], label: "Slightly aware" },
+					{ y: [15.78-2.1, 15.78+2.1], label: "Somewhat aware" },
+					{ y: [24.37-2.48, 24.37+2.48], label: "Moderately aware" },
+					{ y: [35.91-2.77, 35.91+2.77], label: "Extremely aware" }
 				]
 			}
 		]
@@ -182,23 +189,25 @@ window.onload = function () {
          		indexLabelFontColor: color.barlabel,
          		indexLabelLineColor: color.bg,
 				dataPoints: [
+					{ y: 1.22, indexLabel: ' ' },
 					{ y: 1.12, indexLabel: ' ' },
-					{ y: 1.12, indexLabel: ' ' },
-					{ y: 32.81 },
-					{ y: 31.80 },
-					{ y: 33.15 }
+					{ y: 33.43 },
+					{ y: 31.61 },
+					{ y: 32.62 }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [1.12-.69, 1.12+.69], label: "Much less concerned" },
-					{ y: [1.12-.69, 1.12+.69], label: "Somewhat less concerned" },
-					{ y: [32.81-3.08, 32.81+3.08], label: "About the same" },
-					{ y: [31.8-3.06, 31.8+3.06], label: "Somewhat more concerned" },
-					{ y: [33.15-3.09, 33.15+3.09], label: "Much more concerned" }
+					{ y: [1.22-.69, 1.22+.69], label: "Much less concerned" },
+					{ y: [1.12-.66, 1.12+.66], label: "Somewhat less concerned" },
+					{ y: [33.43-2.95, 33.43+2.95], label: "About the same" },
+					{ y: [31.61-2.9, 31.61+2.9], label: "Somewhat more concerned" },
+					{ y: [32.62-2.93, 32.62+2.93], label: "Much more concerned" }
 				]
 			}
 		]
@@ -254,23 +263,25 @@ window.onload = function () {
          		indexLabelFontColor: color.barlabel,
          		indexLabelLineColor: color.bg,
 				dataPoints: [
-					{ y: 10.22 },
-					{ y: 27.45 },
-					{ y: 53.78 },
-					{ y: 5.18, indexLabel: ' ' },
-					{ y: 3.36, indexLabel: ' ' }
+					{ y: 10.12 },
+					{ y: 26.89 },
+					{ y: 54.42 },
+					{ y: 5.12, indexLabel: ' ' },
+					{ y: 3.46, indexLabel: ' ' }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [10.22-2.22, 10.22+2.22], label: "Much more likely to delete" },
-					{ y: [27.45-3.27, 27.45+3.27], label: "Somewhat more likely to delete" },
-					{ y: [53.78-3.66, 53.78+3.66], label: "About the same" },
-					{ y: [5.18-1.63, 5.18+1.63], label: "Somewhat less likely to delete" },
-					{ y: [3.36-1.32, 3.36+1.32], label: "Much less likely to delete" }
+					{ y: [10.12-2.11, 10.12+2.11], label: "Much more likely to delete" },
+					{ y: [26.89-3.11, 26.89+3.11], label: "Somewhat more likely to delete" },
+					{ y: [54.42-3.49, 54.42+3.49], label: "About the same" },
+					{ y: [5.12-1.55, 5.12+1.55], label: "Somewhat less likely to delete" },
+					{ y: [3.46-1.28, 3.46+1.28], label: "Much less likely to delete" }
 				]
 			}
 		]
@@ -290,15 +301,15 @@ window.onload = function () {
 				fontColor: color.mainfont,
 				fontSize: font.subsize,
 				margin: val.submargin
-			},
-			{
+			}
+/*			{
 				text: "I plan to _______ with Facebook:",
 				horizontalAlign: font.align,
 				fontFamily: font.family,
 				fontColor: color.subfont,
 				fontSize: font.micro,
 				margin: val.submargin
-			}
+			}*/
 		],
 		
 		axisX: {
@@ -334,25 +345,27 @@ window.onload = function () {
          		indexLabelFontColor: color.barlabel,
          		indexLabelLineColor: color.bg,
 				dataPoints: [
-					{ y: 9.52  },
-					{ y: 40.34  },
-					{ y: 21.71 },
-					{ y: 27.31 },
-					{ y: 0.84, indexLabel: ' ' },
-					{ y: 0.28, indexLabel: ' ' }
+					{ y: 9.6  },
+					{ y: 39.95  },
+					{ y: 20.87 },
+					{ y: 28.43 },
+					{ y: 0.90, indexLabel: ' ' },
+					{ y: 0.26, indexLabel: ' ' }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [9.52-2.15, 9.52+2.15], label: "Delete or disengage" },
-					{ y: [40.34-3.6, 40.34+3.6], label: "Share much less personal info" },
-					{ y: [21.71-3.02, 21.71+3.02], label: "Share somewhat less personal info" },
-					{ y: [27.31-3.27, 27.31+3.27], label: "Not change how I share personal info" },
-					{ y: [0.84-0.67, 0.84+0.67], label: "Share somewhat more personal info" },
-					{ y: [0, 0.28+0.39], label: "Share much more personal info" }
+					{ y: [9.6-2.07, 9.6+2.07], label: "Delete or disengage" },
+					{ y: [39.95-3.44, 39.95+3.44], label: "Share much less personal info" },
+					{ y: [20.87-2.85, 20.87+2.85], label: "Share somewhat less personal info" },
+					{ y: [28.43-3.16, 28.43+3.16], label: "No change" },
+					{ y: [0.90-0.66, 0.90+0.66], label: "Share somewhat more personal info" },
+					{ y: [0, 0.26+0.35], label: "Share much more personal info" }
 				]
 			}
 		]
@@ -372,15 +385,15 @@ window.onload = function () {
 				fontColor: color.mainfont,
 				fontSize: font.subsize,
 				margin: val.submargin
-			},
-			{
+			}
+/*			{
 				text: "_______ to seek out online privacy tools/services:",
 				horizontalAlign: font.align,
 				fontFamily: font.family,
 				fontColor: color.subfont,
 				fontSize: font.subsize,
 				margin: val.submargin
-			}
+			} */
 		],
 		
 		axisX: {
@@ -416,23 +429,25 @@ window.onload = function () {
          		indexLabelFontColor: '#fff',
          		indexLabelLineColor: color.bg,
 				dataPoints: [
-					{ y: 23.13 },
-					{ y: 29.27 },
-					{ y: 43.69 },
-					{ y: 1.68, indexLabel: ' ' },
-					{ y: 2.23, indexLabel: ' ' }
+					{ y: 22.15 },
+					{ y: 28.96 },
+					{ y: 44.82 },
+					{ y: 1.73, indexLabel: ' ' },
+					{ y: 2.34, indexLabel: ' ' }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [23.13-2.76, 23.13+2.76], label: "Much more likely" },
-					{ y: [29.27-2.98, 29.27+2.98], label: "Somewhat more likely" },
-					{ y: [43.69-3.25, 43.69+3.25], label: "About the same" },
-					{ y: [1.68-0.84, 1.68+0.84], label: "Somewhat less likely" },
-					{ y: [2.23-0.97, 2.23+0.97], label: "Much less likely" }
+					{ y: [22.15-2.59, 22.15+2.59], label: "Much more likely" },
+					{ y: [28.96-2.83, 28.96+2.83], label: "Somewhat more likely" },
+					{ y: [44.82-3.11, 44.82+3.11], label: "About the same" },
+					{ y: [1.73-0.81, 1.73+0.81], label: "Somewhat less likely" },
+					{ y: [2.34-0.94, 2.34+0.94], label: "Much less likely" }
 				]
 			}
 		]
@@ -488,27 +503,29 @@ window.onload = function () {
          		indexLabelFontColor: '#fff',
          		indexLabelLineColor: color.bg,
 				dataPoints: [
-					{ y: 23.13 },
-					{ y: 17.88 },
-					{ y: 14.3 },
-					{ y: 16.76 },
-					{ y: 15.2 },
-					{ y: 8.83 },
-					{ y: 3.91, indexLabel: ' ' }
+					{ y: 23.78 },
+					{ y: 17.68 },
+					{ y: 14.53 },
+					{ y: 16.46 },
+					{ y: 14.94 },
+					{ y: 8.74 },
+					{ y: 3.86, indexLabel: ' ' }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [23.13-2.76, 23.13+2.76], label: "Strongly disagree" },
-					{ y: [17.88-2.51, 17.88+2.51], label: "Disagree" },
-					{ y: [14.3-2.29, 14.3+2.29], label: "Somewhat disagree" },
-					{ y: [16.76-2.45, 16.76+2.45], label: "Neither agree or disagree" },
-					{ y: [15.2-2.35, 15.2+2.35], label: "Somewhat agree" },
-					{ y: [8.83-1.86, 8.83+1.86], label: "Agree" },
-					{ y: [3.91-1.27, 3.91+1.27], label: "Strongly agree" }
+					{ y: [23.78-2.66, 23.78+2.66], label: "Strongly disagree" },
+					{ y: [17.68-2.38, 17.68+2.38], label: "Disagree" },
+					{ y: [14.53-2.20, 14.53+2.20], label: "Somewhat disagree" },
+					{ y: [16.46-2.32, 16.46+2.32], label: "Neither agree nor disagree" },
+					{ y: [14.94-2.23, 14.94+2.23], label: "Somewhat agree" },
+					{ y: [8.74-1.76, 8.74+1.76], label: "Agree" },
+					{ y: [3.86-1.20, 3.86+1.20], label: "Strongly agree" }
 				]
 			}
 		]
@@ -564,27 +581,29 @@ window.onload = function () {
          		indexLabelFontColor: '#fff',
          		indexLabelLineColor: color.bg,
 				dataPoints: [
-					{ y: 13.85 },
-					{ y: 11.62 },
-					{ y: 9.72 },
-					{ y: 21.79 },
-					{ y: 17.65 },
+					{ y: 14.43 },
+					{ y: 11.99 },
+					{ y: 9.55 },
+					{ y: 21.44 },
+					{ y: 17.28 },
 					{ y: 14.53 },
-					{ y: 10.84 }
+					{ y: 10.77 }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [13.85-2.26, 13.85+2.26], label: "Strongly disagree" },
-					{ y: [11.62-2.1, 11.62+2.1], label: "Disagree" },
-					{ y: [9.72-1.94, 9.72+1.94], label: "Somewhat disagree" },
-					{ y: [21.79-2.7, 21.79+2.7], label: "Neither agree or disagree" },
-					{ y: [17.65-2.5, 17.65+2.5], label: "Somewhat agree" },
-					{ y: [14.53-2.31, 14.53+2.31], label: "Agree" },
-					{ y: [10.84-2.04, 10.84+2.04], label: "Strongly agree" }
+					{ y: [14.43-2.20, 14.43+2.20], label: "Strongly disagree" },
+					{ y: [11.99-2.03, 11.99+2.03], label: "Disagree" },
+					{ y: [9.55-1.84, 9.55+1.84], label: "Somewhat disagree" },
+					{ y: [21.44-2.56, 21.44+2.56], label: "Neither agree nor disagree" },
+					{ y: [17.28-2.36, 17.28+2.36], label: "Somewhat agree" },
+					{ y: [14.53-2.20, 14.53+2.20], label: "Agree" },
+					{ y: [10.77-1.94, 10.77+1.94], label: "Strongly agree" }
 				]
 			}
 		]
@@ -640,19 +659,21 @@ window.onload = function () {
          		indexLabelFontColor: '#fff',
          		indexLabelLineColor: color.bg,
 				dataPoints: [
-					{ y: 0.88, indexLabel: ' '},
-					{ y: 45.30 },
-					{ y: 53.81 }
+					{ y: 1.02, indexLabel: ' '},
+					{ y: 45.02 },
+					{ y: 53.96 }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [0.88-0.61, 0.88+0.61], label: "I've never heard of Instagram" },
-					{ y: [45.30-3.24, 45.30+3.24], label: "Yes, I was aware of that" },
-					{ y: [53.81-3.25, 53.81+3.25], label: "No, I was not aware of that" }
+					{ y: [1.02-0.63, 1.02+0.63], label: "I've never heard of Instagram" },
+					{ y: [45.02-3.11, 45.02+3.11], label: "Yes, I was aware of that" },
+					{ y: [53.96-3.11, 53.96+3.11], label: "No, I was not aware of that" }
 					
 				]
 			}
@@ -709,19 +730,21 @@ window.onload = function () {
          		indexLabelFontColor: '#fff',
          		indexLabelLineColor: color.bg,
 				dataPoints: [
-					{ y: 0.37, indexLabel: ' '},
-					{ y: 54.44 },
-					{ y: 45.19 }
+					{ y: 0.61, indexLabel: ' '},
+					{ y: 54.64 },
+					{ y: 44.75 }
 				]
 			},
 			{
 				type: "error",
 				stemColor: color.stem,
 				whiskerColor: color.stem,
+				stemThickness: val.errorthickness,
+				whiskerThickness: val.errorthickness,
 				dataPoints: [
-					{ y: [0.37-0.37, 0.37+0.37], label: "I've never heard of YouTube" },
-					{ y: [54.44-2.98, 54.44+2.98], label: "Yes, I was aware of that" },
-					{ y: [45.19-2.98, 45.19+2.98], label: "No, I was not aware of that" }
+					{ y: [0.61-0.45, 0.61+0.45], label: "I've never heard of YouTube" },
+					{ y: [54.64-2.87, 54.64+2.87], label: "Yes, I was aware of that" },
+					{ y: [44.75-2.87, 44.75+2.87], label: "No, I was not aware of that" }
 					
 				]
 			}
@@ -732,15 +755,52 @@ window.onload = function () {
 </script>
 </head>
 <body>
-	<div class="chart-bg"><div class="block"></div><div id="chart1" class="chart"></div></div>
-	<div class="chart-bg"><div class="block"></div><div id="chart2" class="chart"></div></div>
-	<div class="chart-bg"><div class="block"></div><div id="chart3" class="chart"></div></div>
-	<div class="chart-bg"><div class="block"></div><div id="chart4" class="chart"></div></div>
-	<div class="chart-bg"><div class="block"></div><div id="chart5" class="chart"></div></div>
-	<div class="chart-bg"><div class="block"></div><div id="chart6" class="chart"></div></div>
-	<div class="chart-bg"><div class="block"></div><div id="chart7" class="chart"></div></div>
-	<div class="chart-bg"><div class="block"></div><div id="chart8" class="chart"></div></div>
-	<div class="chart-bg"><div class="block"></div><div id="chart9" class="chart"></div></div>
+	<div id="c1" class="chart-bg"><div class="block"></div><div id="chart1" class="chart"></div></div>
+	<div id="c2" class="chart-bg"><div class="block"></div><div id="chart2" class="chart"></div></div>
+	<div id="c3" class="chart-bg"><div class="block"></div><div id="chart3" class="chart"></div></div>
+	<div id="c4" class="chart-bg"><div class="block"></div><div id="chart4" class="chart"></div></div>
+	<div id="c5" class="chart-bg"><div class="block"></div><div id="chart5" class="chart"></div></div>
+	<div id="c6" class="chart-bg"><div class="block"></div><div id="chart6" class="chart"></div></div>
+	<div id="c7" class="chart-bg"><div class="block"></div><div id="chart7" class="chart"></div></div>
+	<div id="c8" class="chart-bg"><div class="block"></div><div id="chart8" class="chart"></div></div>
+	<div id="c9" class="chart-bg"><div class="block"></div><div id="chart9" class="chart"></div></div>
+
+	<aside>
+		<a href="#c1">chart1</a><br>
+		<a href="#c2">chart2</a><br>
+		<a href="#c3">chart3</a><br>
+		<a href="#c4">chart4</a><br>
+		<a href="#c5">chart5</a><br>
+		<a href="#c6">chart6</a><br>
+		<a href="#c7">chart7</a><br>
+		<a href="#c8">chart8</a><br>
+		<a href="#c9">chart9</a><br>
+	</aside>
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
 	
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
