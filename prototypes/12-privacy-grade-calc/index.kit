@@ -17,7 +17,7 @@
 				</div>
 				<div class="col-8 text-center v-center">
 					<h2>Privacy Grade Calculator</h2>
-					<p><span>Find out how much a site can be trusted with your privacy.</span> <a href="#">Learn more.</a></p>
+					<p><span>Find out how much a site can be trusted with your privacy.</span> <a href="#" data-toggle="modal" data-target="#infoModal">Learn more.</a></p>
 				</div>
 				<div class="col text-right" style="padding-top: 14px;">
 					<i class="fas fa-bars"></i>
@@ -75,6 +75,64 @@
 			<div v-for="(row, index) in rows">
 				<card :row="row" :index="index" :x="x"></card>
 			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">(Insert fun image here)</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div> <!-- /.modal-header -->
+
+		      <div class="modal-body">
+		      	<div class="container-fluid">
+		      		<div class="row">
+		      			<div class="col-12">
+		      				The Privacy Grade Calculator shows how much a site can be trusted with your privacy by giving it a grade based on objective measures.
+		      			</div>
+		      		</div>
+		      		<div class="row">
+		      			<div class="col-10">
+		      				In this case, <strong>{{name}}</strong> received a <strong :class="'text-' + gradeclass">"{{grade}}"</strong> privacy grade because it scored a <strong :class="'text-' + gradeclass">{{score}}</strong> in its overall privacy. 
+		      				<br>Check out the page for more details.
+		      			</div>
+		      			<div class="col-2">
+		      				<div class="grade-mini" :class="'bg-' + gradeclass"><strong>{{ grade }}</strong></div>
+		      			</div>
+		      		</div>
+		      		
+		      	</div>
+		      </div> <!-- /.modal-body -->
+
+		      <div class="modal-footer">
+		      	<div class="container-fluid">
+		      		<div class="row">
+		      			<div class="col-6 text-center rel">
+		      				<div class="grade-mini">&nbsp;</div>
+		      				<div class="fixed">
+		      					<div class="label">Website</div>
+								<h5>{{ name }}</h5>
+		      				</div>
+		      				<p>Check out the privacy grades of popular sites</p>
+		      			</div>
+		      			<div class="col-6 text-center rel">
+		      				<div class="grade-mini">&nbsp;</div>
+		      				<div class="fixed">
+		      					&nbsp;
+		      					<br>&nbsp;
+		      				</div>
+		      				<p>Play with the settings to see how we grade websites</p>
+		      			</div>
+		      		</div>
+		      	</div>
+		      </div> <!-- /.modal-footer -->
+
+		    </div>
+		  </div>
 		</div>
 		
 	</div> <!-- /#pg -->

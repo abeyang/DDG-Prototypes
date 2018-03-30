@@ -31,6 +31,8 @@ body {
 	background: #F9F9F9;
 }
 
+h5 { font-weight: bold; }
+
 .top { 
 	margin-bottom: $header-top; 
 	color: $white;
@@ -93,7 +95,7 @@ body {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 230px;
+	height: 310px;
 	background-color: $royal-purple;
 	z-index: -1;
 }
@@ -247,6 +249,39 @@ body {
 	}
 
 	&.disabled { opacity: 100; }
+}
+
+// MODAL
+.modal-content {
+
+	.row { padding: 10px; }
+
+	strong { font-size: 14px; }
+
+	.rel { 
+		.fixed {
+			/*position: relative;*/
+			/*top: -50px;*/
+			margin-top: -48px;
+			margin-bottom: 24px;
+		}
+		
+		.grade-mini { 
+			display: inline-block;
+			background-color: $lightest-gray;
+		}
+	}
+
+	.grade-mini {
+		width: 56px;
+		height: 56px;
+		border-radius: 56px;
+		line-height: 56px;
+		text-align: center;
+		color: #fff;
+
+		strong { font-size: 24px; }
+	}
 }
 
 // INPUT SLIDER

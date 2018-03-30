@@ -7,6 +7,9 @@ body {
   padding-bottom: 40px;
   background: #F9F9F9; }
 
+h5 {
+  font-weight: bold; }
+
 .top {
   margin-bottom: 40px;
   color: #fff; }
@@ -55,7 +58,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 230px;
+  height: 310px;
   background-color: #1F0B42;
   z-index: -1; }
 
@@ -196,6 +199,32 @@ body {
 
 .btn.disabled {
   opacity: 100; }
+
+.modal-content .row {
+  padding: 10px; }
+
+.modal-content strong {
+  font-size: 14px; }
+
+.modal-content .rel .fixed {
+  /*position: relative;*/
+  /*top: -50px;*/
+  margin-top: -48px;
+  margin-bottom: 24px; }
+
+.modal-content .rel .grade-mini {
+  display: inline-block;
+  background-color: #eee; }
+
+.modal-content .grade-mini {
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  line-height: 56px;
+  text-align: center;
+  color: #fff; }
+  .modal-content .grade-mini strong {
+    font-size: 24px; }
 
 input[type=range] {
   height: 36px;
