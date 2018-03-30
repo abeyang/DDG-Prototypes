@@ -8,17 +8,24 @@ body {
   background: #F9F9F9; }
 
 .top {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  color: #fff; }
   .top h2 {
     padding-top: 8px;
-    color: #fff; }
+    font-size: 24px; }
+  .top p {
+    line-height: 1.2;
+    color: #fff;
+    opacity: 0.66; }
+    .top p a {
+      color: #fff;
+      text-decoration: underline; }
 
 .text-left {
   padding-left: 40px; }
 
 .text-right {
-  padding-right: 40px;
-  color: #fff; }
+  padding-right: 40px; }
 
 .header {
   margin-top: 40px; }

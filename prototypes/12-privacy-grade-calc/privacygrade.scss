@@ -33,12 +33,27 @@ body {
 
 .top { 
 	margin-bottom: $header-top; 
+	color: $white;
 
-	h2 { padding-top: 8px;  color: $white; }
+	h2 { 
+		padding-top: 8px;
+		font-size: 24px;
+	}
+
+	p { 
+		line-height: 1.2; 
+		color: $white;
+		opacity: 0.66;
+		
+		a { 
+			color: $white;
+			text-decoration: underline;
+		}
+	}
 }
 
 .text-left { padding-left: $header-pad; }
-.text-right { padding-right: $header-pad; color: $white; }
+.text-right { padding-right: $header-pad; }
 
 .header {
 	margin-top: $header-top;
@@ -181,7 +196,7 @@ body {
 }
 .toggle .icon, .hover .icon {
 	opacity: 1;
-	
+
 	&#icon-lock { background-image: url(assets/icons/lock.svg); }
 	&#icon-shield { background-image: url(assets/icons/shield.svg); }
 	&#icon-major, &#icon-percentsites { background-image: url(assets/icons/major.svg); }
