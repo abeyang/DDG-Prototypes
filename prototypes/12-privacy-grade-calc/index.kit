@@ -81,54 +81,32 @@
 		<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">(Insert fun image here)</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+		    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
-		      </div> <!-- /.modal-header -->
 
-		      <div class="modal-body">
-		      	<div class="container-fluid">
-		      		<div class="row">
-		      			<div class="col-12">
-		      				The Privacy Grade Calculator shows how much a site can be trusted with your privacy by giving it a grade based on objective measures.
-		      			</div>
-		      		</div>
-		      		<div class="row">
-		      			<div class="col-10">
-		      				In this case, <strong>{{name}}</strong> received a <strong :class="'text-' + gradeclass">"{{grade}}"</strong> privacy grade because it scored a <strong :class="'text-' + gradeclass">{{score}}</strong> in its overall privacy. 
-		      				<br>Check out the page for more details.
-		      			</div>
-		      			<div class="col-2">
-		      				<div class="grade-mini" :class="'bg-' + gradeclass"><strong>{{ grade }}</strong></div>
-		      			</div>
-		      		</div>
-		      		
-		      	</div>
+		      <div class="modal-body modal-hero text-center">
+		      	<p>
+		      		<strong v-if="name != 'Custom'">{{name}}</strong> 
+		      		<strong v-else>Your Custom Site</strong> 
+		      		received a <strong :class="'text-' + gradeclass">"{{grade}}"</strong> privacy grade because 
+		      		<br>it scored a <strong :class="'text-' + gradeclass">{{score}}</strong> in its overall privacy
+		      	</p>
+
+		      	<div class="grade-mini" :class="'bg-' + gradeclass"><strong>{{ grade }}</strong></div>
+		      </div> <!-- /.modal-body .modal-hero -->
+
+		      <div class="modal-body modal-bottom text-center">
+		      	<h5>Privacy Grade Calculator</h5>
+		      	Grades websites on their privacy based on objective criteria.
 		      </div> <!-- /.modal-body -->
 
 		      <div class="modal-footer">
-		      	<div class="container-fluid">
-		      		<div class="row">
-		      			<div class="col-6 text-center rel">
-		      				<div class="grade-mini">&nbsp;</div>
-		      				<div class="fixed">
-		      					<div class="label">Website</div>
-								<h5>{{ name }}</h5>
-		      				</div>
-		      				<p>Check out the privacy grades of popular sites</p>
-		      			</div>
-		      			<div class="col-6 text-center rel">
-		      				<div class="grade-mini">&nbsp;</div>
-		      				<div class="fixed">
-		      					&nbsp;
-		      					<br>&nbsp;
-		      				</div>
-		      				<p>Play with the settings to see how we grade websites</p>
-		      			</div>
-		      		</div>
-		      	</div>
+		      	<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
+		          Check it out
+		        </button>
+
 		      </div> <!-- /.modal-footer -->
 
 		    </div>

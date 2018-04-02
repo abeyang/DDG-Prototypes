@@ -256,23 +256,26 @@ h5 { font-weight: bold; }
 
 	.row { padding: 10px; }
 
-	strong { font-size: 14px; }
+	strong { font-size: 12px; }
 
-	.rel { 
-		.fixed {
-			/*position: relative;*/
-			/*top: -50px;*/
-			margin-top: -48px;
-			margin-bottom: 24px;
-		}
-		
-		.grade-mini { 
-			display: inline-block;
-			background-color: $lightest-gray;
-		}
+	p {
+		font-size: 12px;
+		font-weight: 300;
+		color: #666;
+		line-height: 1.3;
+		margin-top: 10px;
+	}
+
+	.close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		z-index: 500;
 	}
 
 	.grade-mini {
+		display: inline-block;
+		margin-top: 28px;
 		width: 56px;
 		height: 56px;
 		border-radius: 56px;
@@ -281,6 +284,24 @@ h5 { font-weight: bold; }
 		color: #fff;
 
 		strong { font-size: 24px; }
+	}
+
+	.modal-hero {
+		height: 360px;
+		background: center 40px no-repeat $white url(assets/modal-hero.svg); 
+	}
+
+	.modal-bottom {
+		background-color: $offwhite;
+		padding-top: 20px;
+		border-top: 1px solid $lightest-gray;
+	}
+
+	.modal-footer {
+		background-color: $offwhite;
+		border: none;
+		justify-content: center;
+		padding-bottom: 20px;
 	}
 }
 

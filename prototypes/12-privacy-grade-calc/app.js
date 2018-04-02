@@ -234,4 +234,5 @@ var pg = new Vue({
 	}
 });
 
-
+// misc things to load
+$('#infoModal').modal('show');
