@@ -1,0 +1,30 @@
+	aside {
+		position: fixed;
+		top: 40px;
+		right: 40px;
+	}
+
+	.chart { 
+		width: 760px; 
+		height: 350px;
+	}
+
+	.chart-bg {
+		width: 840px; 
+		padding: 40px;
+		margin: 20px;
+		background: #f9f9f9;
+		position: relative;
+	}
+
+	.block {
+		position: absolute;
+		background: #f9f9f9;
+		width: 200px;
+		height: 30px;
+		bottom: 40px;
+		left: 0;
+		z-index: 999999;
+	}
+
+	.canvasjs-chart-credit { display: none; }

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>facebook / DDG Prototypes</title>
+    <meta name="description" content="DuckDuckGo Prototypes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="../../assets/css/main.css" charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/fontawesome-all.min.css" charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" charset="utf-8">
+
+	<!-- JS --> 
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+	<script src="../../assets/js/popper.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/underscore-min.js"></script>
+    <script src="../../assets/js/vue.js"></script>
+    
+    
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="charts.css">
+
+<script>
+	var charts = [
+		{
+			margin: -6,
+			graphfont: -2,
+			title: "Before reading this question, were you aware that Facebook owns Instagram?",
+			results: {
+				"I've never heard of Instagram": [1.30, 0.65, true],
+				'No': [56.90, 2.86],
+				'Yes': [41.8, 2.85]
+			}
+		},
+		{
+			margin: 6,
+			graphfont: -2,
+			title: "Before reading this question, were you aware that Google owns YouTube?",
+			results: {
+				"I've never heard of Youtube": [0.61, 0.45, true],
+				'No': [44.67, 2.87],
+				'Yes': [54.73, 2.87],
+			}
+		}
+	];
+
+window.onload = function () {
+	var color = {
+		bg: '#f9f9f9',
+		stem: '#666',
+		grid: '#999',
+		mainfont: '#333',
+		subfont: '#666',
+		ddgblue: '#4495D4',
+		barlabel: '#fff'
+	};
+
+	var font = {
+		family: 'avenir',
+		align: 'left',
+		mainsize: 24,
+		subsize: 18,
+		minor: 16,
+		mini: 14,
+		micro: 12,
+		subweight: 'normal'
+	};
+
+	var val = {
+		tickmargin: 10,
+		submargin: 20,
+		indexplacement: 'inside',
+		errorthickness: 1
+	};
+
+	var index = 1;
+
+	// chart generator
+
+	_.each(charts, function(data) {
+		// create the elements first; populate them at the end with render()
+		$('<div id="c' + index + '" class="chart-bg"><div class="block"></div><div id="chart' + index + '" class="chart"></div></div>').appendTo( $('#charts') );
+
+		$('<a href="#c' + index + '">chart' + index + '</a><br>').appendTo( $('#aside') );
+
+		var bars = [];
+		var errors = [];
+		
+		_.each(data.results, function (d, key) {
+			// does it have a label?
+			var l = (d[2]) ? ' ' : ''; // ' ' means blank.. '' means use default
+			bars.push({y: d[0], indexLabel: l});
+
+			errors.push({y: [ d[0]-d[1], d[0]+d[1] ], label: key});
+		});
+
+		var chart = new CanvasJS.Chart("chart" + index, {
+			backgroundColor: color.bg,
+			interactivityEnabled: false,
+			animationEnabled: false,
+
+			subtitles: [
+				{
+					text: data.title,
+					horizontalAlign: font.align,
+					fontFamily: font.family,
+					fontColor: color.mainfont,
+					fontSize: font.subsize,
+					margin: val.submargin
+				}
+			],
+
+			axisX: {
+				labelFontSize: font.subsize + data.graphfont,
+				labelFontColor: color.subfont,
+				labelFontFamily: font.family,
+				tickLength: val.tickmargin,
+				tickColor: color.bg,
+				margin: 20 + data.margin
+			},
+			
+			axisY: {
+				interval: 10,
+				maximum: 60,
+				gridColor: color.grid,
+				gridDashType: 'dot',
+				lineThickness: 0,
+				tickLength: val.tickmargin,
+				tickColor: color.bg,
+				suffix: '%',
+				labelFontSize: font.subsize + data.graphfont,
+				labelFontColor: color.subfont,
+				labelFontFamily: font.family,
+			},
+
+			data: [
+				{
+					type: "bar",
+					color: color.ddgblue,
+					indexLabel: '{y}%',
+	         		indexLabelPlacement: val.indexplacement, 
+	         		indexLabelFontSize: font.mini,
+	         		indexLabelFontColor: color.barlabel,
+					dataPoints: bars
+				},
+				{
+					type: "error",
+					stemColor: color.stem,
+					whiskerColor: color.stem,
+					stemThickness: val.errorthickness,
+					whiskerThickness: val.errorthickness,
+					dataPoints: errors
+				}
+			]
+		});
+
+		chart.render();
+
+		index++;
+	});
+
+	$('#charts')
+
+}
+</script>
+</head>
+<body>
+	<div id="charts">
+<!-- 		<div id="c1" class="chart-bg"><div class="block"></div><div id="chart1" class="chart"></div></div>
+		<div id="c2" class="chart-bg"><div class="block"></div><div id="chart2" class="chart"></div></div> -->
+	</div>
+	
+
+	<aside id="aside">
+	</aside>
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+</body>
+</html>
