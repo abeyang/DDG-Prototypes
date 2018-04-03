@@ -103,25 +103,29 @@
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 		    <div class="modal-content">
 
-		    	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
+		    	<div class="modal-header text-center">
+			      	<h5>Privacy Grade Calculator</h5>
+			      	Find out which of your favorite sites can be trusted with your privacy.
+			      	<br>Play around with the settings to see what contributes to an A grade!
+			      	<!-- How much a site can be trusted with your privacy based on a set of criteria. -->
+
+			      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          		<span aria-hidden="true">&times;</span>
+		        	</button>
+		      	</div> <!-- /.modal-header -->
 
 		      <div class="modal-body modal-hero text-center">
 		      	<p>
 		      		<strong v-if="name != 'Custom'">{{name}}</strong> 
 		      		<strong v-else>Your Custom Site</strong> 
-		      		received a <strong :class="'text-' + gradeclass">"{{grade}}"</strong> privacy grade because 
+		      		received a <strong :class="'text-' + gradeclass">"{{grade}}"</strong> grade because 
 		      		<br>it scored a <strong :class="'text-' + gradeclass">{{score}}</strong> in its overall privacy
 		      	</p>
 
 		      	<div class="grade-mini" :class="'bg-' + gradeclass"><strong>{{ grade }}</strong></div>
 		      </div> <!-- /.modal-body .modal-hero -->
 
-		      <div class="modal-body modal-bottom text-center">
-		      	<h5>Privacy Grade Calculator</h5>
-		      	Grades websites on their privacy based on objective criteria.
-		      </div> <!-- /.modal-body -->
+		      
 
 		      <div class="modal-footer">
 		      	<button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
@@ -155,7 +159,7 @@
 					<span @click="x.isencrypted = false" :class="{'btn-dark': !x.isencrypted, 'btn-light': x.isencrypted}" class="btn btn-reg btn-pair">Unencrypted</span>
 				</div>
 				<div v-else-if="index === 1">
-					<input type="range" v-model="x.trackers" min="0" max="20" step="1" :input="update()">
+					<input type="range" v-model="x.trackers" min="0" max="20" step="1" :input="update()" id="range-trackers">
 					<div class="info">{{x.trackers}}<span v-show="x.trackers>=20">+</span></div>
 				</div>
 				<div v-else-if="index === 2">
@@ -164,7 +168,7 @@
 					<span @click="x.major.other = !x.major.other" :class="{'btn-dark': x.major.other, 'btn-light': !x.major.other}" class="btn btn-reg btn-pad">Others</span>
 				</div>
 				<div v-else-if="index === 3">
-					<input type="range" v-model="x.percent" min="0" max="4" step="1">
+					<input type="range" v-model="x.percent" min="0" max="4" step="1" id="range-percent">
 					<div class="info">{{x.percentblurb}}</div>
 				</div>
 				<div v-else class="btn-group" role="group">

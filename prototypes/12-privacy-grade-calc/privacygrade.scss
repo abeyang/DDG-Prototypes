@@ -286,20 +286,14 @@ h5 { font-weight: bold; }
 		strong { font-size: 24px; }
 	}
 
+	.modal-header { display: block; }
+
 	.modal-hero {
 		height: 360px;
 		background: center 40px no-repeat $white url(assets/modal-hero.svg); 
 	}
 
-	.modal-bottom {
-		background-color: $offwhite;
-		padding-top: 20px;
-		border-top: 1px solid $lightest-gray;
-	}
-
 	.modal-footer {
-		background-color: $offwhite;
-		border: none;
 		justify-content: center;
 		padding-bottom: 20px;
 	}
@@ -308,6 +302,7 @@ h5 { font-weight: bold; }
 // INPUT SLIDER
 // http://www.cssportal.com/style-input-range/
 // https://jsfiddle.net/3JJJb/542/
+// https://codepen.io/noahblon/pen/OyajvN <- solid lower fill
 
 input[type=range] {
   height: 36px;
@@ -315,6 +310,7 @@ input[type=range] {
   margin: 0;
   width: 266px;
   background: none;
+  /*overflow: hidden;*/
 }
 input[type=range]:focus {
   outline: none;
@@ -330,6 +326,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0 5px 5px -3px rgba(0,0,0,0.25);
+  /*box-shadow: -10vw 0 0 10vw dodgerblue;*/
   border: 1px solid #EAEAEA;
   height: 24px;
   width: 24px;

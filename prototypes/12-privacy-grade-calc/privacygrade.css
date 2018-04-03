@@ -231,18 +231,14 @@ h5 {
   .modal-content .grade-mini strong {
     font-size: 24px; }
 
+.modal-content .modal-header {
+  display: block; }
+
 .modal-content .modal-hero {
   height: 360px;
   background: center 40px no-repeat #fff url(assets/modal-hero.svg); }
 
-.modal-content .modal-bottom {
-  background-color: #fafafa;
-  padding-top: 20px;
-  border-top: 1px solid #eee; }
-
 .modal-content .modal-footer {
-  background-color: #fafafa;
-  border: none;
   justify-content: center;
   padding-bottom: 20px; }
 
@@ -251,7 +247,8 @@ input[type=range] {
   -webkit-appearance: none;
   margin: 0;
   width: 266px;
-  background: none; }
+  background: none;
+  /*overflow: hidden;*/ }
 
 input[type=range]:focus {
   outline: none; }
@@ -267,6 +264,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.25);
+  /*box-shadow: -10vw 0 0 10vw dodgerblue;*/
   border: 1px solid #EAEAEA;
   height: 24px;
   width: 24px;
