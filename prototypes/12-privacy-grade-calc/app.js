@@ -78,7 +78,7 @@ var pg = new Vue({
 				title: 'How good is the website privacy policy?',
 				snippet: 'The website\'s privacy policy outlines how they can collect and share your personal information.',
 				toggle: false,
-				desc: 'Most websites collect information about you to perform functions or provide services. What they collect, how they use it, and who they share it with is outlined in their Terms of Service. These terms are usually very long and hard to decipher so we\'ve partnered with ToSDR to decode these documents and score websites based on their privacy practices.',
+				desc: 'Most websites collect information about you to perform functions or provide services. What they collect, how they use it, and who they share it with is outlined in their Terms of Service. These terms are usually very long and hard to decipher so we\'ve partnered with <a target="_new" href="https://tosdr.org/">ToSDR</a> to decode these documents and score websites based on their privacy practices.',
 				points: 0
 			},
 		],
@@ -100,6 +100,17 @@ var pg = new Vue({
 					other: false
 				},
 				percent: 1,
+				practices: -2
+			},
+			'Facebook': {
+				isencrypted: true, 
+				trackers: 2,
+				major: {
+					google: true,
+					facebook: false,
+					other: false
+				},
+				percent: 2,
 				practices: -2
 			},
 			'Google': {
@@ -235,4 +246,4 @@ var pg = new Vue({
 });
 
 // misc things to load
-$('#infoModal').modal('show');
+// $('#infoModal').modal('show');

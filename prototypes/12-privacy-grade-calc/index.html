@@ -186,16 +186,13 @@
 				<span v-else>
 					<span class="btn btn-round btn-outline-danger disabled">{{ row.points }}</span>
 				</span>
-
-				<!-- <span @click="row.toggle = !row.toggle" :class="{active: row.toggle}" class="btn btn-round btn-dark btn-float shadow"><i class="far fa-plus"></i></span> -->
 			</div>
 		</div> <!-- /.row -->
 		<div class="row desc" v-show="row.toggle">
 			<div class="col">
 				&nbsp;
 			</div>
-			<div class="col-9">
-				{{ row.desc }}
+			<div class="col-9" v-html="row.desc">
 			</div>
 			<div class="col">
 				&nbsp;
