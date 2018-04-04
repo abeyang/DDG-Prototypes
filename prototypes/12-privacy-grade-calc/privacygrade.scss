@@ -13,6 +13,7 @@ $purple:		#5558D8;
 $dark-purple:	#474BB8;
 $royal-purple:  #1F0B42;
 
+$backing-height: 328px;
 $row-height:	110px;
 $row-pad:		20px;
 $header-top:	40px;
@@ -43,7 +44,7 @@ h5 { font-weight: bold; }
 	}
 
 	p { 
-		line-height: 1.2; 
+		line-height: 1.4; 
 		color: $white;
 		opacity: 0.66;
 		
@@ -57,8 +58,7 @@ h5 { font-weight: bold; }
 .text-left { padding-left: $header-pad; }
 .text-right { padding-right: $header-pad; }
 
-.header {
-	margin-top: $header-top;
+#header {
 
 	.row-wrap {
 		background: $offwhite;
@@ -88,6 +88,8 @@ h5 { font-weight: bold; }
 		height: $progress-height;
 		border-radius: 0;
 	}
+
+	#website { display: inline-block; }
 }
 
 .backing {
@@ -95,7 +97,7 @@ h5 { font-weight: bold; }
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 310px;
+	height: $backing-height;
 	background-color: $royal-purple;
 	z-index: -1;
 }
@@ -113,7 +115,7 @@ h5 { font-weight: bold; }
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: -($row-height/2);
+	top: -70px;
 	margin: auto;
 
 	width: $row-height;
@@ -124,6 +126,23 @@ h5 { font-weight: bold; }
 	color: #fff;
 
 	strong { font-size: 48px; }
+}
+
+.fixed-top {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: $royal-purple;
+
+	.grade {
+		top: -10px;
+		width: 80px;
+		height: 80px;
+		line-height: 80px;
+	}
+}
+.pushdown {
+	margin-top: 154px;
 }
 
 .shadow {
@@ -153,12 +172,19 @@ h5 { font-weight: bold; }
 		margin-bottom: 20px;
 
 		&.hover { background: $white; }
-		.row, .desc {  }
+
 		.row { 
 			border: 1px solid $lightest-gray;
 			background: $white; 
 
-			&.desc { background: $offwhite; }
+			&.desc { 
+				background: $offwhite; 
+
+				a {
+					color: $dark-gray;
+					text-decoration: underline;
+				}
+			}
 		}
 		.btn-float { 
 			display: inline; 
@@ -168,6 +194,10 @@ h5 { font-weight: bold; }
 }
 .row {
 	padding: $row-pad;
+
+	&.row-title {
+		padding-bottom: $row-pad/2;
+	}
 }
 
 .icon {

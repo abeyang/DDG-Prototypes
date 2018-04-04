@@ -21,6 +21,7 @@ Vue.component('card', {
 			// otherwise, it's most likely a button -- change website to custom
 			else {
 				pg.name = 'Custom';
+				$('#website').removeClass().addClass('animated wobble')
 			}
 		},
 		hoverResult: function(event) {
@@ -43,39 +44,39 @@ var pg = new Vue({
 		rows: [
 			{
 				id: 'lock',
-				title: 'Type of connection?',
+				title: 'Is this site encrypted?',
 				snippet: 'An encrypted connection prevents eavesdropping of any personal information you send to a website.',
 				toggle: false,
-				desc: 'Encrypted connections ensure that only authorized clients can access information sent over the connection. In order to decode the encrypted information, the client must have a unique key, otherwise the information is meaningless to an eavesdropper. Over unencrypted connections, information is sent as plain text so  anyone can read it without authorization.',
+				desc: '<b>Encrypted</b> connections ensure that only authorized clients can access information sent over the connection. In order to decode the encrypted information, the client must have a unique key, otherwise the information is meaningless to an eavesdropper. <br>Over <b>unencrypted</b> connections, information is sent as plain text so  anyone can read it without authorization.',
 				points: 0
 			},
 			{
 				id: 'shield',
-				title: 'How many tracker networks?',
-				snippet: 'Tracker networks aggregate your web activity into a data profile about you.',
+				title: 'Number of trackers?',
+				snippet: 'Trackers aggregate your web activity into a data profile about you.',
 				toggle: false,
 				desc: 'Trackers lurk on almost every website you visit. The most common types of trackers are used by advertising companies to collect information about your web activity. Advertising companies rely on networks of these trackers to collect as much information as possible about you and your online activity so they can target you with ads.',
 				points: 0
 			},
 			{
 				id: 'major',
-				title: 'Any major tracker networks?',
-				snippet: 'These networks exist on a large percentage of websites, tracking more of your Internet activity.',
+				title: 'Any major trackers?',
+				snippet: 'Google, Facebook, etc. exist on a large percentage of websites, tracking more of your Internet activity.',
 				toggle: false,
-				desc: 'Because major tracking networks have much more web coverage than other networks, they can assemble more information about you, making it even easier for advertisers to target you with invasive ads. 76% of websites now contain hidden Google trackers, 24% have hidden Facebook trackers, and several other major tracker networks are at 10%+.',
+				desc: 'Because major trackers have much more web coverage than other trackers, they can assemble more information about you, making it even easier for advertisers to target you with invasive ads. <br>76% of websites now contain hidden Google trackers, 24% have hidden Facebook trackers, and several other major trackers are at 10%+.',
 				points: 0
 			},
 			{
 				id: 'percentsites',
-				title: 'Is website a major tracker network itself?',
-				snippet: 'If the website is itself a major tracker network, it can use your data to target you across the Internet.',
+				title: 'Is this website itself a major tracker?',
+				snippet: 'For example, Google may not contain major trackers, but Google <em>itself</em> is a major tracker.',
 				toggle: false,
-				desc: 'Some popular web companies also operate tracking networks. These companies will collect any information you share on their websites and combine it with data collected by their tracker network on other sites. This ensures that their profile on you is as robust as possible. The greater the reach of their network, the more personal data they can collect.',
+				desc: 'Some popular web companies also operate trackers. These companies will collect any information you share on their websites and combine it with data collected by their trackes on other sites. This ensures that their profile on you is as robust as possible. The greater the reach of their network, the more personal data they can collect.',
 				points: 0
 			},
 			{
 				id: 'policy',
-				title: 'How good is the website privacy policy?',
+				title: 'How good is the website\'s privacy policy?',
 				snippet: 'The website\'s privacy policy outlines how they can collect and share your personal information.',
 				toggle: false,
 				desc: 'Most websites collect information about you to perform functions or provide services. What they collect, how they use it, and who they share it with is outlined in their Terms of Service. These terms are usually very long and hard to decipher so we\'ve partnered with <a target="_new" href="https://tosdr.org/">ToSDR</a> to decode these documents and score websites based on their privacy practices.',
@@ -167,28 +168,25 @@ var pg = new Vue({
 				},
 				percent: 0,
 				practices: -2
-			},
-			'Custom': {
-				isencrypted: false, 
-				trackers: 10,
-				major: {
-					google: true,
-					facebook: true,
-					other: true
-				},
-				percent: 2,
-				practices: -2
 			}
 		}
 	},
 	methods: {
-		setPreset: function(key) {		
+		setPreset: function(key) {
+			this.name = key;
+
+			// if user selects "custom", let it show "custom" on website, but get data from Youtube
+			if (key == 'Custom') key = 'Youtube';
+
 			// clone is shallow; need to do another clone for the 'major' property
 			var clone = _.clone(this.presets[key]);
 			clone.major = _.clone(this.presets[key].major);
 
 			this.x = clone;
-			this.name = key;
+			
+
+			// get website name ready for animation (when settings are tweaked)
+			$('#website').removeClass();
 		},
 
 		// calculates total score 
@@ -247,3 +245,16 @@ var pg = new Vue({
 
 // misc things to load
 // $('#infoModal').modal('show');
+
+// sticky header  (.sticky-top doesn't work)
+// https://codepen.io/renduh/pen/oBBGbK
+$(window).scroll(function() {
+	if( $(this).scrollTop() > 215 ) {
+		$('#header').addClass('fixed-top');
+		$('#report').addClass('pushdown');
+	} 
+	else {
+		$('#header').removeClass('fixed-top');
+		$('#report').removeClass('pushdown');
+	}
+});

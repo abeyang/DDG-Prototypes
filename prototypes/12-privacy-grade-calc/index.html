@@ -23,43 +23,50 @@
 </head>
 <body>
 
+<link rel="stylesheet" type="text/css" href="../../assets/css/animate.css">
 <link rel="stylesheet" href="privacygrade.css" charset="utf-8">
 
-<div class="backing">
-	
-</div>
+<div class="backing"></div>
 
-<div class="container">
-	<div id="pg">
+<div id="pg">
+	<div class="container">
 		<div class="top">
 			<div class="row">
-				<div class="icon icon-logo col">
+				<div class="col-2 icon icon-logo">
 					&nbsp;
 				</div>
 				<div class="col-8 text-center v-center">
 					<h2>Privacy Grade Calculator</h2>
-					<p><span>Find out how much a site can be trusted with your privacy.</span> <a href="#" data-toggle="modal" data-target="#infoModal">Learn more.</a></p>
+					<p>
+						<span>Find out which of your favorite sites can be trusted with your privacy.</span><br>
+			      		<span>Play around with the settings to see what contributes to an A grade!</span><br>
+			      		<a href="#" data-toggle="modal" data-target="#infoModal">Learn more.</a>
+					</p>
 				</div>
-				<div class="col text-right" style="padding-top: 14px;">
+				<div class="col-2 text-right" style="padding-top: 14px;">
 					<i class="fas fa-bars"></i>
 				</div>
 			</div>
 		</div> <!-- /.top -->
+	</div> <!-- /.container -->
 
-		<!-- header -->
-		<div class="header">
+	<!-- header -->
+	<div id="header">
+		<div class="container">
 			<div class="row-wrap">
-				<div class="row">
+				<div class="row row-title">
 					<div class="col-3 text-left">
 						<div class="label">Website</div>
 						
 						<div class="dropdown show">
 						  <a class="dropdown-toggle text-dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    <strong>{{ name }}</strong>
+						    <strong id="website">{{ name }}</strong>
 						  </a>
 
 						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 						    <a v-for="(value, key) in presets" class="dropdown-item" @click="setPreset(key)" href="#">{{ key }}</a>
+						    <div class="dropdown-divider"></div>
+						    <a class="dropdown-item" @click="setPreset('Custom')" href="#">Custom</a>
 						  </div>
 						</div> <!-- /.dropdown -->
 					
@@ -67,9 +74,9 @@
 					<div class="col-6">
 						<div class="grade shadow" :class="'bg-' + gradeclass"><strong>{{ grade }}</strong></div>
 					</div>
-					<div class="col text-right">
+					<div class="col-3 text-right">
 						<div class="label">Total Score</div>
-						<span class="btn btn-round" :class="'text-' + gradeclass"><strong>{{ score }}</strong></span>
+						<strong :class="'text-' + gradeclass">{{ score }}</strong>
 					</div>
 				</div> <!-- /.row -->
 				<div class="row gradescale">
@@ -89,8 +96,10 @@
 			<div class="progress">
 			  <div class="progress-bar" :class="'bg-' + gradeclass" role="progressbar" :style="{width: (score-1) / worst * 100 + '%'}"></div>
 			</div>
-		</div> <!-- /.header -->
+		</div> <!-- /.container -->
+	</div> <!-- /.header -->
 
+	<div id="report" class="container">
 		<!-- rows -->
 		<div :update="calculateScore()">
 			<div v-for="(row, index) in rows">
@@ -107,7 +116,6 @@
 			      	<h5>Privacy Grade Calculator</h5>
 			      	Find out which of your favorite sites can be trusted with your privacy.
 			      	<br>Play around with the settings to see what contributes to an A grade!
-			      	<!-- How much a site can be trusted with your privacy based on a set of criteria. -->
 
 			      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          		<span aria-hidden="true">&times;</span>
@@ -137,41 +145,39 @@
 		    </div>
 		  </div>
 		</div>
-		
-	</div> <!-- /#pg -->
-</div> <!-- /.container -->
+	</div> <!-- /.container -->		
+</div> <!-- /#pg -->
 
 
 <!-- Templates -->
 <template id="card">
 	<div :id="row.id" :class="{'toggle shadow-card': row.toggle}" class="row-wrap" @mouseover="hoverResult" @mouseout="outResult">
 		<div class="row" @click="toggleCard(row, $event)">
-			<div class="col icon" :id="'icon-' + row.id" :class="{bad: row.points}"></div>
-			<div class="col-5">
+			<div class="" :id="'icon-' + row.id" :class="{bad: row.points}"></div>
+			<div class="col-6 text-left">
 				<strong>{{ row.title }}</strong>
-				<div class="subtitle">{{ row.snippet }} <u v-show="!row.toggle">Read more</u><u v-show="row.toggle">Read less</u></div>
+				<div class="subtitle"><span v-html="row.snippet"></span> <u v-show="!row.toggle">Read more</u><u v-show="row.toggle">Read less</u></div>
 			</div>
 
 			<!-- Options -->
-			<div class="col-4 text-center v-center">
-				<div v-if="index === 0" class="btn-group" role="group">
-					<span @click="x.isencrypted = true"  :class="{'btn-dark': x.isencrypted, 'btn-light': !x.isencrypted}" class="btn btn-reg btn-pair">Encrypted</span>
-					<span @click="x.isencrypted = false" :class="{'btn-dark': !x.isencrypted, 'btn-light': x.isencrypted}" class="btn btn-reg btn-pair">Unencrypted</span>
+			<div class="col-5 text-center v-center">
+				<div v-if="index === 0">
+					<span @click="x.isencrypted = true"  :class="{'btn-dark': x.isencrypted, 'btn-light': !x.isencrypted}" class="btn btn-reg btn-pair">Yes</span>
+					<span @click="x.isencrypted = false" :class="{'btn-dark': !x.isencrypted, 'btn-light': x.isencrypted}" class="btn btn-reg btn-pair">No</span>
 				</div>
 				<div v-else-if="index === 1">
 					<input type="range" v-model="x.trackers" min="0" max="20" step="1" :input="update()" id="range-trackers">
 					<div class="info">{{x.trackers}}<span v-show="x.trackers>=20">+</span></div>
 				</div>
 				<div v-else-if="index === 2">
-					<span @click="x.major.google = !x.major.google" :class="{'btn-dark': x.major.google, 'btn-light': !x.major.google}" class="btn btn-reg btn-pad">Google</span>
-					<span @click="x.major.facebook = !x.major.facebook" :class="{'btn-dark': x.major.facebook, 'btn-light': !x.major.facebook}" class="btn btn-reg btn-pad">Facebook</span>
-					<span @click="x.major.other = !x.major.other" :class="{'btn-dark': x.major.other, 'btn-light': !x.major.other}" class="btn btn-reg btn-pad">Others</span>
+					<span @click="x.major.google = false" :class="{'btn-dark': !x.major.google, 'btn-light': x.major.google}" class="btn btn-reg btn-pair">No</span>
+					<span @click="x.major.google = true" :class="{'btn-dark': x.major.google, 'btn-light': !x.major.google}" class="btn btn-reg btn-pair">Yes</span>
 				</div>
 				<div v-else-if="index === 3">
 					<input type="range" v-model="x.percent" min="0" max="4" step="1" id="range-percent">
 					<div class="info">{{x.percentblurb}}</div>
 				</div>
-				<div v-else class="btn-group" role="group">
+				<div v-else>
 					<span @click="x.practices = 0" :class="{'btn-dark': x.practices == 0, 'btn-light': x.practices != 0}" class="btn btn-reg">Good</span>
 					<span @click="x.practices = -1" :class="{'btn-dark': x.practices == -1, 'btn-light': x.practices != -1}" class="btn btn-reg">Mixed</span>
 					<span @click="x.practices = -2" :class="{'btn-dark': x.practices == -2, 'btn-light': x.practices != -2}" class="btn btn-reg">Poor</span>
@@ -179,20 +185,20 @@
 				</div>
 			</div>
 			
-			<div class="col text-center v-center">
+			<div class="col text-right v-center">
 				<span v-if="row.points == 0">
-					<span class="btn btn-round btn-outline-success disabled"><i class="fas fa-check disabled"></i></span>
+					<strong class="text-success"><i class="fas fa-check"></i></strong>
 				</span>
 				<span v-else>
-					<span class="btn btn-round btn-outline-danger disabled">{{ row.points }}</span>
+					<strong class="text-danger">{{ row.points }}</strong>
 				</span>
 			</div>
 		</div> <!-- /.row -->
 		<div class="row desc" v-show="row.toggle">
-			<div class="col">
+			<div class="">
 				&nbsp;
 			</div>
-			<div class="col-9" v-html="row.desc">
+			<div class="col-11 text-left" v-html="row.desc">
 			</div>
 			<div class="col">
 				&nbsp;

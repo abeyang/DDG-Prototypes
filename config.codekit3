@@ -16,6 +16,16 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/assets\/css\/animate.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/animate-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/assets\/css\/bootstrap.min.css": {
 		"aP": 0,
 		"bl": 0,
