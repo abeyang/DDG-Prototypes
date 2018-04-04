@@ -44,7 +44,7 @@ var pg = new Vue({
 		rows: [
 			{
 				id: 'lock',
-				title: 'Is this site encrypted?',
+				title: 'Is the website encrypted?',
 				snippet: 'An encrypted connection prevents eavesdropping of any personal information you send to a website.',
 				toggle: false,
 				desc: '<b>Encrypted</b> connections ensure that only authorized clients can access information sent over the connection. In order to decode the encrypted information, the client must have a unique key, otherwise the information is meaningless to an eavesdropper. <br>Over <b>unencrypted</b> connections, information is sent as plain text so  anyone can read it without authorization.',
@@ -52,7 +52,7 @@ var pg = new Vue({
 			},
 			{
 				id: 'shield',
-				title: 'Number of trackers?',
+				title: 'How many trackers were found?',
 				snippet: 'Trackers aggregate your web activity into a data profile about you.',
 				toggle: false,
 				desc: 'Trackers lurk on almost every website you visit. The most common types of trackers are used by advertising companies to collect information about your web activity. Advertising companies rely on networks of these trackers to collect as much information as possible about you and your online activity so they can target you with ads.',
@@ -60,7 +60,7 @@ var pg = new Vue({
 			},
 			{
 				id: 'major',
-				title: 'Any major trackers?',
+				title: 'Are there any major trackers?',
 				snippet: 'Google, Facebook, etc. exist on a large percentage of websites, tracking more of your Internet activity.',
 				toggle: false,
 				desc: 'Because major trackers have much more web coverage than other trackers, they can assemble more information about you, making it even easier for advertisers to target you with invasive ads. <br>76% of websites now contain hidden Google trackers, 24% have hidden Facebook trackers, and several other major trackers are at 10%+.',
@@ -68,8 +68,8 @@ var pg = new Vue({
 			},
 			{
 				id: 'percentsites',
-				title: 'Is this website itself a major tracker?',
-				snippet: 'For example, Google may not contain major trackers, but Google <em>itself</em> is a major tracker.',
+				title: 'Is the website itself a major tracker?',
+				snippet: 'For example, Google may not contain major trackers, but Google ITSELF is a major tracker.',
 				toggle: false,
 				desc: 'Some popular web companies also operate trackers. These companies will collect any information you share on their websites and combine it with data collected by their trackes on other sites. This ensures that their profile on you is as robust as possible. The greater the reach of their network, the more personal data they can collect.',
 				points: 0
