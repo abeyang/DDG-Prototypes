@@ -242,6 +242,17 @@ h5 { font-weight: bold; }
 	}
 }
 
+.illo {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	&.illo-lock { background-image: url(assets/illos/encryption.png); }
+	&.illo-shield { background-image: url(assets/illos/trackers.png); }
+	&.illo-major { background-image: url(assets/illos/majortrackers.png); } 
+	&.illo-percentsites { background-image: url(assets/illos/majortracker-itself.png); }
+	&.illo-policy { background-image: url(assets/illos/privacypolicy.png); }
+}
 
 .btn {
 	&.btn-light {

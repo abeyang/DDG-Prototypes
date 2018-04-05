@@ -190,6 +190,21 @@ h5 {
   .toggle .icon.bad#icon-policy, .hover .icon.bad#icon-policy {
     background-image: url(assets/icons/policy-bad.svg); }
 
+.illo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  .illo.illo-lock {
+    background-image: url(assets/illos/encryption.png); }
+  .illo.illo-shield {
+    background-image: url(assets/illos/trackers.png); }
+  .illo.illo-major {
+    background-image: url(assets/illos/majortrackers.png); }
+  .illo.illo-percentsites {
+    background-image: url(assets/illos/majortracker-itself.png); }
+  .illo.illo-policy {
+    background-image: url(assets/illos/privacypolicy.png); }
+
 .btn.btn-light {
   background: #ddd; }
 

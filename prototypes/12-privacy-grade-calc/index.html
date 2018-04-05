@@ -195,14 +195,10 @@
 			</div>
 		</div> <!-- /.row -->
 		<div class="row desc" v-show="row.toggle">
-			<div class="">
-				&nbsp;
-			</div>
-			<div class="col-11 text-left" v-html="row.desc">
-			</div>
-			<div class="col">
-				&nbsp;
-			</div>
+			<div class=""></div>
+			<div class="col-6 text-left" v-html="row.desc"></div>
+			<div class="col-5 illo" :class="'illo-' + row.id"></div>
+			<div class="col"></div>
 		</div> <!-- /.row.desc -->
 	</div> <!-- /.row-wrap -->
 </template>
