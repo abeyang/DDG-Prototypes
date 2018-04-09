@@ -62,7 +62,7 @@ h5 {
   top: 0;
   left: 0;
   right: 0;
-  height: 328px;
+  height: 324px;
   background-color: #1F0B42;
   z-index: -1; }
 
@@ -71,7 +71,8 @@ h5 {
   color: #777;
   letter-spacing: 2.5px;
   line-height: 18px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-right: 10px; }
 
 .grade {
   position: absolute;
@@ -191,19 +192,48 @@ h5 {
     background-image: url(assets/icons/policy-bad.svg); }
 
 .illo {
+  width: 266px;
+  height: 100%;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #eee;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center; }
-  .illo.illo-lock {
-    background-image: url(assets/illos/encryption.png); }
-  .illo.illo-shield {
-    background-image: url(assets/illos/trackers.png); }
-  .illo.illo-major {
-    background-image: url(assets/illos/majortrackers.png); }
-  .illo.illo-percentsites {
-    background-image: url(assets/illos/majortracker-itself.png); }
-  .illo.illo-policy {
-    background-image: url(assets/illos/privacypolicy.png); }
+  .illo.illo-lock0 {
+    background-image: url(assets/illos/encryption-0.png); }
+  .illo.illo-lock-1 {
+    background-image: url(assets/illos/encryption-1.png); }
+  .illo.illo-shield0 {
+    background-image: url(assets/illos/happy.png); }
+  .illo.illo-shield-1 {
+    background-image: url(assets/illos/trackers-1.png); }
+  .illo.illo-shield-2 {
+    background-image: url(assets/illos/trackers-2.png); }
+  .illo.illo-shield-3 {
+    background-image: url(assets/illos/trackers-3.png); }
+  .illo.illo-major0 {
+    background-image: url(assets/illos/happy.png); }
+  .illo.illo-major-1 {
+    background-image: url(assets/illos/majortrackers-1.png); }
+  .illo.illo-percentsites0 {
+    background-image: url(assets/illos/happy.png); }
+  .illo.illo-percentsites-1 {
+    background-image: url(assets/illos/percent-1.png); }
+  .illo.illo-percentsites-2 {
+    background-image: url(assets/illos/percent-2.png); }
+  .illo.illo-percentsites-3 {
+    background-image: url(assets/illos/percent-3.png); }
+  .illo.illo-percentsites-4 {
+    background-image: url(assets/illos/percent-4.png); }
+  .illo.illo-policy0 {
+    background-image: url(assets/illos/privacy-0.png); }
+  .illo.illo-policy-1 {
+    background-image: url(assets/illos/privacy-1.png); }
+  .illo.illo-policy-2 {
+    background-image: url(assets/illos/privacy-2.png); }
+  .illo.illo-policy-3 {
+    background-image: url(assets/illos/privacy-3.png); }
 
 .btn.btn-light {
   background: #ddd; }
@@ -279,6 +309,16 @@ h5 {
 .modal-content .modal-footer {
   justify-content: center;
   padding-bottom: 20px; }
+
+.card {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  left: 145px;
+  top: -10px;
+  width: 21rem; }
+  .card h5 {
+    font-size: 14px; }
 
 input[type=range] {
   height: 36px;

@@ -38,8 +38,8 @@
 				<div class="col-8 text-center v-center">
 					<h2>Privacy Grade Calculator</h2>
 					<p>
-						<span>Find out which of your favorite sites can be trusted with your privacy.</span><br>
-			      		<span>Play around with the settings to see what contributes to an A grade!</span><br>
+						<span>Find out in more detail how we calculated a {{ grade }} privacy grade for {{ name }}.</span><br>
+			      		<span>Play around with the contributing factors to interactively see how privacy grades are calculated!</span><br>
 			      		<a href="#" data-toggle="modal" data-target="#infoModal">Learn more.</a>
 					</p>
 				</div>
@@ -56,27 +56,38 @@
 			<div class="row-wrap">
 				<div class="row row-title">
 					<div class="col-3 text-left">
-						<div class="label">Website</div>
+						
+						<div id="website-card" class="card shadow-card">
+						  <div class="card-body">
+						    <h5>You're now in "custom" mode!</h5>
+						    <p class="card-text">
+						    	Play around with the settings to see what constitutes for a good (or bad) grade, or check out the privacy grade for other websites via the dropdown.
+							</p>
+						    <button id="website-card-dismiss" class="btn btn-dark">Got it!</button>
+						  </div>
+						</div> <!-- /.card -->
+
+						<!-- <div class="label">Website</div> -->
 						
 						<div class="dropdown show">
-						  <a class="dropdown-toggle text-dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  <a class="dropdown-toggle btn text-white" :class="'btn-' + gradeclass" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    <strong id="website">{{ name }}</strong>
 						  </a>
 
 						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 						    <a v-for="(value, key) in presets" class="dropdown-item" @click="setPreset(key)" href="#">{{ key }}</a>
-						    <div class="dropdown-divider"></div>
-						    <a class="dropdown-item" @click="setPreset('Custom')" href="#">Custom</a>
 						  </div>
 						</div> <!-- /.dropdown -->
+
+
 					
 					</div>
 					<div class="col-6">
 						<div class="grade shadow" :class="'bg-' + gradeclass"><strong>{{ grade }}</strong></div>
 					</div>
 					<div class="col-3 text-right">
-						<div class="label">Total Score</div>
-						<strong :class="'text-' + gradeclass">{{ score }}</strong>
+						<span class="label">Total Risk</span>
+						<span class="btn disabled" :class="'btn-outline-' + gradeclass"><strong>{{ score }}</strong></span>
 					</div>
 				</div> <!-- /.row -->
 				<div class="row gradescale">
@@ -197,7 +208,10 @@
 		<div class="row desc" v-show="row.toggle">
 			<div class=""></div>
 			<div class="col-6 text-left" v-html="row.desc"></div>
-			<div class="col-5 illo" :class="'illo-' + row.id"></div>
+			<div class="col-5 text-center">
+				<div v-if="index === 4" class="illo" :class="'illo-' + row.id + x.practices"></div>
+				<div v-else class="illo" :class="'illo-' + row.id + row.points"></div>
+			</div>
 			<div class="col"></div>
 		</div> <!-- /.row.desc -->
 	</div> <!-- /.row-wrap -->

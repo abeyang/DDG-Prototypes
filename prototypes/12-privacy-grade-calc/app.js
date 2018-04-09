@@ -21,7 +21,9 @@ Vue.component('card', {
 			// otherwise, it's most likely a button -- change website to custom
 			else {
 				pg.name = 'Custom';
-				$('#website').removeClass().addClass('animated wobble')
+				// $('#website-card').show().addClass('animated fadeInLeft');
+				if (!pg.showed_card) $('#website-card').slideDown();
+				pg.showed_card = true;
 			}
 		},
 		hoverResult: function(event) {
@@ -69,7 +71,7 @@ var pg = new Vue({
 			{
 				id: 'percentsites',
 				title: 'Is the website itself a major tracker?',
-				snippet: 'And if so, what is its reach? (e.g., Google may not have major trackers, but it ITSELF is one)',
+				snippet: 'And if so, what is its reach? (e.g., google.com may not have major trackers, but it ITSELF is one)',
 				toggle: false,
 				desc: 'Some popular web companies also operate trackers. These companies will collect any information you share on their websites and combine it with data collected by their trackers on other sites. This ensures that their profile on you is as robust as possible. The greater the reach of their network, the more personal data they can collect.',
 				points: 0
@@ -87,6 +89,7 @@ var pg = new Vue({
 		score: 0,
 		grade: 'A',
 		gradeclass: 'success',
+		showed_card: false,
 		worst: -10,		// worst possible grade
 		// x = current settings
 		x: {},
@@ -184,7 +187,6 @@ var pg = new Vue({
 
 			this.x = clone;
 			
-
 			// get website name ready for animation (when settings are tweaked)
 			$('#website').removeClass();
 		},
@@ -245,6 +247,10 @@ var pg = new Vue({
 
 // misc things to load
 // $('#infoModal').modal('show');
+$('#website-card-dismiss').click(function() {
+	// TODO: not perfect, because "card" is still persistent (just invisible)... but it does block items behind it from being clicked.
+	$('#website-card').slideUp();
+});
 
 // sticky header  (.sticky-top doesn't work)
 // https://codepen.io/renduh/pen/oBBGbK

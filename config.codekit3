@@ -3701,11 +3701,44 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/encryption-0.png": {
+		"ft": 32768,
+		"iS": 23876,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/encryption-0.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/encryption-1.png": {
+		"ft": 32768,
+		"iS": 20342,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/encryption-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/encryption.png": {
 		"ft": 32768,
 		"iS": 46026,
 		"oA": 0,
 		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/encryption.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/happy.png": {
+		"ft": 32768,
+		"iS": 40509,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/happy.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -3723,6 +3756,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/majortrackers-1.png": {
+		"ft": 32768,
+		"iS": 106943,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/majortrackers-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/majortrackers.png": {
 		"ft": 32768,
 		"iS": 63115,
@@ -3734,6 +3778,94 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/percent-1.png": {
+		"ft": 32768,
+		"iS": 81612,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/percent-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/percent-2.png": {
+		"ft": 32768,
+		"iS": 66859,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/percent-2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/percent-3.png": {
+		"ft": 32768,
+		"iS": 71775,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/percent-3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/percent-4.png": {
+		"ft": 32768,
+		"iS": 79555,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/percent-4.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacy-0.png": {
+		"ft": 32768,
+		"iS": 47619,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacy-0.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacy-1.png": {
+		"ft": 32768,
+		"iS": 48870,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacy-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacy-2.png": {
+		"ft": 32768,
+		"iS": 48204,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacy-2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacy-3.png": {
+		"ft": 32768,
+		"iS": 45344,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacy-3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/privacypolicy.png": {
 		"ft": 32768,
 		"iS": 36668,
@@ -3742,6 +3874,39 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/trackers-1.png": {
+		"ft": 32768,
+		"iS": 87662,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/trackers-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/trackers-2.png": {
+		"ft": 32768,
+		"iS": 123373,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/trackers-2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/prototypes\/12-privacy-grade-calc\/assets\/illos\/trackers-3.png": {
+		"ft": 32768,
+		"iS": 210585,
+		"oA": 0,
+		"oAP": "\/prototypes\/12-privacy-grade-calc\/assets\/illos\/trackers-3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},

@@ -13,7 +13,7 @@ $purple:		#5558D8;
 $dark-purple:	#474BB8;
 $royal-purple:  #1F0B42;
 
-$backing-height: 328px;
+$backing-height: 324px;
 $row-height:	110px;
 $row-pad:		20px;
 $header-top:	40px;
@@ -89,7 +89,9 @@ h5 { font-weight: bold; }
 		border-radius: 0;
 	}
 
-	#website { display: inline-block; }
+	#website { 
+		display: inline-block; 
+	}
 }
 
 .backing {
@@ -108,6 +110,7 @@ h5 { font-weight: bold; }
 	letter-spacing: 2.5px;
 	line-height: 18px;
 	text-transform: uppercase;
+	padding-right: 10px;
 }
 
 .grade {
@@ -243,15 +246,32 @@ h5 { font-weight: bold; }
 }
 
 .illo {
+	width: 266px;
+	height: 100%;
+	display: inline-block;
+	border-radius: 5px;
+	background-color: $lightest-gray;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 
-	&.illo-lock { background-image: url(assets/illos/encryption.png); }
-	&.illo-shield { background-image: url(assets/illos/trackers.png); }
-	&.illo-major { background-image: url(assets/illos/majortrackers.png); } 
-	&.illo-percentsites { background-image: url(assets/illos/majortracker-itself.png); }
-	&.illo-policy { background-image: url(assets/illos/privacypolicy.png); }
+	&.illo-lock0 { background-image: url(assets/illos/encryption-0.png); }
+	&.illo-lock-1 { background-image: url(assets/illos/encryption-1.png); }
+	&.illo-shield0 { background-image: url(assets/illos/happy.png); }
+	&.illo-shield-1 { background-image: url(assets/illos/trackers-1.png); }
+	&.illo-shield-2 { background-image: url(assets/illos/trackers-2.png); }
+	&.illo-shield-3 { background-image: url(assets/illos/trackers-3.png); }
+	&.illo-major0 { background-image: url(assets/illos/happy.png); } 
+	&.illo-major-1 { background-image: url(assets/illos/majortrackers-1.png); } 
+	&.illo-percentsites0 { background-image: url(assets/illos/happy.png); }
+	&.illo-percentsites-1 { background-image: url(assets/illos/percent-1.png); }
+	&.illo-percentsites-2 { background-image: url(assets/illos/percent-2.png); }
+	&.illo-percentsites-3 { background-image: url(assets/illos/percent-3.png); }
+	&.illo-percentsites-4 { background-image: url(assets/illos/percent-4.png); }
+	&.illo-policy0 { background-image: url(assets/illos/privacy-0.png); }
+	&.illo-policy-1 { background-image: url(assets/illos/privacy-1.png); }
+	&.illo-policy-2 { background-image: url(assets/illos/privacy-2.png); }
+	&.illo-policy-3 { background-image: url(assets/illos/privacy-3.png); }
 }
 
 .btn {
@@ -338,6 +358,18 @@ h5 { font-weight: bold; }
 		justify-content: center;
 		padding-bottom: 20px;
 	}
+}
+
+// CARD (NON-INVASIVE MODAL)
+.card {
+	display: none;
+	position: absolute;
+	z-index: 50;
+	left: 145px;
+	top: -10px;
+	width: 21rem;
+
+	h5 { font-size: 14px; }
 }
 
 // INPUT SLIDER
